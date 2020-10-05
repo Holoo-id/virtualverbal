@@ -6,6 +6,6 @@
     <title>Virtual Verbal - Situs Media Informasi dan Berita Tentang Games, E-Sports, Teknologi, maupun Pop Culture.</title>
 </head>
 <body>
-
+    
 </body>
 </html>

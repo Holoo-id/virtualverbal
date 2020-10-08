@@ -15,6 +15,7 @@
     </head>
 
     <body>
+        @include('layouts.header')
         @yield('content')
 
         <script src="{{ asset('/frontend/assets/js/script.js') }}"></script>

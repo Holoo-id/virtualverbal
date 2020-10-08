@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6915,3 +6916,6 @@
 </body>
 
 </html>
+=======
+@extends('layouts.base')
+>>>>>>> 8fb14f73e70920b9fa7dc28f4d410c1262be7f8b

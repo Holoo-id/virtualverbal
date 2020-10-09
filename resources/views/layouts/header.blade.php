@@ -141,7 +141,7 @@
     <!-- /FORM BOX WRAP -->
 </div>
 
-<!-- POPUP WRAP -->
+<!-- POPUP Register -->
 <div id="popup-register" class="popup-wrap medium">
     <!-- FORM BOX WRAP -->
     <div class="form-box-wrap">
@@ -262,6 +262,63 @@
     <ul class="mobile-menu">
 
         <!-- MOBILE MENU ITEM HIDDEN FIRST -->
+        <li class="mobile-menu-item">
+            <p class="mobile-menu-item-link pd-dropdown-handler">
+                <img class="widget-option-img user-avatar micro" src="img/users/05.jpg" alt="avatar-01">
+                James_Spiegel
+            </p>
+            <svg class="arrow-icon medium">
+                <use xlink:href="#svg-arrow-medium"></use>
+            </svg>
+            <ul class="mobile-dropdown pd-dropdown">
+                <li class="mobile-dropdown-item">
+                    <p class="mobile-dropdown-item-link pd-dropdown-handler">Main Account</p>
+                    <svg class="arrow-icon medium">
+                        <use xlink:href="#svg-arrow-medium"></use>
+                    </svg>
+                    <ul class="mobile-dropdown pd-dropdown">
+                        <li class="mobile-dropdown-item">
+                            <a href="account-settings.html" class="mobile-dropdown-item-link">Account Settings</a>
+                        </li>
+                        <li class="mobile-dropdown-item">
+                            <a href="#" class="mobile-dropdown-item-link">Shipping Details</a>
+                        </li>
+                        <li class="mobile-dropdown-item">
+                            <a href="#" class="mobile-dropdown-item-link">Billing Details</a>
+                        </li>
+                        <li class="mobile-dropdown-item">
+                            <a href="orders-history.html" class="mobile-dropdown-item-link">Orders History</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mobile-dropdown-item">
+                    <p class="mobile-dropdown-item-link pd-dropdown-handler">Pixel Forums</p>
+                    <svg class="arrow-icon medium">
+                        <use xlink:href="#svg-arrow-medium"></use>
+                    </svg>
+                    <ul class="mobile-dropdown pd-dropdown">
+                        <li class="mobile-dropdown-item">
+                            <a href="profile-summary.html" class="mobile-dropdown-item-link">Summary</a>
+                        </li>
+                        <li class="mobile-dropdown-item">
+                            <a href="profile-activity.html" class="mobile-dropdown-item-link">Activity</a>
+                        </li>
+                        <li class="mobile-dropdown-item">
+                            <a href="profile-notifications.html" class="mobile-dropdown-item-link">Notifications</a>
+                        </li>
+                        <li class="mobile-dropdown-item">
+                            <a href="profile-messages.html" class="mobile-dropdown-item-link">Messages</a>
+                        </li>
+                        <li class="mobile-dropdown-item">
+                            <a href="profile-badges.html" class="mobile-dropdown-item-link">Profile Badges</a>
+                        </li>
+                        <li class="mobile-dropdown-item">
+                            <a href="profile-settings.html" class="mobile-dropdown-item-link">Settings</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
         <li class="mobile-menu-item">
             <a href="#" class="mobile-menu-item-link">Games</a>
         </li>
@@ -1394,7 +1451,7 @@
             <!-- /MOBILE MENU PULL -->
             <!-- LOGO IMG -->
             <figure class="logo-img">
-                <img src="assets/img/brand/logoputihvv.png" alt="Logo">
+                <img src="{{ asset('/frontend/assets/img/brand/logoputihvv.png')}}" alt="Logo">
             </figure>
             <!-- /LOGO IMG -->
         </div>
@@ -4954,7 +5011,7 @@
         <!-- Profil Menu -->
         <div class="profil-menu">
             <div class="log-link">
-                <div class="sudah-login">
+                <!-- <div class="sudah-login">
                     <a href="esports-home.html" class="main-menu-item-link">
                         <p>
                             Nama Lengkap
@@ -4977,17 +5034,17 @@
                             <a href="#" class="dropdown-list-item-link">Logout</a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
                 <!-- Kalo Belum Login -->
                 <div class="belum-login">
                     <a class="popup-login-trigger" href="#">login</a> | <a class="popup-register-trigger" href="#">sign up</a>
                 </div>
             </div>
-            <div class="gambar">
-                <img class="widget-option-img user-avatar" src="assets/img/users/05.jpg" alt="avatar-01">
-            </div>
+            <!-- <div class="gambar">
+                <img class="widget-option-img user-avatar" src="{{ asset('/frontend/assets/img/users/00.jpg')}}" alt="avatar-01">
+            </div> -->
             <!-- INVENTORY BUTTON -->
-            <div class="inventory-button">
+            <div class="inventory-button" style="margin-left: 35px;"
                 <!-- INVENTORY ICON -->
                 <svg class="inventory-icon">
                     <use xlink:href="#svg-inventory"></use>
@@ -5012,3 +5069,4 @@
     </div>
     <!-- NAVIGATION -->
 </nav>
+<!-- /NAVIGATION WRAP -->

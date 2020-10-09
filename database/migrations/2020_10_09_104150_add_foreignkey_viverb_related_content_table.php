@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddForeignkeyViverbContentTable extends Migration
+class AddForeignkeyViverbRelatedContentTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,26 @@ class AddForeignkeyViverbContentTable extends Migration
      */
     public function up()
     {
-        Schema::table('v_content', function (Blueprint $table) {
+        Schema::table('v_related_content', function (Blueprint $table) {
             //
-            $table->foreign('category_id')
+            $table->foreign('updated_by')
                 ->references('id')
-                ->on('v_category_content')
+                ->on('users')
                 ->onDelete('set null');
 
             $table->foreign('created_by')
                 ->references('id')
                 ->on('users')
+                ->onDelete('cascade');
+            
+            $table->foreign('content_id')
+                ->references('id')
+                ->on('v_content')
+                ->onDelete('cascade');
+                
+            $table->foreign('related_content_id')
+                ->references('id')
+                ->on('v_content')
                 ->onDelete('cascade');
         });
     }
@@ -34,7 +44,7 @@ class AddForeignkeyViverbContentTable extends Migration
      */
     public function down()
     {
-        Schema::table('v_content', function (Blueprint $table) {
+        Schema::table('v_related_content', function (Blueprint $table) {
             //
         });
     }

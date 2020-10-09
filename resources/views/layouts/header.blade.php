@@ -1,10 +1,8 @@
 <!-- SEARCH POPUP -->
 <div class="search-popup">
-    <!-- CROSS ICON -->
     <svg class="cross-icon big close-button search-popup-close">
         <use xlink:href="#svg-cross-big"></use>
     </svg>
-    <!-- /CROSS ICON -->
 
     <form method="GET" class="search-popup-form">
         <input type="text" id="search" class="input-line" name="search" placeholder="What are you looking for...?">
@@ -14,239 +12,118 @@
 
 <!-- POPUP LOGIN -->
 <div id="popup-login" class="popup-wrap medium">
-    <!-- FORM BOX WRAP -->
     <div class="form-box-wrap">
-        <!-- FORM BOX HEADING -->
         <div class="form-box-heading login">
-            <!-- FORM BOX HEADING TITLE WRAP -->
             <div class="form-box-heading-title-wrap">
-                <!-- FORM BOX HEADING TITLE -->
                 <p class="form-box-heading-title">Hello Again!</p>
-                <!-- /FORM BOX HEADING TITLE -->
-
-                <!-- FORM BOX HEADING SUBTITLE -->
                 <p class="form-box-heading-subtitle">We are so happy to see you back here!</p>
-                <!-- /FORM BOX HEADING SUBTITLE -->
             </div>
-            <!-- /FORM BOX HEADING TITLE WRAP -->
-
-            <!-- FORM BOX HEADING TEXT -->
             <p class="form-box-heading-text">Don’t you have an account? <a href="#">Register Now!</a> It will take just
                 a few seconds!</p>
-            <!-- /FORM BOX HEADING TEXT -->
-
         </div>
-        <!-- /FORM BOX HEADING -->
-
-        <!-- FORM BOX BODY -->
         <div class="form-box-body">
-            <!-- FORM BOX -->
             <div class="form-box">
-                <!-- SECTION TITLE WRAP -->
                 <div class="section-title-wrap blue">
                     <h2 class="section-title medium">Login to your account</h2>
                     <div class="section-title-separator"></div>
                 </div>
-                <!-- /SECTION TITLE WRAP -->
-
-                <!-- FORM WRAP -->
                 <form class="form-wrap">
-                    <!-- FORM ROW -->
                     <div class="form-row">
-                        <!-- FORM ITEM -->
                         <div class="form-item blue">
                             <label for="login_email" class="rl-label">Email Address</label>
                             <input type="text" id="login_email" name="login_email"
                                 placeholder="Enter your email here...">
                         </div>
-                        <!-- /FORM ITEM -->
                     </div>
-                    <!-- /FORM ROW -->
-
-                    <!-- FORM ROW -->
                     <div class="form-row">
-                        <!-- FORM ITEM -->
                         <div class="form-item blue">
                             <label for="login_pwd" class="rl-label">Password</label>
                             <input type="password" id="login_pwd" name="login_pwd"
                                 placeholder="Enter your password here...">
                         </div>
-                        <!-- /FORM ITEM -->
                     </div>
-                    <!-- /FORM ROW -->
-
-                    <!-- FORM CONFIRM ROW -->
                     <div class="form-confirm-row">
-                        <!-- CHECKBOX ITEM -->
                         <div class="checkbox-item">
                             <input type="checkbox" id="login_remember_ep" name="login_remember_ep" value="remember_ep"
                                 checked>
-                            <!-- CHECKBOX BOX -->
                             <div class="checkbox-box blue">
-                                <!-- CROSS ICON -->
                                 <svg class="cross-cb-icon small">
                                     <use xlink:href="#svg-cross-cb-small"></use>
                                 </svg>
-                                <!-- /CROSS ICON -->
                             </div>
-                            <!-- CHECKBOX BOX -->
                             <label for="login_remember_ep" class="rl-label">Remember Email and Password</label>
                         </div>
-                        <!-- /CHECKBOX ITEM -->
-
-                        <!-- LINK TEXT -->
                         <a href="#" class="link-text-form blue">Forgot Password?</a>
-                        <!-- /LINK TEXT -->
                     </div>
-                    <!-- /FORM CONFIRM ROW -->
-
-                    <!-- FORM ACTIONS -->
                     <div class="form-actions full">
-                        <!-- BUTTON -->
                         <button class="button blue full">Login Now!</button>
-                        <!-- /BUTTON -->
-
-                        <!-- SOCIAL BUTTONS -->
                         <div class="social-buttons">
-                            <!-- BUTTON SOCIAL -->
                             <a href="#" class="button-social fb">Facebook Login</a>
-                            <!-- /BUTTON SOCIAL -->
-
-                            <!-- BUTTON SOCIAL -->
                             <a href="#" class="button-social twt">Twitter Login</a>
-                            <!-- /BUTTON SOCIAL -->
                         </div>
-                        <!-- /SOCIAL BUTTONS -->
                     </div>
-                    <!-- /FORM ACTIONS -->
                 </form>
-                <!-- /FORM WRAP -->
             </div>
-            <!-- /FORM BOX -->
-
-            <!-- TAB FORM BUTTONS -->
             <div class="tab-form-buttons">
-                <!-- TAB FORM BUTTON -->
                 <p class="tab-form-button selected">Login</p>
-                <!-- /TAB FORM BUTTON -->
-
-                <!-- TAB FORM BUTTON -->
                 <p class="tab-form-button">Register</p>
-                <!-- /TAB FORM BUTTON -->
             </div>
-            <!-- /TAB FORM BUTTONS -->
         </div>
-        <!-- /FORM BOX BODY -->
     </div>
-    <!-- /FORM BOX WRAP -->
 </div>
 
 <!-- POPUP Register -->
 <div id="popup-register" class="popup-wrap medium">
-    <!-- FORM BOX WRAP -->
     <div class="form-box-wrap">
-        <!-- FORM BOX HEADING -->
         <div class="form-box-heading register">
-            <!-- FORM BOX HEADING TITLE WRAP -->
             <div class="form-box-heading-title-wrap">
-                <!-- FORM BOX HEADING TITLE -->
                 <p class="form-box-heading-title">Welcome!</p>
-                <!-- /FORM BOX HEADING TITLE -->
-
-                <!-- FORM BOX HEADING SUBTITLE -->
                 <p class="form-box-heading-subtitle">Register and enjoy the full Pixel Diamond experience!</p>
-                <!-- /FORM BOX HEADING SUBTITLE -->
             </div>
-            <!-- /FORM BOX HEADING TITLE WRAP -->
-
-            <!-- FORM BOX HEADING TEXT -->
             <p class="form-box-heading-text">After registering, you’ll receive a confirmation email in your inbox with a
                 link to activate your account!</p>
-            <!-- /FORM BOX HEADING TEXT -->
         </div>
-        <!-- /FORM BOX HEADING -->
-
-        <!-- FORM BOX BODY -->
         <div class="form-box-body">
-            <!-- FORM BOX -->
             <div class="form-box">
-                <!-- SECTION TITLE WRAP -->
                 <div class="section-title-wrap red">
                     <h2 class="section-title medium">Register Now!</h2>
                     <div class="section-title-separator"></div>
                 </div>
-                <!-- /SECTION TITLE WRAP -->
-
-                <!-- FORM WRAP -->
                 <form class="form-wrap">
-                    <!-- FORM ROW -->
                     <div class="form-row">
-                        <!-- FORM ITEM -->
                         <div class="form-item red">
                             <label for="register_email_04" class="rl-label">Email Address</label>
                             <input type="text" id="register_email_04" name="register_email_04"
                                 placeholder="Enter your email here...">
                         </div>
-                        <!-- /FORM ITEM -->
                     </div>
-                    <!-- /FORM ROW -->
-
-                    <!-- FORM ROW -->
                     <div class="form-row">
-                        <!-- FORM ITEM -->
                         <div class="form-item red">
                             <label for="register_pwd_04" class="rl-label">Password</label>
                             <input type="password" id="register_pwd_04" name="register_pwd_04"
                                 placeholder="Enter your password here...">
                         </div>
-                        <!-- /FORM ITEM -->
                     </div>
-                    <!-- /FORM ROW -->
-
-                    <!-- FORM ROW -->
                     <div class="form-row">
-                        <!-- FORM ITEM -->
                         <div class="form-item red">
                             <label for="register_pwd_repeat_04" class="rl-label">Repeat Password</label>
                             <input type="password" id="register_pwd_repeat_04" name="register_pwd_repeat_04"
                                 placeholder="Rewrite your password here...">
                         </div>
-                        <!-- /FORM ITEM -->
                     </div>
-                    <!-- /FORM ROW -->
-
-                    <!-- FORM ACTIONS -->
                     <div class="form-actions full">
-                        <!-- BUTTON -->
                         <button class="button red full">Create your account!</button>
-                        <!-- /BUTTON -->
-
-                        <!-- FORM INFO TEXT -->
                         <p class="form-info-text">You’ll receive a confirmation email in your inbox with a link to
                             activate your account!</p>
-                        <!-- /FORM INFO TEXT -->
                     </div>
-                    <!-- /FORM ACTIONS -->
                 </form>
-                <!-- /FORM WRAP -->
             </div>
-            <!-- /FORM BOX -->
-
-            <!-- TAB FORM BUTTONS -->
             <div class="tab-form-buttons">
-                <!-- TAB FORM BUTTON -->
                 <p class="tab-form-button">Login</p>
-                <!-- /TAB FORM BUTTON -->
-
-                <!-- TAB FORM BUTTON -->
                 <p class="tab-form-button selected">Register</p>
-                <!-- /TAB FORM BUTTON -->
             </div>
-            <!-- /TAB FORM BUTTONS -->
         </div>
-        <!-- /FORM BOX BODY -->
     </div>
-    <!-- /FORM BOX WRAP -->
 </div>
 
 <!-- MENU MOBILE -->
@@ -260,8 +137,6 @@
     </figure>
 
     <ul class="mobile-menu">
-
-        <!-- MOBILE MENU ITEM HIDDEN FIRST -->
         <li class="mobile-menu-item">
             <p class="mobile-menu-item-link pd-dropdown-handler">
                 <img class="widget-option-img user-avatar micro" src="img/users/05.jpg" alt="avatar-01">
@@ -330,169 +205,91 @@
         </li>
         <li class="mobile-menu-item">
             <p class="mobile-menu-item-link pd-dropdown-handler">eSports</p>
-            <!-- ARROW ICON -->
             <svg class="arrow-icon medium">
                 <use xlink:href="#svg-arrow-medium"></use>
             </svg>
-            <!-- /ARROW ICON -->
-
-            <!-- MOBILE DROPDOWN -->
             <ul class="mobile-dropdown pd-dropdown">
-                <!-- MOBILE DROPDOWN ITEM -->
                 <li class="mobile-dropdown-item">
                     <p class="mobile-dropdown-item-link pd-dropdown-handler">Main Pages</p>
-                    <!-- ARROW ICON -->
                     <svg class="arrow-icon medium">
                         <use xlink:href="#svg-arrow-medium"></use>
                     </svg>
-                    <!-- /ARROW ICON -->
-
-                    <!-- MOBILE DROPDOWN -->
                     <ul class="mobile-dropdown pd-dropdown">
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="esports-home.html" class="mobile-dropdown-item-link">eSports Home</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="esports-news.html" class="mobile-dropdown-item-link">eSports News</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="esports-post.html" class="mobile-dropdown-item-link">eSports Post Page</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="esports-tournament.html" class="mobile-dropdown-item-link">Tournament Page</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
                     </ul>
-                    <!-- /MOBILE DROPDOWN -->
                 </li>
-                <!-- /MOBILE DROPDOWN ITEM -->
-
-                <!-- MOBILE DROPDOWN ITEM -->
                 <li class="mobile-dropdown-item">
                     <p class="mobile-dropdown-item-link pd-dropdown-handler">Match Overviews</p>
-                    <!-- ARROW ICON -->
                     <svg class="arrow-icon medium">
                         <use xlink:href="#svg-arrow-medium"></use>
                     </svg>
-                    <!-- /ARROW ICON -->
-
-                    <!-- MOBILE DROPDOWN -->
                     <ul class="mobile-dropdown pd-dropdown">
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="esports-match-overview-v1.html" class="mobile-dropdown-item-link">Match Overview
                                 V1</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="esports-match-overview-v2.html" class="mobile-dropdown-item-link">Match Overview
                                 V2</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="esports-match-overview-v3.html" class="mobile-dropdown-item-link">Match Overview
                                 V3</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="esports-match-overview-v4.html" class="mobile-dropdown-item-link">Match Overview
                                 V4</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
                     </ul>
-                    <!-- /MOBILE DROPDOWN -->
                 </li>
-                <!-- /MOBILE DROPDOWN ITEM -->
-
-                <!-- MOBILE DROPDOWN ITEM -->
                 <li class="mobile-dropdown-item">
                     <p class="mobile-dropdown-item-link pd-dropdown-handler">Teams &amp; Players</p>
-                    <!-- ARROW ICON -->
                     <svg class="arrow-icon medium">
                         <use xlink:href="#svg-arrow-medium"></use>
                     </svg>
-                    <!-- /ARROW ICON -->
-
-                    <!-- MOBILE DROPDOWN -->
                     <ul class="mobile-dropdown pd-dropdown">
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="esports-team.html" class="mobile-dropdown-item-link">eSports Team Page</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="esports-player.html" class="mobile-dropdown-item-link">eSports Player Page</a>
-                        </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="esports-streamers.html" class="mobile-dropdown-item-link">Streamers Page</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="esports-calendar.html" class="mobile-dropdown-item-link">Scores with Calendar</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
                     </ul>
-                    <!-- /MOBILE DROPDOWN -->
                 </li>
-                <!-- /MOBILE DROPDOWN ITEM -->
-
-                <!-- MOBILE DROPDOWN ITEM -->
                 <li class="mobile-dropdown-item">
                     <p class="mobile-dropdown-item-link pd-dropdown-handler">eSports Widgets</p>
-                    <!-- ARROW ICON -->
                     <svg class="arrow-icon medium">
                         <use xlink:href="#svg-arrow-medium"></use>
                     </svg>
-                    <!-- /ARROW ICON -->
-
-                    <!-- MOBILE DROPDOWN -->
                     <ul class="mobile-dropdown pd-dropdown">
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="esports-widgets-v1.html" class="mobile-dropdown-item-link">Widgets Page 01</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="esports-widgets-v2.html" class="mobile-dropdown-item-link">Widgets Page 02</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="esports-widgets-v3.html" class="mobile-dropdown-item-link">Widgets Page 03</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
                     </ul>
-                    <!-- /MOBILE DROPDOWN -->
                 </li>
-                <!-- /MOBILE DROPDOWN ITEM -->
             </ul>
-            <!-- /MOBILE DROPDOWN -->
         </li>
         <li class="mobile-menu-item">
             <a href="#" class="mobile-menu-item-link">Videos</a>
@@ -508,423 +305,217 @@
         </li>
         <li class="mobile-menu-item">
             <p class="mobile-menu-item-link pd-dropdown-handler">Shop</p>
-            <!-- ARROW ICON -->
             <svg class="arrow-icon medium">
                 <use xlink:href="#svg-arrow-medium"></use>
             </svg>
-            <!-- /ARROW ICON -->
-
-            <!-- MOBILE DROPDOWN -->
             <ul class="mobile-dropdown pd-dropdown">
-                <!-- MOBILE DROPDOWN ITEM -->
                 <li class="mobile-dropdown-item">
                     <p class="mobile-dropdown-item-link pd-dropdown-handler">New Releases</p>
-                    <!-- ARROW ICON -->
                     <svg class="arrow-icon medium">
                         <use xlink:href="#svg-arrow-medium"></use>
                     </svg>
-                    <!-- /ARROW ICON -->
-
-                    <!-- MOBILE DROPDOWN -->
                     <ul class="mobile-dropdown pd-dropdown">
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="shop-v1-grid.html" class="mobile-dropdown-item-link">Shop 3 Columns Grid</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="shop-v1-list.html" class="mobile-dropdown-item-link">Shop 3 Columns List</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="shop-v2.html" class="mobile-dropdown-item-link">Shop 4 Columns</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-page.html" class="mobile-dropdown-item-link">Product Description</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-page.html" class="mobile-dropdown-item-link">Product Reviews</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-page.html" class="mobile-dropdown-item-link">Product Specifications</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="inventory-bag.html" class="mobile-dropdown-item-link">Inventory Bag (Cart)</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="checkout.html" class="mobile-dropdown-item-link">Checkout Page</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="order-confirmation.html" class="mobile-dropdown-item-link">Order Confirmation</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="wishlist.html" class="mobile-dropdown-item-link">Wishlist</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-compare.html" class="mobile-dropdown-item-link">Product Compare</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
                     </ul>
-                    <!-- /MOBILE DROPDOWN -->
                 </li>
-                <!-- /MOBILE DROPDOWN ITEM -->
-
-                <!-- MOBILE DROPDOWN ITEM -->
                 <li class="mobile-dropdown-item">
                     <p class="mobile-dropdown-item-link pd-dropdown-handler">Shop Features</p>
-                    <!-- ARROW ICON -->
                     <svg class="arrow-icon medium">
                         <use xlink:href="#svg-arrow-medium"></use>
                     </svg>
-                    <!-- /ARROW ICON -->
-
-                    <!-- MOBILE DROPDOWN -->
                     <ul class="mobile-dropdown pd-dropdown">
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="shop-v1-grid.html" class="mobile-dropdown-item-link">Shop 3 Columns Grid</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="shop-v1-list.html" class="mobile-dropdown-item-link">Shop 3 Columns List</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="shop-v2.html" class="mobile-dropdown-item-link">Shop 4 Columns</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-page.html" class="mobile-dropdown-item-link">Product Description</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-page.html" class="mobile-dropdown-item-link">Product Reviews</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-page.html" class="mobile-dropdown-item-link">Product Specifications</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="inventory-bag.html" class="mobile-dropdown-item-link">Inventory Bag (Cart)</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="checkout.html" class="mobile-dropdown-item-link">Checkout Page</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="order-confirmation.html" class="mobile-dropdown-item-link">Order Confirmation</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="wishlist.html" class="mobile-dropdown-item-link">Wishlist</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-compare.html" class="mobile-dropdown-item-link">Product Compare</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
                     </ul>
-                    <!-- /MOBILE DROPDOWN -->
                 </li>
-                <!-- /MOBILE DROPDOWN ITEM -->
-
-                <!-- MOBILE DROPDOWN ITEM -->
                 <li class="mobile-dropdown-item">
                     <p class="mobile-dropdown-item-link pd-dropdown-handler">Powerstation</p>
-                    <!-- ARROW ICON -->
                     <svg class="arrow-icon medium">
                         <use xlink:href="#svg-arrow-medium"></use>
                     </svg>
-                    <!-- /ARROW ICON -->
-
-                    <!-- MOBILE DROPDOWN -->
                     <ul class="mobile-dropdown pd-dropdown">
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="shop-v1-grid.html" class="mobile-dropdown-item-link">Shop 3 Columns Grid</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="shop-v1-list.html" class="mobile-dropdown-item-link">Shop 3 Columns List</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="shop-v2.html" class="mobile-dropdown-item-link">Shop 4 Columns</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-page.html" class="mobile-dropdown-item-link">Product Description</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-page.html" class="mobile-dropdown-item-link">Product Reviews</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-page.html" class="mobile-dropdown-item-link">Product Specifications</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="inventory-bag.html" class="mobile-dropdown-item-link">Inventory Bag (Cart)</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="checkout.html" class="mobile-dropdown-item-link">Checkout Page</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="order-confirmation.html" class="mobile-dropdown-item-link">Order Confirmation</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="wishlist.html" class="mobile-dropdown-item-link">Wishlist</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-compare.html" class="mobile-dropdown-item-link">Product Compare</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
                     </ul>
-                    <!-- /MOBILE DROPDOWN -->
                 </li>
-                <!-- /MOBILE DROPDOWN ITEM -->
-
-                <!-- MOBILE DROPDOWN ITEM -->
                 <li class="mobile-dropdown-item">
                     <p class="mobile-dropdown-item-link pd-dropdown-handler">X-Rock</p>
-                    <!-- ARROW ICON -->
                     <svg class="arrow-icon medium">
                         <use xlink:href="#svg-arrow-medium"></use>
                     </svg>
-                    <!-- /ARROW ICON -->
-
-                    <!-- MOBILE DROPDOWN -->
                     <ul class="mobile-dropdown pd-dropdown">
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="shop-v1-grid.html" class="mobile-dropdown-item-link">Shop 3 Columns Grid</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="shop-v1-list.html" class="mobile-dropdown-item-link">Shop 3 Columns List</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="shop-v2.html" class="mobile-dropdown-item-link">Shop 4 Columns</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-page.html" class="mobile-dropdown-item-link">Product Description</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-page.html" class="mobile-dropdown-item-link">Product Reviews</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-page.html" class="mobile-dropdown-item-link">Product Specifications</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="inventory-bag.html" class="mobile-dropdown-item-link">Inventory Bag (Cart)</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="checkout.html" class="mobile-dropdown-item-link">Checkout Page</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="order-confirmation.html" class="mobile-dropdown-item-link">Order Confirmation</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="wishlist.html" class="mobile-dropdown-item-link">Wishlist</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-compare.html" class="mobile-dropdown-item-link">Product Compare</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
                     </ul>
-                    <!-- /MOBILE DROPDOWN -->
                 </li>
-                <!-- /MOBILE DROPDOWN ITEM -->
-
-                <!-- MOBILE DROPDOWN ITEM -->
                 <li class="mobile-dropdown-item">
                     <p class="mobile-dropdown-item-link pd-dropdown-handler">Funtendo</p>
-                    <!-- ARROW ICON -->
                     <svg class="arrow-icon medium">
                         <use xlink:href="#svg-arrow-medium"></use>
                     </svg>
-                    <!-- /ARROW ICON -->
-
-                    <!-- MOBILE DROPDOWN -->
                     <ul class="mobile-dropdown pd-dropdown">
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="shop-v1-grid.html" class="mobile-dropdown-item-link">Shop 3 Columns Grid</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="shop-v1-list.html" class="mobile-dropdown-item-link">Shop 3 Columns List</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="shop-v2.html" class="mobile-dropdown-item-link">Shop 4 Columns</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-page.html" class="mobile-dropdown-item-link">Product Description</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-page.html" class="mobile-dropdown-item-link">Product Reviews</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-page.html" class="mobile-dropdown-item-link">Product Specifications</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="inventory-bag.html" class="mobile-dropdown-item-link">Inventory Bag (Cart)</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="checkout.html" class="mobile-dropdown-item-link">Checkout Page</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="order-confirmation.html" class="mobile-dropdown-item-link">Order Confirmation</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="wishlist.html" class="mobile-dropdown-item-link">Wishlist</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
-
-                        <!-- MOBILE DROPDOWN ITEM -->
                         <li class="mobile-dropdown-item">
                             <a href="product-compare.html" class="mobile-dropdown-item-link">Product Compare</a>
                         </li>
-                        <!-- /MOBILE DROPDOWN ITEM -->
                     </ul>
-                    <!-- /MOBILE DROPDOWN -->
                 </li>
-                <!-- /MOBILE DROPDOWN ITEM -->
             </ul>
-            <!-- /MOBILE DROPDOWN -->
         </li>
-
-        <!-- MOBILE MENU ITEM -->
         <li class="mobile-menu-item2">
             <a href="#" class="mobile-menu-item2-link">Hubungi Kami</a>
         </li>
@@ -942,522 +533,285 @@
 
 <!-- INVENTORY BAG PREVIEW -->
 <div class="inventory-bag-preview">
-    <!-- INVENTORY CLOSE BUTTON -->
     <svg class="inventory-close-button cross-icon big">
         <use xlink:href="#svg-cross-big"></use>
     </svg>
-    <!-- /INVENTORY CLOSE BUTTON -->
     <p class="items-in-inventory"><span class="quantity">8</span> items in inventory</p>
     <div class="line-separator"></div>
-
-    <!-- INVENTORY ITEMS PREVIEW -->
     <div class="inventory-items-preview">
-        <!-- INVENTORY ITEM PREVIEW -->
         <div class="inventory-item-preview">
-            <!-- PRODUCT PREVIEW -->
             <div class="product-preview small">
-                <!-- PRODUCT PREVIEW IMG WRAP -->
                 <div class="product-preview-img-wrap">
-                    <!-- PRODUCT PREVIEW IMG -->
                     <a href="product-page.html">
                         <figure class="product-preview-img liquid">
                             <img src="img/products/01.jpg" alt="product-01">
                         </figure>
                     </a>
-                    <!-- /PRODUCT PREVIEW IMG -->
                 </div>
-                <!-- /PRODUCT PREVIEW IMG WRAP -->
-
-                <!-- REMOVE -->
                 <div class="bubble-ornament small red remove">
-                    <!-- CROSS ICON -->
                     <svg class="cross-cb-icon small">
                         <use xlink:href="#svg-cross-cb-small"></use>
                     </svg>
-                    <!-- /CROSS ICON -->
                 </div>
-                <!-- /REMOVE -->
-
-                <!-- TAG QUANTITY -->
                 <div class="tag-quantity">
                     <p class="tag-quantity-text">x <span class="value">2</span></p>
                 </div>
-                <!-- TAG QUANTITY -->
-
-                <!-- PRODUCT PREVIEW TITLE -->
                 <a href="product-page.html" class="product-preview-title">New Funtendo 3XSD - black</a>
-                <!-- PRODUCT PREVIEW INFO -->
                 <div class="product-preview-info">
-                    <!-- RATING ORNAMENT -->
                     <div class="rating-ornament small void yellow">
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
                     </div>
-                    <!-- /RATING ORNAMENT -->
                 </div>
-                <!-- /PRODUCT PREVIEW INFO -->
-
-                <!-- PRODUCT PRICE WRAP -->
                 <div class="product-price-wrap">
                     <p class="product-preview-price current"><span class="currency">$</span>199.00</p>
                 </div>
-                <!-- /PRODUCT PRICE WRAP -->
             </div>
-            <!-- /PRODUCT PREVIEW -->
         </div>
-        <!-- /INVENTORY ITEM PREVIEW -->
-
-        <!-- INVENTORY ITEM PREVIEW -->
         <div class="inventory-item-preview">
-            <!-- PRODUCT PREVIEW -->
             <div class="product-preview small">
-                <!-- PRODUCT PREVIEW IMG WRAP -->
                 <div class="product-preview-img-wrap">
-                    <!-- PRODUCT PREVIEW IMG -->
                     <a href="product-page.html">
                         <figure class="product-preview-img liquid">
                             <img src="img/products/06.jpg" alt="product-06">
                         </figure>
                     </a>
-                    <!-- /PRODUCT PREVIEW IMG -->
                 </div>
-                <!-- /PRODUCT PREVIEW IMG WRAP -->
-
-                <!-- REMOVE -->
                 <div class="bubble-ornament small red remove">
-                    <!-- CROSS ICON -->
                     <svg class="cross-cb-icon small">
                         <use xlink:href="#svg-cross-cb-small"></use>
                     </svg>
-                    <!-- /CROSS ICON -->
                 </div>
-                <!-- /REMOVE -->
-
-                <!-- TAG QUANTITY -->
                 <div class="tag-quantity">
                     <p class="tag-quantity-text">x <span class="value">1</span></p>
                 </div>
-                <!-- TAG QUANTITY -->
-
-                <!-- PRODUCT PREVIEW TITLE -->
                 <a href="product-page.html" class="product-preview-title">Crimson red joystick</a>
-                <!-- PRODUCT PREVIEW INFO -->
                 <div class="product-preview-info">
-                    <!-- RATING ORNAMENT -->
                     <div class="rating-ornament small void yellow">
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon empty">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon empty">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
                     </div>
-                    <!-- /RATING ORNAMENT -->
                 </div>
-                <!-- /PRODUCT PREVIEW INFO -->
-
-                <!-- PRODUCT PRICE WRAP -->
                 <div class="product-price-wrap">
                     <p class="product-preview-price current"><span class="currency">$</span>32.50</p>
                 </div>
-                <!-- /PRODUCT PRICE WRAP -->
             </div>
-            <!-- /PRODUCT PREVIEW -->
         </div>
-        <!-- /INVENTORY ITEM PREVIEW -->
-
-        <!-- INVENTORY ITEM PREVIEW -->
         <div class="inventory-item-preview">
-            <!-- PRODUCT PREVIEW -->
             <div class="product-preview small">
-                <!-- PRODUCT PREVIEW IMG WRAP -->
                 <div class="product-preview-img-wrap">
-                    <!-- PRODUCT PREVIEW IMG -->
                     <a href="product-page.html">
                         <figure class="product-preview-img liquid">
                             <img src="img/products/05.jpg" alt="product-05">
                         </figure>
                     </a>
-                    <!-- /PRODUCT PREVIEW IMG -->
                 </div>
-                <!-- /PRODUCT PREVIEW IMG WRAP -->
-
-                <!-- REMOVE -->
                 <div class="bubble-ornament small red remove">
-                    <!-- CROSS ICON -->
                     <svg class="cross-cb-icon small">
                         <use xlink:href="#svg-cross-cb-small"></use>
                     </svg>
-                    <!-- /CROSS ICON -->
                 </div>
-                <!-- /REMOVE -->
-
-                <!-- TAG QUANTITY -->
                 <div class="tag-quantity">
                     <p class="tag-quantity-text">x <span class="value">4</span></p>
                 </div>
-                <!-- TAG QUANTITY -->
-
-                <!-- PRODUCT PREVIEW TITLE -->
                 <a href="product-page.html" class="product-preview-title">Carbon black joystick</a>
-                <!-- PRODUCT PREVIEW INFO -->
                 <div class="product-preview-info">
-                    <!-- RATING ORNAMENT -->
                     <div class="rating-ornament small void yellow">
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon empty">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
                     </div>
-                    <!-- /RATING ORNAMENT -->
                 </div>
-                <!-- /PRODUCT PREVIEW INFO -->
-
-                <!-- PRODUCT PRICE WRAP -->
                 <div class="product-price-wrap">
                     <p class="product-preview-price current"><span class="currency">$</span>55.00</p>
                 </div>
-                <!-- /PRODUCT PRICE WRAP -->
             </div>
-            <!-- /PRODUCT PREVIEW -->
         </div>
-        <!-- /INVENTORY ITEM PREVIEW -->
-
-        <!-- INVENTORY ITEM PREVIEW -->
         <div class="inventory-item-preview">
-            <!-- PRODUCT PREVIEW -->
             <div class="product-preview small">
-                <!-- PRODUCT PREVIEW IMG WRAP -->
                 <div class="product-preview-img-wrap">
-                    <!-- PRODUCT PREVIEW IMG -->
                     <a href="product-page.html">
                         <figure class="product-preview-img liquid">
                             <img src="img/products/14.jpg" alt="product-14">
                         </figure>
                     </a>
-                    <!-- /PRODUCT PREVIEW IMG -->
                 </div>
-                <!-- /PRODUCT PREVIEW IMG WRAP -->
-
-                <!-- REMOVE -->
                 <div class="bubble-ornament small red remove">
-                    <!-- CROSS ICON -->
                     <svg class="cross-cb-icon small">
                         <use xlink:href="#svg-cross-cb-small"></use>
                     </svg>
-                    <!-- /CROSS ICON -->
                 </div>
-                <!-- /REMOVE -->
-
-                <!-- TAG QUANTITY -->
                 <div class="tag-quantity">
                     <p class="tag-quantity-text">x <span class="value">1</span></p>
                 </div>
-                <!-- TAG QUANTITY -->
-
-                <!-- PRODUCT PREVIEW TITLE -->
                 <a href="product-page.html" class="product-preview-title">Magimons black framed print</a>
-                <!-- PRODUCT PREVIEW INFO -->
                 <div class="product-preview-info">
-                    <!-- RATING ORNAMENT -->
                     <div class="rating-ornament small void yellow">
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
-
-                        <!-- RATING ORNAMENT ITEM -->
                         <div class="rating-ornament-item">
-                            <!-- RATING ORNAMENT ICON -->
                             <svg class="rating-ornament-icon">
                                 <use xlink:href="#svg-star"></use>
                             </svg>
                         </div>
-                        <!-- /RATING ORNAMENT ITEM -->
                     </div>
-                    <!-- /RATING ORNAMENT -->
                 </div>
-                <!-- /PRODUCT PREVIEW INFO -->
-
-                <!-- PRODUCT PRICE WRAP -->
                 <div class="product-price-wrap">
                     <p class="product-preview-price current"><span class="currency">$</span>20.00</p>
                 </div>
-                <!-- /PRODUCT PRICE WRAP -->
             </div>
-            <!-- /PRODUCT PREVIEW -->
         </div>
-        <!-- /INVENTORY ITEM PREVIEW -->
-
-        <!-- INVENTORY ITEM PREVIEW -->
         <div class="inventory-item-preview empty">
-            <!-- INVENTORY ICON -->
             <svg class="inventory-icon">
                 <use xlink:href="#svg-inventory-light"></use>
             </svg>
-            <!-- /INVENTORY ICON -->
         </div>
-        <!-- /INVENTORY ITEM PREVIEW -->
-
-        <!-- INVENTORY ITEM PREVIEW -->
         <div class="inventory-item-preview empty">
-            <!-- INVENTORY ICON -->
             <svg class="inventory-icon">
                 <use xlink:href="#svg-inventory-light"></use>
             </svg>
-            <!-- /INVENTORY ICON -->
         </div>
-        <!-- /INVENTORY ITEM PREVIEW -->
-
-        <!-- INVENTORY ITEM PREVIEW -->
         <div class="inventory-item-preview empty">
-            <!-- INVENTORY ICON -->
             <svg class="inventory-icon">
                 <use xlink:href="#svg-inventory-light"></use>
             </svg>
-            <!-- /INVENTORY ICON -->
         </div>
-        <!-- /INVENTORY ITEM PREVIEW -->
-
-        <!-- INVENTORY ITEM PREVIEW -->
         <div class="inventory-item-preview empty">
-            <!-- INVENTORY ICON -->
             <svg class="inventory-icon">
                 <use xlink:href="#svg-inventory-light"></use>
             </svg>
-            <!-- /INVENTORY ICON -->
         </div>
-        <!-- /INVENTORY ITEM PREVIEW -->
-
-        <!-- INVENTORY ITEM PREVIEW -->
         <div class="inventory-item-preview empty">
-            <!-- INVENTORY ICON -->
             <svg class="inventory-icon">
                 <use xlink:href="#svg-inventory-light"></use>
             </svg>
-            <!-- /INVENTORY ICON -->
         </div>
-        <!-- /INVENTORY ITEM PREVIEW -->
-
-        <!-- INVENTORY ITEM PREVIEW -->
         <div class="inventory-item-preview empty">
-            <!-- INVENTORY ICON -->
             <svg class="inventory-icon">
                 <use xlink:href="#svg-inventory-light"></use>
             </svg>
-            <!-- /INVENTORY ICON -->
         </div>
-        <!-- /INVENTORY ITEM PREVIEW -->
-
-        <!-- INVENTORY ITEM PREVIEW -->
         <div class="inventory-item-preview empty">
-            <!-- INVENTORY ICON -->
             <svg class="inventory-icon">
                 <use xlink:href="#svg-inventory-light"></use>
             </svg>
-            <!-- /INVENTORY ICON -->
         </div>
-        <!-- /INVENTORY ITEM PREVIEW -->
-
-        <!-- INVENTORY ITEM PREVIEW -->
         <div class="inventory-item-preview empty">
-            <!-- INVENTORY ICON -->
             <svg class="inventory-icon">
                 <use xlink:href="#svg-inventory-light"></use>
             </svg>
-            <!-- /INVENTORY ICON -->
         </div>
-        <!-- /INVENTORY ITEM PREVIEW -->
     </div>
-    <!-- /INVENTORY ITEMS PREVIEW -->
-
     <div class="line-separator"></div>
     <p class="inventory-subtotal"><span class="subtotal-text">Inventory subtotal:</span> <span
             class="subtotal-value"><span class="currency">$</span><span class="value">670.50</span></span></p>
     <div class="line-separator"></div>
-    <!-- INVENTORY ACTIONS -->
     <div class="inventory-actions">
         <a href="inventory-bag.html" class="button full blue">Go to the inventory bag</a>
         <a href="checkout.html" class="button full violet">Proceed to checkout</a>
     </div>
-    <!-- /INVENTORY ACTIONS -->
 </div>
 
 <!-- NAVIGATION WRAP -->
 <nav class="navigation-wrap">
-    <!-- NAVIGATION -->
     <div class="navigation">
-        <!-- LOGO -->
         <div class="logo">
-            <!-- MOBILE MENU PULL -->
             <div class="mobile-menu-pull mobile-menu-open">
-                <!-- MENU PULL ICON -->
                 <svg class="menu-pull-icon">
                     <use xlink:href="#svg-menu-pull"></use>
                 </svg>
-                <!-- /MENU PULL ICON -->
             </div>
-            <!-- /MOBILE MENU PULL -->
-            <!-- LOGO IMG -->
             <figure class="logo-img">
                 <img src="{{ asset('/frontend/assets/img/brand/logoputihvv.png')}}" alt="Logo">
             </figure>
-            <!-- /LOGO IMG -->
         </div>
-        <!-- MAIN MENU -->
         <ul class="main-menu">
-            <!-- MAIN MENU ITEM -->
             <li class="main-menu-item">
                 <a href="index.html" class="main-menu-item-link">
                     <i class="fas fa-play fa-2x"></i>
@@ -1466,9 +820,6 @@
                     </p>
                 </a>
             </li>
-            <!-- /MAIN MENU ITEM -->
-
-            <!-- MAIN MENU ITEM -->
             <li class="main-menu-item">
                 <a href="index.html" class="main-menu-item-link">
                     <i class="fas fa-tv fa-2x"></i>
@@ -1477,9 +828,6 @@
                     </p>
                 </a>
             </li>
-            <!-- /MAIN MENU ITEM -->
-
-            <!-- MAIN MENU ITEM -->
             <li class="main-menu-item">
                 <a href="index.html" class="main-menu-item-link">
                     <i class="fas fa-palette fa-2x"></i>
@@ -1488,493 +836,254 @@
                     </p>
                 </a>
             </li>
-            <!-- /MAIN MENU ITEM -->
-
-            <!-- MAIN MENU ITEM -->
             <li class="main-menu-item">
                 <a href="esports-home.html" class="main-menu-item-link">
                     <i class="fas fa-gamepad fa-2x"></i>
                     <p>
                         e-Sports
-                        <!-- SVG ARROW -->
                         <svg class="arrow-icon">
                             <use xlink:href="#svg-arrow"></use>
                         </svg>
-                        <!-- /SVG ARROW -->
                     </p>
                 </a>
 
                 <!-- SUBMENU -->
                 <ul class="submenu">
-                    <!-- SUBMENU ITEM -->
                     <li class="submenu-item grid-limit">
-                        <!-- LINK SECTIONS WRAP -->
                         <div class="link-sections-wrap">
-                            <!-- LINK SECTIONS -->
                             <div class="link-sections">
-                                <!-- LINK SECTION -->
                                 <div class="link-section">
-                                    <!-- SECTION TITLE WRAP -->
                                     <div class="section-title-wrap violet">
                                         <h2 class="section-title small">Main Pages</h2>
                                         <div class="section-title-separator"></div>
                                     </div>
-                                    <!-- /SECTION TITLE WRAP -->
-
-                                    <!-- LINK LIST -->
                                     <ul class="link-list medium">
-                                        <!-- LINK LIST ITEM -->
                                         <li class="link-list-item">
                                             <a href="esports-home.html">eSports Home</a>
                                         </li>
-                                        <!-- /LINK LIST ITEM -->
-
-                                        <!-- LINK LIST ITEM -->
                                         <li class="link-list-item">
                                             <a href="esports-news.html">eSports News</a>
                                         </li>
-                                        <!-- /LINK LIST ITEM -->
-
-                                        <!-- LINK LIST ITEM -->
                                         <li class="link-list-item">
                                             <a href="esports-post.html">eSports Post Page</a>
                                         </li>
-                                        <!-- /LINK LIST ITEM -->
-
-                                        <!-- LINK LIST ITEM -->
                                         <li class="link-list-item">
                                             <a href="esports-tournament.html">Tournament Page</a>
                                         </li>
-                                        <!-- /LINK LIST ITEM -->
                                     </ul>
-                                    <!-- /LINK LIST -->
                                 </div>
-                                <!-- /LINK SECTION -->
-
-                                <!-- LINK SECTION -->
                                 <div class="link-section">
-                                    <!-- SECTION TITLE WRAP -->
                                     <div class="section-title-wrap violet">
                                         <h2 class="section-title small">Match Overviews</h2>
                                         <div class="section-title-separator"></div>
                                     </div>
-                                    <!-- /SECTION TITLE WRAP -->
-
-                                    <!-- LINK LIST -->
                                     <ul class="link-list medium">
-                                        <!-- LINK LIST ITEM -->
                                         <li class="link-list-item">
                                             <a href="esports-match-overview-v1.html">Match Overview V1</a>
                                         </li>
-                                        <!-- /LINK LIST ITEM -->
-
-                                        <!-- LINK LIST ITEM -->
                                         <li class="link-list-item">
                                             <a href="esports-match-overview-v2.html">Match Overview V2</a>
                                         </li>
-                                        <!-- /LINK LIST ITEM -->
-
-                                        <!-- LINK LIST ITEM -->
                                         <li class="link-list-item">
                                             <a href="esports-match-overview-v3.html">Match Overview V3</a>
                                         </li>
-                                        <!-- /LINK LIST ITEM -->
-
-                                        <!-- LINK LIST ITEM -->
                                         <li class="link-list-item">
                                             <a href="esports-match-overview-v4.html">Match Overview V4</a>
                                         </li>
-                                        <!-- /LINK LIST ITEM -->
                                     </ul>
-                                    <!-- /LINK LIST -->
                                 </div>
-                                <!-- /LINK SECTION -->
-
-                                <!-- LINK SECTION -->
                                 <div class="link-section">
-                                    <!-- SECTION TITLE WRAP -->
                                     <div class="section-title-wrap violet">
                                         <h2 class="section-title small">Teams &amp; Players</h2>
                                         <div class="section-title-separator"></div>
                                     </div>
-                                    <!-- /SECTION TITLE WRAP -->
-
-                                    <!-- LINK LIST -->
                                     <ul class="link-list medium">
-                                        <!-- LINK LIST ITEM -->
                                         <li class="link-list-item">
                                             <a href="esports-team.html">eSports Team Page</a>
                                         </li>
-                                        <!-- /LINK LIST ITEM -->
-
-                                        <!-- LINK LIST ITEM -->
                                         <li class="link-list-item">
                                             <a href="esports-player.html">eSports Player Page</a>
                                         </li>
-                                        <!-- /LINK LIST ITEM -->
-
-                                        <!-- LINK LIST ITEM -->
                                         <li class="link-list-item">
                                             <a href="esports-streamers.html">Streamers Page</a>
                                         </li>
-                                        <!-- /LINK LIST ITEM -->
-
-                                        <!-- LINK LIST ITEM -->
                                         <li class="link-list-item">
                                             <a href="esports-calendar.html">Scores with Calendar</a>
                                         </li>
-                                        <!-- /LINK LIST ITEM -->
                                     </ul>
-                                    <!-- /LINK LIST -->
                                 </div>
-                                <!-- /LINK SECTION -->
                             </div>
-                            <!-- /LINK SECTIONS -->
-
-                            <!-- LINK SECTIONS -->
                             <div class="link-sections">
-                                <!-- LINK SECTION -->
                                 <div class="link-section">
-                                    <!-- SECTION TITLE WRAP -->
                                     <div class="section-title-wrap violet">
                                         <h2 class="section-title small">Esports Widgets</h2>
                                         <div class="section-title-separator"></div>
                                     </div>
-                                    <!-- /SECTION TITLE WRAP -->
-
-                                    <!-- LINK LIST -->
                                     <ul class="link-list medium">
-                                        <!-- LINK LIST ITEM -->
                                         <li class="link-list-item">
                                             <a href="esports-widgets-v1.html">Widgets Page 01</a>
                                         </li>
-                                        <!-- /LINK LIST ITEM -->
                                     </ul>
-                                    <!-- /LINK LIST -->
-
-                                    <!-- LINK LIST -->
                                     <ul class="link-list medium">
-                                        <!-- LINK LIST ITEM -->
                                         <li class="link-list-item">
                                             <a href="esports-widgets-v2.html">Widgets Page 02</a>
                                         </li>
-                                        <!-- /LINK LIST ITEM -->
                                     </ul>
-                                    <!-- /LINK LIST -->
-
-                                    <!-- LINK LIST -->
                                     <ul class="link-list medium">
-                                        <!-- LINK LIST ITEM -->
                                         <li class="link-list-item">
                                             <a href="esports-widgets-v3.html">Widgets Page 03</a>
                                         </li>
-                                        <!-- /LINK LIST ITEM -->
                                     </ul>
-                                    <!-- /LINK LIST -->
                                 </div>
-                                <!-- /LINK SECTION -->
                             </div>
-                            <!-- /LINK SECTIONS -->
-
-                            <!-- LINK SECTIONS -->
                             <div class="link-sections">
-                                <!-- LINK SECTION -->
                                 <div class="link-section full">
-                                    <!-- SECTION TITLE WRAP -->
                                     <div class="section-title-wrap violet">
                                         <h2 class="section-title small">Pixel Streamers</h2>
                                         <div class="section-title-separator"></div>
                                     </div>
-                                    <!-- /SECTION TITLE WRAP -->
-
-                                    <!-- STREAMER AVATARS -->
                                     <div class="streamer-avatars">
-                                        <!-- STREAMER AVATAR -->
                                         <div class="streamer-avatar">
                                             <a href="esports-streamers.html">
-                                                <!-- PP HEXAGON -->
                                                 <div class="pp-hexagon">
-                                                    <!-- HEXAGON ICON -->
                                                     <svg class="hexagon-icon hexagon-border">
                                                         <use xlink:href="#svg-hexagon"></use>
                                                     </svg>
-                                                    <!-- /HEXAGON ICON -->
-
-                                                    <!-- HEXAGON ICON -->
                                                     <svg class="hexagon-icon hexagon-fill">
                                                         <use xlink:href="#svg-hexagon"></use>
                                                     </svg>
-                                                    <!-- /HEXAGON ICON -->
                                                 </div>
-                                                <!-- /PP HEXAGON -->
-
-                                                <!-- STREAMER AVATAR IMG WRAP -->
                                                 <div class="streamer-avatar-img-wrap">
-                                                    <!-- STREAMER AVATAR IMG -->
                                                     <img class="streamer-avatar-img"
                                                         src="assets/img/streamers/streamer-hex-01.png"
                                                         alt="st-avatar-01">
                                                 </div>
-                                                <!-- /STREAMER AVATAR IMG WRAP -->
                                             </a>
                                         </div>
-                                        <!-- /STREAMER AVATAR -->
-
-                                        <!-- STREAMER AVATAR -->
                                         <div class="streamer-avatar">
                                             <a href="esports-streamers.html">
-                                                <!-- PP HEXAGON -->
                                                 <div class="pp-hexagon">
-                                                    <!-- HEXAGON ICON -->
                                                     <svg class="hexagon-icon hexagon-border">
                                                         <use xlink:href="#svg-hexagon"></use>
                                                     </svg>
-                                                    <!-- /HEXAGON ICON -->
-
-                                                    <!-- HEXAGON ICON -->
                                                     <svg class="hexagon-icon hexagon-fill">
                                                         <use xlink:href="#svg-hexagon"></use>
                                                     </svg>
-                                                    <!-- /HEXAGON ICON -->
                                                 </div>
-                                                <!-- /PP HEXAGON -->
-
-                                                <!-- STREAMER AVATAR IMG WRAP -->
                                                 <div class="streamer-avatar-img-wrap">
-                                                    <!-- STREAMER AVATAR IMG -->
                                                     <img class="streamer-avatar-img"
                                                         src="assets/img/streamers/streamer-hex-02.png"
                                                         alt="st-avatar-02">
                                                 </div>
-                                                <!-- /STREAMER AVATAR IMG WRAP -->
                                             </a>
                                         </div>
-                                        <!-- /STREAMER AVATAR -->
-
-                                        <!-- STREAMER AVATAR -->
                                         <div class="streamer-avatar">
                                             <a href="esports-streamers.html">
-                                                <!-- PP HEXAGON -->
                                                 <div class="pp-hexagon">
-                                                    <!-- HEXAGON ICON -->
                                                     <svg class="hexagon-icon hexagon-border">
                                                         <use xlink:href="#svg-hexagon"></use>
                                                     </svg>
-                                                    <!-- /HEXAGON ICON -->
-
-                                                    <!-- HEXAGON ICON -->
                                                     <svg class="hexagon-icon hexagon-fill">
                                                         <use xlink:href="#svg-hexagon"></use>
                                                     </svg>
-                                                    <!-- /HEXAGON ICON -->
                                                 </div>
-                                                <!-- /PP HEXAGON -->
-
-                                                <!-- STREAMER AVATAR IMG WRAP -->
                                                 <div class="streamer-avatar-img-wrap">
-                                                    <!-- STREAMER AVATAR IMG -->
                                                     <img class="streamer-avatar-img"
                                                         src="assets/img/streamers/streamer-hex-03.png"
                                                         alt="st-avatar-03">
                                                 </div>
-                                                <!-- /STREAMER AVATAR IMG WRAP -->
                                             </a>
                                         </div>
-                                        <!-- /STREAMER AVATAR -->
-
-                                        <!-- STREAMER AVATAR -->
                                         <div class="streamer-avatar">
                                             <a href="esports-streamers.html">
-                                                <!-- PP HEXAGON -->
                                                 <div class="pp-hexagon">
-                                                    <!-- HEXAGON ICON -->
                                                     <svg class="hexagon-icon hexagon-border">
                                                         <use xlink:href="#svg-hexagon"></use>
                                                     </svg>
-                                                    <!-- /HEXAGON ICON -->
-
-                                                    <!-- HEXAGON ICON -->
                                                     <svg class="hexagon-icon hexagon-fill">
                                                         <use xlink:href="#svg-hexagon"></use>
                                                     </svg>
-                                                    <!-- /HEXAGON ICON -->
                                                 </div>
-                                                <!-- /PP HEXAGON -->
-
-                                                <!-- STREAMER AVATAR IMG WRAP -->
                                                 <div class="streamer-avatar-img-wrap">
-                                                    <!-- STREAMER AVATAR IMG -->
                                                     <img class="streamer-avatar-img"
                                                         src="assets/img/streamers/streamer-hex-04.png"
                                                         alt="st-avatar-04">
                                                 </div>
-                                                <!-- /STREAMER AVATAR IMG WRAP -->
                                             </a>
                                         </div>
-                                        <!-- /STREAMER AVATAR -->
-
-                                        <!-- STREAMER AVATAR -->
                                         <div class="streamer-avatar">
                                             <a href="esports-streamers.html">
-                                                <!-- PP HEXAGON -->
                                                 <div class="pp-hexagon">
-                                                    <!-- HEXAGON ICON -->
                                                     <svg class="hexagon-icon hexagon-border">
                                                         <use xlink:href="#svg-hexagon"></use>
                                                     </svg>
-                                                    <!-- /HEXAGON ICON -->
-
-                                                    <!-- HEXAGON ICON -->
                                                     <svg class="hexagon-icon hexagon-fill">
                                                         <use xlink:href="#svg-hexagon"></use>
                                                     </svg>
-                                                    <!-- /HEXAGON ICON -->
                                                 </div>
-                                                <!-- /PP HEXAGON -->
-
-                                                <!-- STREAMER AVATAR IMG WRAP -->
                                                 <div class="streamer-avatar-img-wrap">
-                                                    <!-- STREAMER AVATAR IMG -->
                                                     <img class="streamer-avatar-img"
                                                         src="assets/img/streamers/streamer-hex-05.png"
                                                         alt="st-avatar-05">
                                                 </div>
-                                                <!-- /STREAMER AVATAR IMG WRAP -->
                                             </a>
                                         </div>
-                                        <!-- /STREAMER AVATAR -->
                                     </div>
-                                    <!-- /STREAMER AVATARS -->
                                 </div>
-                                <!-- /LINK SECTION -->
                             </div>
-                            <!-- /LINK SECTIONS -->
                         </div>
-                        <!-- /LINK SECTIONS WRAP -->
-
-                        <!-- LINK SECTIONS WRAP -->
                         <div class="link-sections-wrap">
-                            <!-- LINK SECTIONS -->
                             <div class="link-sections">
-                                <!-- LINK SECTION -->
                                 <div class="link-section">
-                                    <!-- SECTION TITLE WRAP -->
                                     <div class="section-title-wrap violet">
                                         <h2 class="section-title small">Featured Match</h2>
                                         <div class="section-title-separator"></div>
                                     </div>
-                                    <!-- /SECTION TITLE WRAP -->
-
-                                    <!-- WIDGET MATCH BOX -->
                                     <div class="widget-match-box">
-                                        <!-- WIDGET TITLE WRAP -->
                                         <div class="widget-title-wrap">
                                             <h6 class="widget-title">Xenowatch league finals</h6>
                                             <p class="widget-text">August 28th, 2018</p>
                                         </div>
-                                        <!-- /WIDGET TITLE WRAP -->
-
-                                        <!-- WIDGET TEAM VS -->
                                         <div class="widget-team-vs">
-                                            <!-- WIDGET TEAM VS ITEM -->
                                             <div class="widget-team-vs-item">
-                                                <!-- TEAM INFO WRAP -->
                                                 <div class="team-info-wrap medium">
-                                                    <!-- TEAM LOGO -->
                                                     <img class="team-logo" src="assets/img/teams/logos/01.png"
                                                         alt="logo-01">
-                                                    <!-- /TEAM LOGO -->
-
-                                                    <!-- TEAM INFO -->
                                                     <div class="team-info">
-                                                        <!-- TEAM NAME -->
                                                         <p class="team-name">The Lone Wolves</p>
-                                                        <!-- /TEAM NAME -->
-
-                                                        <!-- TEAM COUNTRY -->
                                                         <p class="team-country">United States</p>
-                                                        <!-- /TEAM COUNTRY -->
                                                     </div>
-                                                    <!-- /TEAM INFO -->
                                                 </div>
-                                                <!-- /TEAM INFO WRAP -->
-
-                                                <!-- TEAM SCORE -->
                                                 <p class="team-score">12</p>
-                                                <!-- /TEAM SCORE -->
                                             </div>
-                                            <!-- /WIDGET TEAM VS ITEM -->
-
-                                            <!-- WIDGET TEAM VS ITEM -->
                                             <div class="widget-team-vs-item">
-                                                <!-- TEAM INFO WRAP -->
                                                 <div class="team-info-wrap medium">
-                                                    <!-- TEAM LOGO -->
                                                     <img class="team-logo" src="assets/img/teams/logos/02.png"
                                                         alt="logo-02">
-                                                    <!-- /TEAM LOGO -->
-
-                                                    <!-- TEAM INFO -->
                                                     <div class="team-info">
-                                                        <!-- TEAM NAME -->
                                                         <p class="team-name">Raging Rhinos</p>
-                                                        <!-- /TEAM NAME -->
-
-                                                        <!-- TEAM COUNTRY -->
                                                         <p class="team-country">South Africa</p>
-                                                        <!-- /TEAM COUNTRY -->
                                                     </div>
-                                                    <!-- /TEAM INFO -->
                                                 </div>
-                                                <!-- /TEAM INFO WRAP -->
-
-                                                <!-- TEAM SCORE -->
                                                 <p class="team-score">10</p>
-                                                <!-- /TEAM SCORE -->
                                             </div>
-                                            <!-- /WIDGET TEAM VS ITEM -->
                                         </div>
-                                        <!-- /WIDGET TEAM VS -->
                                     </div>
-                                    <!-- /WIDGET MATCH BOX -->
-
-                                    <!-- WIDGET MATCH BOX -->
                                     <div class="widget-match-box">
-                                        <!-- WIDGET TITLE WRAP -->
                                         <div class="widget-title-wrap">
-                                            <!-- WIDGET TITLE -->
                                             <h6 class="widget-title">Match Stats</h6>
-                                            <!-- /WIDGET TITLE -->
-
-                                            <!-- STATS REFERENCE -->
                                             <div class="stats-reference">
-                                                <!-- STAT REFERENCE -->
                                                 <div class="stat-reference blue">
-                                                    <!-- STAT REFERENCE TEXT -->
                                                     <p class="stat-reference-text">TLW</p>
-                                                    <!-- /STAT REFERENCE TEXT -->
                                                 </div>
-                                                <!-- /STAT REFERENCE -->
-
-                                                <!-- STAT REFERENCE -->
                                                 <div class="stat-reference yellow">
-                                                    <!-- STAT REFERENCE TEXT -->
                                                     <p class="stat-reference-text">RRH</p>
-                                                    <!-- /STAT REFERENCE TEXT -->
                                                 </div>
-                                                <!-- /STAT REFERENCE -->
                                             </div>
-                                            <!-- /STATS REFERENCE -->
                                         </div>
-                                        <!-- /WIDGET TITLE WRAP -->
-
-                                        <!-- WIDGET TEAM STATS -->
                                         <div class="widget-team-stats">
-                                            <!-- PROGRESS STAT WRAP -->
                                             <div class="progress-stat-wrap">
-                                                <!-- BAR PROGRESS INFO -->
                                                 <p class="bar-progress-info">Total Kills</p>
-                                                <!-- PROGRESS BAR WRAP -->
                                                 <div id="mn-pg-1" class="progress-bar-wrap">
                                                     <div class="bar-progress-wrap left">
                                                         <p id="tlw-kills-stat" class="bar-progress-text"></p>
@@ -1983,15 +1092,9 @@
                                                         <p id="rrh-kills-stat" class="bar-progress-text"></p>
                                                     </div>
                                                 </div>
-                                                <!-- /PROGRESS BAR WRAP -->
                                             </div>
-                                            <!-- /PROGRESS STAT WRAP -->
-
-                                            <!-- PROGRESS STAT WRAP -->
                                             <div class="progress-stat-wrap">
-                                                <!-- BAR PROGRESS INFO -->
                                                 <p class="bar-progress-info">Total Deaths</p>
-                                                <!-- PROGRESS BAR WRAP -->
                                                 <div id="mn-pg-2" class="progress-bar-wrap">
                                                     <div class="bar-progress-wrap left">
                                                         <p id="tlw-deaths-stat" class="bar-progress-text"></p>
@@ -2000,15 +1103,9 @@
                                                         <p id="rrh-deaths-stat" class="bar-progress-text"></p>
                                                     </div>
                                                 </div>
-                                                <!-- /PROGRESS BAR WRAP -->
                                             </div>
-                                            <!-- /PROGRESS STAT WRAP -->
-
-                                            <!-- PROGRESS STAT WRAP -->
                                             <div class="progress-stat-wrap">
-                                                <!-- BAR PROGRESS INFO -->
                                                 <p class="bar-progress-info">Total Assists</p>
-                                                <!-- PROGRESS BAR WRAP -->
                                                 <div id="mn-pg-3" class="progress-bar-wrap">
                                                     <div class="bar-progress-wrap left">
                                                         <p id="tlw-assists-stat" class="bar-progress-text"></p>
@@ -2017,192 +1114,114 @@
                                                         <p id="rrh-assists-stat" class="bar-progress-text"></p>
                                                     </div>
                                                 </div>
-                                                <!-- /PROGRESS BAR WRAP -->
                                             </div>
-                                            <!-- /PROGRESS STAT WRAP -->
                                         </div>
-                                        <!-- /WIDGET TEAM STATS -->
                                     </div>
-                                    <!-- /WIDGET MATCH BOX -->
                                 </div>
-                                <!-- /LINK SECTION -->
                             </div>
-                            <!-- /LINK SECTIONS -->
                         </div>
-                        <!-- /LINK SECTIONS WRAP -->
-
-                        <!-- LINK SECTIONS WRAP -->
                         <div class="link-sections-wrap">
-                            <!-- LINK SECTIONS -->
                             <div class="link-sections">
-                                <!-- LINK SECTION -->
                                 <div class="link-section">
-                                    <!-- SECTION TITLE WRAP -->
                                     <div class="section-title-wrap violet">
                                         <h2 class="section-title small">Featured Articles</h2>
                                         <div class="section-title-separator"></div>
                                     </div>
-                                    <!-- /SECTION TITLE WRAP -->
-
-                                    <!-- POST PREVIEW SHOWCASE -->
                                     <div class="post-preview-showcase grid-1col gutter-small">
-                                        <!-- POST PREVIEW -->
                                         <div class="post-preview tiny e-sport">
-                                            <!-- POST PREVIEW IMG WRAP -->
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">
-                                                    <!-- POST PREVIEW IMG -->
                                                     <figure class="post-preview-img liquid">
                                                         <img src="assets/img/posts/36.jpg" alt="post-36">
                                                     </figure>
-                                                    <!-- /POST PREVIEW IMG -->
                                                 </div>
                                             </a>
-                                            <!-- /POST PREVIEW IMG WRAP -->
-
-                                            <!-- POST PREVIEW TITLE -->
                                             <a href="esports-post.html" class="post-preview-title">Gwen Parker is
                                                 leading her team to the semifinals</a>
-                                            <!-- POST AUTHOR INFO -->
                                             <div class="post-author-info-wrap">
                                                 <p class="post-author-info small light">By <a
                                                         href="search-results.html"
                                                         class="post-author">Dexter</a><span
                                                         class="separator">|</span>Dec 15th, 2018</p>
                                             </div>
-                                            <!-- /POST AUTHOR INFO -->
                                         </div>
-                                        <!-- /POST PREVIEW -->
-
-                                        <!-- POST PREVIEW -->
                                         <div class="post-preview tiny e-sport">
-                                            <!-- POST PREVIEW IMG WRAP -->
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">
-                                                    <!-- POST PREVIEW IMG -->
                                                     <figure class="post-preview-img liquid">
                                                         <img src="assets/img/posts/38.jpg" alt="post-38">
                                                     </figure>
-                                                    <!-- /POST PREVIEW IMG -->
                                                 </div>
                                             </a>
-                                            <!-- /POST PREVIEW IMG WRAP -->
-
-                                            <!-- POST PREVIEW TITLE -->
                                             <a href="esports-post.html" class="post-preview-title">Pro Soccer 2018
                                                 world
                                                 league kicked off today!</a>
-                                            <!-- POST AUTHOR INFO -->
                                             <div class="post-author-info-wrap">
                                                 <p class="post-author-info small light">By <a
                                                         href="search-results.html" class="post-author">Faye
                                                         V.</a><span class="separator">|</span>Dec 15th, 2018</p>
                                             </div>
-                                            <!-- /POST AUTHOR INFO -->
                                         </div>
-                                        <!-- /POST PREVIEW -->
-
-                                        <!-- POST PREVIEW -->
                                         <div class="post-preview tiny e-sport">
-                                            <!-- POST PREVIEW IMG WRAP -->
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">
-                                                    <!-- POST PREVIEW IMG -->
                                                     <figure class="post-preview-img liquid">
                                                         <img src="assets/img/posts/37.jpg" alt="post-37">
                                                     </figure>
-                                                    <!-- /POST PREVIEW IMG -->
                                                 </div>
                                             </a>
-                                            <!-- /POST PREVIEW IMG WRAP -->
-
-                                            <!-- POST PREVIEW TITLE -->
                                             <a href="esports-post.html" class="post-preview-title">Last night the
                                                 wolves
                                                 beat the rhinos 12-10</a>
-                                            <!-- POST AUTHOR INFO -->
                                             <div class="post-author-info-wrap">
                                                 <p class="post-author-info small light">By <a
                                                         href="search-results.html" class="post-author">Faye
                                                         V.</a><span class="separator">|</span>Dec 15th, 2018</p>
                                             </div>
-                                            <!-- /POST AUTHOR INFO -->
                                         </div>
-                                        <!-- /POST PREVIEW -->
-
-                                        <!-- POST PREVIEW -->
                                         <div class="post-preview tiny e-sport">
-                                            <!-- POST PREVIEW IMG WRAP -->
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">
-                                                    <!-- POST PREVIEW IMG -->
                                                     <figure class="post-preview-img liquid">
                                                         <img src="assets/img/posts/39.jpg" alt="post-39">
                                                     </figure>
-                                                    <!-- /POST PREVIEW IMG -->
                                                 </div>
                                             </a>
-                                            <!-- /POST PREVIEW IMG WRAP -->
-
-                                            <!-- POST PREVIEW TITLE -->
                                             <a href="esports-post.html" class="post-preview-title">We had an
                                                 interview
                                                 with the great Emily Danniels</a>
-                                            <!-- POST AUTHOR INFO -->
                                             <div class="post-author-info-wrap">
                                                 <p class="post-author-info small light">By <a
                                                         href="search-results.html"
                                                         class="post-author">Vellatrix</a><span
                                                         class="separator">|</span>Dec 15th, 2018</p>
                                             </div>
-                                            <!-- /POST AUTHOR INFO -->
                                         </div>
-                                        <!-- /POST PREVIEW -->
-
-                                        <!-- POST PREVIEW -->
                                         <div class="post-preview tiny e-sport">
-                                            <!-- POST PREVIEW IMG WRAP -->
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">
-                                                    <!-- POST PREVIEW IMG -->
                                                     <figure class="post-preview-img liquid">
                                                         <img src="assets/img/posts/40.jpg" alt="post-40">
                                                     </figure>
-                                                    <!-- /POST PREVIEW IMG -->
                                                 </div>
                                             </a>
-                                            <!-- /POST PREVIEW IMG WRAP -->
-
-                                            <!-- POST PREVIEW TITLE -->
                                             <a href="esports-post.html" class="post-preview-title">The Siberian
                                                 Tigers
                                                 arrived at New York for the finals</a>
-                                            <!-- POST AUTHOR INFO -->
                                             <div class="post-author-info-wrap">
                                                 <p class="post-author-info small light">By <a
                                                         href="search-results.html"
                                                         class="post-author">Vellatrix</a><span
                                                         class="separator">|</span>Dec 15th, 2018</p>
                                             </div>
-                                            <!-- /POST AUTHOR INFO -->
                                         </div>
-                                        <!-- /POST PREVIEW -->
                                     </div>
-                                    <!-- /POST PREVIEW SHOWCASE -->
                                 </div>
-                                <!-- /LINK SECTION -->
                             </div>
-                            <!-- /LINK SECTIONS -->
                         </div>
-                        <!-- /LINK SECTIONS WRAP -->
                     </li>
-                    <!-- /SUBMENU ITEM -->
                 </ul>
-                <!-- /SUBMENU -->
             </li>
-            <!-- /MAIN MENU ITEM -->
-
-            <!-- MAIN MENU ITEM -->
             <li class="main-menu-item">
                 <a href="news-v1.html" class="main-menu-item-link">
                     <i class="fas fa-video fa-2x"></i>
@@ -2211,9 +1230,6 @@
                     </p>
                 </a>
             </li>
-            <!-- /MAIN MENU ITEM -->
-
-            <!-- MAIN MENU ITEM -->
             <li class="main-menu-item">
                 <a href="news-v2.html" class="main-menu-item-link">
                     <i class="fas fa-database fa-2x"></i>
@@ -2222,9 +1238,6 @@
                     </p>
                 </a>
             </li>
-            <!-- /MAIN MENU ITEM -->
-
-            <!-- MAIN MENU ITEM -->
             <li class="main-menu-item">
                 <a href="index.html" class="main-menu-item-link">
                     <i class="fas fa-mobile fa-2x"></i>
@@ -2233,9 +1246,6 @@
                     </p>
                 </a>
             </li>
-            <!-- /MAIN MENU ITEM -->
-
-            <!-- MAIN MENU ITEM -->
             <li class="main-menu-item">
                 <a href="index.html" class="main-menu-item-link">
                     <i class="fas fa-comment-alt fa-2x"></i>
@@ -2244,1362 +1254,1229 @@
                     </p>
                 </a>
             </li>
-            <!-- /MAIN MENU ITEM -->
-            <!-- MAIN MENU ITEM -->
             <li class="main-menu-item">
                 <a href="shop-v1-grid.html" class="main-menu-item-link">
                     <i class="fas fa-shopping-bag fa-2x"></i>
                     <p>
                         Shop
-                        <!-- SVG ARROW -->
                         <svg class="arrow-icon">
                             <use xlink:href="#svg-arrow"></use>
                         </svg>
-                        <!-- /SVG ARROW -->
                     </p>
                 </a>
-
-                <!-- SUBMENU -->
                 <ul class="submenu void">
-                    <!-- SUBMENU ITEM -->
                     <li class="submenu-item v2">
-                        <!-- SUBMENU ITEM SLIDER -->
                         <div id="submenu-slider-1" class="submenu-slider">
-                            <!-- DROPDOWN LIST -->
                             <ul class="dropdown-list submenu-slider-options">
-                                <!-- DROPDOWN LIST ITEM -->
                                 <li class="dropdown-list-item">
                                     <p class="dropdown-list-item-link">New Releases</p>
-                                    <!-- ARROW ICON -->
                                     <svg class="arrow-icon medium">
                                         <use xlink:href="#svg-arrow-medium"></use>
                                     </svg>
-                                    <!-- /ARROW ICON -->
                                 </li>
-                                <!-- /DROPDOWN LIST ITEM -->
-
-                                <!-- DROPDOWN LIST ITEM -->
                                 <li class="dropdown-list-item">
                                     <p class="dropdown-list-item-link">Shop Features</p>
-                                    <!-- ARROW ICON -->
                                     <svg class="arrow-icon medium">
                                         <use xlink:href="#svg-arrow-medium"></use>
                                     </svg>
-                                    <!-- /ARROW ICON -->
                                 </li>
-                                <!-- /DROPDOWN LIST ITEM -->
-
-                                <!-- DROPDOWN LIST ITEM -->
                                 <li class="dropdown-list-item">
                                     <p class="dropdown-list-item-link">Powerstation</p>
-                                    <!-- ARROW ICON -->
                                     <svg class="arrow-icon medium">
                                         <use xlink:href="#svg-arrow-medium"></use>
                                     </svg>
-                                    <!-- /ARROW ICON -->
                                 </li>
-                                <!-- /DROPDOWN LIST ITEM -->
-
-                                <!-- DROPDOWN LIST ITEM -->
                                 <li class="dropdown-list-item">
                                     <p class="dropdown-list-item-link">Funtendo</p>
-                                    <!-- ARROW ICON -->
                                     <svg class="arrow-icon medium">
                                         <use xlink:href="#svg-arrow-medium"></use>
                                     </svg>
-                                    <!-- /ARROW ICON -->
                                 </li>
-                                <!-- /DROPDOWN LIST ITEM -->
-
-                                <!-- DROPDOWN LIST ITEM -->
                                 <li class="dropdown-list-item">
                                     <p class="dropdown-list-item-link">X-Rock</p>
-                                    <!-- ARROW ICON -->
                                     <svg class="arrow-icon medium">
                                         <use xlink:href="#svg-arrow-medium"></use>
                                     </svg>
-                                    <!-- /ARROW ICON -->
                                 </li>
-                                <!-- /DROPDOWN LIST ITEM -->
-
-                                <!-- DROPDOWN LIST ITEM -->
                                 <li class="dropdown-list-item">
                                     <p class="dropdown-list-item-link">Clothing &amp; Hats</p>
-                                    <!-- ARROW ICON -->
                                     <svg class="arrow-icon medium">
                                         <use xlink:href="#svg-arrow-medium"></use>
                                     </svg>
-                                    <!-- /ARROW ICON -->
                                 </li>
-                                <!-- /DROPDOWN LIST ITEM -->
-
-                                <!-- DROPDOWN LIST ITEM -->
                                 <li class="dropdown-list-item">
                                     <p class="dropdown-list-item-link">Merchandise</p>
-                                    <!-- ARROW ICON -->
                                     <svg class="arrow-icon medium">
                                         <use xlink:href="#svg-arrow-medium"></use>
                                     </svg>
-                                    <!-- /ARROW ICON -->
                                 </li>
-                                <!-- /DROPDOWN LIST ITEM -->
                             </ul>
-                            <!-- /DROPDOWN LIST -->
-
-                            <!-- SUBMENU SLIDER ITEMS WRAP -->
                             <div class="submenu-slider-items-wrap">
-                                <!-- SUBMENU SLIDER ITEMS -->
                                 <div class="submenu-slider-items">
-                                    <!-- SUBMENU SLIDER ITEM -->
                                     <div class="submenu-slider-item submenu-slider-item-1">
-                                        <!-- PRODUCT PREVIEW -->
                                         <div class="product-preview short">
-                                            <!-- PRODUCT PREVIEW IMG WRAP -->
                                             <div class="product-preview-img-wrap">
-                                                <!-- PRODUCT PREVIEW IMG -->
                                                 <a href="product-page.html">
                                                     <figure class="product-preview-img liquid">
                                                         <img src="assets/img/products/04.jpg" alt="product-04">
                                                     </figure>
                                                 </a>
-                                                <!-- /PRODUCT PREVIEW IMG -->
                                             </div>
-                                            <!-- /PRODUCT PREVIEW IMG WRAP -->
-
-                                            <!-- PRODUCT PREVIEW TITLE -->
                                             <a href="product-page.html" class="product-preview-title">Mee U - kawai
                                                 8
                                                 bundle</a>
-                                            <!-- PRODUCT PREVIEW INFO -->
                                             <div class="product-preview-info">
-                                                <!-- PRODUCT PREVIEW CATEGORY -->
                                                 <a href="shop-v1-grid.html"
                                                     class="product-preview-category">Funtendo</a>
-                                                <!-- RATING ORNAMENT -->
                                                 <div class="rating-ornament small void yellow">
-                                                    <!-- RATING ORNAMENT ITEM -->
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
-
-                                                    <!-- RATING ORNAMENT ITEM -->
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
-
-                                                    <!-- RATING ORNAMENT ITEM -->
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
-
-                                                    <!-- RATING ORNAMENT ITEM -->
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
                                                         <svg class="rating-ornament-icon empty">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
-
-                                                    <!-- RATING ORNAMENT ITEM -->
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
                                                         <svg class="rating-ornament-icon empty">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
                                                 </div>
-                                                <!-- /RATING ORNAMENT -->
                                             </div>
-                                            <!-- /PRODUCT PREVIEW INFO -->
-
-                                            <!-- PRODUCT PRICE WRAP -->
                                             <div class="product-price-wrap">
                                                 <p class="product-preview-price before"><span
                                                         class="currency">$</span>310.00</p>
                                                 <p class="product-preview-price current"><span
                                                         class="currency">$</span>280.00</p>
                                             </div>
-                                            <!-- /PRODUCT PRICE WRAP -->
-
-                                            <!-- ADD TO BAG -->
                                             <div class="button small violet add-to-bag">Add to bag</div>
                                         </div>
-                                        <!-- /PRODUCT PREVIEW -->
-
-                                        <!-- LINK SECTIONS -->
                                         <div class="link-sections">
-                                            <!-- LINK SECTION -->
                                             <div class="link-section">
-                                                <!-- SECTION TITLE WRAP -->
                                                 <div class="section-title-wrap violet">
                                                     <h2 class="section-title small">New Releases</h2>
                                                     <div class="section-title-separator"></div>
                                                 </div>
-                                                <!-- /SECTION TITLE WRAP -->
-
-                                                <!-- LINK LIST -->
                                                 <ul class="link-list">
-                                                    <!-- LINK LIST ITEM -->
                                                     <li class="link-list-item">
                                                         <a href="shop-v1-grid.html">Shop 3 Columns Grid</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
-
-                                                    <!-- LINK LIST ITEM -->
                                                     <li class="link-list-item">
                                                         <a href="shop-v1-list.html">Shop 3 Columns List</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
-
-                                                    <!-- LINK LIST ITEM -->
                                                     <li class="link-list-item">
                                                         <a href="shop-v2.html">Shop 4 Columns</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
-
-                                                    <!-- LINK LIST ITEM -->
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Description</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
-
-                                                    <!-- LINK LIST ITEM -->
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Reviews</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
-
-                                                    <!-- LINK LIST ITEM -->
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Specifications</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
-
-                                                    <!-- LINK LIST ITEM -->
                                                     <li class="link-list-item">
                                                         <a href="inventory-bag.html">Inventory Bag (Cart)</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
-
-                                                    <!-- LINK LIST ITEM -->
                                                     <li class="link-list-item">
                                                         <a href="checkout.html">Checkout Page</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
-
-                                                    <!-- LINK LIST ITEM -->
                                                     <li class="link-list-item">
                                                         <a href="order-confirmation.html">Order Confirmation</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
                                                 </ul>
-                                                <!-- /LINK LIST -->
-
-                                                <!-- LINK LIST -->
                                                 <ul class="link-list">
-                                                    <!-- LINK LIST ITEM -->
                                                     <li class="link-list-item">
                                                         <a href="wishlist.html">Wishlist</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
-
-                                                    <!-- LINK LIST ITEM -->
                                                     <li class="link-list-item">
                                                         <a href="product-compare.html">Product Compare</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
                                                 </ul>
-                                                <!-- /LINK LIST -->
                                             </div>
-                                            <!-- /LINK SECTION -->
                                         </div>
-                                        <!-- /LINK SECTIONS -->
                                     </div>
-                                    <!-- /SUBMENU SLIDER ITEM -->
-
-                                    <!-- SUBMENU SLIDER ITEM -->
                                     <div class="submenu-slider-item submenu-slider-item-2">
-                                        <!-- PRODUCT PREVIEW -->
                                         <div class="product-preview short">
-                                            <!-- PRODUCT PREVIEW IMG WRAP -->
+                                            
                                             <div class="product-preview-img-wrap">
-                                                <!-- PRODUCT PREVIEW IMG -->
+                                                
                                                 <a href="product-page.html">
                                                     <figure class="product-preview-img liquid">
                                                         <img src="assets/img/products/11.jpg" alt="product-11">
                                                     </figure>
                                                 </a>
-                                                <!-- /PRODUCT PREVIEW IMG -->
+                                                
                                             </div>
-                                            <!-- /PRODUCT PREVIEW IMG WRAP -->
+                                            
 
-                                            <!-- PRODUCT PREVIEW TITLE -->
+                                            
                                             <a href="product-page.html" class="product-preview-title">Diamond men's
                                                 black...</a>
-                                            <!-- PRODUCT PREVIEW INFO -->
+                                            
                                             <div class="product-preview-info">
                                                 <!-- PRODUCT PREVIEW CATEGORY -->
                                                 <a href="shop-v1-grid.html"
                                                     class="product-preview-category">Clothing
                                                     &amp; Hats</a>
-                                                <!-- RATING ORNAMENT -->
+                                                
                                                 <div class="rating-ornament small void yellow">
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
                                                 </div>
-                                                <!-- /RATING ORNAMENT -->
+                                                
                                             </div>
-                                            <!-- /PRODUCT PREVIEW INFO -->
+                                           
 
-                                            <!-- PRODUCT PRICE WRAP -->
+                                            
                                             <div class="product-price-wrap">
                                                 <p class="product-preview-price current"><span
                                                         class="currency">$</span>16.00</p>
                                             </div>
-                                            <!-- /PRODUCT PRICE WRAP -->
+                                            
 
                                             <!-- ADD TO BAG -->
                                             <div class="button small violet add-to-bag">Add to bag</div>
                                         </div>
-                                        <!-- /PRODUCT PREVIEW -->
+                                        
 
-                                        <!-- LINK SECTIONS -->
+                                        
                                         <div class="link-sections">
-                                            <!-- LINK SECTION -->
+                                            
                                             <div class="link-section">
-                                                <!-- SECTION TITLE WRAP -->
+                                                
                                                 <div class="section-title-wrap violet">
                                                     <h2 class="section-title small">Shop Features</h2>
                                                     <div class="section-title-separator"></div>
                                                 </div>
-                                                <!-- /SECTION TITLE WRAP -->
+                                                
 
-                                                <!-- LINK LIST -->
+                                                
                                                 <ul class="link-list">
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v1-grid.html">Shop 3 Columns Grid</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v1-list.html">Shop 3 Columns List</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v2.html">Shop 4 Columns</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Description</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Reviews</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Specifications</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="inventory-bag.html">Inventory Bag (Cart)</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="checkout.html">Checkout Page</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="order-confirmation.html">Order Confirmation</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
                                                 </ul>
-                                                <!-- /LINK LIST -->
+                                                
 
-                                                <!-- LINK LIST -->
+                                                
                                                 <ul class="link-list">
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="wishlist.html">Wishlist</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-compare.html">Product Compare</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
                                                 </ul>
-                                                <!-- /LINK LIST -->
+                                                
                                             </div>
-                                            <!-- /LINK SECTION -->
+                                            
                                         </div>
-                                        <!-- /LINK SECTIONS -->
+                                        
                                     </div>
                                     <!-- /SUBMENU SLIDER ITEM -->
 
                                     <!-- SUBMENU SLIDER ITEM -->
                                     <div class="submenu-slider-item submenu-slider-item-3">
-                                        <!-- PRODUCT PREVIEW -->
+                                        
                                         <div class="product-preview short">
-                                            <!-- PRODUCT PREVIEW IMG WRAP -->
+                                            
                                             <div class="product-preview-img-wrap">
-                                                <!-- PRODUCT PREVIEW IMG -->
+                                                
                                                 <a href="product-page.html">
                                                     <figure class="product-preview-img liquid">
                                                         <img src="assets/img/products/09.jpg" alt="product-09">
                                                     </figure>
                                                 </a>
-                                                <!-- /PRODUCT PREVIEW IMG -->
+                                                
                                             </div>
-                                            <!-- /PRODUCT PREVIEW IMG WRAP -->
+                                            
 
-                                            <!-- PRODUCT PREVIEW TITLE -->
+                                            
                                             <a href="product-page.html" class="product-preview-title">Galaxy
                                                 Adventure
                                                 RX...</a>
-                                            <!-- PRODUCT PREVIEW INFO -->
+                                            
                                             <div class="product-preview-info">
                                                 <!-- PRODUCT PREVIEW CATEGORY -->
                                                 <a href="shop-v1-grid.html"
                                                     class="product-preview-category">Powerstation</a>
-                                                <!-- RATING ORNAMENT -->
+                                                
                                                 <div class="rating-ornament small void yellow">
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
                                                 </div>
-                                                <!-- /RATING ORNAMENT -->
+                                                
                                             </div>
-                                            <!-- /PRODUCT PREVIEW INFO -->
+                                           
 
-                                            <!-- PRODUCT PRICE WRAP -->
+                                            
                                             <div class="product-price-wrap">
                                                 <p class="product-preview-price current"><span
                                                         class="currency">$</span>59.99</p>
                                             </div>
-                                            <!-- /PRODUCT PRICE WRAP -->
+                                            
 
                                             <!-- ADD TO BAG -->
                                             <div class="button small violet add-to-bag">Add to bag</div>
                                         </div>
-                                        <!-- /PRODUCT PREVIEW -->
+                                        
 
-                                        <!-- LINK SECTIONS -->
+                                        
                                         <div class="link-sections">
-                                            <!-- LINK SECTION -->
+                                            
                                             <div class="link-section">
-                                                <!-- SECTION TITLE WRAP -->
+                                                
                                                 <div class="section-title-wrap violet">
                                                     <h2 class="section-title small">Powerstation</h2>
                                                     <div class="section-title-separator"></div>
                                                 </div>
-                                                <!-- /SECTION TITLE WRAP -->
+                                                
 
-                                                <!-- LINK LIST -->
+                                                
                                                 <ul class="link-list">
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v1-grid.html">Shop 3 Columns Grid</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v1-list.html">Shop 3 Columns List</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v2.html">Shop 4 Columns</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Description</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Reviews</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Specifications</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="inventory-bag.html">Inventory Bag (Cart)</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="checkout.html">Checkout Page</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="order-confirmation.html">Order Confirmation</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
                                                 </ul>
-                                                <!-- /LINK LIST -->
+                                                
 
-                                                <!-- LINK LIST -->
+                                                
                                                 <ul class="link-list">
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="wishlist.html">Wishlist</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-compare.html">Product Compare</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
                                                 </ul>
-                                                <!-- /LINK LIST -->
+                                                
                                             </div>
-                                            <!-- /LINK SECTION -->
+                                            
                                         </div>
-                                        <!-- /LINK SECTIONS -->
+                                        
                                     </div>
                                     <!-- /SUBMENU SLIDER ITEM -->
 
                                     <!-- SUBMENU SLIDER ITEM -->
                                     <div class="submenu-slider-item submenu-slider-item-4">
-                                        <!-- PRODUCT PREVIEW -->
+                                        
                                         <div class="product-preview short">
-                                            <!-- PRODUCT PREVIEW IMG WRAP -->
+                                            
                                             <div class="product-preview-img-wrap">
-                                                <!-- PRODUCT PREVIEW IMG -->
+                                                
                                                 <a href="product-page.html">
                                                     <figure class="product-preview-img liquid">
                                                         <img src="assets/img/products/08.jpg" alt="product-08">
                                                     </figure>
                                                 </a>
-                                                <!-- /PRODUCT PREVIEW IMG -->
+                                                
                                             </div>
-                                            <!-- /PRODUCT PREVIEW IMG WRAP -->
+                                            
 
-                                            <!-- PRODUCT PREVIEW TITLE -->
+                                            
                                             <a href="product-page.html" class="product-preview-title">Tales of Odd
                                                 Dimensions</a>
-                                            <!-- PRODUCT PREVIEW INFO -->
+                                            
                                             <div class="product-preview-info">
                                                 <!-- PRODUCT PREVIEW CATEGORY -->
                                                 <a href="shop-v1-grid.html"
                                                     class="product-preview-category">Funtendo</a>
-                                                <!-- RATING ORNAMENT -->
+                                                
                                                 <div class="rating-ornament small void yellow">
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon empty">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon empty">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
                                                 </div>
-                                                <!-- /RATING ORNAMENT -->
+                                                
                                             </div>
-                                            <!-- /PRODUCT PREVIEW INFO -->
+                                           
 
-                                            <!-- PRODUCT PRICE WRAP -->
+                                            
                                             <div class="product-price-wrap">
                                                 <p class="product-preview-price current"><span
                                                         class="currency">$</span>59.99</p>
                                             </div>
-                                            <!-- /PRODUCT PRICE WRAP -->
+                                            
 
                                             <!-- ADD TO BAG -->
                                             <div class="button small violet add-to-bag">Add to bag</div>
                                         </div>
-                                        <!-- /PRODUCT PREVIEW -->
+                                        
 
-                                        <!-- LINK SECTIONS -->
+                                        
                                         <div class="link-sections">
-                                            <!-- LINK SECTION -->
+                                            
                                             <div class="link-section">
-                                                <!-- SECTION TITLE WRAP -->
+                                                
                                                 <div class="section-title-wrap violet">
                                                     <h2 class="section-title small">Funtendo</h2>
                                                     <div class="section-title-separator"></div>
                                                 </div>
-                                                <!-- /SECTION TITLE WRAP -->
+                                                
 
-                                                <!-- LINK LIST -->
+                                                
                                                 <ul class="link-list">
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v1-grid.html">Shop 3 Columns Grid</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v1-list.html">Shop 3 Columns List</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v2.html">Shop 4 Columns</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Description</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Reviews</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Specifications</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="inventory-bag.html">Inventory Bag (Cart)</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="checkout.html">Checkout Page</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="order-confirmation.html">Order Confirmation</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
                                                 </ul>
-                                                <!-- /LINK LIST -->
+                                                
 
-                                                <!-- LINK LIST -->
+                                                
                                                 <ul class="link-list">
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="wishlist.html">Wishlist</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-compare.html">Product Compare</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
                                                 </ul>
-                                                <!-- /LINK LIST -->
+                                                
                                             </div>
-                                            <!-- /LINK SECTION -->
+                                            
                                         </div>
-                                        <!-- /LINK SECTIONS -->
+                                        
                                     </div>
                                     <!-- /SUBMENU SLIDER ITEM -->
 
                                     <!-- SUBMENU SLIDER ITEM -->
                                     <div class="submenu-slider-item submenu-slider-item-5">
-                                        <!-- PRODUCT PREVIEW -->
+                                        
                                         <div class="product-preview short">
-                                            <!-- PRODUCT PREVIEW IMG WRAP -->
+                                            
                                             <div class="product-preview-img-wrap">
-                                                <!-- PRODUCT PREVIEW IMG -->
+                                                
                                                 <a href="product-page.html">
                                                     <figure class="product-preview-img liquid">
                                                         <img src="assets/img/products/07.jpg" alt="product-07">
                                                     </figure>
                                                 </a>
-                                                <!-- /PRODUCT PREVIEW IMG -->
+                                                
                                             </div>
-                                            <!-- /PRODUCT PREVIEW IMG WRAP -->
+                                            
 
-                                            <!-- PRODUCT PREVIEW TITLE -->
+                                            
                                             <a href="product-page.html" class="product-preview-title">XRock One
                                                 Bundle +
                                                 Cam</a>
-                                            <!-- PRODUCT PREVIEW INFO -->
+                                            
                                             <div class="product-preview-info">
                                                 <!-- PRODUCT PREVIEW CATEGORY -->
                                                 <a href="shop-v1-grid.html"
                                                     class="product-preview-category">Funtendo</a>
-                                                <!-- RATING ORNAMENT -->
+                                                
                                                 <div class="rating-ornament small void yellow">
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon empty">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
                                                 </div>
-                                                <!-- /RATING ORNAMENT -->
+                                                
                                             </div>
-                                            <!-- /PRODUCT PREVIEW INFO -->
+                                           
 
-                                            <!-- PRODUCT PRICE WRAP -->
+                                            
                                             <div class="product-price-wrap">
                                                 <p class="product-preview-price current"><span
                                                         class="currency">$</span>399.00</p>
                                             </div>
-                                            <!-- /PRODUCT PRICE WRAP -->
+                                            
 
                                             <!-- ADD TO BAG -->
                                             <div class="button small violet add-to-bag">Add to bag</div>
                                         </div>
-                                        <!-- /PRODUCT PREVIEW -->
+                                        
 
-                                        <!-- LINK SECTIONS -->
+                                        
                                         <div class="link-sections">
-                                            <!-- LINK SECTION -->
+                                            
                                             <div class="link-section">
-                                                <!-- SECTION TITLE WRAP -->
+                                                
                                                 <div class="section-title-wrap violet">
                                                     <h2 class="section-title small">X-Rock</h2>
                                                     <div class="section-title-separator"></div>
                                                 </div>
-                                                <!-- /SECTION TITLE WRAP -->
+                                                
 
-                                                <!-- LINK LIST -->
+                                                
                                                 <ul class="link-list">
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v1-grid.html">Shop 3 Columns Grid</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v1-list.html">Shop 3 Columns List</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v2.html">Shop 4 Columns</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Description</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Reviews</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Specifications</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="inventory-bag.html">Inventory Bag (Cart)</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="checkout.html">Checkout Page</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="order-confirmation.html">Order Confirmation</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
                                                 </ul>
-                                                <!-- /LINK LIST -->
+                                                
 
-                                                <!-- LINK LIST -->
+                                                
                                                 <ul class="link-list">
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="wishlist.html">Wishlist</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-compare.html">Product Compare</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
                                                 </ul>
-                                                <!-- /LINK LIST -->
+                                                
                                             </div>
-                                            <!-- /LINK SECTION -->
+                                            
                                         </div>
-                                        <!-- /LINK SECTIONS -->
+                                        
                                     </div>
                                     <!-- /SUBMENU SLIDER ITEM -->
 
                                     <!-- SUBMENU SLIDER ITEM -->
                                     <div class="submenu-slider-item submenu-slider-item-6">
-                                        <!-- PRODUCT PREVIEW -->
+                                        
                                         <div class="product-preview short">
-                                            <!-- PRODUCT PREVIEW IMG WRAP -->
+                                            
                                             <div class="product-preview-img-wrap">
-                                                <!-- PRODUCT PREVIEW IMG -->
+                                                
                                                 <a href="product-page.html">
                                                     <figure class="product-preview-img liquid">
                                                         <img src="assets/img/products/12.jpg" alt="product-12">
                                                     </figure>
                                                 </a>
-                                                <!-- /PRODUCT PREVIEW IMG -->
+                                                
                                             </div>
-                                            <!-- /PRODUCT PREVIEW IMG WRAP -->
+                                            
 
-                                            <!-- PRODUCT PREVIEW TITLE -->
+                                            
                                             <a href="product-page.html" class="product-preview-title">Diamond men's
                                                 white...</a>
-                                            <!-- PRODUCT PREVIEW INFO -->
+                                            
                                             <div class="product-preview-info">
                                                 <!-- PRODUCT PREVIEW CATEGORY -->
                                                 <a href="shop-v1-grid.html"
                                                     class="product-preview-category">Clothing
                                                     &amp; Hats</a>
-                                                <!-- RATING ORNAMENT -->
+                                                
                                                 <div class="rating-ornament small void yellow">
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
                                                 </div>
-                                                <!-- /RATING ORNAMENT -->
+                                                
                                             </div>
-                                            <!-- /PRODUCT PREVIEW INFO -->
+                                           
 
-                                            <!-- PRODUCT PRICE WRAP -->
+                                            
                                             <div class="product-price-wrap">
                                                 <p class="product-preview-price current"><span
                                                         class="currency">$</span>16.00</p>
                                             </div>
-                                            <!-- /PRODUCT PRICE WRAP -->
+                                            
 
                                             <!-- ADD TO BAG -->
                                             <div class="button small violet add-to-bag">Add to bag</div>
                                         </div>
-                                        <!-- /PRODUCT PREVIEW -->
+                                        
 
-                                        <!-- LINK SECTIONS -->
+                                        
                                         <div class="link-sections">
-                                            <!-- LINK SECTION -->
+                                            
                                             <div class="link-section">
-                                                <!-- SECTION TITLE WRAP -->
+                                                
                                                 <div class="section-title-wrap violet">
                                                     <h2 class="section-title small">Clothing &amp; Hats</h2>
                                                     <div class="section-title-separator"></div>
                                                 </div>
-                                                <!-- /SECTION TITLE WRAP -->
+                                                
 
-                                                <!-- LINK LIST -->
+                                                
                                                 <ul class="link-list">
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v1-grid.html">Shop 3 Columns Grid</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v1-list.html">Shop 3 Columns List</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v2.html">Shop 4 Columns</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Description</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Reviews</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Specifications</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="inventory-bag.html">Inventory Bag (Cart)</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="checkout.html">Checkout Page</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="order-confirmation.html">Order Confirmation</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
                                                 </ul>
-                                                <!-- /LINK LIST -->
+                                                
 
-                                                <!-- LINK LIST -->
+                                                
                                                 <ul class="link-list">
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="wishlist.html">Wishlist</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-compare.html">Product Compare</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
                                                 </ul>
-                                                <!-- /LINK LIST -->
+                                                
                                             </div>
-                                            <!-- /LINK SECTION -->
+                                            
                                         </div>
-                                        <!-- /LINK SECTIONS -->
+                                        
                                     </div>
                                     <!-- /SUBMENU SLIDER ITEM -->
 
                                     <!-- SUBMENU SLIDER ITEM -->
                                     <div class="submenu-slider-item submenu-slider-item-7">
-                                        <!-- PRODUCT PREVIEW -->
+                                        
                                         <div class="product-preview short">
-                                            <!-- PRODUCT PREVIEW IMG WRAP -->
+                                            
                                             <div class="product-preview-img-wrap">
-                                                <!-- PRODUCT PREVIEW IMG -->
+                                                
                                                 <a href="product-page.html">
                                                     <figure class="product-preview-img liquid">
                                                         <img src="assets/img/products/13.jpg" alt="product-13">
                                                     </figure>
                                                 </a>
-                                                <!-- /PRODUCT PREVIEW IMG -->
+                                                
                                             </div>
-                                            <!-- /PRODUCT PREVIEW IMG WRAP -->
+                                            
 
-                                            <!-- PRODUCT PREVIEW TITLE -->
+                                            
                                             <a href="product-page.html" class="product-preview-title">Diamond white
                                                 enamel...</a>
-                                            <!-- PRODUCT PREVIEW INFO -->
+                                            
                                             <div class="product-preview-info">
                                                 <!-- PRODUCT PREVIEW CATEGORY -->
                                                 <a href="shop-v1-grid.html"
                                                     class="product-preview-category">Merchandise</a>
-                                                <!-- RATING ORNAMENT -->
+                                                
                                                 <div class="rating-ornament small void yellow">
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
 
-                                                    <!-- RATING ORNAMENT ITEM -->
+                                                    
                                                     <div class="rating-ornament-item">
-                                                        <!-- RATING ORNAMENT ICON -->
+                                                        
                                                         <svg class="rating-ornament-icon empty">
                                                             <use xlink:href="#svg-star"></use>
                                                         </svg>
                                                     </div>
-                                                    <!-- /RATING ORNAMENT ITEM -->
+                                                    
                                                 </div>
-                                                <!-- /RATING ORNAMENT -->
+                                                
                                             </div>
-                                            <!-- /PRODUCT PREVIEW INFO -->
+                                           
 
-                                            <!-- PRODUCT PRICE WRAP -->
+                                            
                                             <div class="product-price-wrap">
                                                 <p class="product-preview-price current"><span
                                                         class="currency">$</span>10.99</p>
                                             </div>
-                                            <!-- /PRODUCT PRICE WRAP -->
+                                            
 
                                             <!-- ADD TO BAG -->
                                             <div class="button small violet add-to-bag">Add to bag</div>
                                         </div>
-                                        <!-- /PRODUCT PREVIEW -->
+                                        
 
-                                        <!-- LINK SECTIONS -->
+                                        
                                         <div class="link-sections">
-                                            <!-- LINK SECTION -->
+                                            
                                             <div class="link-section">
-                                                <!-- SECTION TITLE WRAP -->
+                                                
                                                 <div class="section-title-wrap violet">
                                                     <h2 class="section-title small">Merchandise</h2>
                                                     <div class="section-title-separator"></div>
                                                 </div>
-                                                <!-- /SECTION TITLE WRAP -->
+                                                
 
-                                                <!-- LINK LIST -->
+                                                
                                                 <ul class="link-list">
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v1-grid.html">Shop 3 Columns Grid</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v1-list.html">Shop 3 Columns List</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="shop-v2.html">Shop 4 Columns</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Description</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Reviews</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-page.html">Product Specifications</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="inventory-bag.html">Inventory Bag (Cart)</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="checkout.html">Checkout Page</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="order-confirmation.html">Order Confirmation</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
                                                 </ul>
-                                                <!-- /LINK LIST -->
+                                                
 
-                                                <!-- LINK LIST -->
+                                                
                                                 <ul class="link-list">
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="wishlist.html">Wishlist</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
 
-                                                    <!-- LINK LIST ITEM -->
+                                                    
                                                     <li class="link-list-item">
                                                         <a href="product-compare.html">Product Compare</a>
                                                     </li>
-                                                    <!-- /LINK LIST ITEM -->
+                                                    
                                                 </ul>
-                                                <!-- /LINK LIST -->
+                                                
                                             </div>
-                                            <!-- /LINK SECTION -->
+                                            
                                         </div>
-                                        <!-- /LINK SECTIONS -->
+                                        
                                     </div>
                                     <!-- /SUBMENU SLIDER ITEM -->
                                 </div>
@@ -3613,7 +2490,7 @@
                 </ul>
                 <!-- /SUBMENU -->
             </li>
-            <!-- /MAIN MENU ITEM -->
+            
 
             <!-- MAIN MENU ITEM 
             <li class="main-menu-item">
@@ -5045,11 +3922,11 @@
             </div> -->
             <!-- INVENTORY BUTTON -->
             <div class="inventory-button" style="margin-left: 35px;"
-                <!-- INVENTORY ICON -->
+                
                 <svg class="inventory-icon">
                     <use xlink:href="#svg-inventory"></use>
                 </svg>
-                <!-- /INVENTORY ICON -->
+                
             
                 <!-- INVENTORY ITEM QUANTITY WRAP -->
                 <div class="inventory-item-quantity-wrap">

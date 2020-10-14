@@ -10769,10 +10769,39 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .widget-sidebar .card-langganan {
+    background: linear-gradient(45deg, #7442CE, #F30A5C);
     color: #eeffee;
-    background: linear-gradient(to right, #1C95F3, #7442CE);
     padding: 20px;
     border-radius: 5px;
+    box-shadow: 5px 5px 5px #dbdbdb;
+}
+
+.widget-sidebar .card-profil-game{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #dbdbdb;
+    background: linear-gradient(to right, #1C95F3, #7442CE);
+    color: #fff;
+}
+
+.widget-sidebar .card-profil-game .profil-game-text {
+    font-family: "Gibson", sans-serif;
+}
+
+.widget-sidebar .card-profil-game img {
+    max-width: 50%;
+    float:right;
+    border: 5px solid #36363675;
+}
+
+.widget-sidebar .card-profil-game .profil-game-text .text-judul{
+    font-weight: 700;
+}
+
+.widget-sidebar .card-profil-game .profil-game-text .text-isi{
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
 }
 
 .widget-sidebar .sidebar-search-form {
@@ -14572,7 +14601,6 @@ input[type="radio"]:disabled+.radio-circle {
 .post-open .post-open-content {
     display: grid;
     grid-template-areas: 'sidebar body';
-    grid-template-columns: 70px 770px;
     grid-gap: 30px
 }
 
@@ -14792,6 +14820,18 @@ input[type="radio"]:disabled+.radio-circle {
     margin-top: 20px
 }
 
+.post-open .post-open-card-game{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px;
+    padding: 25px;
+    background: linear-gradient(180deg, transparent, #dbdbdb);
+}
+
+.post-open .post-open-card-game img{
+    max-width: 225px;
+}
+
 .post-open .post-open-img-wrap {
     margin-bottom: 30px;
     position: relative
@@ -14991,7 +15031,7 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .post-open .feature-list .feature-list-block {
-    width: 65%
+    width: 100%
 }
 
 .post-open .feature-list .feature-list-block:first-child {
@@ -15013,7 +15053,7 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .post-open .feature-list .feature-list-item {
-    margin-bottom: 20px;
+    margin: 0 0 20px 20px;
     font-size: 1em;
     line-height: 1em
 }

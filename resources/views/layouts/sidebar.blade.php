@@ -75,8 +75,8 @@
         </div>
         <!-- /SOCIAL LINKS -->
     </div>
-    
-    <!-- Hide di halaman Search-result -->
+
+    <!-- Visible on Homepage Only -->
     <div class="widget-sidebar">
         <!-- DROPDOWN LIST -->
         <ul class="dropdown-list accordion">

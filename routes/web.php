@@ -17,7 +17,7 @@ Route::get('/berita', [BeritaController::class, 'Berita']);
 Route::get('/berita/{slug}', [BeritaController::class, 'LinkBerita']);
 
 Route::get('/artikel', function () {
-    return view('artikel');
+    return view('artikel-game');
 });
 Route::get('/search-result', function () {
     return view('search-result');

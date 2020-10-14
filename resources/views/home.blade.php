@@ -753,7 +753,7 @@
                                     <div class="post-preview-img-wrap">
                                         <!-- POST PREVIEW IMG -->
                                         <figure class="post-preview-img liquid">
-                                            <img src="assets/img/posts/07.jpg" alt="post-07">
+                                            <img src="{{ asset('/frontend/assets/img/posts/07.jpg')}}" alt="post-07">
                                         </figure>
                                         <!-- /POST PREVIEW IMG -->
     
@@ -788,7 +788,7 @@
                                     <div class="post-preview-img-wrap">
                                         <!-- POST PREVIEW IMG -->
                                         <figure class="post-preview-img liquid">
-                                            <img src="assets/img/posts/25.jpg" alt="post-25">
+                                            <img src="{{ asset('/frontend/assets/img/posts/25.jpg')}}" alt="post-25">
                                         </figure>
                                         <!-- /POST PREVIEW IMG -->
     
@@ -828,7 +828,7 @@
                                     <div class="post-preview-img-wrap">
                                         <!-- POST PREVIEW IMG -->
                                         <figure class="post-preview-img liquid">
-                                            <img src="assets/img/posts/18.jpg" alt="post-18">
+                                            <img src="{{ asset('/frontend/assets/img/posts/18.jpg')}}" alt="post-18">
                                         </figure>
                                         <!-- /POST PREVIEW IMG -->
     
@@ -863,7 +863,7 @@
                                     <div class="post-preview-img-wrap">
                                         <!-- POST PREVIEW IMG -->
                                         <figure class="post-preview-img liquid">
-                                            <img src="assets/img/posts/09.jpg" alt="post-09">
+                                            <img src="{{ asset('/frontend/assets/img/posts/09.jpg')}}" alt="post-09">
                                         </figure>
                                         <!-- /POST PREVIEW IMG -->
     
@@ -898,7 +898,7 @@
                                     <div class="post-preview-img-wrap">
                                         <!-- POST PREVIEW IMG -->
                                         <figure class="post-preview-img liquid">
-                                            <img src="assets/img/posts/12.jpg" alt="post-12">
+                                            <img src="{{ asset('/frontend/assets/img/posts/12.jpg')}}" alt="post-12">
                                         </figure>
                                         <!-- /POST PREVIEW IMG -->
     
@@ -936,7 +936,7 @@
                                 <div class="post-preview-img-wrap">
                                     <!-- POST PREVIEW IMG -->
                                     <figure class="post-preview-img liquid">
-                                        <img src="assets/img/posts/07.jpg" alt="post-07">
+                                        <img src="{{ asset('/frontend/assets/img/posts/07.jpg')}}" alt="post-07">
                                     </figure>
                                     <!-- /POST PREVIEW IMG -->
     
@@ -969,7 +969,7 @@
                                 <div class="post-preview-img-wrap">
                                     <!-- POST PREVIEW IMG -->
                                     <figure class="post-preview-img liquid">
-                                        <img src="assets/img/posts/25.jpg" alt="post-25">
+                                        <img src="{{ asset('/frontend/assets/img/posts/25.jpg')}}" alt="post-25">
                                     </figure>
                                     <!-- /POST PREVIEW IMG -->
     
@@ -1002,7 +1002,7 @@
                                 <div class="post-preview-img-wrap">
                                     <!-- POST PREVIEW IMG -->
                                     <figure class="post-preview-img liquid">
-                                        <img src="assets/img/posts/18.jpg" alt="post-18">
+                                        <img src="{{ asset('/frontend/assets/img/posts/18.jpg')}}" alt="post-18">
                                     </figure>
                                     <!-- /POST PREVIEW IMG -->
     
@@ -1036,7 +1036,7 @@
                                 <div class="post-preview-img-wrap">
                                     <!-- POST PREVIEW IMG -->
                                     <figure class="post-preview-img liquid">
-                                        <img src="assets/img/posts/09.jpg" alt="post-09">
+                                        <img src="{{ asset('/frontend/assets/img/posts/09.jpg')}}" alt="post-09">
                                     </figure>
                                     <!-- /POST PREVIEW IMG -->
     
@@ -1070,7 +1070,7 @@
                                 <div class="post-preview-img-wrap">
                                     <!-- POST PREVIEW IMG -->
                                     <figure class="post-preview-img liquid">
-                                        <img src="assets/img/posts/12.jpg" alt="post-12">
+                                        <img src="{{ asset('/frontend/assets/img/posts/12.jpg')}}" alt="post-12">
                                     </figure>
                                     <!-- /POST PREVIEW IMG -->
     
@@ -1128,353 +1128,13 @@
                 <!-- /POSTSLIDE WRAP -->
             </div>
             <!-- /LAYOUT ITEM -->
-    
-            <!-- LAYOUT ITEM -->
-            <div class="layout-item">
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape big gaming-news">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-v1.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="assets/img/posts/01.jpg" alt="post-01">
-                            </figure>
-                            <!-- POST PREVIEW IMG -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-    
-                    <!-- TAG ORNAMENT -->
-                    <a href="news-v1.html" class="tag-ornament">Gaming News</a>
-                    <!-- /TAG ORNAMENT -->
-    
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-v1.html" class="post-preview-title">The Clash of Dragons is breaking record sales in
-                        Japan</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <!-- USER AVATAR -->
-                        <a href="search-results.html">
-                            <figure class="user-avatar tiny liquid">
-                                <img src="assets/img/users/01.jpg" alt="user-01">
-                            </figure>
-                        </a>
-                        <!-- /USER AVATAR -->
-                        <p class="post-author-info small light">By <a href="search-results.html"
-                                class="post-author">Dexter</a><span class="separator">|</span>December 15th, 2018<span
-                                class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
-                                Comments</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        loso laboris tempora aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore...</p>
-                </div>
-                <!-- /POST PREVIEW -->
-    
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape big e-sport">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="esports-post.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="assets/img/posts/45.jpg" alt="post-45">
-                            </figure>
-                            <!-- POST PREVIEW IMG -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-    
-                    <!-- TAG ORNAMENT -->
-                    <a href="esports-news.html" class="tag-ornament">Esports</a>
-                    <!-- /TAG ORNAMENT -->
-    
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="esports-post.html" class="post-preview-title">Thomas Howlett joins the Wolves Xenowatch esports
-                        team</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <!-- USER AVATAR -->
-                        <a href="search-results.html">
-                            <figure class="user-avatar tiny liquid">
-                                <img src="assets/img/users/08.jpg" alt="user-08">
-                            </figure>
-                        </a>
-                        <!-- /USER AVATAR -->
-                        <p class="post-author-info small light">By <a href="search-results.html"
-                                class="post-author">Morgana</a><span class="separator">|</span>December 15th, 2018<span
-                                class="separator">|</span><a href="esports-post.html#op-comments"
-                                class="post-comment-count">342 Comments</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        loso laboris tempora aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore...</p>
-                </div>
-                <!-- /POST PREVIEW -->
-    
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape big gaming-news">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-v1.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="assets/img/posts/27.jpg" alt="post-27">
-                            </figure>
-                            <!-- POST PREVIEW IMG -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-    
-                    <!-- TAG ORNAMENT -->
-                    <a href="news-v1.html" class="tag-ornament">Gaming News</a>
-                    <!-- /TAG ORNAMENT -->
-    
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-v1.html" class="post-preview-title">Everything about kawai party 8!</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <!-- USER AVATAR -->
-                        <a href="search-results.html">
-                            <figure class="user-avatar tiny liquid">
-                                <img src="assets/img/users/01.jpg" alt="user-01">
-                            </figure>
-                        </a>
-                        <!-- /USER AVATAR -->
-                        <p class="post-author-info small light">By <a href="search-results.html"
-                                class="post-author">Dexter</a><span class="separator">|</span>December 15th, 2018<span
-                                class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
-                                Comments</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        loso laboris tempora aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore...</p>
-                </div>
-                <!-- /POST PREVIEW -->
-    
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape big game-review">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-v2.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="assets/img/posts/05.jpg" alt="post-05">
-                            </figure>
-                            <!-- POST PREVIEW IMG -->
-    
-                            <!-- REVIEW RATING -->
-                            <div class="review-rating">
-                                <div id="content-news-rate-7" class="arc"></div>
-                            </div>
-                            <!-- /REVIEW RATING -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-    
-                    <!-- TAG ORNAMENT -->
-                    <a href="news-v2.html" class="tag-ornament">Game Reviews</a>
-                    <!-- /TAG ORNAMENT -->
-    
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-v2.html" class="post-preview-title">We reviewed the new and exciting fantasy game
-                        "Olympus"</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <!-- USER AVATAR -->
-                        <a href="search-results.html">
-                            <figure class="user-avatar tiny liquid">
-                                <img src="assets/img/users/08.jpg" alt="user-08">
-                            </figure>
-                        </a>
-                        <!-- /USER AVATAR -->
-                        <p class="post-author-info small light">By <a href="search-results.html"
-                                class="post-author">Morgana</a><span class="separator">|</span>December 15th, 2018<span
-                                class="separator">|</span><a href="post-v2.html#op-comments" class="post-comment-count">258
-                                Comments</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        loso laboris tempora aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore...</p>
-                </div>
-                <!-- /POST PREVIEW -->
-    
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape big geeky-news">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-v4.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="assets/img/posts/21.jpg" alt="post-21">
-                            </figure>
-                            <!-- POST PREVIEW IMG -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-    
-                    <!-- TAG ORNAMENT -->
-                    <a href="news-v4.html" class="tag-ornament">Geeky News</a>
-                    <!-- /TAG ORNAMENT -->
-    
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-v4.html" class="post-preview-title">"Steamboat" anime will have a preview event in May</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <!-- USER AVATAR -->
-                        <a href="search-results.html">
-                            <figure class="user-avatar tiny liquid">
-                                <img src="assets/img/users/08.jpg" alt="user-08">
-                            </figure>
-                        </a>
-                        <!-- /USER AVATAR -->
-                        <p class="post-author-info small light">By <a href="search-results.html"
-                                class="post-author">Morgana</a><span class="separator">|</span>December 15th, 2018<span
-                                class="separator">|</span><a href="post-v4.html#op-comments" class="post-comment-count">342
-                                Comments</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        loso laboris tempora aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore...</p>
-                </div>
-                <!-- /POST PREVIEW -->
-    
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape big movie-news">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-v3.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="assets/img/posts/03.jpg" alt="post-03">
-                            </figure>
-                            <!-- /POST PREVIEW IMG -->
-    
-                            <!-- RATING ORNAMENT -->
-                            <div class="rating-ornament">
-                                <!-- RATING ORNAMENT ITEM -->
-                                <div class="rating-ornament-item">
-                                    <!-- RATING ORNAMENT ICON -->
-                                    <svg class="rating-ornament-icon">
-                                        <use xlink:href="#svg-star"></use>
-                                    </svg>
-                                </div>
-                                <!-- /RATING ORNAMENT ITEM -->
-    
-                                <!-- RATING ORNAMENT ITEM -->
-                                <div class="rating-ornament-item">
-                                    <!-- RATING ORNAMENT ICON -->
-                                    <svg class="rating-ornament-icon">
-                                        <use xlink:href="#svg-star"></use>
-                                    </svg>
-                                </div>
-                                <!-- /RATING ORNAMENT ITEM -->
-    
-                                <!-- RATING ORNAMENT ITEM -->
-                                <div class="rating-ornament-item">
-                                    <!-- RATING ORNAMENT ICON -->
-                                    <svg class="rating-ornament-icon">
-                                        <use xlink:href="#svg-star"></use>
-                                    </svg>
-                                </div>
-                                <!-- /RATING ORNAMENT ITEM -->
-    
-                                <!-- RATING ORNAMENT ITEM -->
-                                <div class="rating-ornament-item">
-                                    <!-- RATING ORNAMENT ICON -->
-                                    <svg class="rating-ornament-icon">
-                                        <use xlink:href="#svg-star"></use>
-                                    </svg>
-                                </div>
-                                <!-- /RATING ORNAMENT ITEM -->
-    
-                                <!-- RATING ORNAMENT ITEM -->
-                                <div class="rating-ornament-item">
-                                    <!-- RATING ORNAMENT ICON -->
-                                    <svg class="rating-ornament-icon">
-                                        <use xlink:href="#svg-star"></use>
-                                    </svg>
-                                </div>
-                                <!-- /RATING ORNAMENT ITEM -->
-                            </div>
-                            <!-- /RATING ORNAMENT -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-    
-                    <!-- TAG ORNAMENT -->
-                    <a href="news-v3.html" class="tag-ornament">Movie News</a>
-                    <!-- /TAG ORNAMENT -->
-    
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-v3.html" class="post-preview-title">"The Sandbender II" break the bad sequel spell with a
-                        great movie</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <!-- USER AVATAR -->
-                        <a href="search-results.html">
-                            <figure class="user-avatar tiny liquid">
-                                <img src="assets/img/users/03.jpg" alt="user-03">
-                            </figure>
-                        </a>
-                        <!-- /USER AVATAR -->
-                        <p class="post-author-info small light">By <a href="search-results.html"
-                                class="post-author">Greyson</a><span class="separator">|</span>December 15th, 2018<span
-                                class="separator">|</span><a href="post-v3.html#op-comments" class="post-comment-count">174
-                                Comments</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        loso laboris tempora aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore...</p>
-                </div>
-                <!-- /POST PREVIEW -->
-            </div>
-            <!-- /LAYOUT ITEM -->
+
+            <!-- Layout Item -->
         </div>
         <!-- /LAYOUT BODY -->
     
         <!-- LAYOUT SIDEBAR -->
         <div class="layout-sidebar layout-item gutter-medium">
-            <!-- WIDGET SIDEBAR -->
-            <div class="widget-sidebar">
-                <!-- SIDEBAR SEARCH FORM -->
-                <form class="sidebar-search-form">
-                    <!-- SUBMIT INPUT -->
-                    <div class="submit-input full violet">
-                        <input type="text" id="sidebar-search1" name="sidebar-search1"
-                            placeholder="Search articles here...">
-                        <button class="submit-input-button">
-                            <!-- SEARCH ICON -->
-                            <svg class="search-icon small">
-                                <use xlink:href="#svg-search"></use>
-                            </svg>
-                            <!-- /SEARCH ICON -->
-                        </button>
-                    </div>
-                    <!-- /SUBMIT INPUT -->
-                </form>
-                <!-- /SIDEBAR SEARCH FORM -->
-            </div>
-            <!-- /WIDGET SIDEBAR -->
 
             <!-- WIDGET SIDEBAR-->
             <div class="widget-sidebar">
@@ -1592,7 +1252,7 @@
                                             <div class="post-preview-img-wrap">
                                                 <!-- POST PREVIEW IMG -->
                                                 <figure class="post-preview-img liquid">
-                                                    <img src="assets/img/posts/36.jpg" alt="post-36">
+                                                    <img src="{{ asset('/frontend/assets/img/posts/36.jpg')}}" alt="post-36">
                                                 </figure>
                                                 <!-- /POST PREVIEW IMG -->
                                             </div>
@@ -1617,7 +1277,7 @@
                                             <div class="post-preview-img-wrap">
                                                 <!-- POST PREVIEW IMG -->
                                                 <figure class="post-preview-img liquid">
-                                                    <img src="assets/img/posts/38.jpg" alt="post-38">
+                                                    <img src="{{ asset('/frontend/assets/img/posts/38.jpg')}}" alt="post-38">
                                                 </figure>
                                                 <!-- /POST PREVIEW IMG -->
                                             </div>
@@ -1642,7 +1302,7 @@
                                             <div class="post-preview-img-wrap">
                                                 <!-- POST PREVIEW IMG -->
                                                 <figure class="post-preview-img liquid">
-                                                    <img src="assets/img/posts/37.jpg" alt="post-37">
+                                                    <img src="{{ asset('/frontend/assets/img/posts/37.jpg')}}" alt="post-37">
                                                 </figure>
                                                 <!-- /POST PREVIEW IMG -->
                                             </div>
@@ -1667,7 +1327,7 @@
                                             <div class="post-preview-img-wrap">
                                                 <!-- POST PREVIEW IMG -->
                                                 <figure class="post-preview-img liquid">
-                                                    <img src="assets/img/posts/39.jpg" alt="post-39">
+                                                    <img src="{{ asset('/frontend/assets/img/posts/39.jpg')}}" alt="post-39">
                                                 </figure>
                                                 <!-- /POST PREVIEW IMG -->
                                             </div>
@@ -1706,7 +1366,7 @@
                         <!-- /ACCORDION ACTION -->
 
                         <!-- SECTION TITLE WRAP -->
-                        <div class="section-title-wrap violet no-space accordion-trigger">
+                        <div class="section-title-wrap red no-space accordion-trigger">
                             <h2 class="section-title medium">Coming Soon</h2>
                             <div class="section-title-separator"></div>
                         </div>
@@ -1724,7 +1384,7 @@
                                             <div class="post-preview-img-wrap">
                                                 <!-- POST PREVIEW IMG -->
                                                 <figure class="post-preview-img liquid">
-                                                    <img src="assets/img/posts/36.jpg" alt="post-36">
+                                                    <img src="{{ asset('/frontend/assets/img/posts/36.jpg')}}" alt="post-36">
                                                 </figure>
                                                 <!-- /POST PREVIEW IMG -->
                                             </div>
@@ -1750,7 +1410,7 @@
                                             <div class="post-preview-img-wrap">
                                                 <!-- POST PREVIEW IMG -->
                                                 <figure class="post-preview-img liquid">
-                                                    <img src="assets/img/posts/38.jpg" alt="post-38">
+                                                    <img src="{{ asset('/frontend/assets/img/posts/38.jpg')}}" alt="post-38">
                                                 </figure>
                                                 <!-- /POST PREVIEW IMG -->
                                             </div>
@@ -1776,7 +1436,7 @@
                                             <div class="post-preview-img-wrap">
                                                 <!-- POST PREVIEW IMG -->
                                                 <figure class="post-preview-img liquid">
-                                                    <img src="assets/img/posts/37.jpg" alt="post-37">
+                                                    <img src="{{ asset('/frontend/assets/img/posts/37.jpg')}}" alt="post-37">
                                                 </figure>
                                                 <!-- /POST PREVIEW IMG -->
                                             </div>
@@ -1801,7 +1461,7 @@
                                             <div class="post-preview-img-wrap">
                                                 <!-- POST PREVIEW IMG -->
                                                 <figure class="post-preview-img liquid">
-                                                    <img src="assets/img/posts/39.jpg" alt="post-39">
+                                                    <img src="{{ asset('/frontend/assets/img/posts/39.jpg')}}" alt="post-39">
                                                 </figure>
                                                 <!-- /POST PREVIEW IMG -->
                                             </div>
@@ -1841,7 +1501,7 @@
                         <!-- /ACCORDION ACTION -->
 
                         <!-- SECTION TITLE WRAP -->
-                        <div class="section-title-wrap violet no-space accordion-trigger">
+                        <div class="section-title-wrap cyan no-space accordion-trigger">
                             <h2 class="section-title medium">Most Anticipated</h2>
                             <div class="section-title-separator"></div>
                         </div>
@@ -1859,7 +1519,7 @@
                                             <div class="post-preview-img-wrap">
                                                 <!-- POST PREVIEW IMG -->
                                                 <figure class="post-preview-img liquid">
-                                                    <img src="assets/img/posts/36.jpg" alt="post-36">
+                                                    <img src="{{ asset('/frontend/assets/img/posts/36.jpg')}}" alt="post-36">
                                                 </figure>
                                                 <!-- /POST PREVIEW IMG -->
                                             </div>
@@ -1885,7 +1545,7 @@
                                             <div class="post-preview-img-wrap">
                                                 <!-- POST PREVIEW IMG -->
                                                 <figure class="post-preview-img liquid">
-                                                    <img src="assets/img/posts/38.jpg" alt="post-38">
+                                                    <img src="{{ asset('/frontend/assets/img/posts/38.jpg')}}" alt="post-38">
                                                 </figure>
                                                 <!-- /POST PREVIEW IMG -->
                                             </div>
@@ -1911,7 +1571,7 @@
                                             <div class="post-preview-img-wrap">
                                                 <!-- POST PREVIEW IMG -->
                                                 <figure class="post-preview-img liquid">
-                                                    <img src="assets/img/posts/37.jpg" alt="post-37">
+                                                    <img src="{{ asset('/frontend/assets/img/posts/37.jpg')}}" alt="post-37">
                                                 </figure>
                                                 <!-- /POST PREVIEW IMG -->
                                             </div>
@@ -1936,7 +1596,7 @@
                                             <div class="post-preview-img-wrap">
                                                 <!-- POST PREVIEW IMG -->
                                                 <figure class="post-preview-img liquid">
-                                                    <img src="assets/img/posts/39.jpg" alt="post-39">
+                                                    <img src="{{ asset('/frontend/assets/img/posts/39.jpg')}}" alt="post-39">
                                                 </figure>
                                                 <!-- /POST PREVIEW IMG -->
                                             </div>
@@ -1984,7 +1644,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/36.jpg" alt="post-36">
+                                    <img src="{{ asset('/frontend/assets/img/posts/36.jpg')}}" alt="post-36">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
                             </div>
@@ -2009,7 +1669,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/38.jpg" alt="post-38">
+                                    <img src="{{ asset('/frontend/assets/img/posts/38.jpg')}}" alt="post-38">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
                             </div>
@@ -2034,7 +1694,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/37.jpg" alt="post-37">
+                                    <img src="{{ asset('/frontend/assets/img/posts/37.jpg')}}" alt="post-37">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
                             </div>
@@ -2059,7 +1719,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/39.jpg" alt="post-39">
+                                    <img src="{{ asset('/frontend/assets/img/posts/39.jpg')}}" alt="post-39">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
                             </div>
@@ -2084,7 +1744,7 @@
             <!-- WIDGET SIDEBAR -->
             <div class="widget-sidebar">
                 <!-- SECTION TITLE WRAP -->
-                <div class="section-title-wrap blue">
+                <div class="section-title-wrap black-lighter">
                     <h2 class="section-title medium">Top 5 News</h2>
                     <div class="section-title-separator"></div>
                 </div>
@@ -2099,7 +1759,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/01.jpg" alt="post-01">
+                                    <img src="{{ asset('/frontend/assets/img/posts/01.jpg')}}" alt="post-01">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
                             </div>
@@ -2131,7 +1791,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/02.jpg" alt="post-02">
+                                    <img src="{{ asset('/frontend/assets/img/posts/02.jpg')}}" alt="post-02">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
                             </div>
@@ -2162,7 +1822,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/41.jpg" alt="post-41">
+                                    <img src="{{ asset('/frontend/assets/img/posts/41.jpg')}}" alt="post-41">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
                             </div>
@@ -2193,7 +1853,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/25.jpg" alt="post-25">
+                                    <img src="{{ asset('/frontend/assets/img/posts/25.jpg')}}" alt="post-25">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
             
@@ -2230,7 +1890,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/12.jpg" alt="post-12">
+                                    <img src="{{ asset('/frontend/assets/img/posts/12.jpg')}}" alt="post-12">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
             
@@ -2310,7 +1970,7 @@
             <!-- WIDGET SIDEBAR -->
             <div class="widget-sidebar">
                 <!-- SECTION TITLE WRAP -->
-                <div class="section-title-wrap blue">
+                <div class="section-title-wrap green">
                     <h2 class="section-title medium">Pixel Tags</h2>
                     <div class="section-title-separator"></div>
                 </div>
@@ -2401,7 +2061,7 @@
                                 <!-- USER AVATAR -->
                                 <a href="search-results.html">
                                     <figure class="user-avatar tiny liquid">
-                                        <img src="assets/img/users/04.jpg" alt="user-04">
+                                        <img src="{{ asset('/frontend/assets/img/users/04.jpg')}}" alt="user-04">
                                     </figure>
                                 </a>
                                 <!-- /USER AVATAR -->
@@ -2461,7 +2121,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/25.jpg" alt="post-25">
+                                    <img src="{{ asset('/frontend/assets/img/posts/25.jpg')}}" alt="post-25">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
     
@@ -2505,7 +2165,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/38.jpg" alt="post-38">
+                                    <img src="{{ asset('/frontend/assets/img/posts/38.jpg')}}" alt="post-38">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
     
@@ -2549,7 +2209,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/31.jpg" alt="post-31">
+                                    <img src="{{ asset('/frontend/assets/img/posts/31.jpg')}}" alt="post-31">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
     
@@ -2592,7 +2252,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/07.jpg" alt="post-07">
+                                    <img src="{{ asset('/frontend/assets/img/posts/07.jpg')}}" alt="post-07">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
     
@@ -2636,7 +2296,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/41.jpg" alt="post-41">
+                                    <img src="{{ asset('/frontend/assets/img/posts/41.jpg')}}" alt="post-41">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
     
@@ -2680,7 +2340,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/02.jpg" alt="post-02">
+                                    <img src="{{ asset('/frontend/assets/img/posts/02.jpg')}}" alt="post-02">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
     
@@ -2724,7 +2384,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/12.jpg" alt="post-12">
+                                    <img src="{{ asset('/frontend/assets/img/posts/12.jpg')}}" alt="post-12">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
     
@@ -2768,7 +2428,7 @@
                             <div class="post-preview-img-wrap">
                                 <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
-                                    <img src="assets/img/posts/01.jpg" alt="post-01">
+                                    <img src="{{ asset('/frontend/assets/img/posts/01.jpg')}}" alt="post-01">
                                 </figure>
                                 <!-- /POST PREVIEW IMG -->
     
@@ -2870,7 +2530,7 @@
                         <div class="post-preview-img-wrap">
                             <!-- POST PREVIEW IMG -->
                             <figure class="post-preview-img liquid">
-                                <img src="assets/img/posts/01.jpg" alt="post-01">
+                                <img src="{{ asset('/frontend/assets/img/posts/01.jpg')}}" alt="post-01">
                             </figure>
                             <!-- POST PREVIEW IMG -->
                         </div>
@@ -2889,7 +2549,7 @@
                         <!-- USER AVATAR -->
                         <a href="search-results.html">
                             <figure class="user-avatar tiny liquid">
-                                <img src="assets/img/users/01.jpg" alt="user-01">
+                                <img src="{{ asset('/frontend/assets/img/users/01.jpg')}}" alt="user-01">
                             </figure>
                         </a>
                         <!-- /USER AVATAR -->
@@ -2914,7 +2574,7 @@
                         <div class="post-preview-img-wrap">
                             <!-- POST PREVIEW IMG -->
                             <figure class="post-preview-img liquid">
-                                <img src="assets/img/posts/45.jpg" alt="post-45">
+                                <img src="{{ asset('/frontend/assets/img/posts/45.jpg')}}" alt="post-45">
                             </figure>
                             <!-- POST PREVIEW IMG -->
                         </div>
@@ -2933,7 +2593,7 @@
                         <!-- USER AVATAR -->
                         <a href="search-results.html">
                             <figure class="user-avatar tiny liquid">
-                                <img src="assets/img/users/08.jpg" alt="user-08">
+                                <img src="{{ asset('/frontend/assets/img/users/08.jpg')}}" alt="user-08">
                             </figure>
                         </a>
                         <!-- /USER AVATAR -->
@@ -2958,7 +2618,7 @@
                         <div class="post-preview-img-wrap">
                             <!-- POST PREVIEW IMG -->
                             <figure class="post-preview-img liquid">
-                                <img src="assets/img/posts/27.jpg" alt="post-27">
+                                <img src="{{ asset('/frontend/assets/img/posts/27.jpg')}}" alt="post-27">
                             </figure>
                             <!-- POST PREVIEW IMG -->
                         </div>
@@ -2976,7 +2636,7 @@
                         <!-- USER AVATAR -->
                         <a href="search-results.html">
                             <figure class="user-avatar tiny liquid">
-                                <img src="assets/img/users/01.jpg" alt="user-01">
+                                <img src="{{ asset('/frontend/assets/img/users/01.jpg')}}" alt="user-01">
                             </figure>
                         </a>
                         <!-- /USER AVATAR -->
@@ -3001,7 +2661,7 @@
                         <div class="post-preview-img-wrap">
                             <!-- POST PREVIEW IMG -->
                             <figure class="post-preview-img liquid">
-                                <img src="assets/img/posts/05.jpg" alt="post-05">
+                                <img src="{{ asset('/frontend/assets/img/posts/05.jpg')}}" alt="post-05">
                             </figure>
                             <!-- POST PREVIEW IMG -->
     
@@ -3026,7 +2686,7 @@
                         <!-- USER AVATAR -->
                         <a href="search-results.html">
                             <figure class="user-avatar tiny liquid">
-                                <img src="assets/img/users/08.jpg" alt="user-08">
+                                <img src="{{ asset('/frontend/assets/img/users/08.jpg')}}" alt="user-08">
                             </figure>
                         </a>
                         <!-- /USER AVATAR -->
@@ -3051,7 +2711,7 @@
                         <div class="post-preview-img-wrap">
                             <!-- POST PREVIEW IMG -->
                             <figure class="post-preview-img liquid">
-                                <img src="assets/img/posts/21.jpg" alt="post-21">
+                                <img src="{{ asset('/frontend/assets/img/posts/21.jpg')}}" alt="post-21">
                             </figure>
                             <!-- POST PREVIEW IMG -->
                         </div>
@@ -3069,7 +2729,7 @@
                         <!-- USER AVATAR -->
                         <a href="search-results.html">
                             <figure class="user-avatar tiny liquid">
-                                <img src="assets/img/users/08.jpg" alt="user-08">
+                                <img src="{{ asset('/frontend/assets/img/users/08.jpg')}}" alt="user-08">
                             </figure>
                         </a>
                         <!-- /USER AVATAR -->
@@ -3094,7 +2754,7 @@
                         <div class="post-preview-img-wrap">
                             <!-- POST PREVIEW IMG -->
                             <figure class="post-preview-img liquid">
-                                <img src="assets/img/posts/03.jpg" alt="post-03">
+                                <img src="{{ asset('/frontend/assets/img/posts/03.jpg')}}" alt="post-03">
                             </figure>
                             <!-- /POST PREVIEW IMG -->
     
@@ -3162,7 +2822,7 @@
                         <!-- USER AVATAR -->
                         <a href="search-results.html">
                             <figure class="user-avatar tiny liquid">
-                                <img src="assets/img/users/03.jpg" alt="user-03">
+                                <img src="{{ asset('/frontend/assets/img/users/03.jpg')}}" alt="user-03">
                             </figure>
                         </a>
                         <!-- /USER AVATAR -->
@@ -3179,6 +2839,29 @@
                         voluptate velit esse cillum dolore...</p>
                 </div>
                 <!-- /POST PREVIEW -->
+
+                <!-- BUTTON -->
+                <div style="display: flex; justify-content: center">
+                    <a style="width: 30%" href="" class="button big blue centered">
+                        Load More
+                        <!-- BUTTON ORNAMENT -->
+                        <div class="button-ornament">
+                            <!-- ARROW ICON -->
+                            <svg class="arrow-icon big">
+                                <use xlink:href="#svg-arrow-big"></use>
+                            </svg>
+                            <!-- /ARROW ICON -->
+                    
+                            <!-- CROSS ICON -->
+                            <svg class="cross-icon big">
+                                <use xlink:href="#svg-cross-big"></use>
+                            </svg>
+                            <!-- /CROSS ICON -->
+                        </div>
+                        <!-- /BUTTON ORNAMENT -->
+                    </a>
+                </div>
+                <!-- /BUTTON -->
             </div>
             <!-- /LAYOUT ITEM -->
         </div>
@@ -3284,7 +2967,7 @@
                             <!-- TEAM INFO WRAP -->
                             <div class="team-info-wrap">
                                 <!-- TEAM LOGO -->
-                                <img class="team-logo small" src="assets/img/teams/logos/01.png" alt="logo-01">
+                                <img class="team-logo small" src="{{ asset('/frontend/assets/img/teams/logos/01.png')}}" alt="logo-01">
                                 <!-- /TEAM LOGO -->
             
                                 <!-- TEAM INFO -->
@@ -3315,7 +2998,7 @@
                             <!-- TEAM INFO WRAP -->
                             <div class="team-info-wrap inverted">
                                 <!-- TEAM LOGO -->
-                                <img class="team-logo small" src="assets/img/teams/logos/03.png" alt="logo-03">
+                                <img class="team-logo small" src="{{ asset('/frontend/assets/img/teams/logos/03.png')}}" alt="logo-03">
                                 <!-- /TEAM LOGO -->
             
                                 <!-- TEAM INFO -->
@@ -3354,7 +3037,7 @@
                             <!-- TEAM INFO WRAP -->
                             <div class="team-info-wrap">
                                 <!-- TEAM LOGO -->
-                                <img class="team-logo small" src="assets/img/teams/logos/05.png" alt="logo-05">
+                                <img class="team-logo small" src="{{ asset('/frontend/assets/img/teams/logos/05.png')}}" alt="logo-05">
                                 <!-- /TEAM LOGO -->
             
                                 <!-- TEAM INFO -->
@@ -3385,7 +3068,7 @@
                             <!-- TEAM INFO WRAP -->
                             <div class="team-info-wrap inverted">
                                 <!-- TEAM LOGO -->
-                                <img class="team-logo small" src="assets/img/teams/logos/02.png" alt="logo-02">
+                                <img class="team-logo small" src="{{ asset('/frontend/assets/img/teams/logos/02.png')}}" alt="logo-02">
                                 <!-- /TEAM LOGO -->
             
                                 <!-- TEAM INFO -->
@@ -3424,7 +3107,7 @@
                             <!-- TEAM INFO WRAP -->
                             <div class="team-info-wrap">
                                 <!-- TEAM LOGO -->
-                                <img class="team-logo small" src="assets/img/teams/logos/04.png" alt="logo-04">
+                                <img class="team-logo small" src="{{ asset('/frontend/assets/img/teams/logos/04.png')}}" alt="logo-04">
                                 <!-- /TEAM LOGO -->
             
                                 <!-- TEAM INFO -->
@@ -3455,7 +3138,7 @@
                             <!-- TEAM INFO WRAP -->
                             <div class="team-info-wrap inverted">
                                 <!-- TEAM LOGO -->
-                                <img class="team-logo small" src="assets/img/teams/logos/01.png" alt="logo-01">
+                                <img class="team-logo small" src="{{ asset('/frontend/assets/img/teams/logos/01.png')}}" alt="logo-01">
                                 <!-- /TEAM LOGO -->
             
                                 <!-- TEAM INFO -->
@@ -3520,7 +3203,7 @@
                                 <!-- TEAM INFO WRAP -->
                                 <div class="team-info-wrap">
                                     <!-- TEAM LOGO -->
-                                    <img class="team-logo small" src="assets/img/teams/logos/01.png" alt="logo-01">
+                                    <img class="team-logo small" src="{{ asset('/frontend/assets/img/teams/logos/01.png')}}" alt="logo-01">
                                     <!-- /TEAM LOGO -->
             
                                     <!-- TEAM INFO -->
@@ -3553,7 +3236,7 @@
                                 <!-- TEAM INFO WRAP -->
                                 <div class="team-info-wrap">
                                     <!-- TEAM LOGO -->
-                                    <img class="team-logo small" src="assets/img/teams/logos/02.png" alt="logo-02">
+                                    <img class="team-logo small" src="{{ asset('/frontend/assets/img/teams/logos/02.png')}}" alt="logo-02">
                                     <!-- /TEAM LOGO -->
             
                                     <!-- TEAM INFO -->
@@ -3586,7 +3269,7 @@
                                 <!-- TEAM INFO WRAP -->
                                 <div class="team-info-wrap">
                                     <!-- TEAM LOGO -->
-                                    <img class="team-logo small" src="assets/img/teams/logos/03.png" alt="logo-03">
+                                    <img class="team-logo small" src="{{ asset('/frontend/assets/img/teams/logos/03.png')}}" alt="logo-03">
                                     <!-- /TEAM LOGO -->
             
                                     <!-- TEAM INFO -->
@@ -3619,7 +3302,7 @@
                                 <!-- TEAM INFO WRAP -->
                                 <div class="team-info-wrap">
                                     <!-- TEAM LOGO -->
-                                    <img class="team-logo small" src="assets/img/teams/logos/04.png" alt="logo-04">
+                                    <img class="team-logo small" src="{{ asset('/frontend/assets/img/teams/logos/04.png')}}" alt="logo-04">
                                     <!-- /TEAM LOGO -->
             
                                     <!-- TEAM INFO -->
@@ -3652,7 +3335,7 @@
                                 <!-- TEAM INFO WRAP -->
                                 <div class="team-info-wrap">
                                     <!-- TEAM LOGO -->
-                                    <img class="team-logo small" src="assets/img/teams/logos/05.png" alt="logo-05">
+                                    <img class="team-logo small" src="{{ asset('/frontend/assets/img/teams/logos/05.png')}}" alt="logo-05">
                                     <!-- /TEAM LOGO -->
             
                                     <!-- TEAM INFO -->
@@ -3685,7 +3368,7 @@
                 <!-- PROMO AD -->
                 <div class="promo-ad">
                     <a href="#">
-                        <img class="promo-ad-img" src="assets/img/banners/promo-ad-1.jpg" alt="promo-ad-1">
+                        <img class="promo-ad-img" src="{{ asset('/frontend/assets/img/banners/promo-ad-1.jpg')}}" alt="promo-ad-1">
                     </a>
                 </div>
                 <!-- /PROMO AD -->

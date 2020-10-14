@@ -142,7 +142,7 @@
     <ul class="mobile-menu">
         <li class="mobile-menu-item">
             <p class="mobile-menu-item-link pd-dropdown-handler">
-                <img class="widget-option-img user-avatar micro" src="img/users/05.jpg" alt="avatar-01">
+                <img class="widget-option-img user-avatar micro" src="{{ asset('/frontend/assets/img/users/00.jpg')}}" alt="avatar-01">
                 James_Spiegel
             </p>
             <svg class="arrow-icon medium">

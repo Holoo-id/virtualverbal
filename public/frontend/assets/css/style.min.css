@@ -8041,7 +8041,7 @@ input[type="radio"]:disabled+.radio-circle {
 
 .navigation {
     height: 92px;
-    background: -webkit-linear-gradient(45deg, #1C95F3, #7442CE);
+    background: linear-gradient(to right, #1C95F3, #7442CE);
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -8604,6 +8604,7 @@ input[type="radio"]:disabled+.radio-circle {
 
 .dropdown-list.accordion {
     box-shadow: none;
+    width: 100%;
     border-bottom: 1px solid #dbdbdb
 }
 
@@ -8625,7 +8626,7 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .dropdown-list.violet .dropdown-list-item:hover>.dropdown-list-item-link {
-    background: -webkit-linear-gradient(45deg, #1C95F3, #7442CE);
+    background: linear-gradient(to right, #1C95F3, #7442CE);
     color: #dbdbdb;
 }
 
@@ -10769,7 +10770,7 @@ input[type="radio"]:disabled+.radio-circle {
 
 .widget-sidebar .card-langganan {
     color: #eeffee;
-    background: -webkit-linear-gradient(120deg, #f30a5c, #7442ce);
+    background: linear-gradient(to right, #1C95F3, #7442CE);
     padding: 20px;
     border-radius: 5px;
 }

@@ -3,7 +3,6 @@
     <svg class="cross-icon big close-button search-popup-close">
         <use xlink:href="#svg-cross-big"></use>
     </svg>
-
     <form method="GET" class="search-popup-form">
         <input type="text" id="search" class="input-line" name="search" placeholder="What are you looking for...?">
     </form>
@@ -130,6 +129,10 @@
 <div class="mobile-menu-wrap">
     <svg class="cross-icon big mobile-menu-close">
         <use xlink:href="#svg-cross-big"></use>
+    </svg>
+    <!-- SEARCH POPUP OPEN -->
+    <svg style="fill: #363636" class="search-popup-open search-icon">
+      <use xlink:href="#svg-search"></use>
     </svg>
 
     <figure class="logo-img">
@@ -955,7 +958,7 @@
                                                 </div>
                                                 <div class="streamer-avatar-img-wrap">
                                                     <img class="streamer-avatar-img"
-                                                        src="assets/img/streamers/streamer-hex-01.png"
+                                                        src="{{ asset('/frontend/assets/img/streamers/streamer-hex-01.png')}}"
                                                         alt="st-avatar-01">
                                                 </div>
                                             </a>
@@ -972,7 +975,7 @@
                                                 </div>
                                                 <div class="streamer-avatar-img-wrap">
                                                     <img class="streamer-avatar-img"
-                                                        src="assets/img/streamers/streamer-hex-02.png"
+                                                        src="{{ asset('/frontend/assets/img/streamers/streamer-hex-02.png')}}"
                                                         alt="st-avatar-02">
                                                 </div>
                                             </a>
@@ -989,7 +992,7 @@
                                                 </div>
                                                 <div class="streamer-avatar-img-wrap">
                                                     <img class="streamer-avatar-img"
-                                                        src="assets/img/streamers/streamer-hex-03.png"
+                                                        src="{{ asset('/frontend/assets/img/streamers/streamer-hex-03.png')}}"
                                                         alt="st-avatar-03">
                                                 </div>
                                             </a>
@@ -1006,7 +1009,7 @@
                                                 </div>
                                                 <div class="streamer-avatar-img-wrap">
                                                     <img class="streamer-avatar-img"
-                                                        src="assets/img/streamers/streamer-hex-04.png"
+                                                        src="{{ asset('/frontend/assets/img/streamers/streamer-hex-04.png')}}"
                                                         alt="st-avatar-04">
                                                 </div>
                                             </a>
@@ -1023,7 +1026,7 @@
                                                 </div>
                                                 <div class="streamer-avatar-img-wrap">
                                                     <img class="streamer-avatar-img"
-                                                        src="assets/img/streamers/streamer-hex-05.png"
+                                                        src="{{ asset('/frontend/assets/img/streamers/streamer-hex-05.png')}}"
                                                         alt="st-avatar-05">
                                                 </div>
                                             </a>
@@ -1047,7 +1050,7 @@
                                         <div class="widget-team-vs">
                                             <div class="widget-team-vs-item">
                                                 <div class="team-info-wrap medium">
-                                                    <img class="team-logo" src="assets/img/teams/logos/01.png"
+                                                    <img class="team-logo" src="{{ asset('/frontend/assets/img/teams/logos/01.png')}}"
                                                         alt="logo-01">
                                                     <div class="team-info">
                                                         <p class="team-name">The Lone Wolves</p>
@@ -1058,7 +1061,7 @@
                                             </div>
                                             <div class="widget-team-vs-item">
                                                 <div class="team-info-wrap medium">
-                                                    <img class="team-logo" src="assets/img/teams/logos/02.png"
+                                                    <img class="team-logo" src="{{ asset('/frontend/assets/img/teams/logos/02.png')}}"
                                                         alt="logo-02">
                                                     <div class="team-info">
                                                         <p class="team-name">Raging Rhinos</p>
@@ -1132,7 +1135,7 @@
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">
                                                     <figure class="post-preview-img liquid">
-                                                        <img src="assets/img/posts/36.jpg" alt="post-36">
+                                                        <img src="{{ asset('/frontend/assets/img/posts/36.jpg')}}" alt="post-36">
                                                     </figure>
                                                 </div>
                                             </a>
@@ -1149,7 +1152,7 @@
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">
                                                     <figure class="post-preview-img liquid">
-                                                        <img src="assets/img/posts/38.jpg" alt="post-38">
+                                                        <img src="{{ asset('/frontend/assets/img/posts/38.jpg')}}" alt="post-38">
                                                     </figure>
                                                 </div>
                                             </a>
@@ -1166,7 +1169,7 @@
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">
                                                     <figure class="post-preview-img liquid">
-                                                        <img src="assets/img/posts/37.jpg" alt="post-37">
+                                                        <img src="{{ asset('/frontend/assets/img/posts/37.jpg')}}" alt="post-37">
                                                     </figure>
                                                 </div>
                                             </a>
@@ -1183,7 +1186,7 @@
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">
                                                     <figure class="post-preview-img liquid">
-                                                        <img src="assets/img/posts/39.jpg" alt="post-39">
+                                                        <img src="{{ asset('/frontend/assets/img/posts/39.jpg')}}" alt="post-39">
                                                     </figure>
                                                 </div>
                                             </a>
@@ -1201,7 +1204,7 @@
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">
                                                     <figure class="post-preview-img liquid">
-                                                        <img src="assets/img/posts/40.jpg" alt="post-40">
+                                                        <img src="{{ asset('/frontend/assets/img/posts/40.jpg')}}" alt="post-40">
                                                     </figure>
                                                 </div>
                                             </a>
@@ -1318,7 +1321,7 @@
                                             <div class="product-preview-img-wrap">
                                                 <a href="product-page.html">
                                                     <figure class="product-preview-img liquid">
-                                                        <img src="assets/img/products/04.jpg" alt="product-04">
+                                                        <img src="{{ asset('/frontend/assets/img/products/04.jpg')}}" alt="product-04">
                                                     </figure>
                                                 </a>
                                             </div>
@@ -1417,7 +1420,7 @@
                                                 
                                                 <a href="product-page.html">
                                                     <figure class="product-preview-img liquid">
-                                                        <img src="assets/img/products/11.jpg" alt="product-11">
+                                                        <img src="{{ asset('/frontend/assets/img/products/11.jpg')}}" alt="product-11">
                                                     </figure>
                                                 </a>
                                                 
@@ -1596,7 +1599,7 @@
                                                 
                                                 <a href="product-page.html">
                                                     <figure class="product-preview-img liquid">
-                                                        <img src="assets/img/products/09.jpg" alt="product-09">
+                                                        <img src="{{ asset('/frontend/assets/img/products/09.jpg')}}" alt="product-09">
                                                     </figure>
                                                 </a>
                                                 
@@ -1775,7 +1778,7 @@
                                                 
                                                 <a href="product-page.html">
                                                     <figure class="product-preview-img liquid">
-                                                        <img src="assets/img/products/08.jpg" alt="product-08">
+                                                        <img src="{{ asset('/frontend/assets/img/products/08.jpg')}}" alt="product-08">
                                                     </figure>
                                                 </a>
                                                 
@@ -1953,7 +1956,7 @@
                                                 
                                                 <a href="product-page.html">
                                                     <figure class="product-preview-img liquid">
-                                                        <img src="assets/img/products/07.jpg" alt="product-07">
+                                                        <img src="{{ asset('/frontend/assets/img/products/07.jpg')}}" alt="product-07">
                                                     </figure>
                                                 </a>
                                                 
@@ -2132,7 +2135,7 @@
                                                 
                                                 <a href="product-page.html">
                                                     <figure class="product-preview-img liquid">
-                                                        <img src="assets/img/products/12.jpg" alt="product-12">
+                                                        <img src="{{ asset('/frontend/assets/img/products/12.jpg')}}" alt="product-12">
                                                     </figure>
                                                 </a>
                                                 
@@ -2311,7 +2314,7 @@
                                                 
                                                 <a href="product-page.html">
                                                     <figure class="product-preview-img liquid">
-                                                        <img src="assets/img/products/13.jpg" alt="product-13">
+                                                        <img src="{{ asset('/frontend/assets/img/products/13.jpg')}}" alt="product-13">
                                                     </figure>
                                                 </a>
                                                 

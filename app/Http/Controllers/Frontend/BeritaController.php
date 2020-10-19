@@ -10,7 +10,7 @@ class BeritaController extends Controller
     public function Berita()
     {
 
-        return view('layouts.content');
+        return view('berita');
     }
 
     public function LinkBerita($linkurl)

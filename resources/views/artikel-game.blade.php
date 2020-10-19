@@ -27,12 +27,27 @@
             <!-- POST OPEN -->
             <div class="post-open gaming-news">
                 <!-- POST OPEN CONTENT -->
-                <div class="post-open-content">
+                <div class="post-open-content v5">
                     <!-- POST OPEN BODY  -->
                     <div class="post-open-body">
-                        <a class="tag-ornament" href="#">Berita Coba Lebih Panjang</a>
-
-                        <p class="post-open-title">Game 1: Penjelasan - Lebih Detail</p>
+                        <!-- TAG LIST -->
+                        <div class="tag-list">
+                            <!-- TAG ORNAMENT -->
+                            <a href="news-v4.html" class="tag-ornament">Geeky News</a>
+                            <!-- /TAG ORNAMENT -->
+                        </div>
+                        <!-- /TAG LIST -->
+    
+                        <!-- POST OPEN TITLE -->
+                        <p class="post-open-title">Check out some Hearte Bunny original design ideas</p>
+                        <!-- /POST OPEN TITLE -->
+                
+                        <!-- POST OPEN TEXT -->
+                        <p class="post-open-subtitle">Also, get a sneak peak of the new season looks</p>
+                        <div class="section-title-wrap blue">
+                            <div class="section-title-separator"></div>
+                        </div>
+                        <!-- /POST OPEN TEXT -->
 
                         <div class="post-open-card-game">
                             <img src="{{ asset('/frontend/assets/img/posts/07.jpg')}}" alt="">
@@ -113,129 +128,8 @@
             <!-- /POST OPEN -->
         </div>
         <!-- /LAYOUT BODY -->
-    
-        <!-- LAYOUT SIDEBAR 2 -->
-        <div class="layout-sidebar2 layout-item">
-            <!-- WIDGET SIDEBAR-->
-            <div class="widget-sidebar">
-                <div class="card-profil-game">
-                    <div class="section-title-wrap">
-                        <div class="section-title medium">Profil Game</div>
-                    </div>
-                    <img src="{{ asset('/frontend/assets/img/posts/02_tall.jpg')}}" alt="">
-                    <ul class="profil-game-text">
-                        <li class="text-judul">Judul :</li>
-                        <li class="text-isi">Game 1</li>
-                        <li class="text-judul">Publisher :</li>
-                        <li class="text-isi">Publisher 1</li>
-                        <li class="text-judul">Pengembang :</li>
-                        <li class="text-isi">Developer</li>
-                        <li class="text-judul">Genre :</li>
-                        <li class="text-isi">Game</li>
-                        <li class="text-judul">Tanggal Release :</li>
-                        <li class="text-isi">12 Bulan 1234 (UK), 12 Bulan 1234 (UK)</li>
-                        <li class="text-judul">Official Website :</li>
-                        <li class="text-isi">asdfghjkl.com</li>
-                        <li class="text-judul">Link :</li>
-                        <a style="width: 100%; margin-top: 5px;" href="#" class="button disable">Beli
-                            <!-- BUTTON ORNAMENT -->
-                            <div class="button-ornament">
-                                <!-- ARROW ICON -->
-                                <svg class="arrow-icon medium">
-                                    <use xlink:href="#svg-arrow-medium"></use>
-                                </svg>
-                                <!-- /ARROW ICON -->
-                            </div>
-                            <!-- /BUTTON ORNAMENT -->
-                        </a>
-                    </ul>
-                </div>
-            </div>
-            <!-- /WIDGET SIDEBAR-->
 
-            <!-- WIDGET SIDEBAR-->
-            <div class="widget-sidebar">
-                <div class="card-langganan">
-                    <div class="section-title-wrap">
-                        <div class="section-title medium">Langganan Artikel</div>
-                    </div>
-                    <p style="color: #eeffee; margin-bottom: 10px">Temukan Tips dan Berita Menarik Setiap Harinya.
-                        GRATIS!</p>
-                    <a style="width: 100%;" href="#" class="button disable">Langganan
-                        <!-- BUTTON ORNAMENT -->
-                        <div class="button-ornament">
-                            <!-- ARROW ICON -->
-                            <svg class="arrow-icon medium">
-                                <use xlink:href="#svg-arrow-medium"></use>
-                            </svg>
-                            <!-- /ARROW ICON -->
-                        </div>
-                        <!-- /BUTTON ORNAMENT -->
-                    </a>
-                </div>
-            </div>
-            <!-- /WIDGET SIDEBAR-->
-
-            <!-- WIDGET SIDEBAR -->
-            <div class="widget-sidebar">
-                <!-- SECTION TITLE WRAP -->
-                <div class="section-title-wrap blue">
-                    <h2 class="section-title medium">Pixel Tags</h2>
-                    <div class="section-title-separator"></div>
-                </div>
-                <!-- /SECTION TITLE WRAP -->
-            
-                <!-- TAG LIST -->
-                <div class="tag-list">
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Gaming</a>
-                    <!-- /TAG ITEM -->
-            
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Video Reviews</a>
-                    <!-- /TAG ITEM -->
-            
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Previews</a>
-                    <!-- /TAG ITEM -->
-            
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Movie Reviews</a>
-                    <!-- /TAG ITEM -->
-            
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Movie News</a>
-                    <!-- /TAG ITEM -->
-            
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Critic</a>
-                    <!-- /TAG ITEM -->
-            
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Ratings</a>
-                    <!-- /TAG ITEM -->
-            
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Funtendo</a>
-                    <!-- /TAG ITEM -->
-                </div>
-                <!-- /TAG LIST -->
-            </div>
-            <!-- /WIDGET SIDEBAR -->
-            
-            <!-- WIDGET SIDEBAR -->
-            <div class="widget-sidebar">
-                <!-- PROMO AD -->
-                <div class="promo-ad">
-                    <a href="#">
-                        <img class="promo-ad-img" src="{{ asset('/frontend/assets/img/banners/promo-ad-1.jpg')}}" alt="promo-ad-1">
-                    </a>
-                </div>
-                <!-- /PROMO AD -->
-            </div>
-            <!-- /WIDGET SIDEBAR -->
-        </div>
-        <!-- /LAYOUT SIDEBAR 2 -->
+        @include('layouts.sidebar-right')
     </div>
     <!-- /LAYOUT CONTENT 2 -->
     <!-- POST COMMENT FORM WRAP -->

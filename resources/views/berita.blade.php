@@ -28,33 +28,74 @@
             <!-- POST OPEN -->
             <div class="post-open gaming-news">
                 <!-- POST OPEN CONTENT -->
-                <div class="post-open-content">
+                <div class="post-open-content v5">
                     <!-- POST OPEN BODY  -->
                     <div class="post-open-body">
-                        <a class="tag-ornament" href="#">Berita Coba Lebih Panjang</a>
-                        <!-- POST OPEN IMG -->
-                        <figure class="post-open-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/09.jpg')}}" alt="post-13">
-                        </figure>
-                        <!-- /POST OPEN IMG -->
-                        <!-- POST OPEN TITLE -->
-                        <p class="post-open-title">The "Clash of Eternity" new game was just released</p>
-                        <!-- /POST OPEN TITLE -->
-                        <!-- POST OPEN IMG WRAP BLUR-->
-                        <div class="post-open-img-wrap blur-bg-wrap">
-                            <!-- POST OPEN IMG -->
-                            <figure class="post-open-img blur-bg liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/07.jpg')}}" alt="post-19">
-                            </figure>
-                            <!-- /POST OPEN IMG -->
-                        
-                            <!-- POST OPEN IMG -->
-                            <figure class="post-open-img blur-bg-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/07.jpg')}}" alt="post-19">
-                            </figure>
-                            <!-- /POST OPEN IMG -->
+                        <!-- TAG LIST -->
+                        <div class="tag-list">
+                            <!-- TAG ORNAMENT -->
+                            <a href="news-v4.html" class="tag-ornament">Geeky News</a>
+                            <!-- /TAG ORNAMENT -->
                         </div>
-                        <!-- /POST OPEN IMG WRAP -->
+                        <!-- /TAG LIST -->
+    
+                        <!-- POST OPEN TITLE -->
+                        <p class="post-open-title">Check out some Hearte Bunny original design ideas</p>
+                        <!-- /POST OPEN TITLE -->
+                
+                        <!-- POST OPEN TEXT -->
+                        <p class="post-open-subtitle">Also, get a sneak peak of the new season looks</p>
+                        <div class="section-title-wrap blue">
+                            <div class="section-title-separator"></div>
+                        </div>
+                        <!-- /POST OPEN TEXT -->
+
+                        <!-- POST AUTHOR INFO -->
+                        <div style="margin-top: 5px;display: flex; justify-content: center;" class="post-author-info-wrap">
+                            <!-- USER AVATAR -->
+                            <a href="search-results.html">
+                                <figure class="user-avatar tiny liquid">
+                                    <img src="{{ asset('/frontend/assets/img/users/01.jpg')}}" alt="user-01">
+                                </figure>
+                            </a>
+                            <!-- /USER AVATAR -->
+                            <p style="display: flex; justify-content: center; align-items: center" class="post-author-info small light">Oleh 
+                                <a href="search-results.html" class="post-author" style="margin-left:2px"> Dexter</a>
+                                <span class="separator">-</span>Senin, 19 Oktober 2020, 14:29 WIB
+                                <span class="separator">-</span>
+                                <!-- BUBBLE ORNAMENT -->
+                                <a href="#" class="bubble-ornament fb">
+                                    <!-- FACEBOOK ICON -->
+                                    <svg class="facebook-icon">
+                                        <use xlink:href="#svg-facebook"></use>
+                                    </svg>
+                                    <!-- /FACEBOOK ICON -->
+                                </a>
+                                <!-- /BUBBLE ORNAMENT -->
+    
+                                <!-- BUBBLE ORNAMENT -->
+                                <a href="#" class="bubble-ornament twt">
+                                    <!-- TWITTER ICON -->
+                                    <svg class="twitter-icon">
+                                        <use xlink:href="#svg-twitter"></use>
+                                    </svg>
+                                    <!-- /TWITTER ICON -->
+                                </a>
+                                <!-- /BUBBLE ORNAMENT -->
+    
+                                <!-- BUBBLE ORNAMENT -->
+                                <a href="#" class="bubble-ornament gplus">
+                                    <!-- GPLUS ICON -->
+                                    <svg class="gplus-icon">
+                                        <use xlink:href="#svg-gplus"></use>
+                                    </svg>
+                                    <!-- /GPLUS ICON -->
+                                </a>
+                                <!-- /BUBBLE ORNAMENT -->
+                            </p>
+                        </div>
+                        <!-- /POST AUTHOR INFO -->
+                        
                         <!-- POST OPEN MEDIA WRAP -->
                         <div class="post-open-media-wrap">
                             <!-- POST OPEN MEDIA -->
@@ -76,6 +117,11 @@
                             velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
                             in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <!-- /POST OPEN TEXT -->
+                        <!-- POST OPEN IMG -->
+                        <figure class="post-open-img liquid">
+                            <img src="{{ asset('/frontend/assets/img/posts/09.jpg')}}" alt="post-13">
+                        </figure>
+                        <!-- /POST OPEN IMG -->
                         <!-- Slideshow -->
                         <!-- <div id="po-slideshow2" class="slideshow v2">
                             <div class="slider-content">
@@ -177,6 +223,21 @@
                             <!-- /QUOTE TEXT -->
                         </div>
                         <!-- /POST OPEN QUOTE -->
+                        <!-- POST OPEN IMG WRAP BLUR-->
+                        <div class="post-open-img-wrap blur-bg-wrap">
+                            <!-- POST OPEN IMG -->
+                            <figure class="post-open-img blur-bg liquid">
+                                <img src="{{ asset('/frontend/assets/img/posts/07.jpg')}}" alt="post-19">
+                            </figure>
+                            <!-- /POST OPEN IMG -->
+                        
+                            <!-- POST OPEN IMG -->
+                            <figure class="post-open-img blur-bg-img liquid">
+                                <img src="{{ asset('/frontend/assets/img/posts/07.jpg')}}" alt="post-19">
+                            </figure>
+                            <!-- /POST OPEN IMG -->
+                        </div>
+                        <!-- /POST OPEN IMG WRAP -->
                         <!-- REVIEW WRAP -->
                         <div class="review-wrap">
                             <!-- REVIEW SCORE WRAP -->
@@ -732,9 +793,6 @@
                             <!-- /POST OPEN MEDIA -->
                         </div>
                         <!-- /POST OPEN MEDIA WRAP -->
-                        <!-- POST OPEN SUBTITLE -->
-                        <p class="post-open-subtitle">Two columns text</p>
-                        <!-- /POST OPEN SUBTITLE -->
                         <!-- POST OPEN TEXT WRAP -->
                         <div class="post-open-text-wrap half">
                             <!-- POST OPEN TEXT -->
@@ -808,6 +866,32 @@
                             <!-- /REVIEW BLOCK ITEM -->
                         </div>
                         <!-- /REVIEW BLOCK -->
+
+                        <div class="post-open-card-game">
+                            <img src="{{ asset('/frontend/assets/img/posts/07.jpg')}}" alt="">
+                            <!-- FEATURE LIST -->
+                            <div class="feature-list">
+                                <!-- FEATURE LIST BLOCK -->
+                                <div class="feature-list-block">
+                            
+                                    <!-- FEATURE LIST ITEM -->
+                                    <p class="feature-list-item"><span class="feature-title">Developer:</span><span class="feature-info">Broken
+                                            Pixels</span></p>
+                                    <!-- /FEATURE LIST ITEM -->
+                                    <!-- FEATURE LIST ITEM -->
+                                    <p class="feature-list-item"><span class="feature-title">Publisher:</span><span class="feature-info">Diamond
+                                            Canada</span></p>
+                                    <!-- /FEATURE LIST ITEM -->
+                            
+                                    <!-- FEATURE LIST ITEM -->
+                                    <p class="feature-list-item"><span class="feature-title">Release Date:</span><span class="feature-info">October
+                                            15th, 2018</span></p>
+                                    <!-- /FEATURE LIST ITEM -->
+                                </div>
+                                <!-- /FEATURE LIST BLOCK -->
+                            </div>
+                            <!-- /FEATURE LIST -->
+                        </div>
                     </div>
                     <!-- /POST OPEN BODY -->
                 </div>
@@ -856,104 +940,8 @@
             <!-- /POST OPEN -->
         </div>
         <!-- /LAYOUT BODY -->
-    
-        <!-- LAYOUT SIDEBAR 2 -->
-        <div class="layout-sidebar2 layout-item">
-            <!-- WIDGET SIDEBAR-->
-            <div class="widget-sidebar">
-                <div class="card-langganan">
-                    <div class="section-title-wrap">
-                        <div class="section-title medium">Langganan Artikel</div>
-                    </div>
-                    <p style="color: #eeffee; margin-bottom: 10px">Temukan Tips dan Berita Menarik Setiap Harinya.
-                        GRATIS!</p>
-                    <a href="#" class="button disable">Langganan
-                        <!-- BUTTON ORNAMENT -->
-                        <div class="button-ornament">
-                            <!-- ARROW ICON -->
-                            <svg class="arrow-icon medium">
-                                <use xlink:href="#svg-arrow-medium"></use>
-                            </svg>
-                            <!-- /ARROW ICON -->
-                        </div>
-                        <!-- /BUTTON ORNAMENT -->
-                    </a>
-                </div>
-            </div>
-            <!-- /WIDGET SIDEBAR-->
 
-            <!-- WIDGET SIDEBAR -->
-            <div class="widget-sidebar">
-                <!-- SECTION TITLE WRAP -->
-                <div class="section-title-wrap blue">
-                    <h2 class="section-title medium">Pixel Tags</h2>
-                    <div class="section-title-separator"></div>
-                </div>
-                <!-- /SECTION TITLE WRAP -->
-            
-                <!-- TAG LIST -->
-                <div class="tag-list">
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Gaming</a>
-                    <!-- /TAG ITEM -->
-            
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Video Reviews</a>
-                    <!-- /TAG ITEM -->
-            
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Previews</a>
-                    <!-- /TAG ITEM -->
-            
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Movie Reviews</a>
-                    <!-- /TAG ITEM -->
-            
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Movie News</a>
-                    <!-- /TAG ITEM -->
-            
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Critic</a>
-                    <!-- /TAG ITEM -->
-            
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Ratings</a>
-                    <!-- /TAG ITEM -->
-            
-                    <!-- TAG ITEM -->
-                    <a href="search-results.html" class="tag-item">Funtendo</a>
-                    <!-- /TAG ITEM -->
-                </div>
-                <!-- /TAG LIST -->
-            </div>
-            <!-- /WIDGET SIDEBAR -->
-            
-            <!-- WIDGET SIDEBAR -->
-            <div class="widget-sidebar">
-                <!-- PROMO AD -->
-                <div class="promo-ad">
-                    <a href="#">
-                        <img class="promo-ad-img" src="{{ asset('/frontend/assets/img/banners/promo-ad-1.jpg')}}" alt="promo-ad-1">
-                    </a>
-                </div>
-                <!-- /PROMO AD -->
-            </div>
-            <!-- /WIDGET SIDEBAR -->
-
-            <!-- WIDGET SIDEBAR -->
-            <div class="widget-sidebar">
-                <!-- PROMO AD -->
-                <div class="promo-ad">
-                    <a href="#">
-                        <img class="promo-ad-img" src="assets/img/posts/02_tall.jpg" alt="promo-ad-2">
-                    </a>
-                </div>
-                <!-- /PROMO AD -->
-            </div>
-            <!-- /WIDGET SIDEBAR -->
-        </div>
-        <!-- /LAYOUT SIDEBAR 2 -->
+        @include('layouts.sidebar-right')
     </div>
     <!-- /LAYOUT CONTENT 2 -->
     <!-- POST COMMENT FORM WRAP -->

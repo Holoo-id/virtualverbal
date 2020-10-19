@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;900&family=Nunito:wght@400;900&family=Open+Sans:wght@300;400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -43,7 +45,6 @@ figure>img {
 .contact-section .contact-section-title,
 .sponsors-title,
 .order-result-banner .order-result-banner-title,
-.post-open .post-open-title,
 .banner .banner-title,
 .post-preview.picture.big .post-preview-overlay .post-preview-title,
 .post-preview.large .post-preview-title,
@@ -64,7 +65,6 @@ figure>img {
 .stats-info-item .stats-info-item-value,
 .form-box-heading .form-box-heading-subtitle,
 .product-open .product-name,
-.post-preview-title,
 .error-display .error-subtitle,
 .post-preview.video.no-hover .post-preview-title,
 .post-comment .post-comment-username,
@@ -226,17 +226,27 @@ figure>img {
 .match-stats .match-time,
 .calendar .calendar-body .calendar-day .event-list .event-item,
 .text-heading,
-.post-open .post-open-subtitle,
 .post-open .feature-list .feature-list-item .feature-title,
 .post-open .review-wrap .review-score-wrap .review-score-number,
 .post-open .review-wrap .review-score-wrap .review-score-text,
 .section-title-wrap .section-title,
 .shortcode-font .shortcode-font-demo {
     display: block;
-    font-family: "Gibson", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 900;
+    text-transform: capitalize;
     line-height: 1em
+}
+
+
+.post-preview-title{
+    display: block;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 900;
+    text-transform: capitalize;
+    line-height: 1em;
+    letter-spacing: .8px;
+    color: #d8d8d8;
 }
 
 .mobile-menu-wrap .mobile-menu .mobile-menu-item{
@@ -1222,8 +1232,11 @@ figure>img {
 }
 
 @font-face {
-    font-family: Gibson;
-    src: url('/fonts/Gibson-Regular.tff');
+    font-family: 'Gibson';
+    font-weight: normal;
+    font-style: normal;
+    src: url("../font/gibson/Gibson-Regular.ttf");
+    src: url("../font/gibson/Gibson-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -2267,9 +2280,9 @@ h6 {
 
 p {
     color: #777;
-    font-family: "Gibson", sans-serif;
-    font-size: .8125em;
-    line-height: 1.6923076923em
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5em
 }
 
 p.light {
@@ -5547,6 +5560,7 @@ a {
     background-color: #dbdbdb;
     text-align: center;
     cursor: pointer;
+    margin: 5px;
     position: relative
 }
 
@@ -6071,7 +6085,7 @@ a {
 .bubble-ornament .twitter-icon,
 .bubble-ornament .gplus-icon {
     position: relative;
-    top: 7px
+    top: 10px
 }
 
 .bubble-ornament .twitch-icon {
@@ -10772,14 +10786,10 @@ input[type="radio"]:disabled+.radio-circle {
     background: linear-gradient(45deg, #7442CE, #F30A5C);
     color: #eeffee;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px #dbdbdb;
 }
 
 .widget-sidebar .card-profil-game{
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px #dbdbdb;
     background: linear-gradient(to right, #1C95F3, #7442CE);
     color: #fff;
 }
@@ -13319,7 +13329,7 @@ input[type="radio"]:disabled+.radio-circle {
 
 .post-author-info-wrap .user-avatar {
     float: left;
-    margin-right: 8px
+    margin: 8px
 }
 
 .post-author-info-wrap.negative .post-author-info {
@@ -14789,7 +14799,8 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .post-open .section-title-wrap {
-    margin-top: 40px
+    margin-top: 27px;
+    margin-bottom: 18px
 }
 
 .post-open .progress-bar-block {
@@ -14875,10 +14886,23 @@ input[type="radio"]:disabled+.radio-circle {
     margin: 16px 0 26px
 }
 
+.post-open .post-open-title{
+    display: block;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 900;
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 1em
+}
+
 .post-open .post-open-subtitle {
-    margin-top: 50px;
-    color: #363636;
-    font-size: 1.5em
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 20px;
+    color: #8b8b8b;
+    font-weight: 500;
+    font-size: 1.2em
 }
 
 .post-open .post-open-subtitle.small {
@@ -14918,7 +14942,9 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .post-open .post-open-text {
-    margin-top: 30px
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-bottom: 45px;
 }
 
 .post-open .post-open-text .video-length {
@@ -14988,8 +15014,8 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .post-open .post-open-media-wrap .post-open-media-info {
-    margin-top: 30px;
-    font-size: .8125em;
+    font-size: .65em;
+    font-style: italic;
     text-align: center
 }
 
@@ -19250,7 +19276,9 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .section-title-wrap .section-title.medium {
-    font-size: 1.125em
+    font-size: 1.125em;
+    letter-spacing: 1.5px;
+    word-spacing: 1.8px;
 }
 
 .section-title-wrap .section-title.small {

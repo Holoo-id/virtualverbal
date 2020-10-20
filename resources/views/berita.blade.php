@@ -49,32 +49,6 @@
                             <div class="section-title-separator"></div>
                         </div>
                         <!-- /POST OPEN TEXT -->
-
-                        <div class="post-open-card-game">
-                            <img src="{{ asset('/frontend/assets/img/posts/07.jpg')}}" alt="">
-                            <!-- FEATURE LIST -->
-                            <div class="feature-list">
-                                <!-- FEATURE LIST BLOCK -->
-                                <div class="feature-list-block">
-                            
-                                    <!-- FEATURE LIST ITEM -->
-                                    <p class="feature-list-item"><span class="feature-title">Developer:</span><span class="feature-info">Broken
-                                            Pixels</span></p>
-                                    <!-- /FEATURE LIST ITEM -->
-                                    <!-- FEATURE LIST ITEM -->
-                                    <p class="feature-list-item"><span class="feature-title">Publisher:</span><span class="feature-info">Diamond
-                                            Canada</span></p>
-                                    <!-- /FEATURE LIST ITEM -->
-                            
-                                    <!-- FEATURE LIST ITEM -->
-                                    <p class="feature-list-item"><span class="feature-title">Release Date:</span><span class="feature-info">October
-                                            15th, 2018</span></p>
-                                    <!-- /FEATURE LIST ITEM -->
-                                </div>
-                                <!-- /FEATURE LIST BLOCK -->
-                            </div>
-                            <!-- /FEATURE LIST -->
-                        </div>
                         <p class="post-open-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                             incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate

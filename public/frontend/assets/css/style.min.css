@@ -8250,9 +8250,9 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .main-menu-item-link p {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 900;
     color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
     font-size: 1em;
     text-transform: uppercase;
 }
@@ -10798,27 +10798,29 @@ input[type="radio"]:disabled+.radio-circle {
     color: #fff;
 }
 
-.widget-sidebar .card-profil-game .profil-game-text {
-}
-
 .widget-sidebar .card-profil-game img {
     max-width: 50%;
     float:right;
     border: 5px solid #36363675;
+    margin-top: -15px;
+}
+
+.widget-sidebar .card-profil-game .profil-game-text{
+    margin-top: -15px
 }
 
 .widget-sidebar .card-profil-game .profil-game-text .text-judul{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .widget-sidebar .card-profil-game .profil-game-text .text-isi{
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     margin-bottom: 5px;
     padding-bottom: 5px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
 }
 
 .widget-sidebar .sidebar-search-form {
@@ -19286,7 +19288,7 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .section-title-wrap .section-title.medium {
-    font-size: 1.125em;
+    font-size: 1.2em;
     word-spacing: 1.8px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;

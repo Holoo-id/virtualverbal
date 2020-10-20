@@ -20,7 +20,7 @@
                 <li class="text-isi">12 Bulan 1234 (UK), 12 Bulan 1234 (UK)</li>
                 <li class="text-judul">Platform:</li>
                 <li class="text-isi">asdghjkl</li>
-                <a style="width: 100%; margin-top: 5px;" href="#" class="button disable">Selengkapnya
+                <a style="width: 100%; margin-top: 15px;" href="#" class="button disable">Selengkapnya
                     <!-- BUTTON ORNAMENT -->
                     <div class="button-ornament">
                         <!-- ARROW ICON -->

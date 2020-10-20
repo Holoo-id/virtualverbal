@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;900&family=Nunito:wght@400;900&family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,900;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,400;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,800;1,400;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,800;1,400;1,800&display=swap');
 
 * {
     margin: 0;
@@ -183,9 +186,7 @@ figure>img {
 .medal-list .medal-list-item .medal-list-item-title,
 .overview-info-wrap .overview-info-item .overview-info-item-text,
 .table.order-overview .table-row-item .product-name,
-.post-preview.video.tiny .post-preview-title,
 .post-preview.video.large .post-preview-overlay .post-preview-overlay-info .post-preview-text,
-.post-preview.tiny .post-preview-title,
 .product-open .product-category-wrap .product-category,
 .product-feature .product-feature-info .product-feature-text,
 .progress-bar .progress-bar-text,
@@ -211,11 +212,8 @@ figure>img {
 .live-news-widget .live-news-widget-title-wrap .live-news-widget-title,
 .widget-slider-items .widget-slider-item .widget-slider-item-title,
 .widget-calendar-row .calendar-row-wrap .calendar-row-items .calendar-row-item .calendar-row-item-day,
-.post-preview.video .post-preview-title,
-.post-preview.small .post-preview-title,
 .forum-category-wrap .forum-category-title,
 .topic-wrap .topic-scroll-wrap .topic-scroll .topic-scroll-info .topic-scroll-counter,
-.post-preview.picture.short .post-preview-overlay .post-preview-title,
 .user-avatar-wrap .user-avatar-text,
 .user-avatar-wrap .user-avatar-decoration .user-avatar-decoration-text,
 .widget-top-player .top-player-info-wrap .top-player-info .top-player-flag,
@@ -232,26 +230,27 @@ figure>img {
 .section-title-wrap .section-title,
 .shortcode-font .shortcode-font-demo {
     display: block;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 900;
     text-transform: capitalize;
     line-height: 1em
 }
 
-
+.post-preview.tiny .post-preview-title,
+.post-preview.video.tiny .post-preview-title,
+.post-preview.picture.short .post-preview-overlay .post-preview-title,
+.post-preview.video .post-preview-title,
+.post-preview.small .post-preview-title,
 .post-preview-title{
     display: block;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
     text-transform: capitalize;
-    line-height: 1em;
-    letter-spacing: .8px;
-    color: #d8d8d8;
+    font-weight: 800;
 }
 
 .mobile-menu-wrap .mobile-menu .mobile-menu-item{
     display: none;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1em
@@ -2273,16 +2272,17 @@ h4,
 h5,
 h6 {
     color: #363636;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 700;
     text-transform: uppercase
 }
 
 p {
-    color: #777;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2em;
-    line-height: 1.5em
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 27px;
+    color: #777777;
 }
 
 p.light {
@@ -2294,7 +2294,7 @@ p.small {
 }
 
 a {
-    font-family: "Gibson", sans-serif
+    font-family: 'Rubik', sans-serif
 }
 
 ::selection {
@@ -2309,7 +2309,7 @@ a {
 
 .title {
     color: #363636;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1em;
     line-height: 1.375em;
     font-weight: 700;
@@ -2688,13 +2688,13 @@ a {
 }
 
 .logo .logo-text .logo-title {
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.375em
 }
 
 .logo .logo-text .logo-title .highlight {
     color: #1c95f3;
-    font-family: "Gibson", sans-serif
+    font-family: 'Rubik', sans-serif
 }
 
 .logo .logo-text .logo-info {
@@ -2934,7 +2934,7 @@ a {
     border-radius: 2px;
     background-color: #363636;
     color: #fff;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 8px;
     font-weight: 700;
     line-height: 1em;
@@ -5471,7 +5471,7 @@ a {
     padding: 0 10px;
     background-color: #252627;
     color: #fff;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .625em;
     line-height: 20px;
     font-weight: 900;
@@ -6282,7 +6282,7 @@ a {
     border: 1px solid #dbdbdb;
     border-radius: 200px;
     color: #777;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .75em;
     line-height: 25px
 }
@@ -6376,7 +6376,7 @@ a {
     padding: 0 68px 0 34px;
     background-color: #363636;
     color: #fff;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .6875em;
     font-weight: 800;
     line-height: 46px;
@@ -6821,7 +6821,7 @@ a {
 label {
     display: block;
     color: #363636;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .6875em;
     text-transform: uppercase
 }
@@ -6931,7 +6931,7 @@ select {
     border: 1px solid #dbdbdb;
     background-color: #fff;
     color: #363636;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .8125em;
     transition: border-color .2s ease-in-out
 }
@@ -7921,7 +7921,7 @@ input[type="radio"]:disabled+.radio-circle {
 .search-popup .input-line {
     height: auto;
     padding: 0 0 32px;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 3.5em;
     font-weight: 700;
     text-transform: uppercase
@@ -8104,13 +8104,15 @@ input[type="radio"]:disabled+.radio-circle {
 .navigation .profil-menu .log-link {
     padding: 20px;
     align-self: center;
+    color: #fff;
 }
 
 .navigation .profil-menu .log-link a {
     font-size: .75em;
-    color: #fff;
     text-transform: capitalize;
-    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+    color: #fff;
 }
 
 .navigation .profil-menu .log-link .sudah-login:hover>.dropdown {
@@ -8169,7 +8171,7 @@ input[type="radio"]:disabled+.radio-circle {
 
 .navigation .profil-menu .inventory-button .inventory-item-quantity-wrap .inventory-item-quantity {
     color: #fff;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .625em;
     font-weight: 900;
     line-height: 21px;
@@ -8238,9 +8240,9 @@ input[type="radio"]:disabled+.radio-circle {
     background-color: transparent;
     text-align: center;
     color: #fff;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
     font-size: .75em;
-    font-weight: 700;
     line-height: 50px;
     transition: all .3s ease-in-out;
     position: relative;
@@ -8248,6 +8250,8 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .main-menu-item-link p {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
     color: #fff;
     font-size: 1em;
     text-transform: uppercase;
@@ -8458,7 +8462,7 @@ input[type="radio"]:disabled+.radio-circle {
 .link-list-item a {
     display: inline-block;
     color: #777;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .75em;
     line-height: 32px
 }
@@ -8681,7 +8685,7 @@ input[type="radio"]:disabled+.radio-circle {
     padding: 0 30px;
     background-color: #fff;
     color: #bfbfbf;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .75em;
     font-weight: 700;
     text-transform: uppercase;
@@ -9074,7 +9078,7 @@ input[type="radio"]:disabled+.radio-circle {
 
 .mobile-dropdown-item>.mobile-dropdown .mobile-dropdown-item .mobile-dropdown-item-link {
     color: #777;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .75em;
     font-weight: 400;
     text-transform: none
@@ -10111,7 +10115,7 @@ input[type="radio"]:disabled+.radio-circle {
     width: 34px;
     background-color: #fff;
     color: #363636;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .625em;
     font-weight: 700;
     text-transform: uppercase;
@@ -10795,7 +10799,6 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .widget-sidebar .card-profil-game .profil-game-text {
-    font-family: "Gibson", sans-serif;
 }
 
 .widget-sidebar .card-profil-game img {
@@ -10805,13 +10808,17 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .widget-sidebar .card-profil-game .profil-game-text .text-judul{
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    font-size: 15px;
 }
 
 .widget-sidebar .card-profil-game .profil-game-text .text-isi{
-    border-bottom: 1px solid #dbdbdb;
-    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 5px;
     padding-bottom: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
 }
 
 .widget-sidebar .sidebar-search-form {
@@ -13340,7 +13347,6 @@ input[type="radio"]:disabled+.radio-circle {
     line-height: 26px
 }
 
-.post-author-info .post-author,
 .post-author-info .post-comment-count {
     font-weight: 700
 }
@@ -14900,8 +14906,8 @@ input[type="radio"]:disabled+.radio-circle {
     font-weight: 400;
     text-align: center;
     margin-top: 20px;
-    color: #8b8b8b;
-    font-weight: 500;
+    color: #acacac;
+    letter-spacing: .5px;
     font-size: 1.2em
 }
 
@@ -14942,14 +14948,17 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .post-open .post-open-text {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #777777;
     margin-bottom: 45px;
 }
 
 .post-open .post-open-text .video-length {
     color: #00e3d0;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 700;
     margin-right: 12px
 }
@@ -14981,6 +14990,7 @@ input[type="radio"]:disabled+.radio-circle {
     margin: 0 auto;
     text-transform: none;
     color: #363636;
+    font-family: 'Barlow', sans-serif;
     text-align: center
 }
 
@@ -15638,7 +15648,7 @@ input[type="radio"]:disabled+.radio-circle {
     float: left;
     margin-right: 36px;
     color: #8b8b8b;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .625em;
     font-weight: 700;
     line-height: 1em;
@@ -15998,7 +16008,7 @@ input[type="radio"]:disabled+.radio-circle {
 
 .product-preview .product-preview-category {
     color: #8b8b8b;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .625em;
     font-weight: 700;
     line-height: 1em;
@@ -16175,7 +16185,7 @@ input[type="radio"]:disabled+.radio-circle {
 
 .sticker-ornament .sticker-ornament-text {
     color: #fff;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .625em;
     font-weight: 900;
     text-transform: uppercase;
@@ -16518,7 +16528,7 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .product-feature .product-feature-info .product-feature-text.price {
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.125em
 }
 
@@ -16613,7 +16623,7 @@ input[type="radio"]:disabled+.radio-circle {
 
 .arc .arc-progress-text {
     color: #fff;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.625em;
     line-height: 90px;
     font-weight: 700;
@@ -16764,7 +16774,7 @@ input[type="radio"]:disabled+.radio-circle {
 
 .countdown-arc .arc-progress-text {
     color: #fff;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.375em;
     line-height: 66px;
     font-weight: 700;
@@ -18794,7 +18804,7 @@ input[type="radio"]:disabled+.radio-circle {
 .widget-options-wrap .widget-option-text {
     float: left;
     color: #fff;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .6875em
 }
 
@@ -18913,7 +18923,7 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .widget-options .widget-option-heading .widget-option-text {
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .625em;
     font-weight: 700;
     line-height: 40px;
@@ -19277,8 +19287,9 @@ input[type="radio"]:disabled+.radio-circle {
 
 .section-title-wrap .section-title.medium {
     font-size: 1.125em;
-    letter-spacing: 1.5px;
     word-spacing: 1.8px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 }
 
 .section-title-wrap .section-title.small {
@@ -20803,7 +20814,7 @@ input[type="radio"]:disabled+.radio-circle {
 
 .inventory-open-action .inventory-open-row-text .amount {
     margin-left: 45px;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 14px
 }
 
@@ -20857,7 +20868,7 @@ input[type="radio"]:disabled+.radio-circle {
 
 .inventory-open-total .inventory-open-row-text .amount {
     margin-left: 45px;
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 14px
 }
 
@@ -20978,7 +20989,7 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .inventory-compare .inventory-compare-title.v2 {
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: .875em
 }
 
@@ -21601,7 +21612,7 @@ input[type="radio"]:disabled+.radio-circle {
 .shortcode-font.roboto .shortcode-font-demo,
 .shortcode-font.roboto .shortcode-font-family,
 .shortcode-font.roboto .shortcode-font-weight {
-    font-family: "Gibson", sans-serif;
+    font-family: 'Rubik', sans-serif;
     text-transform: none
 }
 

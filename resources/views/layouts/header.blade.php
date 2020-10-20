@@ -4,9 +4,9 @@
         <use xlink:href="#svg-cross-big"></use>
     </svg>
     <form method="GET" class="search-popup-form">
-        <input type="text" id="search" class="input-line" name="search" placeholder="What are you looking for...?">
+        <input type="text" id="search" class="input-line" name="search" placeholder="kamu Mau Cari Tulisan Apa?">
     </form>
-    <p class="search-popup-text">Write what you are looking for and press enter to begin your search!</p>
+    <p class="search-popup-text">Tulis kata kunci yang kamu mau lalu tekan Enter untuk memulai pencarian!</p>
 </div>
 
 <!-- POPUP LOGIN -->

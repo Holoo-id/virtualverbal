@@ -1,466 +1,59 @@
 <!-- LAYOUT SIDEBAR 1 -->
 <div class="layout-sidebar1 layout-item">
+    <!-- App Articles Only -->
+    <div class="widget-sidebar">
+        <div class="card-profil-game">
+            <div class="section-title-wrap">
+                <div style="padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.15)" class="section-title medium">Game Database</div>
+            </div>
+            <img src="{{ asset('/frontend/assets/img/posts/02_tall.jpg')}}" alt="">
+            <ul class="profil-game-text">
+                <li class="text-judul">Judul:</li>
+                <li class="text-isi">Game 1</li>
+                <li class="text-judul">Publisher:</li>
+                <li class="text-isi">Publisher 1</li>
+                <li class="text-judul">Developer:</li>
+                <li class="text-isi">Developer</li>
+                <li class="text-judul">Genre:</li>
+                <li class="text-isi">Game</li>
+                <li class="text-judul">Tanggal Rilis:</li>
+                <li class="text-isi">12 Bulan 1234 (UK), 12 Bulan 1234 (UK)</li>
+                <li class="text-judul">Platform:</li>
+                <li class="text-isi">asdghjkl</li>
+                <a style="width: 100%; margin-top: 5px;" href="#" class="button disable">Selengkapnya
+                    <!-- BUTTON ORNAMENT -->
+                    <div class="button-ornament">
+                        <!-- ARROW ICON -->
+                        <svg class="arrow-icon medium">
+                            <use xlink:href="#svg-arrow-medium"></use>
+                        </svg>
+                        <!-- /ARROW ICON -->
+                    </div>
+                    <!-- /BUTTON ORNAMENT -->
+                </a>
+            </ul>
+        </div>
+    </div>
 
-    <!-- WIDGET SIDEBAR -->
     <div class="widget-sidebar">
-        <!-- SECTION TITLE WRAP -->
-        <div class="section-title-wrap blue">
-            <h2 class="section-title medium">Related News</h2>
-            <div class="section-title-separator"></div>
+        <div class="card-langganan">
+            <div class="section-title-wrap">
+                <div class="section-title medium">Langganan Artikel</div>
+            </div>
+            <p style="color: #eeffee; margin-bottom: 10px">Temukan Tips dan Berita Menarik Setiap Harinya.
+                GRATIS!</p>
+            <a style="width: 100%;" href="#" class="button disable">Langganan
+                <!-- BUTTON ORNAMENT -->
+                <div class="button-ornament">
+                    <!-- ARROW ICON -->
+                    <svg class="arrow-icon medium">
+                        <use xlink:href="#svg-arrow-medium"></use>
+                    </svg>
+                    <!-- /ARROW ICON -->
+                </div>
+                <!-- /BUTTON ORNAMENT -->
+            </a>
         </div>
-        <!-- /SECTION TITLE WRAP -->
-    
-        <!-- POST PREVIEW SHOWCASE -->
-        <div class="post-preview-showcase grid-1col centered gutter-medium">
-            <!-- POST PREVIEW -->
-            <div class="post-preview tiny padded gaming-news">
-                <!-- POST PREVIEW IMG WRAP -->
-                <a href="post-v1.html">
-                    <div class="post-preview-img-wrap">
-                        <!-- POST PREVIEW IMG -->
-                        <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/01.jpg')}}" alt="post-01">
-                        </figure>
-                        <!-- /POST PREVIEW IMG -->
-                    </div>
-                </a>
-                <!-- /POST PREVIEW IMG WRAP -->
-    
-                <!-- BUBBLE ORNAMENT -->
-                <div class="bubble-ornament small black no-link">
-                    <p class="bubble-ornament-info">01</p>
-                </div>
-                <!-- /BUBBLE ORNAMENT -->
-    
-                <!-- POST PREVIEW TITLE -->
-                <a href="post-v1.html" class="post-preview-title">The Clash of Dragons is breaking record sales
-                    in USA and
-                    Japan</a>
-                <!-- POST AUTHOR INFO -->
-                <div class="post-author-info-wrap">
-                    <p class="post-author-info small light">By <a href="search-results.html"
-                            class="post-author">Dexter</a><span class="separator">|</span>Dec 15th, 2018</p>
-                </div>
-                <!-- /POST AUTHOR INFO -->
-            </div>
-            <!-- /POST PREVIEW -->
-    
-            <!-- POST PREVIEW -->
-            <div class="post-preview tiny padded geeky-news">
-                <!-- POST PREVIEW IMG WRAP -->
-                <a href="post-v4.html">
-                    <div class="post-preview-img-wrap">
-                        <!-- POST PREVIEW IMG -->
-                        <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/02.jpg')}}" alt="post-02">
-                        </figure>
-                        <!-- /POST PREVIEW IMG -->
-                    </div>
-                </a>
-                <!-- /POST PREVIEW IMG WRAP -->
-    
-                <!-- BUBBLE ORNAMENT -->
-                <div class="bubble-ornament small black no-link">
-                    <p class="bubble-ornament-info">02</p>
-                </div>
-                <!-- /BUBBLE ORNAMENT -->
-    
-                <!-- POST PREVIEW TITLE -->
-                <a href="post-v4.html" class="post-preview-title">Jessica Tam to star in the new "Charlotte"
-                    series</a>
-                <!-- POST AUTHOR INFO -->
-                <div class="post-author-info-wrap">
-                    <p class="post-author-info small light">By <a href="search-results.html"
-                            class="post-author">Vellatrix</a><span class="separator">|</span>Dec 15th, 2018</p>
-                </div>
-                <!-- /POST AUTHOR INFO -->
-            </div>
-            <!-- /POST PREVIEW -->
-    
-            <!-- POST PREVIEW -->
-            <div class="post-preview tiny padded e-sport">
-                <!-- POST PREVIEW IMG WRAP -->
-                <a href="esports-post.html">
-                    <div class="post-preview-img-wrap">
-                        <!-- POST PREVIEW IMG -->
-                        <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/41.jpg')}}" alt="post-41">
-                        </figure>
-                        <!-- /POST PREVIEW IMG -->
-                    </div>
-                </a>
-                <!-- /POST PREVIEW IMG WRAP -->
-    
-                <!-- BUBBLE ORNAMENT -->
-                <div class="bubble-ornament small black no-link">
-                    <p class="bubble-ornament-info">03</p>
-                </div>
-                <!-- /BUBBLE ORNAMENT -->
-    
-                <!-- POST PREVIEW TITLE -->
-                <a href="esports-post.html" class="post-preview-title">The Xenowatch semifinals were truly
-                    incredible</a>
-                <!-- POST AUTHOR INFO -->
-                <div class="post-author-info-wrap">
-                    <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                            V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                </div>
-                <!-- /POST AUTHOR INFO -->
-            </div>
-            <!-- /POST PREVIEW -->
-    
-            <!-- POST PREVIEW -->
-            <div class="post-preview tiny padded game-review">
-                <!-- POST PREVIEW IMG WRAP -->
-                <a href="post-v2.html">
-                    <div class="post-preview-img-wrap">
-                        <!-- POST PREVIEW IMG -->
-                        <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/25.jpg')}}" alt="post-25">
-                        </figure>
-                        <!-- /POST PREVIEW IMG -->
-    
-                        <!-- REVIEW RATING -->
-                        <div class="review-rating">
-                            <div id="sidebar-rate-6" class="arc tiny"></div>
-                        </div>
-                        <!-- /REVIEW RATING -->
-                    </div>
-                </a>
-                <!-- /POST PREVIEW IMG WRAP -->
-    
-                <!-- BUBBLE ORNAMENT -->
-                <div class="bubble-ornament small black no-link">
-                    <p class="bubble-ornament-info">04</p>
-                </div>
-                <!-- /BUBBLE ORNAMENT -->
-    
-                <!-- POST PREVIEW TITLE -->
-                <a href="post-v2.html" class="post-preview-title">"Legend of Kenshii II" is a bit green for
-                    now</a>
-                <!-- POST AUTHOR INFO -->
-                <div class="post-author-info-wrap">
-                    <p class="post-author-info small light">By <a href="search-results.html"
-                            class="post-author">Vellatrix</a><span class="separator">|</span>Dec 15th, 2018</p>
-                </div>
-                <!-- /POST AUTHOR INFO -->
-            </div>
-            <!-- /POST PREVIEW -->
-    
-            <!-- POST PREVIEW -->
-            <div class="post-preview tiny padded movie-news">
-                <!-- POST PREVIEW IMG WRAP -->
-                <a href="post-v3.html">
-                    <div class="post-preview-img-wrap">
-                        <!-- POST PREVIEW IMG -->
-                        <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/12.jpg')}}" alt="post-12">
-                        </figure>
-                        <!-- /POST PREVIEW IMG -->
-    
-                        <!-- RATING ORNAMENT -->
-                        <div class="rating-ornament">
-                            <!-- RATING ORNAMENT ITEM -->
-                            <div class="rating-ornament-item">
-                                <!-- RATING ORNAMENT ICON -->
-                                <svg class="rating-ornament-icon">
-                                    <use xlink:href="#svg-star"></use>
-                                </svg>
-                            </div>
-                            <!-- /RATING ORNAMENT ITEM -->
-    
-                            <!-- RATING ORNAMENT ITEM -->
-                            <div class="rating-ornament-item">
-                                <!-- RATING ORNAMENT ICON -->
-                                <svg class="rating-ornament-icon">
-                                    <use xlink:href="#svg-star"></use>
-                                </svg>
-                            </div>
-                            <!-- /RATING ORNAMENT ITEM -->
-    
-                            <!-- RATING ORNAMENT ITEM -->
-                            <div class="rating-ornament-item">
-                                <!-- RATING ORNAMENT ICON -->
-                                <svg class="rating-ornament-icon">
-                                    <use xlink:href="#svg-star"></use>
-                                </svg>
-                            </div>
-                            <!-- /RATING ORNAMENT ITEM -->
-    
-                            <!-- RATING ORNAMENT ITEM -->
-                            <div class="rating-ornament-item">
-                                <!-- RATING ORNAMENT ICON -->
-                                <svg class="rating-ornament-icon empty">
-                                    <use xlink:href="#svg-star"></use>
-                                </svg>
-                            </div>
-                            <!-- /RATING ORNAMENT ITEM -->
-    
-                            <!-- RATING ORNAMENT ITEM -->
-                            <div class="rating-ornament-item">
-                                <!-- RATING ORNAMENT ICON -->
-                                <svg class="rating-ornament-icon empty">
-                                    <use xlink:href="#svg-star"></use>
-                                </svg>
-                            </div>
-                            <!-- /RATING ORNAMENT ITEM -->
-                        </div>
-                        <!-- /RATING ORNAMENT -->
-                    </div>
-                </a>
-                <!-- /POST PREVIEW IMG WRAP -->
-    
-                <!-- BUBBLE ORNAMENT -->
-                <div class="bubble-ornament small black no-link">
-                    <p class="bubble-ornament-info">05</p>
-                </div>
-                <!-- /BUBBLE ORNAMENT -->
-    
-                <!-- POST PREVIEW TITLE -->
-                <a href="post-v3.html" class="post-preview-title">We reviewed the "Guardians of the Universe"
-                    movie</a>
-                <!-- POST AUTHOR INFO -->
-                <div class="post-author-info-wrap">
-                    <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                            V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                </div>
-                <!-- /POST AUTHOR INFO -->
-            </div>
-            <!-- /POST PREVIEW -->
-        </div>
-        <!-- /POST PREVIEW SHOWCASE -->
     </div>
-    <!-- /WIDGET SIDEBAR -->
-    
-    <!-- WIDGET SIDEBAR -->
-    <div class="widget-sidebar">
-        <!-- SECTION TITLE WRAP -->
-        <div class="section-title-wrap blue">
-            <h2 class="section-title medium">Top 5 News</h2>
-            <div class="section-title-separator"></div>
-        </div>
-        <!-- /SECTION TITLE WRAP -->
-    
-        <!-- POST PREVIEW SHOWCASE -->
-        <div class="post-preview-showcase grid-1col centered gutter-medium">
-            <!-- POST PREVIEW -->
-            <div class="post-preview tiny padded gaming-news">
-                <!-- POST PREVIEW IMG WRAP -->
-                <a href="post-v1.html">
-                    <div class="post-preview-img-wrap">
-                        <!-- POST PREVIEW IMG -->
-                        <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/01.jpg')}}" alt="post-01">
-                        </figure>
-                        <!-- /POST PREVIEW IMG -->
-                    </div>
-                </a>
-                <!-- /POST PREVIEW IMG WRAP -->
-    
-                <!-- BUBBLE ORNAMENT -->
-                <div class="bubble-ornament small black no-link">
-                    <p class="bubble-ornament-info">01</p>
-                </div>
-                <!-- /BUBBLE ORNAMENT -->
-    
-                <!-- POST PREVIEW TITLE -->
-                <a href="post-v1.html" class="post-preview-title">The Clash of Dragons is breaking record sales
-                    in USA and
-                    Japan</a>
-                <!-- POST AUTHOR INFO -->
-                <div class="post-author-info-wrap">
-                    <p class="post-author-info small light">By <a href="search-results.html"
-                            class="post-author">Dexter</a><span class="separator">|</span>Dec 15th, 2018</p>
-                </div>
-                <!-- /POST AUTHOR INFO -->
-            </div>
-            <!-- /POST PREVIEW -->
-    
-            <!-- POST PREVIEW -->
-            <div class="post-preview tiny padded geeky-news">
-                <!-- POST PREVIEW IMG WRAP -->
-                <a href="post-v4.html">
-                    <div class="post-preview-img-wrap">
-                        <!-- POST PREVIEW IMG -->
-                        <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/02.jpg')}}" alt="post-02">
-                        </figure>
-                        <!-- /POST PREVIEW IMG -->
-                    </div>
-                </a>
-                <!-- /POST PREVIEW IMG WRAP -->
-    
-                <!-- BUBBLE ORNAMENT -->
-                <div class="bubble-ornament small black no-link">
-                    <p class="bubble-ornament-info">02</p>
-                </div>
-                <!-- /BUBBLE ORNAMENT -->
-    
-                <!-- POST PREVIEW TITLE -->
-                <a href="post-v4.html" class="post-preview-title">Jessica Tam to star in the new "Charlotte"
-                    series</a>
-                <!-- POST AUTHOR INFO -->
-                <div class="post-author-info-wrap">
-                    <p class="post-author-info small light">By <a href="search-results.html"
-                            class="post-author">Vellatrix</a><span class="separator">|</span>Dec 15th, 2018</p>
-                </div>
-                <!-- /POST AUTHOR INFO -->
-            </div>
-            <!-- /POST PREVIEW -->
-    
-            <!-- POST PREVIEW -->
-            <div class="post-preview tiny padded e-sport">
-                <!-- POST PREVIEW IMG WRAP -->
-                <a href="esports-post.html">
-                    <div class="post-preview-img-wrap">
-                        <!-- POST PREVIEW IMG -->
-                        <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/41.jpg')}}" alt="post-41">
-                        </figure>
-                        <!-- /POST PREVIEW IMG -->
-                    </div>
-                </a>
-                <!-- /POST PREVIEW IMG WRAP -->
-    
-                <!-- BUBBLE ORNAMENT -->
-                <div class="bubble-ornament small black no-link">
-                    <p class="bubble-ornament-info">03</p>
-                </div>
-                <!-- /BUBBLE ORNAMENT -->
-    
-                <!-- POST PREVIEW TITLE -->
-                <a href="esports-post.html" class="post-preview-title">The Xenowatch semifinals were truly
-                    incredible</a>
-                <!-- POST AUTHOR INFO -->
-                <div class="post-author-info-wrap">
-                    <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                            V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                </div>
-                <!-- /POST AUTHOR INFO -->
-            </div>
-            <!-- /POST PREVIEW -->
-    
-            <!-- POST PREVIEW -->
-            <div class="post-preview tiny padded game-review">
-                <!-- POST PREVIEW IMG WRAP -->
-                <a href="post-v2.html">
-                    <div class="post-preview-img-wrap">
-                        <!-- POST PREVIEW IMG -->
-                        <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/25.jpg')}}" alt="post-25">
-                        </figure>
-                        <!-- /POST PREVIEW IMG -->
-    
-                        <!-- REVIEW RATING -->
-                        <div class="review-rating">
-                            <div id="sidebar-rate-6" class="arc tiny"></div>
-                        </div>
-                        <!-- /REVIEW RATING -->
-                    </div>
-                </a>
-                <!-- /POST PREVIEW IMG WRAP -->
-    
-                <!-- BUBBLE ORNAMENT -->
-                <div class="bubble-ornament small black no-link">
-                    <p class="bubble-ornament-info">04</p>
-                </div>
-                <!-- /BUBBLE ORNAMENT -->
-    
-                <!-- POST PREVIEW TITLE -->
-                <a href="post-v2.html" class="post-preview-title">"Legend of Kenshii II" is a bit green for
-                    now</a>
-                <!-- POST AUTHOR INFO -->
-                <div class="post-author-info-wrap">
-                    <p class="post-author-info small light">By <a href="search-results.html"
-                            class="post-author">Vellatrix</a><span class="separator">|</span>Dec 15th, 2018</p>
-                </div>
-                <!-- /POST AUTHOR INFO -->
-            </div>
-            <!-- /POST PREVIEW -->
-    
-            <!-- POST PREVIEW -->
-            <div class="post-preview tiny padded movie-news">
-                <!-- POST PREVIEW IMG WRAP -->
-                <a href="post-v3.html">
-                    <div class="post-preview-img-wrap">
-                        <!-- POST PREVIEW IMG -->
-                        <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/12.jpg')}}" alt="post-12">
-                        </figure>
-                        <!-- /POST PREVIEW IMG -->
-    
-                        <!-- RATING ORNAMENT -->
-                        <div class="rating-ornament">
-                            <!-- RATING ORNAMENT ITEM -->
-                            <div class="rating-ornament-item">
-                                <!-- RATING ORNAMENT ICON -->
-                                <svg class="rating-ornament-icon">
-                                    <use xlink:href="#svg-star"></use>
-                                </svg>
-                            </div>
-                            <!-- /RATING ORNAMENT ITEM -->
-    
-                            <!-- RATING ORNAMENT ITEM -->
-                            <div class="rating-ornament-item">
-                                <!-- RATING ORNAMENT ICON -->
-                                <svg class="rating-ornament-icon">
-                                    <use xlink:href="#svg-star"></use>
-                                </svg>
-                            </div>
-                            <!-- /RATING ORNAMENT ITEM -->
-    
-                            <!-- RATING ORNAMENT ITEM -->
-                            <div class="rating-ornament-item">
-                                <!-- RATING ORNAMENT ICON -->
-                                <svg class="rating-ornament-icon">
-                                    <use xlink:href="#svg-star"></use>
-                                </svg>
-                            </div>
-                            <!-- /RATING ORNAMENT ITEM -->
-    
-                            <!-- RATING ORNAMENT ITEM -->
-                            <div class="rating-ornament-item">
-                                <!-- RATING ORNAMENT ICON -->
-                                <svg class="rating-ornament-icon empty">
-                                    <use xlink:href="#svg-star"></use>
-                                </svg>
-                            </div>
-                            <!-- /RATING ORNAMENT ITEM -->
-    
-                            <!-- RATING ORNAMENT ITEM -->
-                            <div class="rating-ornament-item">
-                                <!-- RATING ORNAMENT ICON -->
-                                <svg class="rating-ornament-icon empty">
-                                    <use xlink:href="#svg-star"></use>
-                                </svg>
-                            </div>
-                            <!-- /RATING ORNAMENT ITEM -->
-                        </div>
-                        <!-- /RATING ORNAMENT -->
-                    </div>
-                </a>
-                <!-- /POST PREVIEW IMG WRAP -->
-    
-                <!-- BUBBLE ORNAMENT -->
-                <div class="bubble-ornament small black no-link">
-                    <p class="bubble-ornament-info">05</p>
-                </div>
-                <!-- /BUBBLE ORNAMENT -->
-    
-                <!-- POST PREVIEW TITLE -->
-                <a href="post-v3.html" class="post-preview-title">We reviewed the "Guardians of the Universe"
-                    movie</a>
-                <!-- POST AUTHOR INFO -->
-                <div class="post-author-info-wrap">
-                    <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                            V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                </div>
-                <!-- /POST AUTHOR INFO -->
-            </div>
-            <!-- /POST PREVIEW -->
-        </div>
-        <!-- /POST PREVIEW SHOWCASE -->
-    </div>
-    <!-- /WIDGET SIDEBAR -->
 </div>
 <!-- /LAYOUT SIDEBAR 1 -->

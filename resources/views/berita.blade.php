@@ -51,7 +51,7 @@
                         <!-- /POST OPEN TEXT -->
 
                         <!-- POST AUTHOR INFO -->
-                        <div style="margin-top: 5px;display: flex; justify-content: center;" class="post-author-info-wrap">
+                        <div style="margin-top: 5px;margin-bottom:40px;display: flex; justify-content: center;" class="post-author-info-wrap">
                             <!-- USER AVATAR -->
                             <a href="search-results.html">
                                 <figure class="user-avatar tiny liquid">
@@ -96,6 +96,13 @@
                         </div>
                         <!-- /POST AUTHOR INFO -->
                         
+                        <!-- POST OPEN TEXT -->
+                        <p class="post-open-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                            in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <!-- /POST OPEN TEXT -->
                         <!-- POST OPEN MEDIA WRAP -->
                         <div class="post-open-media-wrap">
                             <!-- POST OPEN MEDIA -->
@@ -110,13 +117,6 @@
                             <!-- /POST OPEN MEDIA INFO -->
                         </div>
                         <!-- /POST OPEN MEDIA WRAP -->
-                        <!-- POST OPEN TEXT -->
-                        <p class="post-open-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                            in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <!-- /POST OPEN TEXT -->
                         <!-- POST OPEN IMG -->
                         <figure class="post-open-img liquid">
                             <img src="{{ asset('/frontend/assets/img/posts/09.jpg')}}" alt="post-13">

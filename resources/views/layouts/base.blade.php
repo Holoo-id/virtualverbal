@@ -35,6 +35,7 @@
     <body>
         @include('layouts.header')
         @yield('content')
+        @include('layouts.footer')
 
         <script src="{{ asset('/frontend/assets/js/script.js') }}"></script>
         <script src="{{ asset('/frontend/assets/js/app.bundle.min.js') }}"></script>

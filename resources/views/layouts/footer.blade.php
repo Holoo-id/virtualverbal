@@ -17,7 +17,6 @@
                     <div class="section-title-separator"></div>
                 </div>
                 <!-- /SECTION TITLE WRAP -->
-                <img style="margin-top:22px" src="{{ asset('/frontend/assets/img/brand/logovvfullcolor.png')}}" alt="">
 
                 <!-- CONTACT INFO PREVIEW -->
                 <div class="contact-info-preview negative">
@@ -96,17 +95,5 @@
     </div>
 </div>
 <!-- /FOOTER TOP WRAP -->
-
-<!-- FOOTER BOTTOM WRAP -->
-<div class="footer-bottom-wrap">
-    <!-- FOOTER BOTTOM -->
-<<<<<<< HEAD
-    <div class="footer-bottom grid-limit">
-        <p class="footer-bottom-text">© Copyright 2020<span class="separator">-</span><span class="brand"><a class="highlighted" href="">virtualverbal.com</a></span>. All Rights Reserved<span class="separator">|</span><span class="brand"><a class="highlighted" href="">virtualverbal.com</a></span> is part of <span class="brand"><a class="highlighted" href="https://holoo.id/">Holoo.id</a></span>.</p>
-    </div>
-=======
-    
->>>>>>> 2650dd529b480b3239fffaf27416a1131a5b29fe
-    <!-- /FOOTER BOTTOM -->
 </div>
 <!-- /FOOTER BOTTOM WRAP -->

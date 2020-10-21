@@ -64,7 +64,8 @@
                                 <span class="separator">-</span>Senin, 19 Oktober 2020, 14:29 WIB
                                 <span class="separator">-</span>
                                 <!-- BUBBLE ORNAMENT -->
-                                <a href="#" class="bubble-ornament fb">
+                                <!-- tambahkan link halaman sekarang pada link share -->
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=" class="bubble-ornament fb">
                                     <!-- FACEBOOK ICON -->
                                     <svg class="facebook-icon">
                                         <use xlink:href="#svg-facebook"></use>
@@ -74,7 +75,8 @@
                                 <!-- /BUBBLE ORNAMENT -->
     
                                 <!-- BUBBLE ORNAMENT -->
-                                <a href="#" class="bubble-ornament twt">
+                                <!-- tambahkan link halaman sekarang pada link share -->
+                                <a href="https://twitter.com/intent/tweet?text=" class="bubble-ornament twt">
                                     <!-- TWITTER ICON -->
                                     <svg class="twitter-icon">
                                         <use xlink:href="#svg-twitter"></use>
@@ -84,7 +86,8 @@
                                 <!-- /BUBBLE ORNAMENT -->
     
                                 <!-- BUBBLE ORNAMENT -->
-                                <a href="#" class="bubble-ornament gplus">
+                                <!-- tambahkan link halaman sekarang pada link share -->
+                                <a href="whatsapp://send?text=" class="bubble-ornament gplus">
                                     <!-- GPLUS ICON -->
                                     <svg class="gplus-icon">
                                         <use xlink:href="#svg-gplus"></use>

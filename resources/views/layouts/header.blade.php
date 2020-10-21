@@ -63,7 +63,7 @@
                 </form>
             </div>
             <div class="tab-form-buttons">
-                <p class="tab-form-button selected">Login</p>
+                <p class="tab-form-button selected ">Login</p>
                 <p class="tab-form-button">Daftar</p>
             </div>
         </div>
@@ -75,7 +75,7 @@
     <div class="form-box-wrap">
         <div class="form-box-heading register">
             <div class="form-box-heading-title-wrap">
-                <p class="form-box-heading-title">Selamat Datang!</p>
+                <p class="form-box-heading-title">Hi!</p>
                 <p class="form-box-heading-subtitle">Ayo daftar dan bergabung bersama komunitas kami!</p>
             </div>
             <p class="form-box-heading-text">Setelah mendaftar, kamu akan menerima E-Mail konfirmasi yang terdapat link untuk mengaktifkan akun kamu!</p>
@@ -3914,7 +3914,7 @@
                 </div> -->
                 <!-- Kalo Belum Login -->
                 <div class="belum-login">
-                    <a class="popup-login-trigger" href="#">login</a> | <a class="popup-register-trigger" href="#">sign up</a>
+                    <a class="popup-login-trigger" href="#">login</a> | <a class="popup-register-trigger" href="#">daftar</a>
                 </div>
             </div>
             <!-- <div class="gambar">

@@ -20,13 +20,17 @@
 
                 <!-- CONTACT INFO PREVIEW -->
                 <div class="contact-info-preview negative">
-                <img src="{{ asset('/frontend/assets/img/brand/logovvfullcolor.png')}}" alt="">
+                    <img src="{{ asset('/frontend/assets/img/brand/logovvfullcolor.png')}}" alt="">
                     <p class="contact-info-preview-text"><span class="highlighted">Virtual Verbal</span> merupakan situs media informasi dan berita tentang Games, E-Sports, Teknologi, maupun Pop Culture. Tertarik bekerjasama dengan kami? Hubungi kontak dibawah ini:</p>
 
                     <!-- CONTACT INFO PREVIEW EMAIL WRAP -->
                     <div class="contact-info-preview-email-wrap">
                         <i class="email-icon icon-envelope"></i>
                         <a href="mailto:contact@virtualverbal.com" class="contact-info-preview-email">contact@virtualverbal.com</a>
+                    </div>
+                    <div class="contact-info-preview-email-wrap">
+                        <i class="email-icon icon-envelope"></i>
+                        <a href="https://wa.me/6289678419991" class="contact-info-preview-email">+6289678419991</a>
                     </div>
                     <!-- CONTACT INFO PREVIEW EMAIL WRAP -->
                     <!-- SOCIAL LINKS -->
@@ -62,16 +66,6 @@
                         <!-- /BUBBLE ORNAMENT -->
 
                         <!-- BUBBLE ORNAMENT -->
-                        <a href="https://wa.me/6289678419991" class="bubble-ornament green">
-                            <!-- TWITCH ICON -->
-                            <svg class="whatsapp-icon">
-                                <use xlink:href="#svg-whatsapp"></use>
-                            </svg>
-                            <!-- /TWITCH ICON -->
-                        </a>
-                        <!-- /BUBBLE ORNAMENT -->
-
-                        <!-- BUBBLE ORNAMENT -->
                         <a href="https://www.youtube.com/channel/UC6LJYdmDyL4QL5rlgXDMX7A" class="bubble-ornament youtube">
                             <!-- YOUTUBE ICON -->
                             <svg class="youtube-icon">
@@ -84,7 +78,7 @@
                     <!-- /SOCIAL LINKS -->
                 </div>  
                 <!-- /CONTACT INFO PREVIEW -->
-                </div>
+            </div>
             <!-- FOOTER TOP WIDGET -->
         </div>
         <!-- /FOOTER TOP WIDGETS -->

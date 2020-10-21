@@ -257,7 +257,7 @@ figure>img {
 }
 
 .form-box-heading .form-box-heading-title {
-    font-size: 5.375em
+    font-size: 3em
 }
 
 .error-display .error-title,
@@ -304,7 +304,7 @@ figure>img {
 .stats-info-item .stats-info-item-value,
 .form-box-heading .form-box-heading-subtitle,
 .product-open .product-name {
-    font-size: 1.75em
+    font-size: 1.3em
 }
 
 .post-preview.landscape.big .post-preview-title,
@@ -6108,6 +6108,7 @@ a {
 
 .social-links {
     display: flex;
+    justify-content: center;
     flex-flow: row wrap
 }
 
@@ -7612,6 +7613,7 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .form-box-wrap .tab-form-buttons {
+visibility: hidden;
     width: 430px;
     display: flex;
     flex-flow: row wrap

@@ -4,9 +4,9 @@
         <use xlink:href="#svg-cross-big"></use>
     </svg>
     <form method="GET" class="search-popup-form">
-        <input type="text" id="search" class="input-line" name="search" placeholder="kamu Mau Cari Tulisan Apa?">
+        <input type="text" id="search" class="input-line" name="search" placeholder="Mau Cari Apa?">
     </form>
-    <p class="search-popup-text">Tulis kata kunci yang kamu mau lalu tekan Enter untuk memulai pencarian!</p>
+    <p class="search-popup-text">Tulis kata kunci yang kamu mau lalu tekan ENTER untuk memulai pencarian!</p>
 </div>
 
 <!-- POPUP LOGIN -->
@@ -14,31 +14,30 @@
     <div class="form-box-wrap">
         <div class="form-box-heading login">
             <div class="form-box-heading-title-wrap">
-                <p class="form-box-heading-title">Hello Again!</p>
-                <p class="form-box-heading-subtitle">We are so happy to see you back here!</p>
+                <p class="form-box-heading-title">Hi!</p>
+                <p class="form-box-heading-subtitle">Kami Senang akhirnya kamu kembali lagi!</p>
             </div>
-            <p class="form-box-heading-text">Don’t you have an account? <a href="#">Register Now!</a> It will take just
-                a few seconds!</p>
+            <p class="form-box-heading-text">Belum punya akun? <a href="#">Daftar Disini!</a> Gabung bersama komunitas kami!</p>
         </div>
         <div class="form-box-body">
             <div class="form-box">
                 <div class="section-title-wrap blue">
-                    <h2 class="section-title medium">Login to your account</h2>
+                    <h2 class="section-title medium">Login dulu ke akun kamu</h2>
                     <div class="section-title-separator"></div>
                 </div>
                 <form class="form-wrap">
                     <div class="form-row">
                         <div class="form-item blue">
-                            <label for="login_email" class="rl-label">Email Address</label>
+                            <label for="login_email" class="rl-label">E-Mail:</label>
                             <input type="text" id="login_email" name="login_email"
-                                placeholder="Enter your email here...">
+                                placeholder="Masukkan E-Mail kamu...">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-item blue">
                             <label for="login_pwd" class="rl-label">Password</label>
                             <input type="password" id="login_pwd" name="login_pwd"
-                                placeholder="Enter your password here...">
+                                placeholder="Masukkan Password kamu...">
                         </div>
                     </div>
                     <div class="form-confirm-row">
@@ -50,12 +49,12 @@
                                     <use xlink:href="#svg-cross-cb-small"></use>
                                 </svg>
                             </div>
-                            <label for="login_remember_ep" class="rl-label">Remember Email and Password</label>
+                            <label for="login_remember_ep" class="rl-label">Simpan E-Mail dan Password</label>
                         </div>
-                        <a href="#" class="link-text-form blue">Forgot Password?</a>
+                        <a href="#" class="link-text-form blue">Lupa Password?</a>
                     </div>
                     <div class="form-actions full">
-                        <button class="button blue full">Login Now!</button>
+                        <button class="button blue full">Masuk!</button>
                         <div class="social-buttons">
                             <a href="#" class="button-social fb">Facebook Login</a>
                             <a href="#" class="button-social twt">Twitter Login</a>
@@ -65,7 +64,7 @@
             </div>
             <div class="tab-form-buttons">
                 <p class="tab-form-button selected">Login</p>
-                <p class="tab-form-button">Register</p>
+                <p class="tab-form-button">Daftar</p>
             </div>
         </div>
     </div>
@@ -76,50 +75,48 @@
     <div class="form-box-wrap">
         <div class="form-box-heading register">
             <div class="form-box-heading-title-wrap">
-                <p class="form-box-heading-title">Welcome!</p>
-                <p class="form-box-heading-subtitle">Register and enjoy the full Pixel Diamond experience!</p>
+                <p class="form-box-heading-title">Selamat Datang!</p>
+                <p class="form-box-heading-subtitle">Ayo daftar dan bergabung bersama komunitas kami!</p>
             </div>
-            <p class="form-box-heading-text">After registering, you’ll receive a confirmation email in your inbox with a
-                link to activate your account!</p>
+            <p class="form-box-heading-text">Setelah mendaftar, kamu akan menerima E-Mail konfirmasi yang terdapat link untuk mengaktifkan akun kamu!</p>
         </div>
         <div class="form-box-body">
             <div class="form-box">
                 <div class="section-title-wrap red">
-                    <h2 class="section-title medium">Register Now!</h2>
+                    <h2 class="section-title medium">Daftar Sekarang</h2>
                     <div class="section-title-separator"></div>
                 </div>
                 <form class="form-wrap">
                     <div class="form-row">
                         <div class="form-item red">
-                            <label for="register_email_04" class="rl-label">Email Address</label>
+                            <label for="register_email_04" class="rl-label">E-Mail:</label>
                             <input type="text" id="register_email_04" name="register_email_04"
-                                placeholder="Enter your email here...">
+                                placeholder="Masukkan E-Mail kamu...">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-item red">
                             <label for="register_pwd_04" class="rl-label">Password</label>
                             <input type="password" id="register_pwd_04" name="register_pwd_04"
-                                placeholder="Enter your password here...">
+                                placeholder="Masukkan Password kamu...">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-item red">
-                            <label for="register_pwd_repeat_04" class="rl-label">Repeat Password</label>
+                            <label for="register_pwd_repeat_04" class="rl-label">Ulangi Password</label>
                             <input type="password" id="register_pwd_repeat_04" name="register_pwd_repeat_04"
-                                placeholder="Rewrite your password here...">
+                                placeholder="Tulis kembali Password kamu...">
                         </div>
                     </div>
                     <div class="form-actions full">
-                        <button class="button red full">Create your account!</button>
-                        <p class="form-info-text">You’ll receive a confirmation email in your inbox with a link to
-                            activate your account!</p>
+                        <button class="button red full">Buat akun!</button>
+                        <p class="form-info-text">Cek E-Mail kamu setelah mendaftar!</p>
                     </div>
                 </form>
             </div>
             <div class="tab-form-buttons">
                 <p class="tab-form-button">Login</p>
-                <p class="tab-form-button selected">Register</p>
+                <p class="tab-form-button selected">Daftar</p>
             </div>
         </div>
     </div>

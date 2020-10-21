@@ -1642,52 +1642,31 @@
         <div class="layout-body layout-item centered">
             <!-- LAYOUT ITEM -->
             <div class="layout-item">
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape big gaming-news">
-                    <!-- POST PREVIEW IMG WRAP -->
+                <div class="post-preview landscape gaming-news">
                     <a href="post-v1.html">
                         <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
                             <figure class="post-preview-img liquid">
                                 <img src="{{ asset('/frontend/assets/img/posts/01.jpg')}}" alt="post-01">
                             </figure>
-                            <!-- POST PREVIEW IMG -->
                         </div>
                     </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-    
-                    <!-- TAG ORNAMENT -->
                     <a href="news-v1.html" class="tag-ornament">Gaming News</a>
-                    <!-- /TAG ORNAMENT -->
-    
-                    <!-- POST PREVIEW TITLE -->
                     <a href="post-v1.html" class="post-preview-title">The Clash of Dragons is breaking record sales in
                         Japan</a>
-                    <!-- POST AUTHOR INFO -->
                     <div class="post-author-info-wrap">
-                        <!-- USER AVATAR -->
-                        <a href="search-results.html">
-                            <figure class="user-avatar tiny liquid">
-                                <img src="{{ asset('/frontend/assets/img/users/01.jpg')}}" alt="user-01">
-                            </figure>
-                        </a>
-                        <!-- /USER AVATAR -->
-                        <p class="post-author-info small light">By <a href="search-results.html"
-                                class="post-author">Dexter</a><span class="separator">|</span>December 15th, 2018<span
+                        <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
+                                class="post-author">Dexter</a><span class="separator">|</span>Hari, 15 Desember 2018<span
                                 class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
-                                Comments</a></p>
+                                Komentar</a></p>
                     </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
+                    <!-- Diambil dari subtitle -->
                     <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        loso laboris tempora aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore...</p>
+                        tempor incididunt dutor et dolore magna aliqua</p>
                 </div>
                 <!-- /POST PREVIEW -->
     
                 <!-- POST PREVIEW -->
-                <div class="post-preview landscape big e-sport">
+                <div class="post-preview landscape e-sport">
                     <!-- POST PREVIEW IMG WRAP -->
                     <a href="esports-post.html">
                         <div class="post-preview-img-wrap">
@@ -1731,7 +1710,7 @@
                 <!-- /POST PREVIEW -->
     
                 <!-- POST PREVIEW -->
-                <div class="post-preview landscape big gaming-news">
+                <div class="post-preview landscape gaming-news">
                     <!-- POST PREVIEW IMG WRAP -->
                     <a href="post-v1.html">
                         <div class="post-preview-img-wrap">
@@ -1774,7 +1753,7 @@
                 <!-- /POST PREVIEW -->
     
                 <!-- POST PREVIEW -->
-                <div class="post-preview landscape big game-review">
+                <div class="post-preview landscape game-review">
                     <!-- POST PREVIEW IMG WRAP -->
                     <a href="post-v2.html">
                         <div class="post-preview-img-wrap">
@@ -1824,7 +1803,7 @@
                 <!-- /POST PREVIEW -->
     
                 <!-- POST PREVIEW -->
-                <div class="post-preview landscape big geeky-news">
+                <div class="post-preview landscape geeky-news">
                     <!-- POST PREVIEW IMG WRAP -->
                     <a href="post-v4.html">
                         <div class="post-preview-img-wrap">
@@ -1867,7 +1846,7 @@
                 <!-- /POST PREVIEW -->
     
                 <!-- POST PREVIEW -->
-                <div class="post-preview landscape big movie-news">
+                <div class="post-preview landscape movie-news">
                     <!-- POST PREVIEW IMG WRAP -->
                     <a href="post-v3.html">
                         <div class="post-preview-img-wrap">

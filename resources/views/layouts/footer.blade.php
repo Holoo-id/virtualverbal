@@ -32,7 +32,7 @@
                     <!-- SOCIAL LINKS -->
                     <div class="social-links">
                         <!-- BUBBLE ORNAMENT -->
-                        <a href="#" class="bubble-ornament fb">
+                        <a href="https://www.facebook.com/virtualverbal" class="bubble-ornament fb">
                             <!-- FACEBOOK ICON -->
                             <svg class="facebook-icon">
                                 <use xlink:href="#svg-facebook"></use>
@@ -42,7 +42,7 @@
                         <!-- /BUBBLE ORNAMENT -->
 
                         <!-- BUBBLE ORNAMENT -->
-                        <a href="#" class="bubble-ornament twt">
+                        <a href="https://twitter.com/virtualverbal" class="bubble-ornament twt">
                             <!-- TWITTER ICON -->
                             <svg class="twitter-icon">
                                 <use xlink:href="#svg-twitter"></use>
@@ -52,7 +52,7 @@
                         <!-- /BUBBLE ORNAMENT -->
 
                         <!-- BUBBLE ORNAMENT -->
-                        <a href="#" class="bubble-ornament insta">
+                        <a href="https://www.instagram.com/virtualverbaldotcom/" class="bubble-ornament insta">
                             <!-- INSTAGRAM ICON -->
                             <svg class="instagram-icon">
                                 <use xlink:href="#svg-instagram"></use>
@@ -62,17 +62,17 @@
                         <!-- /BUBBLE ORNAMENT -->
 
                         <!-- BUBBLE ORNAMENT -->
-                        <a href="#" class="bubble-ornament twitch">
+                        <a href="https://wa.me/6289678419991" class="bubble-ornament green">
                             <!-- TWITCH ICON -->
-                            <svg class="twitch-icon">
-                                <use xlink:href="#svg-twitch"></use>
+                            <svg class="whatsapp-icon">
+                                <use xlink:href="#svg-whatsapp"></use>
                             </svg>
                             <!-- /TWITCH ICON -->
                         </a>
                         <!-- /BUBBLE ORNAMENT -->
 
                         <!-- BUBBLE ORNAMENT -->
-                        <a href="#" class="bubble-ornament youtube">
+                        <a href="https://www.youtube.com/channel/UC6LJYdmDyL4QL5rlgXDMX7A" class="bubble-ornament youtube">
                             <!-- YOUTUBE ICON -->
                             <svg class="youtube-icon">
                                 <use xlink:href="#svg-youtube"></use>

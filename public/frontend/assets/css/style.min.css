@@ -5112,10 +5112,6 @@ a {
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .mobile-menu-wrap .mobile-menu .mobile-menu-item{display:block;}
-}
-
 .s-icon {
     color: #1e1f20
 }
@@ -10797,29 +10793,40 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .widget-sidebar .card-profil-game{
+    display: block;
+    padding: 20px;
+    background: linear-gradient(to right, #1C95F3, #7442CE);
+    color: #fff;
+}
+.post-open .card-profil-game{
+    display: none;
     padding: 20px;
     background: linear-gradient(to right, #1C95F3, #7442CE);
     color: #fff;
 }
 
-.widget-sidebar .card-profil-game img {
+.widget-sidebar .card-profil-game img,
+.post-open .card-profil-game img {
     max-width: 50%;
     float:right;
     border: 5px solid #36363675;
     margin-top: -15px;
 }
 
-.widget-sidebar .card-profil-game .profil-game-text{
+.widget-sidebar .card-profil-game .profil-game-text,
+.post-open .card-profil-game .profil-game-text{
     margin-top: -15px
 }
 
-.widget-sidebar .card-profil-game .profil-game-text .text-judul{
+.widget-sidebar .card-profil-game .profil-game-text .text-judul,
+.post-open .card-profil-game .profil-game-text .text-judul{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 14px;
 }
 
-.widget-sidebar .card-profil-game .profil-game-text .text-isi{
+.widget-sidebar .card-profil-game .profil-game-text .text-isi,
+.post-open .card-profil-game .profil-game-text .text-isi{
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     margin-bottom: 5px;
     padding-bottom: 5px;
@@ -11949,6 +11956,16 @@ input[type="radio"]:disabled+.radio-circle {
 
     .team-overview .arc-rate-wrap {
         display: none
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .mobile-menu-wrap .mobile-menu .mobile-menu-item,
+    .post-open .card-profil-game {
+        display:block;
+    }
+    .widget-sidebar .card-profil-game {
+        display:none;
     }
 }
 
@@ -21262,7 +21279,7 @@ input[type="radio"]:disabled+.radio-circle {
 }
 
 .contact-info-preview .contact-info-preview-email-wrap {
-    margin-top: 24px;
+    margin: 24px 0;
     padding: 1px 0 0 56px;
     position: relative
 }

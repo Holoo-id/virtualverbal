@@ -22,8 +22,8 @@ class CreateViverbContentTable extends Migration
             $table->longtext('konten');
             $table->text('sub_judul');
             $table->string('permalink');
-            $table->string('image_path')->after('konten');
-            $table->string('image_name')->after('image_path');
+            $table->text('image_path')->nullable();
+            $table->string('image_name')->nullable();
             $table->foreignId('category_id');
             $table->integer('igdb_id')->nullable();
             $table->boolean('published')->default(false);

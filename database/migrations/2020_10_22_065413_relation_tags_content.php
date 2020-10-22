@@ -16,7 +16,7 @@ class RelationTagsContent extends Migration
         Schema::create('v_relation_tags_content', function (Blueprint $table) {
             $table->id();
             $table->foreignId('content_id');
-            $table->foreignId('tag_id');
+            $table->foreignId('tag_id')->nullable();
 
             $table->foreign('content_id')
                 ->references('id')

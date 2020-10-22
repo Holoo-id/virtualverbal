@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 	<head>
 		<link href="{{ asset('/frontend/assets/img/brand/logovv.png')}}" rel="shortcut icon">
-		<link rel="stylesheet" href="{{ asset('dist/css/app.css') }}" />
+		<link rel="stylesheet" href="{{ asset('backend/dist/css/app.css') }}" />
 		<meta charset="utf-8">
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
@@ -11,7 +11,8 @@
 		<meta name="description" content="Virtual Verbal adalah portal berita Games, Event, dan E-Sport">
 		<meta name="keywords" content="virtual verbal, vv, portal game news">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ \App\Helpers\Viverb::title() }}</title>
+		<!-- <title>{{ \App\Helpers\Viverb::title() }}</title> -->
+        <title>Virtual Admin</title>
 	</head>
     <body class="app">
         <div class="mobile-menu md:hidden">
@@ -23,7 +24,8 @@
             </div>
             <ul class="border-t border-theme-24 py-5 hidden">
                 <li>
-                    <a href="{{ route('viverb-esport-be-dashboard') }}" class="menu">
+                    <!-- <a href="{{ route('viverb-esport-be-dashboard') }}" class="menu"> -->
+                    <a class="menu" href="">
                         <div class="menu__icon"> <i data-feather="home"></i> </div>
                         <div class="menu__title"> Dashboard </div>
                     </a>
@@ -35,7 +37,8 @@
                     </a>
                     <ul class="">
                         <li>
-                            <a href="{{ route('viverb-esport-be-content-index') }}" class="menu">
+                            <!-- <a href="{{ route('viverb-esport-be-content-index') }}" class="menu"> -->
+                            <a class="menu" href="">
                                 <div class="menu__icon"> <i data-feather="book-open"></i> </div>
                                 <div class="menu__title"> Konten </div>
                             </a>
@@ -48,13 +51,15 @@
                             </a>
                             <ul class="">
                                 <li>
-                                    <a href="{{ route('viverb-esport-be-category-article') }}" class="menu">
+                                    <!-- <a href="{{ route('viverb-esport-be-category-article') }}" class="menu"> -->
+                                    <a class="menu" href="">
                                         <div class="menu__icon"> <i data-feather="file-text"></i> </div>
                                         <div class="menu__title"> Article </div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('viverb-esport-be-category-games') }}" class="menu">
+                                    <!-- <a href="{{ route('viverb-esport-be-category-games') }}" class="menu"> -->
+                                    <a class="menu" href="">
                                         <div class="menu__icon"> <i data-feather="play-circle"></i> </div>
                                         <div class="menu__title"> Games </div>
                                     </a>
@@ -63,7 +68,8 @@
                         </li>
                         @endif
                         <li>
-                            <a href="{{ route('viverb-esport-be-information') }}" class="menu">
+                            <!-- <a href="{{ route('viverb-esport-be-information') }}" class="menu"> -->
+                            <a class="menu" href="">
                                 <div class="menu__icon"> <i data-feather="hash"></i> </div>
                                 <div class="menu__title"> Information </div>
                             </a>
@@ -78,25 +84,29 @@
                     </a>
                     <ul class="">
                         <li>
-                            <a href="{{ route('viverb-esport-be-user-admin') }}" class="menu">
+                            <!-- <a href="{{ route('viverb-esport-be-user-admin') }}" class="menu"> -->
+                            <a class="menu" href="">
                                 <div class="menu__icon"> <i data-feather="user"></i> </div>
                                 <div class="menu__title"> Admin </div>
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('viverb-esport-be-user-author') }}" class="menu">
+                            <!-- <a href="{{ route('viverb-esport-be-user-author') }}" class="menu"> -->
+                            <a class="menu" href="">
                                 <div class="menu__icon"> <i data-feather="user-plus"></i> </div>
                                 <div class="menu__title"> Author </div>
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('viverb-esport-be-user-guest') }}" class="menu">
+                            <!-- <a href="{{ route('viverb-esport-be-user-guest') }}" class="menu"> -->
+                            <a class="menu" href="">
                                 <div class="menu__icon"> <i data-feather="user-x"></i> </div>
                                 <div class="menu__title"> Guest </div>
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('viverb-esport-be-sponsor') }}" class="menu">
+                            <!-- <a href="{{ route('viverb-esport-be-sponsor') }}" class="menu"> -->
+                            <a class="menu" href="">
                                 <div class="menu__icon"> <i data-feather="user-check"></i> </div>
                                 <div class="menu__title"> Sponsor </div>
                             </a>
@@ -106,20 +116,23 @@
                 @endif
                 <li class="side-nav__devider my-6"></li>
                 <li>
-                    <a href="{{ route('forum') }}" class="menu">
+                    <!-- <a href="{{ route('forum') }}" class="menu"> -->
+                    <a class="menu" href="">
                         <div class="menu__icon"> <i data-feather="message-square"></i> </div>
                         <div class="menu__title"> Forum </div>
                     </a>
                 </li>
                 @if(Auth::user()->role_id == 1 || Auth::user()->role_id == 2)
                 <li>
-                    <a href="{{ route('viverb-esport-be-giftpoint-index') }}" class="menu">
+                    <!-- <a href="{{ route('viverb-esport-be-giftpoint-index') }}" class="menu"> -->
+                    <a class="menu" href="">
                         <div class="menu__icon"> <i data-feather="gift"></i> </div>
                         <div class="menu__title"> Gift Point </div>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('viverb-esport-be-schedule-index') }}" class="menu">
+                    <!-- <a href="{{ route('viverb-esport-be-schedule-index') }}" class="menu"> -->
+                    <a class="menu" href="">
                         <div class="menu__icon"> <i data-feather="calendar"></i> </div>
                         <div class="menu__title"> Jadwal </div>
                     </a>
@@ -131,7 +144,8 @@
                     </a>
                     <ul class="">
                         <li>
-                            <a href="{{ route('viverb-esport-be-shop-games') }}" class="menu">
+                            <!-- <a href="{{ route('viverb-esport-be-shop-games') }}" class="menu"> -->
+                            <a class="menu" href="">
                                 <div class="menu__icon"> <i data-feather="play"></i> </div>
                                 <div class="menu__title"> Games </div>
                             </a>
@@ -146,13 +160,15 @@
                     </a>
                     <ul class="">
                         <li>
-                            <a href="{{ route('viverb-esport-be-configuration') }}" class="menu">
+                            <!-- <a href="{{ route('viverb-esport-be-configuration') }}" class="menu"> -->
+                            <a class="menu" href="">
                                 <div class="menu__icon"> <i data-feather="settings"></i> </div>
                                 <div class="menu__title"> Settings </div>
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('viverb-esport-be-configuration') }}" class="menu">
+                            <!-- <a href="{{ route('viverb-esport-be-configuration') }}" class="menu"> -->
+                            <a class="menu" href="">
                                 <div class="menu__icon"> <i data-feather="monitor"></i> </div>
                                 <div class="menu__title"> Frontpage </div>
                             </a>
@@ -161,7 +177,8 @@
                 </li>
                 @endif
                 <li>
-                    <a href="{{ route('viverb-esport-index') }}" class="menu">
+                    <!-- <a href="{{ route('viverb-esport-index') }}" class="menu"> -->
+                    <a class="menu" href="">
                         <div class="menu__icon"> <i data-feather="maximize"></i> </div>
                         <div class="menu__title"> FrontPage </div>
                     </a>
@@ -366,7 +383,8 @@
                     </li> -->
 					
                     <li>
-                        <a href="{{ route('viverb-esport-be-dashboard') }}" class="side-menu">
+                        <!-- <a href="{{ route('viverb-esport-be-dashboard') }}" class="side-menu"> -->
+                        <a class="side-menu" href="">
                             <div class="side-menu__icon"> <i data-feather="home"></i> </div>
                             <div class="side-menu__title"> Dashboard </div>
                         </a>
@@ -378,7 +396,7 @@
                         </a>
                         <ul class="">
                             <li>
-                                <a href="{{ route('viverb-esport-be-content-index') }}" class="side-menu">
+                                <a class="menu" href="">
                                     <div class="side-menu__icon"> <i data-feather="book-open"></i> </div>
                                     <div class="side-menu__title"> Konten </div>
                                 </a>
@@ -391,13 +409,15 @@
                                 </a>
                                 <ul class="">
                                     <li>
-                                        <a href="{{ route('viverb-esport-be-category-article') }}" class="side-menu">
+                                        <!-- <a href="{{ route('viverb-esport-be-category-article') }}" class="side-menu"> -->
+                                        <a class="side-menu" href="">
                                             <div class="side-menu__icon"> <i data-feather="file-text"></i> </div>
                                             <div class="side-menu__title"> Article </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('viverb-esport-be-category-games') }}" class="side-menu">
+                                        <!-- <a href="{{ route('viverb-esport-be-category-games') }}" class="side-menu"> -->
+                                        <a class="side-menu" href="">
                                             <div class="side-menu__icon"> <i data-feather="play-circle"></i> </div>
                                             <div class="side-menu__title"> Games </div>
                                         </a>
@@ -406,7 +426,8 @@
                             </li>
                             @endif
                             <li>
-                                <a href="{{ route('viverb-esport-be-information') }}" class="side-menu">
+                                <!-- <a href="{{ route('viverb-esport-be-information') }}" class="side-menu"> -->
+                                <a class="side-menu" href="">
                                     <div class="side-menu__icon"> <i data-feather="hash"></i> </div>
                                     <div class="side-menu__title"> Information </div>
                                 </a>
@@ -719,7 +740,7 @@
 		</div>
 
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-        <script src="{{ asset('dist/js/app.js') }}"></script>
+        <script src="{{ asset('backend/dist/js/app.js') }}"></script>
 
         <script>
         $.widget.bridge('uibutton', $.ui.button);

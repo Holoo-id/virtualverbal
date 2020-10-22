@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('front.layouts.base')
 
 @section('content')
     <!-- LAYOUT CONTENT 1 -->
@@ -889,7 +889,7 @@
         </div>
         <!-- /LAYOUT BODY -->
     
-        @include('layouts.sidebar')
+        @include('front.layouts.sidebar')
     </div>
     <!-- /LAYOUT CONTENT 1 -->
 @endsection

@@ -10,17 +10,17 @@ use App\Http\Controllers\Frontend\BeritaController;
 //View
 
 Route::get('/', function () {
-    return view('home');
+    return view('front.home');
 });
 
 Route::get('/berita', [BeritaController::class, 'Berita']);
 Route::get('/berita/{slug}', [BeritaController::class, 'LinkBerita']);
 
 Route::get('/artikel', function () {
-    return view('artikel-game');
+    return view('front.artikel-game');
 });
 Route::get('/search-result', function () {
-    return view('search-result');
+    return view('front.search-result');
 });
 
 Route::get('/esports', function () {
@@ -45,4 +45,9 @@ Route::get('/komunitas', function () {
 
 Route::get('/shop', function () {
     return view('shop');
+});
+
+// start backend layouts
+Route::get('/dashboard', function () {
+    return view('back.dashboard');
 });

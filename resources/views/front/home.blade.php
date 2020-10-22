@@ -1,7 +1,7 @@
-@extends('layouts.base')
+@extends('front.layouts.base')
 
 @section('content')
-    @include('layouts.banner-slider')
+    @include('front.layouts.banner-slider')
     <!-- CAROUSEL MATCH RESULT WRAP -->
     <div id="ew1-cmrf-controls" class="carousel-match-result-wrap full">
         <!-- MATCH SELECTOR -->
@@ -735,7 +735,7 @@
         </div>
     </div>
     <!-- LAYOUT CONTENT 1 -->
-    <div class="layout-content-1 layout-item-3-1 search-pad grid-limit">
+    <div class="layout-content-1 layout-item search-pad centered">
         <!-- LAYOUT BODY -->
         <div class="layout-body layout-item centered">
             <!-- LAYOUT ITEM -->
@@ -1132,13 +1132,11 @@
             <!-- Layout Item -->
         </div>
         <!-- /LAYOUT BODY -->
-    
-        @include('layouts.sidebar')
     </div>
     <!-- SECTION BG -->
     <div class="section-bg">
         <!-- LAYOUT CONTENT 1 -->
-        <div class="layout-content-1 layout-item-3-1 padded-large grid-limit">
+        <div class="layout-content-1 layout-item-3-1 padded-large centered">
             <!-- LAYOUT BODY -->
             <div class="layout-body">
                 <!-- POST OPEN -->
@@ -1637,7 +1635,7 @@
         <!-- /LAYOUT CONTENT 1 -->
     </div>
     <!-- LAYOUT CONTENT 1 -->
-    <div class="layout-content-1 layout-item-3-1 search-pad grid-limit">
+    <div class="layout-content-1 layout-item-3-1 search-pad centered">
         <!-- LAYOUT BODY -->
         <div class="layout-body layout-item centered">
             <!-- LAYOUT ITEM -->

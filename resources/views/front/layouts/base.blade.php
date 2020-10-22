@@ -33,9 +33,9 @@
     </style>
 
     <body>
-        @include('layouts.header')
+        @include('front.layouts.header')
         @yield('content')
-        @include('layouts.footer')
+        @include('front.layouts.footer')
 
         <script src="{{ asset('/frontend/assets/js/script.js') }}"></script>
         <script src="{{ asset('/frontend/assets/js/app.bundle.min.js') }}"></script>

@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-  <head>
+	<head>
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="csrf-token" content="{{ csrf_token() }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="icon" href="{{ asset('/frontend/assets/img/brand/logovv.png')}}">
 
-    <!-- Twitter -->
-    <meta name="twitter:site" content="@virtualverbal">
-    <meta name="twitter:creator" content="@virtualverbal">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Virtual Verbal">
-    <meta name="twitter:description" content="Kamu butuh bacaan seputar games, geeks, technology, hobbies, lifestyle dengan pembahasan yang santai dan menarik? Yuk, pantengin timeline kami.">
-    <meta name="twitter:image" content="https://twitter.com/virtualverbal/photo">
+		<!-- Twitter -->
+		<meta name="twitter:site" content="@virtualverbal">
+		<meta name="twitter:creator" content="@virtualverbal">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Virtual Verbal">
+		<meta name="twitter:description" content="Responsive Bootstrap 4 Dashboard Template">
+		<meta name="twitter:image" content="http://themepixels.me/azia/img/azia-social.png">
 
-    <!-- Facebook -->
-    <meta property="og:url" content="https://www.facebook.com/virtualverbal">
-    <meta property="og:title" content="Virtual Verbal">
-    <meta property="og:description" content="Kamu butuh bacaan seputar games, geeks, technology, hobbies, lifestyle dengan pembahasan yang santai dan menarik? Yuk, pantengin timeline kami.">
+		<!-- Facebook -->
+		<meta property="og:url" content="https://www.facebook.com/virtualverbal">
+		<meta property="og:title" content="Virtual Verbal">
+		<meta property="og:description" content="Responsive Bootstrap 4 Dashboard Template">
 
-    <meta property="og:image" content="http://themepixels.me/azia/img/azia-social.png">
-    <meta property="og:image:secure_url" content="http://themepixels.me/azia/img/azia-social.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="600">
+		<meta property="og:image" content="http://themepixels.me/azia/img/azia-social.png">
+		<meta property="og:image:secure_url" content="http://themepixels.me/azia/img/azia-social.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="600">
 
-    <!-- Meta -->
-    <meta name="author" content="Virtual Verbal">
-    <meta name="description" content="Virtual Verbal adalah portal berita Games, Event, dan E-Sport">
-    <meta name="keywords" content="virtual verbal, vv, portal game news">
+		<!-- Meta -->
+		<meta name="author" content="Virtual Verbal">
+		<meta name="description" content="Virtual Verbal adalah portal berita Games, Event, dan E-Sport">
+		<meta name="keywords" content="virtual verbal, vv, portal game news">
 
-    <title>Azia Responsive Bootstrap 4 Dashboard Template</title>
+		<title>Azia Responsive Bootstrap 4 Dashboard Template</title>
 
-    <!-- vendor css -->
-    <link href="../lib/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="../lib/typicons.font/typicons.css" rel="stylesheet">
+		<!-- vendor css -->
+		<link href="{{ asset('/backend/lib/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
+		<link href="{{ asset('/backend/lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
+		<link href="{{ asset('/backend/lib/typicons.font/typicons.css')}}" rel="stylesheet">
 
-    <!-- azia CSS -->
-    <link rel="stylesheet" href="../css/azia.css">
+		<!-- azia CSS -->
+		<link rel="stylesheet" href="{{ asset('/backend/css/azia.css')}}">
 
-  </head>
+	</head>
+
   <body class="az-minimal">
 
     <div class="az-header">
@@ -269,11 +272,11 @@
       </div><!-- container -->
     </div><!-- az-footer -->
 
-    <script src="../lib/jquery/jquery.min.js"></script>
-    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/ionicons/ionicons.js"></script>
+    <script src="{{ asset('/backend/lib/jquery/jquery.min.js')}}"></script>
+    <script src="{{ asset('/backend/lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('/backend/lib/ionicons/ionicons.js')}}"></script>
 
-    <script src="../js/azia.js"></script>
+    <script src="{{ asset('/backend/js/azia.js')}}"></script>
 
   </body>
 </html>

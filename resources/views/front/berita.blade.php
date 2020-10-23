@@ -10,7 +10,7 @@
             <div class="post-open-img-wrap">
                 <!-- POST OPEN IMG -->
                 <figure class="post-open-img2 liquid">
-                    <img src="{{ asset('/frontend/assets/img/posts/12.jpg')}}" alt="post-12">
+                    <img src="{{ asset('/frontend/assets/img/posts/16_flat.jpg')}}" alt="post-12">
                 </figure>
                 <!-- /POST OPEN IMG -->
             </div>

@@ -2,8 +2,8 @@
 <div class="layout-sidebar1 layout-item">
     <!-- App Articles Only -->
     <div class="widget-sidebar">
-        <img style="width:245px; height:331px; position:absolute; margin:0 12.5px;" src="{{ asset('/frontend/assets/img/posts/02_tall.jpg')}}" alt="">
-        <div class="card-profil-game">
+        <img style="width:230px; height:295px; position:absolute; margin:0 20px;" src="{{ asset('/frontend/assets/img/posts/02_tall.jpg')}}" alt="">
+        <div class="card-profil-game centered">
             <div class="section-title-wrap">
                 <div style="padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.15)" class="section-title medium">Game Database</div>
             </div>

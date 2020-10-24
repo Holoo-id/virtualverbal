@@ -34,5 +34,25 @@
             </div>
         </div>
     </div>
+
+    <div class="widget-sidebar">
+        <div class="section-title-wrap red">
+            <h2 class="section-title medium">Tags</h2>
+            <div class="section-title-separator"></div>
+        </div>
+
+        <ul class="custom-tags-wrap">
+            <ul style="margin: -1px 0;padding: 20px 0;border-bottom: 1px solid #d8d8d8;" class="custom-tags">
+                <li style="padding: 10px 15px;background: linear-gradient(to right, #f30a5c, #fff);" class="custom-tag">
+                    <a style="color: #fff" href="" class="custum-tag">gamegame</a>
+                </li>
+            </ul>
+            <ul style="margin: -1px 0;padding: 20px 0;border-bottom: 1px solid #d8d8d8;" class="custom-tags">
+                <li style="padding: 10px 15px;background: linear-gradient(to right, #f30a5c, #fff);" class="custom-tag">
+                    <a href="" class="custum-tag">gamegame</a>
+                </li>
+            </ul>
+        </ul>
+    </div>
 </div>
 <!-- /LAYOUT SIDEBAR 1 -->

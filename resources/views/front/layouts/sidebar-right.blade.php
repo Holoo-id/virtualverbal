@@ -20,7 +20,7 @@
         <!-- /SECTION TITLE WRAP -->
     
         <!-- POST PREVIEW SHOWCASE -->
-        <div class="post-preview-showcase grid-1col centered gutter-medium">
+        <div class="post-preview-showcase grid-1col_1 gutter-medium">
             <!-- POST PREVIEW -->
             <div class="post-preview tiny padded gaming-news">
                 <!-- POST PREVIEW IMG WRAP -->
@@ -251,7 +251,7 @@
         <!-- /SECTION TITLE WRAP -->
     
         <!-- POST PREVIEW SHOWCASE -->
-        <div class="post-preview-showcase grid-1col centered gutter-medium">
+        <div class="post-preview-showcase grid-1col_1 gutter-medium">
             <!-- POST PREVIEW -->
             <div class="post-preview tiny padded gaming-news">
                 <!-- POST PREVIEW IMG WRAP -->

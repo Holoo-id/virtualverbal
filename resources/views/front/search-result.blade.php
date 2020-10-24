@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- LAYOUT CONTENT 1 -->
-    <div class="layout-content-1 layout-item-3-1 search-pad centered grid-limit">
+    <div class="layout-content-1 layout-item-3-1 own-grid centered">
         <!-- LAYOUT BODY -->
         <div class="layout-body layout-item centered">
             <!-- SECTION TITLE WRAP -->

@@ -1,5 +1,5 @@
 <!-- LAYOUT SIDEBAR -->
-<div class="layout-sidebar layout-item gutter-medium">
+<div class="layout-sidebar layout-item own-grid gutter-medium">
     <div class="widget-sidebar">
         <div class="card-langganan">
             <div class="section-title-wrap">
@@ -85,7 +85,7 @@
         <!-- /SECTION TITLE WRAP -->
     
         <!-- POST PREVIEW SHOWCASE -->
-        <div class="post-preview-showcase grid-1col gutter-small">
+        <div class="post-preview-showcase grid-1col_1 gutter-small">
             <!-- POST PREVIEW -->
             <div class="post-preview tiny e-sport">
                 <!-- POST PREVIEW IMG WRAP -->
@@ -197,7 +197,7 @@
         <!-- /SECTION TITLE WRAP -->
     
         <!-- POST PREVIEW SHOWCASE -->
-        <div class="post-preview-showcase grid-1col centered gutter-medium">
+        <div class="post-preview-showcase grid-1col_1 gutter-small">
             <!-- POST PREVIEW -->
             <div class="post-preview tiny padded gaming-news">
                 <!-- POST PREVIEW IMG WRAP -->

@@ -788,7 +788,9 @@ figure>img {
 .layout-item-1-2.own-grid,
 .layout-item-2-1.own-grid,
 .layout-item-3-1.own-grid {
-    display: block
+    max-width: 1440px;
+    display: grid;
+    margin: 0 auto;
 }
 
 .layout-item-1-1-1 {
@@ -796,27 +798,27 @@ figure>img {
 }
 
 .layout-item-1-1-1_2 {
-    grid-template-columns: repeat(3, 25%)
+    grid-template-columns: repeat(3, 22.5%)
 }
 
 .layout-item-1-2-1 {
-    grid-template-columns: 22% 46% 22%
+    grid-template-columns: 22.5% 45% 22.5%
 }
 
 .layout-item-2-1 {
-    grid-template-columns: 46% 22%
+    grid-template-columns: 45% 22.5%
 }
 
 .layout-item-1-2 {
-    grid-template-columns: 22% 46%
+    grid-template-columns: 22.5% 45%
 }
 
 .layout-item-3-1 {
-    grid-template-columns: 70% 20%
+    grid-template-columns: 66.5% 22.5%
 }
 
 .layout-item-1-3 {
-    grid-template-columns: 20% 70%
+    grid-template-columns: 22.5% 66.5%
 }
 
 @media screen and (max-width: 1260px) {
@@ -1106,7 +1108,7 @@ figure>img {
 }
 
 .grid-4col_1 {
-    grid-template-columns: repeat(4, 22.5%)
+    grid-template-columns: repeat(4, 252px)
 }
 
 .grid-3col_1 {
@@ -1118,11 +1120,11 @@ figure>img {
 }
 
 .grid-1col_1 {
-    grid-template-columns: 90%
+    grid-template-columns: 270px
 }
 
 .grid-4col {
-    grid-template-columns: repeat(4, 25%)
+    grid-template-columns: repeat(4, 288px)
 }
 
 .grid-3col {
@@ -1138,15 +1140,15 @@ figure>img {
 }
 
 .grid-1col_3 {
-    grid-template-columns: 70%
+    grid-template-columns: 90px
 }
 
 .grid-1col_2 {
-    grid-template-columns: 80%
+    grid-template-columns: 180px
 }
 
 .grid-1col {
-    grid-template-columns: 100%
+    grid-template-columns: 360px
 }
 
 @media screen and (max-width: 1260px) {
@@ -10793,43 +10795,42 @@ visibility: hidden;
     padding: 20px;
 }
 
-.widget-sidebar .card-profil-game{
-    display: block;
-    width: 270px;
-    margin-top: 190px;
+.widget-sidebar .game-card-wrap{
+    margin: 0 5%;
+    min-width: 270px;
+}
+
+.widget-sidebar .game-card-wrap .gambar-gantung {
+    width: 230px;
+    height: 295px;
+    margin: 0 calc((100% - 230px)/2);
+}
+
+.widget-sidebar .game-card-wrap .card-profil-game {
+    margin-top: -110px;
     padding: 125px 20px 20px;
     background: linear-gradient(to right, #1C95F3, #7442CE);
     color: #fff;
 }
-.post-open .card-profil-game{
+
+.post-open .game-card-wrap {
     display: none;
-    padding: 20px;
-    background: linear-gradient(to right, #1C95F3, #7442CE);
-    color: #fff;
 }
 
-.widget-sidebar .card-profil-game img,
-.post-open .card-profil-game img {
-    max-width: 50%;
-    float:right;
-    border: 5px solid #36363675;
-    margin-top: -15px;
-}
-
-.widget-sidebar .card-profil-game .profil-game-text,
-.post-open .card-profil-game .profil-game-text{
+.widget-sidebar .game-card-wrap .card-profil-game .profil-game-text,
+.post-open .game-card-wrap .card-profil-game .profil-game-text{
     margin-top: -15px
 }
 
-.widget-sidebar .card-profil-game .profil-game-text .text-judul,
-.post-open .card-profil-game .profil-game-text .text-judul{
+.widget-sidebar .game-card-wrap .card-profil-game .profil-game-text .text-judul,
+.post-open .game-card-wrap .card-profil-game .profil-game-text .text-judul{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 14px;
 }
 
-.widget-sidebar .card-profil-game .profil-game-text .text-isi,
-.post-open .card-profil-game .profil-game-text .text-isi{
+.widget-sidebar .game-card-wrap .card-profil-game .profil-game-text .text-isi,
+.post-open .game-card-wrap .card-profil-game .profil-game-text .text-isi{
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     margin-bottom: 5px;
     padding-bottom: 5px;
@@ -11964,11 +11965,25 @@ visibility: hidden;
 
 @media screen and (max-width: 1024px) {
     .mobile-menu-wrap .mobile-menu .mobile-menu-item,
-    .post-open .card-profil-game {
-        display:block;
+    .post-open .game-card-wrap {
+        display: block;
     }
-    .widget-sidebar .card-profil-game {
-        display:none;
+
+    .post-open .game-card-wrap .card-profil-game {
+        margin-top: -110px;
+        padding: 125px 5% 5%;
+        background: linear-gradient(to right, #1C95F3, #7442CE);
+        color: #fff;
+    }
+
+    .post-open .game-card-wrap .gambar-gantung {
+        width: 230px;
+        height: 295px;
+        margin: 0 calc((100% - 230px)/2);
+    }
+
+    .widget-sidebar .game-card-wrap {
+        display: none;
     }
 }
 
@@ -19405,6 +19420,8 @@ visibility: hidden;
 }
 
 .section-bg {
+    display: flex;
+    justify-content: center;
     background: #1e1f20 url("../img/section/bg1.jpg") no-repeat center;
     background-size: cover
 }

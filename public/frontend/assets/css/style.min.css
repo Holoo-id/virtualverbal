@@ -10796,7 +10796,6 @@ visibility: hidden;
 }
 
 .widget-sidebar .game-card-wrap{
-    margin: 0 5%;
     min-width: 270px;
 }
 
@@ -10808,7 +10807,7 @@ visibility: hidden;
 
 .widget-sidebar .game-card-wrap .card-profil-game {
     margin-top: -110px;
-    padding: 125px 20px 20px;
+    padding: 130px 25px 25px;
     background: linear-gradient(to right, #1C95F3, #7442CE);
     color: #fff;
 }

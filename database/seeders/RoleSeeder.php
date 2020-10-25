@@ -4,8 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
-class CategorySeeder extends Seeder
+class RoleSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,29 +16,30 @@ class CategorySeeder extends Seeder
     public function run()
     {
         //
-        DB::table('v_category_content')->insert([
+        DB::table('v_role')->insert([
             [
-                'name' => 'Berita',
+            'id' => 1,
+            'name' => 'Not Verified User',
+            'created_at' => Carbon::now()
+            ],
+            [
+                'id' => 2,
+                'name' => 'User',
                 'created_at' => Carbon::now()
             ],
             [
-                'name' => 'Artikel',
+                'id' => 3,
+                'name' => 'Writer',
                 'created_at' => Carbon::now()
             ],
             [
-                'name' => 'E-Sports',
+                'id' => 4,
+                'name' => 'Admin',
                 'created_at' => Carbon::now()
             ],
             [
-                'name' => 'Videos',
-                'created_at' => Carbon::now()
-            ],
-            [
-                'name' => 'Apps',
-                'created_at' => Carbon::now()
-            ],
-            [
-                'name' => 'Database',
+                'id' => 5,
+                'name' => 'Super Admin',
                 'created_at' => Carbon::now()
             ]
         ]);

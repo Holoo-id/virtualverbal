@@ -37,24 +37,24 @@
 
     <div class="widget-sidebar">
         <div class="section-title-wrap blue">
-            <h2 class="section-title medium">Tags</h2>
+            <h2 class="section-title medium">topik</h2>
             <div class="section-title-separator"></div>
         </div>
 
         <ul class="custom-tags-wrap">
-            <ul style="margin: 0;padding: 10px 0;border-bottom: 1px solid #d8d8d8;" class="custom-tags">
-                <li style="padding: 10px 15px;background: linear-gradient(to right, #1c95f3 25%, #fff);" class="custom-tag">
-                    <a style="color: #fff" href="" class="custum-tag">gamegame</a>
+            <ul class="custom-tags">
+                <li class="custom-tag">
+                    <a href="">gamegame</a>
                 </li>
             </ul>
-            <ul style="margin: 0;padding: 10px 0;border-bottom: 1px solid #d8d8d8;" class="custom-tags">
-                <li style="padding: 10px 15px;background: linear-gradient(to right, #1c95f3 25%, #fff);" class="custom-tag">
-                    <a style="color: #fff" href="" class="custum-tag">gamegame</a>
+            <ul class="custom-tags">
+                <li class="custom-tag">
+                    <a href="">gamegame</a>
                 </li>
             </ul>
-            <ul style="margin: 0;padding: 10px 0;border-bottom: 1px solid #d8d8d8;" class="custom-tags">
-                <li style="padding: 10px 15px;background: linear-gradient(to right, #1c95f3 25%, #fff);" class="custom-tag">
-                    <a style="color: #fff" href="" class="custum-tag">gamegame</a>
+            <ul class="custom-tags">
+                <li class="custom-tag">
+                    <a href="">gamegame</a>
                 </li>
             </ul>
         </ul>

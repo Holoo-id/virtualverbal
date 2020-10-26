@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
-class CategorySeeder extends Seeder
+class FormatSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,7 +16,7 @@ class CategorySeeder extends Seeder
     public function run()
     {
         //
-        DB::table('v_category_content')->insert([
+        DB::table('v_format_content')->insert([
             [
                 'name' => 'Berita',
                 'created_at' => Carbon::now()

@@ -3908,9 +3908,11 @@
                         <li class="dropdown-list-item">
                             <a href="#" class="dropdown-list-item-link">Histori</a>
                         </li>
+                        @if(Auth::user()->role_id >= 3)
                         <li class="dropdown-list-item">
-                            <a href="#" class="dropdown-list-item-link">Admin Panel</a>
+                            <a href="/dashboard" class="dropdown-list-item-link">Admin Panel</a>
                         </li>
+                        @endif
                         <li class="dropdown-list-item">
                             <a href="#" class="dropdown-list-item-link">Profil</a>
                         </li>

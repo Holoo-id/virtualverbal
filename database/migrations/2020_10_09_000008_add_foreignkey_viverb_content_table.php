@@ -17,7 +17,7 @@ class AddForeignkeyViverbContentTable extends Migration
             //
             $table->foreign('category_id')
                 ->references('id')
-                ->on('v_category_content')
+                ->on('v_format_content')
                 ->onDelete('cascade');
 
             $table->foreign('created_by')

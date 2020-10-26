@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateViverbCategoryContentTable extends Migration
+class CreateViverbFormatContentTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateViverbCategoryContentTable extends Migration
      */
     public function up()
     {
-        Schema::create('v_category_content', function (Blueprint $table) {
+        Schema::create('v_format_content', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateViverbCategoryContentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('v_category_content');
+        Schema::dropIfExists('v_format_content');
     }
 }

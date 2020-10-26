@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
                 'email_verified_at' => Carbon::now(),
                 'image' => '/storage/images/users/18.jpg',
                 'activated' => true,
-                'role_id' => 5,
+                'role_id' => 7,
                 'created_at' => Carbon::now()
                 ],
                 [
@@ -34,7 +34,7 @@ class UserSeeder extends Seeder
                 'email_verified_at' => Carbon::now(),
                 'image' => '/storage/images/users/00.jpg',
                 'activated' => true,
-                'role_id' => 5,
+                'role_id' => 7,
                 'created_at' => Carbon::now()
                 ]
             ]);

@@ -24,22 +24,32 @@ class RoleSeeder extends Seeder
             ],
             [
                 'id' => 2,
-                'name' => 'User',
+                'name' => 'Pengunjung',
                 'created_at' => Carbon::now()
             ],
             [
                 'id' => 3,
-                'name' => 'Writer',
+                'name' => 'Kontributor',
                 'created_at' => Carbon::now()
             ],
             [
                 'id' => 4,
-                'name' => 'Admin',
+                'name' => 'Penulis',
                 'created_at' => Carbon::now()
             ],
             [
                 'id' => 5,
-                'name' => 'Super Admin',
+                'name' => 'Editor',
+                'created_at' => Carbon::now()
+            ],
+            [
+                'id' => 6,
+                'name' => 'Redaksi',
+                'created_at' => Carbon::now()
+            ],
+            [
+                'id' => 7,
+                'name' => 'Administor',
                 'created_at' => Carbon::now()
             ]
         ]);

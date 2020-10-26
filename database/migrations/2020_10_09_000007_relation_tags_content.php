@@ -25,7 +25,7 @@ class RelationTagsContent extends Migration
 
             $table->foreign('tag_id')
                 ->references('id')
-                ->on('v_tags')
+                ->on('v_topics')
                 ->onDelete('set null');
         });
     }

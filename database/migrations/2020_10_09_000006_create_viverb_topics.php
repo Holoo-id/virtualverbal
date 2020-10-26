@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateViverbTags extends Migration
+class CreateViverbTopics extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateViverbTags extends Migration
      */
     public function up()
     {
-        Schema::create('v_tags', function (Blueprint $table) {
+        Schema::create('v_topics', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->text('url')->nullable();
@@ -29,6 +29,6 @@ class CreateViverbTags extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('v_tags');
+        Schema::dropIfExists('v_topics');
     }
 }

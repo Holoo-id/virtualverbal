@@ -3889,10 +3889,16 @@
         <!-- Profil Menu -->
         <div class="profil-menu">
             <div class="log-link">
-                <!-- <div class="sudah-login">
+                <!-- Kalo Belum Login -->
+            @if (Auth::guest())
+                <div class="belum-login">
+                    <a class="popup-login-trigger" href="#">login</a> | <a class="popup-register-trigger" href="#">daftar</a>
+                </div>
+            @else
+                <div class="sudah-login">
                     <a href="esports-home.html" class="main-menu-item-link">
                         <p>
-                            Nama Lengkap
+                            {{Auth::user()->name}}
                             <svg class="arrow-icon">
                                 <use xlink:href="#svg-arrow"></use>
                             </svg>
@@ -3909,18 +3915,15 @@
                             <a href="#" class="dropdown-list-item-link">Profil</a>
                         </li>
                         <li class="dropdown-list-item">
-                            <a href="#" class="dropdown-list-item-link">Logout</a>
+                            <a href="/logout" class="dropdown-list-item-link">Logout</a>
                         </li>
                     </ul>
-                </div> -->
-                <!-- Kalo Belum Login -->
-                <div class="belum-login">
-                    <a class="popup-login-trigger" href="#">login</a> | <a class="popup-register-trigger" href="#">daftar</a>
                 </div>
             </div>
-            <!-- <div class="gambar">
-                <img class="widget-option-img user-avatar" src="{{ asset('/frontend/assets/img/users/00.jpg')}}" alt="avatar-01">
-            </div> -->
+            <div class="gambar">
+                <img class="widget-option-img user-avatar" src="{{ asset(Auth::user()->image)}}" alt="{{Auth::user()->image}}">
+            </div>
+            @endif
             <!-- INVENTORY BUTTON -->
             <div class="inventory-button" style="margin-left: 35px;"
                 

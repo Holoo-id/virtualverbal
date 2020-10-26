@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
                 'email' => 'superadmin@viverb.com',
                 'password' => Hash::make('asdf1234'),
                 'email_verified_at' => Carbon::now(),
-                'image' => '/public/storage/images/users/18.jpg',
+                'image' => '/storage/images/users/18.jpg',
                 'activated' => true,
                 'role_id' => 5,
                 'created_at' => Carbon::now()
@@ -32,7 +32,7 @@ class UserSeeder extends Seeder
                 'email' => 'deletedwriter@viverb.com',
                 'password' => Hash::make(' '),
                 'email_verified_at' => Carbon::now(),
-                'image' => '/public/storage/images/users/00.jpg',
+                'image' => '/storage/images/users/00.jpg',
                 'activated' => true,
                 'role_id' => 5,
                 'created_at' => Carbon::now()

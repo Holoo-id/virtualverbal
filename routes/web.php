@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Frontend\BeritaController;
+use App\Http\Controllers\Backend\AuthController;
 
 
 //Route
@@ -12,6 +13,8 @@ use App\Http\Controllers\Frontend\BeritaController;
 Route::get('/', function () {
     return view('front.home');
 });
+
+Route::post('/login', [AuthController::class, 'authenticate']);
 
 Route::get('/berita', [BeritaController::class, 'Berita']);
 Route::get('/berita/{slug}', [BeritaController::class, 'LinkBerita']);

@@ -25,7 +25,8 @@
                     <h2 class="section-title medium">Login dulu ke akun kamu</h2>
                     <div class="section-title-separator"></div>
                 </div>
-                <form class="form-wrap">
+                <form class="form-wrap" method='POST' action='/login'>
+                    @csrf
                     <div class="form-row">
                         <div class="form-item blue">
                             <label for="login_email" class="rl-label">E-Mail:</label>
@@ -54,7 +55,7 @@
                         <a href="#" class="link-text-form blue">Lupa Password?</a>
                     </div>
                     <div class="form-actions full">
-                        <button class="button blue full">Masuk!</button>
+                        <button type="submit" class="button blue full">Masuk!</button>
                         <div class="social-buttons">
                             <a href="#" class="button-social fb">Facebook Login</a>
                             <a href="#" class="button-social twt">Twitter Login</a>

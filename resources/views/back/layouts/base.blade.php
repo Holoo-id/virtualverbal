@@ -256,8 +256,23 @@
     <div class="az-content pd-y-20">
       <div class="container">
         <div class="az-content-body">
-
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style2">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Library</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+          </nav>
           <h2 class="az-content-title-minimal">Hi, welcome back!</h2>
+
+          <div class="d-flex bg-gray-200">
+            <div class="pd-10 bg-gray-300 flex-grow-1">Flex item</div>
+            <div class="pd-10 bg-gray-500">
+              <div class="card card-body bg-gray-200 bd-0">
+              </div>
+            </div>
+          </div>
+
           <p class="az-content-text-minimal">Your cryptocurrency monitoring and performance dashboard template.</p>
 
 

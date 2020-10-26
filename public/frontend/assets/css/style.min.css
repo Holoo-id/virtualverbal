@@ -10816,6 +10816,32 @@ visibility: hidden;
     display: none;
 }
 
+.widget-sidebar .custom-tags-wrap {
+    margin-top: -20px;
+}
+
+.widget-sidebar .custom-tags-wrap .custom-tags {
+    margin: 0;
+    padding: 5px 0;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.widget-sidebar .custom-tags-wrap .custom-tags .custom-tag {
+    padding: 6px 15px;
+    background: linear-gradient(to right, #1c95f3, #1c95f388 30%, transparent);
+}
+
+.widget-sidebar .custom-tags-wrap .custom-tags .custom-tag a {
+    font-size: 0.6em;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.widget-sidebar .custom-tags-wrap .custom-tags .custom-tag a:hover {
+    text-decoration: underline;
+}
+
 .widget-sidebar .game-card-wrap .card-profil-game .profil-game-text,
 .post-open .game-card-wrap .card-profil-game .profil-game-text{
     margin-top: -15px

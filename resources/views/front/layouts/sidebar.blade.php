@@ -1,5 +1,5 @@
 <!-- LAYOUT SIDEBAR -->
-<div class="layout-sidebar layout-item gutter-medium">
+<div class="layout-sidebar layout-item own-grid gutter-medium">
     <div class="widget-sidebar">
         <div class="card-langganan">
             <div class="section-title-wrap">
@@ -76,416 +76,6 @@
         <!-- /SOCIAL LINKS -->
     </div>
 
-    <!-- Visible on Homepage Only -->
-    <div class="widget-sidebar">
-        <!-- DROPDOWN LIST -->
-        <ul class="dropdown-list accordion">
-            <!-- DROPDOWN LIST ITEM -->
-            <li style="margin-bottom: 15px;" class="dropdown-list-item">
-                <!-- ACCORDION ACTION -->
-                <div class="accordion-action">
-                    <!-- ARROW ICON -->
-                    <svg class="arrow-icon medium">
-                        <use xlink:href="#svg-arrow-medium"></use>
-                    </svg>
-                    <!-- /ARROW ICON -->
-                </div>
-                <!-- /ACCORDION ACTION -->
-
-                <!-- SECTION TITLE WRAP -->
-                <div class="section-title-wrap violet no-space accordion-trigger">
-                    <h2 class="section-title medium">Recently Release</h2>
-                    <div class="section-title-separator"></div>
-                </div>
-                <!-- /SECTION TITLE WRAP -->
-
-                <!-- DROPDOWN INNER LIST -->
-                <ul class="dropdown-inner-list accordion-content accordion-open">
-                    <!-- DROPDOWN INNER LIST ITEM -->
-                    <li class="dropdown-inner-list-item">
-                        <!-- POST PREVIEW SHOWCASE -->
-                        <div class="post-preview-showcase grid-1col gutter-small">
-                            <!-- POST PREVIEW -->
-                            <div class="post-preview tiny e-sport">
-                                <!-- POST PREVIEW IMG WRAP -->
-                                <a href="esports-post.html">
-                                    <div class="post-preview-img-wrap">
-                                        <!-- POST PREVIEW IMG -->
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/36.jpg')}}" alt="post-36">
-                                        </figure>
-                                        <!-- /POST PREVIEW IMG -->
-                                    </div>
-                                </a>
-                                <!-- /POST PREVIEW IMG WRAP -->
-                        
-                                <!-- POST PREVIEW TITLE -->
-                                <a href="esports-post.html" class="post-preview-title">Gwen Parker is leading her team to the semifinals</a>
-                                <!-- POST AUTHOR INFO -->
-                                <div class="post-author-info-wrap">
-                                    <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Dexter</a><span
-                                            class="separator">|</span>Dec 15th, 2018</p>
-                                </div>
-                                <!-- /POST AUTHOR INFO -->
-                            </div>
-                            <!-- /POST PREVIEW -->
-                        
-                            <!-- POST PREVIEW -->
-                            <div class="post-preview tiny e-sport">
-                                <!-- POST PREVIEW IMG WRAP -->
-                                <a href="esports-post.html">
-                                    <div class="post-preview-img-wrap">
-                                        <!-- POST PREVIEW IMG -->
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/38.jpg')}}" alt="post-38">
-                                        </figure>
-                                        <!-- /POST PREVIEW IMG -->
-                                    </div>
-                                </a>
-                                <!-- /POST PREVIEW IMG WRAP -->
-                        
-                                <!-- POST PREVIEW TITLE -->
-                                <a href="esports-post.html" class="post-preview-title">Pro Soccer 2018 world league kicked off today!</a>
-                                <!-- POST AUTHOR INFO -->
-                                <div class="post-author-info-wrap">
-                                    <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                                            V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                                </div>
-                                <!-- /POST AUTHOR INFO -->
-                            </div>
-                            <!-- /POST PREVIEW -->
-                        
-                            <!-- POST PREVIEW -->
-                            <div class="post-preview tiny e-sport">
-                                <!-- POST PREVIEW IMG WRAP -->
-                                <a href="esports-post.html">
-                                    <div class="post-preview-img-wrap">
-                                        <!-- POST PREVIEW IMG -->
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/37.jpg')}}" alt="post-37">
-                                        </figure>
-                                        <!-- /POST PREVIEW IMG -->
-                                    </div>
-                                </a>
-                                <!-- /POST PREVIEW IMG WRAP -->
-                        
-                                <!-- POST PREVIEW TITLE -->
-                                <a href="esports-post.html" class="post-preview-title">Last night the wolves beat the rhinos 12-10</a>
-                                <!-- POST AUTHOR INFO -->
-                                <div class="post-author-info-wrap">
-                                    <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                                            V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                                </div>
-                                <!-- /POST AUTHOR INFO -->
-                            </div>
-                            <!-- /POST PREVIEW -->
-                        
-                            <!-- POST PREVIEW -->
-                            <div class="post-preview tiny e-sport">
-                                <!-- POST PREVIEW IMG WRAP -->
-                                <a href="esports-post.html">
-                                    <div class="post-preview-img-wrap">
-                                        <!-- POST PREVIEW IMG -->
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/39.jpg')}}" alt="post-39">
-                                        </figure>
-                                        <!-- /POST PREVIEW IMG -->
-                                    </div>
-                                </a>
-                                <!-- /POST PREVIEW IMG WRAP -->
-                        
-                                <!-- POST PREVIEW TITLE -->
-                                <a href="esports-post.html" class="post-preview-title">We had an interview with the great Emily Danniels</a>
-                                <!-- POST AUTHOR INFO -->
-                                <div class="post-author-info-wrap">
-                                    <p class="post-author-info small light">By <a href="search-results.html"
-                                            class="post-author">Vellatrix</a><span class="separator">|</span>Dec 15th, 2018</p>
-                                </div>
-                                <!-- /POST AUTHOR INFO -->
-                            </div>
-                            <!-- /POST PREVIEW -->
-                        </div>
-                        <!-- /POST PREVIEW SHOWCASE -->
-                    </li>
-                    <!-- /DROPDOWN INNER LIST ITEM -->
-                </ul>
-                <!-- /DROPDOWN INNER LIST -->
-            </li>
-            <!-- /DROPDOWN LIST ITEM -->
-
-            <!-- DROPDOWN LIST ITEM -->
-            <li style="margin-bottom: 15px;" class="dropdown-list-item">
-                <!-- ACCORDION ACTION -->
-                <div class="accordion-action">
-                    <!-- ARROW ICON -->
-                    <svg class="arrow-icon medium">
-                        <use xlink:href="#svg-arrow-medium"></use>
-                    </svg>
-                    <!-- /ARROW ICON -->
-                </div>
-                <!-- /ACCORDION ACTION -->
-
-                <!-- SECTION TITLE WRAP -->
-                <div class="section-title-wrap red no-space accordion-trigger">
-                    <h2 class="section-title medium">Coming Soon</h2>
-                    <div class="section-title-separator"></div>
-                </div>
-                <!-- /SECTION TITLE WRAP -->
-
-                <ul class="dropdown-inner-list accordion-content accordion-open">
-                    <!-- DROPDOWN INNER LIST ITEM -->
-                    <li class="dropdown-inner-list-item">
-                        <!-- POST PREVIEW SHOWCASE -->
-                        <div class="post-preview-showcase grid-1col gutter-small">
-                            <!-- POST PREVIEW -->
-                            <div class="post-preview tiny e-sport">
-                                <!-- POST PREVIEW IMG WRAP -->
-                                <a href="esports-post.html">
-                                    <div class="post-preview-img-wrap">
-                                        <!-- POST PREVIEW IMG -->
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/36.jpg')}}" alt="post-36">
-                                        </figure>
-                                        <!-- /POST PREVIEW IMG -->
-                                    </div>
-                                </a>
-                                <!-- /POST PREVIEW IMG WRAP -->
-                
-                                <!-- POST PREVIEW TITLE -->
-                                <a href="esports-post.html" class="post-preview-title">Gwen Parker is leading her team to the
-                                    semifinals</a>
-                                <!-- POST AUTHOR INFO -->
-                                <div class="post-author-info-wrap">
-                                    <p class="post-author-info small light">By <a href="search-results.html"
-                                            class="post-author">Dexter</a><span class="separator">|</span>Dec 15th, 2018</p>
-                                </div>
-                                <!-- /POST AUTHOR INFO -->
-                            </div>
-                            <!-- /POST PREVIEW -->
-                
-                            <!-- POST PREVIEW -->
-                            <div class="post-preview tiny e-sport">
-                                <!-- POST PREVIEW IMG WRAP -->
-                                <a href="esports-post.html">
-                                    <div class="post-preview-img-wrap">
-                                        <!-- POST PREVIEW IMG -->
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/38.jpg')}}" alt="post-38">
-                                        </figure>
-                                        <!-- /POST PREVIEW IMG -->
-                                    </div>
-                                </a>
-                                <!-- /POST PREVIEW IMG WRAP -->
-                
-                                <!-- POST PREVIEW TITLE -->
-                                <a href="esports-post.html" class="post-preview-title">Pro Soccer 2018 world league kicked off
-                                    today!</a>
-                                <!-- POST AUTHOR INFO -->
-                                <div class="post-author-info-wrap">
-                                    <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                                            V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                                </div>
-                                <!-- /POST AUTHOR INFO -->
-                            </div>
-                            <!-- /POST PREVIEW -->
-                
-                            <!-- POST PREVIEW -->
-                            <div class="post-preview tiny e-sport">
-                                <!-- POST PREVIEW IMG WRAP -->
-                                <a href="esports-post.html">
-                                    <div class="post-preview-img-wrap">
-                                        <!-- POST PREVIEW IMG -->
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/37.jpg')}}" alt="post-37">
-                                        </figure>
-                                        <!-- /POST PREVIEW IMG -->
-                                    </div>
-                                </a>
-                                <!-- /POST PREVIEW IMG WRAP -->
-                
-                                <!-- POST PREVIEW TITLE -->
-                                <a href="esports-post.html" class="post-preview-title">Last night the wolves beat the rhinos 12-10</a>
-                                <!-- POST AUTHOR INFO -->
-                                <div class="post-author-info-wrap">
-                                    <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                                            V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                                </div>
-                                <!-- /POST AUTHOR INFO -->
-                            </div>
-                            <!-- /POST PREVIEW -->
-                
-                            <!-- POST PREVIEW -->
-                            <div class="post-preview tiny e-sport">
-                                <!-- POST PREVIEW IMG WRAP -->
-                                <a href="esports-post.html">
-                                    <div class="post-preview-img-wrap">
-                                        <!-- POST PREVIEW IMG -->
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/39.jpg')}}" alt="post-39">
-                                        </figure>
-                                        <!-- /POST PREVIEW IMG -->
-                                    </div>
-                                </a>
-                                <!-- /POST PREVIEW IMG WRAP -->
-                
-                                <!-- POST PREVIEW TITLE -->
-                                <a href="esports-post.html" class="post-preview-title">We had an interview with the great Emily
-                                    Danniels</a>
-                                <!-- POST AUTHOR INFO -->
-                                <div class="post-author-info-wrap">
-                                    <p class="post-author-info small light">By <a href="search-results.html"
-                                            class="post-author">Vellatrix</a><span class="separator">|</span>Dec 15th, 2018</p>
-                                </div>
-                                <!-- /POST AUTHOR INFO -->
-                            </div>
-                            <!-- /POST PREVIEW -->
-                        </div>
-                        <!-- /POST PREVIEW SHOWCASE -->
-                    </li>
-                    <!-- /DROPDOWN INNER LIST ITEM -->
-                </ul>
-                <!-- /DROPDOWN INNER LIST -->
-            </li>
-            <!-- /DROPDOWN LIST ITEM -->
-
-            <!-- DROPDOWN LIST ITEM -->
-            <li style="margin-bottom: 15px;" class="dropdown-list-item">
-                <!-- ACCORDION ACTION -->
-                <div class="accordion-action">
-                    <!-- ARROW ICON -->
-                    <svg class="arrow-icon medium">
-                        <use xlink:href="#svg-arrow-medium"></use>
-                    </svg>
-                    <!-- /ARROW ICON -->
-                </div>
-                <!-- /ACCORDION ACTION -->
-
-                <!-- SECTION TITLE WRAP -->
-                <div class="section-title-wrap cyan no-space accordion-trigger">
-                    <h2 class="section-title medium">Most Anticipated</h2>
-                    <div class="section-title-separator"></div>
-                </div>
-                <!-- /SECTION TITLE WRAP -->
-
-                <ul class="dropdown-inner-list accordion-content accordion-open">
-                    <!-- DROPDOWN INNER LIST ITEM -->
-                    <li class="dropdown-inner-list-item">
-                        <!-- POST PREVIEW SHOWCASE -->
-                        <div class="post-preview-showcase grid-1col gutter-small">
-                            <!-- POST PREVIEW -->
-                            <div class="post-preview tiny e-sport">
-                                <!-- POST PREVIEW IMG WRAP -->
-                                <a href="esports-post.html">
-                                    <div class="post-preview-img-wrap">
-                                        <!-- POST PREVIEW IMG -->
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/36.jpg')}}" alt="post-36">
-                                        </figure>
-                                        <!-- /POST PREVIEW IMG -->
-                                    </div>
-                                </a>
-                                <!-- /POST PREVIEW IMG WRAP -->
-                
-                                <!-- POST PREVIEW TITLE -->
-                                <a href="esports-post.html" class="post-preview-title">Gwen Parker is leading her team to the
-                                    semifinals</a>
-                                <!-- POST AUTHOR INFO -->
-                                <div class="post-author-info-wrap">
-                                    <p class="post-author-info small light">By <a href="search-results.html"
-                                            class="post-author">Dexter</a><span class="separator">|</span>Dec 15th, 2018</p>
-                                </div>
-                                <!-- /POST AUTHOR INFO -->
-                            </div>
-                            <!-- /POST PREVIEW -->
-                
-                            <!-- POST PREVIEW -->
-                            <div class="post-preview tiny e-sport">
-                                <!-- POST PREVIEW IMG WRAP -->
-                                <a href="esports-post.html">
-                                    <div class="post-preview-img-wrap">
-                                        <!-- POST PREVIEW IMG -->
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/38.jpg')}}" alt="post-38">
-                                        </figure>
-                                        <!-- /POST PREVIEW IMG -->
-                                    </div>
-                                </a>
-                                <!-- /POST PREVIEW IMG WRAP -->
-                
-                                <!-- POST PREVIEW TITLE -->
-                                <a href="esports-post.html" class="post-preview-title">Pro Soccer 2018 world league kicked off
-                                    today!</a>
-                                <!-- POST AUTHOR INFO -->
-                                <div class="post-author-info-wrap">
-                                    <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                                            V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                                </div>
-                                <!-- /POST AUTHOR INFO -->
-                            </div>
-                            <!-- /POST PREVIEW -->
-                
-                            <!-- POST PREVIEW -->
-                            <div class="post-preview tiny e-sport">
-                                <!-- POST PREVIEW IMG WRAP -->
-                                <a href="esports-post.html">
-                                    <div class="post-preview-img-wrap">
-                                        <!-- POST PREVIEW IMG -->
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/37.jpg')}}" alt="post-37">
-                                        </figure>
-                                        <!-- /POST PREVIEW IMG -->
-                                    </div>
-                                </a>
-                                <!-- /POST PREVIEW IMG WRAP -->
-                
-                                <!-- POST PREVIEW TITLE -->
-                                <a href="esports-post.html" class="post-preview-title">Last night the wolves beat the rhinos 12-10</a>
-                                <!-- POST AUTHOR INFO -->
-                                <div class="post-author-info-wrap">
-                                    <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                                            V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                                </div>
-                                <!-- /POST AUTHOR INFO -->
-                            </div>
-                            <!-- /POST PREVIEW -->
-                
-                            <!-- POST PREVIEW -->
-                            <div class="post-preview tiny e-sport">
-                                <!-- POST PREVIEW IMG WRAP -->
-                                <a href="esports-post.html">
-                                    <div class="post-preview-img-wrap">
-                                        <!-- POST PREVIEW IMG -->
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/39.jpg')}}" alt="post-39">
-                                        </figure>
-                                        <!-- /POST PREVIEW IMG -->
-                                    </div>
-                                </a>
-                                <!-- /POST PREVIEW IMG WRAP -->
-                
-                                <!-- POST PREVIEW TITLE -->
-                                <a href="esports-post.html" class="post-preview-title">We had an interview with the great Emily
-                                    Danniels</a>
-                                <!-- POST AUTHOR INFO -->
-                                <div class="post-author-info-wrap">
-                                    <p class="post-author-info small light">By <a href="search-results.html"
-                                            class="post-author">Vellatrix</a><span class="separator">|</span>Dec 15th, 2018</p>
-                                </div>
-                                <!-- /POST AUTHOR INFO -->
-                            </div>
-                            <!-- /POST PREVIEW -->
-                        </div>
-                        <!-- /POST PREVIEW SHOWCASE -->
-                    </li>
-                    <!-- /DROPDOWN INNER LIST ITEM -->
-                </ul>
-                <!-- /DROPDOWN INNER LIST -->
-            </li>
-            <!-- /DROPDOWN LIST ITEM -->
-        </ul>
-        <!-- /DROPDOWN LIST -->
-    </div>
-
     <div class="widget-sidebar">
         <!-- SECTION TITLE WRAP -->
         <div class="section-title-wrap yellow">
@@ -495,7 +85,7 @@
         <!-- /SECTION TITLE WRAP -->
     
         <!-- POST PREVIEW SHOWCASE -->
-        <div class="post-preview-showcase grid-1col gutter-small">
+        <div class="post-preview-showcase grid-1col_1 gutter-small">
             <!-- POST PREVIEW -->
             <div class="post-preview tiny e-sport">
                 <!-- POST PREVIEW IMG WRAP -->
@@ -503,7 +93,7 @@
                     <div class="post-preview-img-wrap">
                         <!-- POST PREVIEW IMG -->
                         <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/36.jpg')}}" alt="post-36">
+                            <img src="{{ asset('/frontend/assets/img/posts/09.jpg')}}" alt="post-36">
                         </figure>
                         <!-- /POST PREVIEW IMG -->
                     </div>
@@ -528,7 +118,7 @@
                     <div class="post-preview-img-wrap">
                         <!-- POST PREVIEW IMG -->
                         <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/38.jpg')}}" alt="post-38">
+                            <img src="{{ asset('/frontend/assets/img/posts/10.jpg')}}" alt="post-38">
                         </figure>
                         <!-- /POST PREVIEW IMG -->
                     </div>
@@ -553,7 +143,7 @@
                     <div class="post-preview-img-wrap">
                         <!-- POST PREVIEW IMG -->
                         <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/37.jpg')}}" alt="post-37">
+                            <img src="{{ asset('/frontend/assets/img/posts/11.jpg')}}" alt="post-37">
                         </figure>
                         <!-- /POST PREVIEW IMG -->
                     </div>
@@ -578,7 +168,7 @@
                     <div class="post-preview-img-wrap">
                         <!-- POST PREVIEW IMG -->
                         <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/39.jpg')}}" alt="post-39">
+                            <img src="{{ asset('/frontend/assets/img/posts/12.jpg')}}" alt="post-39">
                         </figure>
                         <!-- /POST PREVIEW IMG -->
                     </div>
@@ -607,7 +197,7 @@
         <!-- /SECTION TITLE WRAP -->
     
         <!-- POST PREVIEW SHOWCASE -->
-        <div class="post-preview-showcase grid-1col centered gutter-medium">
+        <div class="post-preview-showcase grid-1col_1 gutter-small">
             <!-- POST PREVIEW -->
             <div class="post-preview tiny padded gaming-news">
                 <!-- POST PREVIEW IMG WRAP -->
@@ -615,7 +205,7 @@
                     <div class="post-preview-img-wrap">
                         <!-- POST PREVIEW IMG -->
                         <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/01.jpg')}}" alt="post-01">
+                            <img src="{{ asset('/frontend/assets/img/posts/13.jpg')}}" alt="post-01">
                         </figure>
                         <!-- /POST PREVIEW IMG -->
                     </div>
@@ -647,7 +237,7 @@
                     <div class="post-preview-img-wrap">
                         <!-- POST PREVIEW IMG -->
                         <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/02.jpg')}}" alt="post-02">
+                            <img src="{{ asset('/frontend/assets/img/posts/14.jpg')}}" alt="post-02">
                         </figure>
                         <!-- /POST PREVIEW IMG -->
                     </div>
@@ -678,7 +268,7 @@
                     <div class="post-preview-img-wrap">
                         <!-- POST PREVIEW IMG -->
                         <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/41.jpg')}}" alt="post-41">
+                            <img src="{{ asset('/frontend/assets/img/posts/15.jpg')}}" alt="post-41">
                         </figure>
                         <!-- /POST PREVIEW IMG -->
                     </div>
@@ -709,7 +299,7 @@
                     <div class="post-preview-img-wrap">
                         <!-- POST PREVIEW IMG -->
                         <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/25.jpg')}}" alt="post-25">
+                            <img src="{{ asset('/frontend/assets/img/posts/16.jpg')}}" alt="post-25">
                         </figure>
                         <!-- /POST PREVIEW IMG -->
     
@@ -746,7 +336,7 @@
                     <div class="post-preview-img-wrap">
                         <!-- POST PREVIEW IMG -->
                         <figure class="post-preview-img liquid">
-                            <img src="{{ asset('/frontend/assets/img/posts/12.jpg')}}" alt="post-12">
+                            <img src="{{ asset('/frontend/assets/img/posts/17.jpg')}}" alt="post-12">
                         </figure>
                         <!-- /POST PREVIEW IMG -->
     

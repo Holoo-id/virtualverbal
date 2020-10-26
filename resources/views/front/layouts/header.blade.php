@@ -850,7 +850,7 @@
 
                 <!-- SUBMENU -->
                 <ul class="submenu">
-                    <li class="submenu-item grid-limit">
+                    <li class="submenu-item grid-limit centered">
                         <div class="link-sections-wrap">
                             <div class="link-sections">
                                 <div class="link-section">
@@ -1133,7 +1133,7 @@
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">
                                                     <figure class="post-preview-img liquid">
-                                                        <img src="{{ asset('/frontend/assets/img/posts/36.jpg')}}" alt="post-36">
+                                                        <img src="{{ asset('/frontend/assets/img/posts/05.jpg')}}" alt="post-36">
                                                     </figure>
                                                 </div>
                                             </a>
@@ -1150,7 +1150,7 @@
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">
                                                     <figure class="post-preview-img liquid">
-                                                        <img src="{{ asset('/frontend/assets/img/posts/38.jpg')}}" alt="post-38">
+                                                        <img src="{{ asset('/frontend/assets/img/posts/06.jpg')}}" alt="post-38">
                                                     </figure>
                                                 </div>
                                             </a>
@@ -1167,7 +1167,7 @@
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">
                                                     <figure class="post-preview-img liquid">
-                                                        <img src="{{ asset('/frontend/assets/img/posts/37.jpg')}}" alt="post-37">
+                                                        <img src="{{ asset('/frontend/assets/img/posts/07.jpg')}}" alt="post-37">
                                                     </figure>
                                                 </div>
                                             </a>
@@ -1184,7 +1184,7 @@
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">
                                                     <figure class="post-preview-img liquid">
-                                                        <img src="{{ asset('/frontend/assets/img/posts/39.jpg')}}" alt="post-39">
+                                                        <img src="{{ asset('/frontend/assets/img/posts/08.jpg')}}" alt="post-39">
                                                     </figure>
                                                 </div>
                                             </a>
@@ -1202,7 +1202,7 @@
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">
                                                     <figure class="post-preview-img liquid">
-                                                        <img src="{{ asset('/frontend/assets/img/posts/40.jpg')}}" alt="post-40">
+                                                        <img src="{{ asset('/frontend/assets/img/posts/09.jpg')}}" alt="post-40">
                                                     </figure>
                                                 </div>
                                             </a>

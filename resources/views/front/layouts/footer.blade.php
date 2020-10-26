@@ -1,7 +1,7 @@
 <!-- FOOTER TOP WRAP -->
 <div class="footer-top-wrap">
     <!-- FOOTER TOP -->
-    <div class="footer-top grid-limit">
+    <div class="footer-top">
 
         <!-- LINE SEPARATOR -->
         <div class="line-separator negative"></div>

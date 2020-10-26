@@ -10,7 +10,7 @@
             <div class="post-open-img-wrap">
                 <!-- POST OPEN IMG -->
                 <figure class="post-open-img2 liquid">
-                    <img src="{{ asset('/frontend/assets/img/posts/12.jpg')}}" alt="post-12">
+                    <img src="{{ asset('/frontend/assets/img/posts/16_flat.jpg')}}" alt="post-12">
                 </figure>
                 <!-- /POST OPEN IMG -->
             </div>
@@ -20,7 +20,7 @@
     </div>
     <!-- /LAYOUT ITEM -->
 
-    <div class="layout-content-2 layout-item-1-2-1 centered">
+    <div class="layout-content-2 layout-item-1-2-1 own-grid centered">
         @include('front.layouts.sidebar-left')
     
         <!-- LAYOUT BODY -->
@@ -108,36 +108,36 @@
                     </div>
                     <!-- /POST OPEN BODY -->
                 
-                    <div class="card-profil-game">
-                        <div class="section-title-wrap">
-                            <div style="padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.15)" class="section-title medium">Game Database</div>
+                    <div class="game-card-wrap grid-limit">
+                        <img class="gambar-gantung" src="{{ asset('/frontend/assets/img/posts/02_tall.jpg')}}" alt="">
+                        <div class="card-profil-game centered">
+                            <div class="section-title-wrap">
+                                <div style="padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.15)" class="section-title medium">Game Database</div>
+                            </div>
+                            <ul class="profil-game-text">
+                                <li class="text-judul">Platform:</li>
+                                <li class="text-isi">asdghjkl</li>
+                                <li class="text-judul">Tanggal Rilis:</li>
+                                <li class="text-isi">12 Bulan 1234 (UK), 12 Bulan 1234 (UK)</li>
+                                <li class="text-judul">Publisher:</li>
+                                <li class="text-isi">Publisher 1</li>
+                                <li class="text-judul">Developer:</li>
+                                <li class="text-isi">Developer</li>
+                                <li class="text-judul">Genre:</li>
+                                <li class="text-isi">Game</li>
+                                <a style="width: 100%; margin-top: 15px;" href="#" class="button disable">Selengkapnya
+                                    <!-- BUTTON ORNAMENT -->
+                                    <div class="button-ornament">
+                                        <!-- ARROW ICON -->
+                                        <svg class="arrow-icon medium">
+                                            <use xlink:href="#svg-arrow-medium"></use>
+                                        </svg>
+                                        <!-- /ARROW ICON -->
+                                    </div>
+                                    <!-- /BUTTON ORNAMENT -->
+                                </a>
+                            </ul>
                         </div>
-                        <img src="{{ asset('/frontend/assets/img/posts/02_tall.jpg')}}" alt="">
-                        <ul class="profil-game-text">
-                            <li class="text-judul">Judul:</li>
-                            <li class="text-isi">Game 1</li>
-                            <li class="text-judul">Publisher:</li>
-                            <li class="text-isi">Publisher 1</li>
-                            <li class="text-judul">Developer:</li>
-                            <li class="text-isi">Developer</li>
-                            <li class="text-judul">Genre:</li>
-                            <li class="text-isi">Game</li>
-                            <li class="text-judul">Tanggal Rilis:</li>
-                            <li class="text-isi">12 Bulan 1234 (UK), 12 Bulan 1234 (UK)</li>
-                            <li class="text-judul">Platform:</li>
-                            <li class="text-isi">asdghjkl</li>
-                            <a style="width: 100%; margin-top: 15px;" href="#" class="button disable">Selengkapnya
-                                <!-- BUTTON ORNAMENT -->
-                                <div class="button-ornament">
-                                    <!-- ARROW ICON -->
-                                    <svg class="arrow-icon medium">
-                                        <use xlink:href="#svg-arrow-medium"></use>
-                                    </svg>
-                                    <!-- /ARROW ICON -->
-                                </div>
-                                <!-- /BUTTON ORNAMENT -->
-                            </a>
-                        </ul>
                     </div>
                     <!-- POST OPEN TAGS -->
                     <div class="post-open-tags">

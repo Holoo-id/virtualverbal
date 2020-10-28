@@ -55,3 +55,6 @@ Route::get('/shop', function () {
 Route::get('/dashboard', function () {
     return view('back.dashboard');
 });
+Route::get('/create-content', function () {
+    return view('back.create-content');
+});

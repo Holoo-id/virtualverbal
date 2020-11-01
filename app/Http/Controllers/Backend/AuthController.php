@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
@@ -21,7 +24,7 @@ class AuthController extends Controller
 
         if (Auth::attempt(['email' => $login_data['login_email'], 'password' => $login_data['login_pwd']], $remember)) {
             // Authentication passed...
-            return redirect('/');
+            return redirect()->route('home');
         }
         else{
             return redirect('/gagal');
@@ -33,5 +36,20 @@ class AuthController extends Controller
         # code...
         Auth::logout();
         return redirect('/');
+    }
+
+    public function register(Request $request)
+    {
+        $new_user = new User;
+        $new_user->email = $request->register_email;
+        $new_user->password = Hash::make($request->register_pwd);
+
+        $new_user->save();
+
+        Auth::login($new_user);
+
+        event(new Registered($new_user));
+
+        return redirect()->route('verification.notice');
     }
 }

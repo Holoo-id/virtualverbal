@@ -25,8 +25,11 @@
                     <h2 class="section-title medium">Login dulu ke akun kamu</h2>
                     <div class="section-title-separator"></div>
                 </div>
-                <form class="form-wrap" method='POST' action='/login'>
+                <form class="form-wrap" method='POST' action="{{route('login')}}">
+                    
+                    <!-- memanggil csrf_field  -->
                     @csrf
+
                     <div class="form-row">
                         <div class="form-item blue">
                             <label for="login_email" class="rl-label">E-Mail:</label>
@@ -87,30 +90,34 @@
                     <h2 class="section-title medium">Daftar Sekarang</h2>
                     <div class="section-title-separator"></div>
                 </div>
-                <form class="form-wrap">
+                <form class="form-wrap" method="POST" action="{{route('register')}}">
+                    
+                    <!-- memanggil csrf_field  -->
+                    @csrf
+                    
                     <div class="form-row">
                         <div class="form-item red">
-                            <label for="register_email_04" class="rl-label">E-Mail:</label>
-                            <input type="text" id="register_email_04" name="register_email_04"
+                            <label for="register_email" class="rl-label">E-Mail:</label>
+                            <input type="text" id="register_email" name="register_email"
                                 placeholder="Masukkan E-Mail kamu...">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-item red">
-                            <label for="register_pwd_04" class="rl-label">Password</label>
-                            <input type="password" id="register_pwd_04" name="register_pwd_04"
+                            <label for="register_pwd" class="rl-label">Password</label>
+                            <input type="password" id="register_pwd" name="register_pwd"
                                 placeholder="Masukkan Password kamu...">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-item red">
-                            <label for="register_pwd_repeat_04" class="rl-label">Ulangi Password</label>
-                            <input type="password" id="register_pwd_repeat_04" name="register_pwd_repeat_04"
+                            <label for="register_pwd_repeat" class="rl-label">Ulangi Password</label>
+                            <input type="password" id="register_pwd_repeat" name="register_pwd_repeat"
                                 placeholder="Tulis kembali Password kamu...">
                         </div>
                     </div>
                     <div class="form-actions full">
-                        <button class="button red full">Buat akun!</button>
+                        <button class="button red full" type="submit">Buat akun!</button>
                         <p class="form-info-text">Cek E-Mail kamu setelah mendaftar!</p>
                     </div>
                 </form>
@@ -3889,15 +3896,17 @@
         <!-- Profil Menu -->
         <div class="profil-menu">
             <div class="log-link">
-                <!-- Kalo Belum Login -->
+            <!-- Kalo Belum Login (Guest) -->
             @if (Auth::guest())
                 <div class="belum-login">
                     <a class="popup-login-trigger" href="#">login</a> | <a class="popup-register-trigger" href="#">daftar</a>
                 </div>
+            <!-- Kalo sudah Login -->
             @else
                 <div class="sudah-login">
                     <a href="esports-home.html" class="main-menu-item-link">
                         <p>
+                            <!-- Memunculkan username -->
                             {{Auth::user()->name}}
                             <svg class="arrow-icon">
                                 <use xlink:href="#svg-arrow"></use>
@@ -3908,11 +3917,9 @@
                         <li class="dropdown-list-item">
                             <a href="#" class="dropdown-list-item-link">Histori</a>
                         </li>
-                        @if(Auth::user()->role_id >= 3)
                         <li class="dropdown-list-item">
                             <a href="/dashboard" class="dropdown-list-item-link">Admin Panel</a>
                         </li>
-                        @endif
                         <li class="dropdown-list-item">
                             <a href="#" class="dropdown-list-item-link">Profil</a>
                         </li>
@@ -3923,6 +3930,7 @@
                 </div>
             </div>
             <div class="gambar">
+                <!-- Memunculkan gambar profil dari storage -->
                 <img class="widget-option-img user-avatar" src="{{ asset(Auth::user()->image)}}" alt="{{Auth::user()->image}}">
             </div>
             @endif

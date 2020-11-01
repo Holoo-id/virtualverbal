@@ -58,3 +58,9 @@ Route::get('/dashboard', function () {
 Route::get('/create-content', function () {
     return view('back.create-content');
 });
+Route::get('/content-list', function () {
+    return view('back.content-list');
+});
+Route::get('/content-preview', function () {
+    return view('back.content-preview');
+});

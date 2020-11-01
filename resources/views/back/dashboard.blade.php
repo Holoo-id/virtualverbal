@@ -35,59 +35,45 @@
                     <a href="" class="ml-auto flex text-theme-1"> <i data-feather="refresh-ccw" class="w-4 h-4 mr-3"></i> Reload Data </a>
                 </div>
                 <div class="grid grid-cols-12 gap-6 mt-5">
-                    <div class="col-span-12 sm:col-span-6 xl:col-span-3 intro-y">
+                    <div class="col-span-12 sm:col-span-6 xl:col-span-4 intro-y">
                         <div class="report-box zoom-in">
                             <div class="box p-5">
                                 <div class="flex">
-                                    <i data-feather="shopping-cart" class="report-box__icon text-theme-10"></i> 
+                                    <i data-feather="book" class="report-box__icon text-theme-4"></i> 
                                     <div class="ml-auto">
                                         <div class="report-box__indicator bg-theme-9 tooltip cursor-pointer" title="33% Higher than last month"> 33% <i data-feather="chevron-up" class="w-4 h-4"></i> </div>
                                     </div>
                                 </div>
                                 <div class="text-3xl font-bold leading-8 mt-6">4.510</div>
-                                <div class="text-base text-gray-600 mt-1">Item Sales</div>
+                                <div class="text-base text-gray-600 mt-1">Post</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-12 sm:col-span-6 xl:col-span-3 intro-y">
+                    <div class="col-span-12 sm:col-span-6 xl:col-span-4 intro-y">
                         <div class="report-box zoom-in">
                             <div class="box p-5">
                                 <div class="flex">
-                                    <i data-feather="credit-card" class="report-box__icon text-theme-11"></i> 
+                                    <i data-feather="book-open" class="report-box__icon text-theme-6"></i> 
                                     <div class="ml-auto">
                                         <div class="report-box__indicator bg-theme-6 tooltip cursor-pointer" title="2% Lower than last month"> 2% <i data-feather="chevron-down" class="w-4 h-4"></i> </div>
                                     </div>
                                 </div>
                                 <div class="text-3xl font-bold leading-8 mt-6">3.521</div>
-                                <div class="text-base text-gray-600 mt-1">New Orders</div>
+                                <div class="text-base text-gray-600 mt-1">Di-publish</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-12 sm:col-span-6 xl:col-span-3 intro-y">
+                    <div class="col-span-12 sm:col-span-6 xl:col-span-4 intro-y">
                         <div class="report-box zoom-in">
                             <div class="box p-5">
                                 <div class="flex">
-                                    <i data-feather="monitor" class="report-box__icon text-theme-12"></i> 
+                                    <i data-feather="archive" class="report-box__icon text-theme-9"></i> 
                                     <div class="ml-auto">
                                         <div class="report-box__indicator bg-theme-9 tooltip cursor-pointer" title="12% Higher than last month"> 12% <i data-feather="chevron-up" class="w-4 h-4"></i> </div>
                                     </div>
                                 </div>
                                 <div class="text-3xl font-bold leading-8 mt-6">2.145</div>
-                                <div class="text-base text-gray-600 mt-1">Total Products</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-12 sm:col-span-6 xl:col-span-3 intro-y">
-                        <div class="report-box zoom-in">
-                            <div class="box p-5">
-                                <div class="flex">
-                                    <i data-feather="user" class="report-box__icon text-theme-9"></i> 
-                                    <div class="ml-auto">
-                                        <div class="report-box__indicator bg-theme-9 tooltip cursor-pointer" title="22% Higher than last month"> 22% <i data-feather="chevron-up" class="w-4 h-4"></i> </div>
-                                    </div>
-                                </div>
-                                <div class="text-3xl font-bold leading-8 mt-6">152.000</div>
-                                <div class="text-base text-gray-600 mt-1">Unique Visitor</div>
+                                <div class="text-base text-gray-600 mt-1">Belum diedit</div>
                             </div>
                         </div>
                     </div>
@@ -106,7 +92,7 @@
                     <div class="pt-5">
                         <div class="flex">
                             <div class="w-10 h-10 sm:w-12 sm:h-12 flex-none image-fit">
-                                <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-3.jpg">
+                                <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('/backend/dist/images/profile-3.jpg') }}">
                             </div>
                             <div class="ml-3 flex-1">
                                 <div class="flex items-center"> <a href="" class="font-medium">Leonardo DiCaprio</a> <a href="" class="ml-auto text-xs text-gray-600">Reply</a> </div>
@@ -118,7 +104,19 @@
                     <div class="mt-5 pt-5 border-t border-gray-200">
                         <div class="flex">
                             <div class="w-10 h-10 sm:w-12 sm:h-12 flex-none image-fit">
-                                <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-10.jpg">
+                                <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('/backend/dist/images/profile-10.jpg') }}">
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <div class="flex items-center"> <a href="" class="font-medium">Bruce Willis</a> <a href="" class="ml-auto text-xs text-gray-600">Reply</a> </div>
+                                <div class="text-gray-600 text-xs sm:text-sm">31 seconds ago</div>
+                                <div class="mt-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5 pt-5 border-t border-gray-200">
+                        <div class="flex">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 flex-none image-fit">
+                                <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('/backend/dist/images/profile-1.jpg') }}">
                             </div>
                             <div class="ml-3 flex-1">
                                 <div class="flex items-center"> <a href="" class="font-medium">Bruce Willis</a> <a href="" class="ml-auto text-xs text-gray-600">Reply</a> </div>
@@ -141,7 +139,7 @@
                     <div class="intro-y">
                         <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
                             <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                <img alt="Midone Tailwind HTML Admin Template" src="dist/images/profile-6.jpg">
+                                <img alt="Midone Tailwind HTML Admin Template" src="{{ asset('/backend/dist/images/profile-6.jpg') }}">
                             </div>
                             <div class="ml-4 mr-auto">
                                 <div class="font-medium">Arnold Schwarzenegger</div>
@@ -153,7 +151,7 @@
                     <div class="intro-y">
                         <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
                             <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                <img alt="Midone Tailwind HTML Admin Template" src="dist/images/profile-4.jpg">
+                                <img alt="Midone Tailwind HTML Admin Template" src="{{ asset('/backend/dist/images/profile-4.jpg') }}">
                             </div>
                             <div class="ml-4 mr-auto">
                                 <div class="font-medium">Arnold Schwarzenegger</div>
@@ -165,7 +163,7 @@
                     <div class="intro-y">
                         <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
                             <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                <img alt="Midone Tailwind HTML Admin Template" src="dist/images/profile-13.jpg">
+                                <img alt="Midone Tailwind HTML Admin Template" src="{{ asset('/backend/dist/images/profile-13.jpg') }}">
                             </div>
                             <div class="ml-4 mr-auto">
                                 <div class="font-medium">Nicolas Cage</div>
@@ -177,7 +175,7 @@
                     <div class="intro-y">
                         <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
                             <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                <img alt="Midone Tailwind HTML Admin Template" src="dist/images/profile-4.jpg">
+                                <img alt="Midone Tailwind HTML Admin Template" src="{{ asset('/backend/dist/images/profile-4.jpg') }}">
                             </div>
                             <div class="ml-4 mr-auto">
                                 <div class="font-medium">Angelina Jolie</div>

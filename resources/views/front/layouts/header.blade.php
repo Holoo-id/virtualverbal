@@ -3894,6 +3894,7 @@
                 <div class="belum-login">
                     <a class="popup-login-trigger" href="#">login</a> | <a class="popup-register-trigger" href="#">daftar</a>
                 </div>
+            </div>
             @else
                 <div class="sudah-login">
                     <a href="esports-home.html" class="main-menu-item-link">

@@ -64,3 +64,11 @@ Route::get('/content-list', function () {
 Route::get('/content-preview', function () {
     return view('back.content-preview');
 });
+
+//start error layout
+Route::get('/error-404', function () {
+    return view('error.404');
+});
+Route::get('/error-401', function () {
+    return view('error.401');
+});

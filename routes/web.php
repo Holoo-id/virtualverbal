@@ -50,6 +50,9 @@ Route::get('/komunitas', function () {
 Route::get('/shop', function () {
     return view('shop');
 });
+Route::get('/before-email', function () {
+    return view('front.before-email');
+});
 
 // start backend layouts
 Route::get('/dashboard', function () {

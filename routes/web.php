@@ -53,6 +53,9 @@ Route::get('/shop', function () {
 Route::get('/before-email', function () {
     return view('front.before-email');
 });
+Route::get('/about', function () {
+    return view('front.about');
+});
 
 // start backend layouts
 Route::get('/dashboard', function () {

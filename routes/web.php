@@ -64,6 +64,9 @@ Route::get('/content-list', function () {
 Route::get('/content-preview', function () {
     return view('back.content-preview');
 });
+Route::get('/email', function () {
+    return view('back.at-email');
+});
 
 //start error layout
 Route::get('/error-404', function () {

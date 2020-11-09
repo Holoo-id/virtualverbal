@@ -925,46 +925,6 @@
                             </ul>
                         </div>
                     </div>
-
-                    <!-- POST OPEN TAGS -->
-                    <div class="post-open-tags">
-                        <!-- TAG LIST -->
-                        <div class="tag-list2">
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Gaming</a>
-                            <!-- /TAG ITEM -->
-                
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Video Reviews</a>
-                            <!-- /TAG ITEM -->
-                
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Previews</a>
-                            <!-- /TAG ITEM -->
-                
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Movie Reviews</a>
-                            <!-- /TAG ITEM -->
-                
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Movie News</a>
-                            <!-- /TAG ITEM -->
-                
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Critic</a>
-                            <!-- /TAG ITEM -->
-                
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Ratings</a>
-                            <!-- /TAG ITEM -->
-                
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Funtendo</a>
-                            <!-- /TAG ITEM -->
-                        </div>
-                        <!-- /TAG LIST -->
-                    </div>
-                    <!-- /POST OPEN TAGS -->
     
                     <!-- POST COMMENT FORM WRAP -->
                     <div class="post-comment-form-wrap">

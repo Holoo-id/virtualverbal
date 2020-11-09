@@ -1,8 +1,6 @@
 @extends('front.layouts.base')
 
 @section('content')
-
-    <!-- LAYOUT ITEM -->
     <div class="layout-item gutter-big">
         <!-- POST OPEN -->
         <div class="post-open game-review">
@@ -18,18 +16,12 @@
         </div>
         <!-- /POST OPEN -->
     </div>
-    <!-- /LAYOUT ITEM -->
 
     <div class="layout-content-2 layout-item-1-2-1 own-grid centered">
         @include('front.layouts.sidebar-left')
-    
-        <!-- LAYOUT BODY -->
         <div class="layout-body layout-item">
-            <!-- POST OPEN -->
             <div class="post-open gaming-news">
-                <!-- POST OPEN CONTENT -->
                 <div class="post-open-content v5">
-                    <!-- POST OPEN BODY  -->
                     <div class="post-open-body">
                         <!-- TAG LIST -->
                         <div class="tag-list">
@@ -106,7 +98,6 @@
                             in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <!-- /POST OPEN IMG -->
                     </div>
-                    <!-- /POST OPEN BODY -->
                 
                     <div class="game-card-wrap grid-limit">
                         <img class="gambar-gantung" src="{{ asset('/frontend/assets/img/posts/02_tall.jpg')}}" alt="">
@@ -139,47 +130,7 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- POST OPEN TAGS -->
-                    <div class="post-open-tags">
-                        <!-- TAG LIST -->
-                        <div class="tag-list2">
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Gaming</a>
-                            <!-- /TAG ITEM -->
-                
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Video Reviews</a>
-                            <!-- /TAG ITEM -->
-                
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Previews</a>
-                            <!-- /TAG ITEM -->
-                
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Movie Reviews</a>
-                            <!-- /TAG ITEM -->
-                
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Movie News</a>
-                            <!-- /TAG ITEM -->
-                
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Critic</a>
-                            <!-- /TAG ITEM -->
-                
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Ratings</a>
-                            <!-- /TAG ITEM -->
-                
-                            <!-- TAG ITEM -->
-                            <a href="search-results.html" class="tag-item">Funtendo</a>
-                            <!-- /TAG ITEM -->
-                        </div>
-                        <!-- /TAG LIST -->
-                    </div>
-                    <!-- /POST OPEN TAGS -->
     
-                    <!-- POST COMMENT FORM WRAP -->
                     <div class="post-comment-form-wrap">
                         <!-- SECTION TITLE WRAP -->
                         <div class="section-title-wrap blue">
@@ -247,8 +198,6 @@
                         </form>
                         <!-- /POST COMMENT FORM -->
                     </div>
-                    <!-- /POST COMMENT FORM WRAP -->
-                    <!-- POST COMMENT THREAD -->
                     <div id="op-comments" class="post-comment-thread">
                         <!-- SECTION TITLE WRAP -->
                         <div class="section-title-wrap blue">
@@ -441,15 +390,10 @@
                         </div>
                         <!-- /POST COMMENT -->
                     </div>
-                    <!-- /POST COMMENT THREAD -->
                 </div>
-                <!-- /POST OPEN CONTENT -->
             </div>
-            <!-- /POST OPEN -->
 
-            <!-- WIDGET NEWS -->
             <div class="widget-news">
-                <!-- SECTION TITLE WRAP -->
                 <div class="section-title-wrap blue">
                     <h2 class="section-title medium">Related News</h2>
                 <div class="section-title-separator"></div>
@@ -693,9 +637,7 @@
                 </div>
                 <!-- /POST PREVIEW SHOWCASE -->
             </div>
-            <!-- /WIDGET NEWS -->
         </div>
-        <!-- /LAYOUT BODY -->
 
         @include('front.layouts.sidebar-right')
     </div>

@@ -739,6 +739,43 @@
         <!-- LAYOUT BODY -->
         <div class="layout-body layout-item centered">
             <!-- LAYOUT ITEM -->
+            <div class="subscribe-section-wrap">
+                <div class="subscribe-section grid-limit">
+                    <!-- SUBSCRIBE SECTION IMG -->
+                    <img class="subscribe-section-img" src="img/other/newsletter_people.png" alt="subscribe-img">
+                    <!-- /SUBSCRIBE SECTION IMG -->
+
+                    <!-- SUBSCRIBE SECTION INFO -->
+                    <div class="subscribe-section-info">
+                    <!-- SUBSCRIBE SECTION TITLE -->
+                    <p class="subscribe-section-title">Langganan Artikel!</p>
+                    <!-- /SUBSCRIBE SECTION TITLE -->
+
+                    <!-- SUBSCRIBE SECTION TEXT -->
+                    <p class="subscribe-section-text">Temukan tips dan berita menarik setiap harinya. GRATIS!</p>
+                    <!-- /SUBSCRIBE SECTION TEXT -->
+
+                    <!-- FORM WRAP -->
+                    <form class="form-wrap">
+                        <!-- SUBMIT INPUT -->
+                        <div class="submit-input medium green">
+                            <input type="text" id="newsletter_email" name="newsletter_email" placeholder="Emailmu...">
+                            <button class="submit-input-button">
+                                <!-- ARROW ICON -->
+                                <svg class="arrow-icon medium">
+                                <use xlink:href="#svg-arrow-medium"></use>
+                                </svg>
+                                <!-- /ARROW ICON -->
+                            </button>
+                            </div>
+                        <!-- /SUBMIT INPUT -->
+                    </form>
+                    <!-- /FORM WRAP -->
+                    </div>
+                    <!-- /SUBSCRIBE SECTION INFO -->
+                </div>
+            </div>
+
             <div class="layout-item centered">
                 <!-- POSTSLIDE WRAP -->
                 <div class="postslide-wrap">

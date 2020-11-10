@@ -10793,12 +10793,6 @@ visibility: hidden;
     margin-bottom: 10px
 }
 
-.widget-sidebar .card-langganan {
-    background: linear-gradient(45deg, #7442CE, #F30A5C);
-    color: #eeffee;
-    padding: 20px;
-}
-
 .widget-sidebar .game-card-wrap{
     min-width: 270px;
 }

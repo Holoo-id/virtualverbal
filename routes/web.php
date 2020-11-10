@@ -76,6 +76,9 @@ Route::get('/email', function () {
 Route::get('/after-registration', function () {
     return view('back.after-registration');
 });
+Route::get('/profil', function () {
+    return view('back.profile.profil');
+});
 
 //start error layout
 Route::get('/error-404', function () {

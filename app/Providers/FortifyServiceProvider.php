@@ -32,5 +32,15 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
         Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
         Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
+        
+        Fortify::verifyEmailView(function () {
+            return view('auth.verify-email');
+        });
+        Fortify::loginView(function () {
+            return view('front.layouts.header');
+        });
+        Fortify::registerView(function () {
+            return view('front.layouts.header');
+        });
     }
 }

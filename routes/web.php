@@ -14,8 +14,8 @@ Route::get('/', function () {
     return view('front.home');
 });
 
-Route::post('/login', [AuthController::class, 'authenticate']);
-Route::get('/logout', [AuthController::class, 'logout']);
+// Route::post('/login', [AuthController::class, 'authenticate']);
+// Route::get('/logout', [AuthController::class, 'logout']);
 
 Route::get('/berita', [BeritaController::class, 'Berita']);
 Route::get('/berita/{slug}', [BeritaController::class, 'LinkBerita']);

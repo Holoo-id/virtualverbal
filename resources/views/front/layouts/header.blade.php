@@ -25,25 +25,25 @@
                     <h2 class="section-title medium">Login dulu ke akun kamu</h2>
                     <div class="section-title-separator"></div>
                 </div>
-                <form class="form-wrap" method='POST' action='/login'>
+                <form class="form-wrap" method='POST' action="{{ route('login') }}">
                     @csrf
                     <div class="form-row">
                         <div class="form-item blue">
                             <label for="login_email" class="rl-label">E-Mail:</label>
-                            <input type="text" id="login_email" name="login_email"
+                            <input type="text" id="login_email" name="email"
                                 placeholder="Masukkan E-Mail kamu...">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-item blue">
                             <label for="login_pwd" class="rl-label">Password</label>
-                            <input type="password" id="login_pwd" name="login_pwd"
+                            <input type="password" id="login_pwd" name="password"
                                 placeholder="Masukkan Password kamu...">
                         </div>
                     </div>
                     <div class="form-confirm-row">
                         <div class="checkbox-item">
-                            <input type="checkbox" id="login_remember_ep" name="login_remember_ep" value="remember_ep"
+                            <input type="checkbox" id="login_remember_ep" name="remember" value="remember"
                                 checked>
                             <div class="checkbox-box blue">
                                 <svg class="cross-cb-icon small">
@@ -87,25 +87,26 @@
                     <h2 class="section-title medium">Daftar Sekarang</h2>
                     <div class="section-title-separator"></div>
                 </div>
-                <form class="form-wrap">
+            <form class="form-wrap" method="POST" action="{{ route('register') }}">
+                @csrf
                     <div class="form-row">
                         <div class="form-item red">
                             <label for="register_email_04" class="rl-label">E-Mail:</label>
-                            <input type="text" id="register_email_04" name="register_email_04"
+                            <input type="text" id="register_email_04" name="email"
                                 placeholder="Masukkan E-Mail kamu...">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-item red">
                             <label for="register_pwd_04" class="rl-label">Password</label>
-                            <input type="password" id="register_pwd_04" name="register_pwd_04"
+                            <input type="password" id="register_pwd_04" name="password"
                                 placeholder="Masukkan Password kamu...">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-item red">
                             <label for="register_pwd_repeat_04" class="rl-label">Ulangi Password</label>
-                            <input type="password" id="register_pwd_repeat_04" name="register_pwd_repeat_04"
+                            <input type="password" id="register_pwd_repeat_04" name="password_confirmation"
                                 placeholder="Tulis kembali Password kamu...">
                         </div>
                     </div>
@@ -3895,6 +3896,8 @@
                     <a class="popup-login-trigger" href="#">login</a> | <a class="popup-register-trigger" href="#">daftar</a>
                 </div>
             </div>
+            @elseif (!(Auth::user()->hasVerifiedEmail()))
+            <hr>
             @else
                 <div class="sudah-login">
                     <a href="esports-home.html" class="main-menu-item-link">
@@ -3918,7 +3921,10 @@
                             <a href="#" class="dropdown-list-item-link">Profil</a>
                         </li>
                         <li class="dropdown-list-item">
-                            <a href="/logout" class="dropdown-list-item-link">Logout</a>
+                        <a href="{{route('logout')}}" class="dropdown-list-item-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                        </form>
                         </li>
                     </ul>
                 </div>

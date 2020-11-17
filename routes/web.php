@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Frontend\BeritaController;
 use App\Http\Controllers\Backend\AuthController;
-
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 
 //Route
 //Controller
@@ -70,12 +71,25 @@ Route::get('/content-list', function () {
 Route::get('/content-preview', function () {
     return view('back.content-preview');
 });
-Route::get('/email', function () {
-    return view('back.at-email');
-});
-Route::get('/after-registration', function () {
-    return view('back.after-registration');
-});
+
+
+Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware(['auth'])->name('verification.notice');
+
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+
+    return view('auth.after-registration');
+
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
+Route::post('email/verification-notification', function (Request $request)
+{
+    $request->user()->sendEmailVerificationNotification();
+    return back()->with('status', 'verification-link-sent');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
 Route::get('/profil', function () {
     return view('back.profile.profil');
 });

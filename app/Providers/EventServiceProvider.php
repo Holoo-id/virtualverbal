@@ -18,6 +18,9 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        'Illuminate\Atuh\Events\Verified' => [
+            'App\Listeners\LogVerifiedUser'
+        ],
     ];
 
     /**

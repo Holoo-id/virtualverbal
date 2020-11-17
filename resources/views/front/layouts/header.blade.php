@@ -139,11 +139,7 @@
     </figure>
 
     <ul class="mobile-menu">
-    @if (Auth::Guest())
-    <hr>
-    @elseif (!(Auth::user()->hasVerifiedEmail()))
-    <hr>
-    @else
+    @if (!(Auth::Guest()))
         <li class="mobile-menu-item">
             <p class="mobile-menu-item-link pd-dropdown-handler">
                 <img class="widget-option-img user-avatar micro" src="{{ asset(Auth::user()->image)}}" alt="avatar-01">
@@ -3902,8 +3898,6 @@
                     <a class="popup-login-trigger" href="#">login</a> | <a class="popup-register-trigger" href="#">daftar</a>
                 </div>
             </div>
-            @elseif (!(Auth::user()->hasVerifiedEmail()))
-            <hr>
             @else
                 <div class="sudah-login">
                     <a href="esports-home.html" class="main-menu-item-link">

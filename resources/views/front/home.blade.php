@@ -741,9 +741,6 @@
             <!-- LAYOUT ITEM -->
             <div class="subscribe-section-wrap">
                 <div class="subscribe-section grid-limit">
-                    <!-- SUBSCRIBE SECTION IMG -->
-                    <img class="subscribe-section-img" src="img/other/newsletter_people.png" alt="subscribe-img">
-                    <!-- /SUBSCRIBE SECTION IMG -->
 
                     <!-- SUBSCRIBE SECTION INFO -->
                     <div class="subscribe-section-info">

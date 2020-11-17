@@ -75,8 +75,6 @@
                             <div class="intro-x mt-8">
                                 <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" action="/file-upload" method="post">
                                     <input type="text" class="intro-x login__input input input--lg border border-gray-300 block" placeholder="Username" name="username" required>
-                                    <!-- buat role jangan get velue, dari fungsi nya aja -->
-                                    <input type="text" class="intro-x login__input input input--lg border border-gray-300 block mt-4" placeholder="Role" value="Kontributor" disabled>
                                     <input type="file" class="intro-x login__input input input--lg border border-gray-300 block mt-4" placeholder="Your Photo" name="file">
                                 </form>
                             </div>

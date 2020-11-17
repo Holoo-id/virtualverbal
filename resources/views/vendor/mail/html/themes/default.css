@@ -80,7 +80,7 @@ img {
     -premailer-cellpadding: 0;
     -premailer-cellspacing: 0;
     -premailer-width: 100%;
-    background-color: #edf2f7;
+    background-color: #1C3FAA;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -231,29 +231,29 @@ img {
 
 .button-blue,
 .button-primary {
-    background-color: #2d3748;
-    border-bottom: 8px solid #2d3748;
-    border-left: 18px solid #2d3748;
-    border-right: 18px solid #2d3748;
-    border-top: 8px solid #2d3748;
+    background-color: #1C95F3;
+    border-bottom: 8px solid #1C95F3;
+    border-left: 18px solid #1C95F3;
+    border-right: 18px solid #1C95F3;
+    border-top: 8px solid #1C95F3;
 }
 
 .button-green,
 .button-success {
-    background-color: #48bb78;
-    border-bottom: 8px solid #48bb78;
-    border-left: 18px solid #48bb78;
-    border-right: 18px solid #48bb78;
-    border-top: 8px solid #48bb78;
+    background-color: #58D819;
+    border-bottom: 8px solid #58D819;
+    border-left: 18px solid #58D819;
+    border-right: 18px solid #58D819;
+    border-top: 8px solid #58D819;
 }
 
 .button-red,
 .button-error {
-    background-color: #e53e3e;
-    border-bottom: 8px solid #e53e3e;
-    border-left: 18px solid #e53e3e;
-    border-right: 18px solid #e53e3e;
-    border-top: 8px solid #e53e3e;
+    background-color: #F30A5C;
+    border-bottom: 8px solid #F30A5C;
+    border-left: 18px solid #F30A5C;
+    border-right: 18px solid #F30A5C;
+    border-top: 8px solid #F30A5C;
 }
 
 /* Panels */

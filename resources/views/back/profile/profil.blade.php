@@ -19,8 +19,8 @@
                                 <div class="text-gray-700 mr-auto">Next Level</div>
                                 <div class="font-medium">10%</div>
                             </div>
-                            <div class="w-full h-1 mt-2 bg-gray-400 rounded-full">
-                                <div style="width:10%" class="h-full bg-theme-1 rounded-full"></div>
+                            <div class="w-full h-3 mt-2 bg-gray-400 rounded-full">
+                                <div style="width:10%" class="h-full bg-theme-1 rounded-full tooltip bg-theme-1 text-white"  data-theme="light" title="This is awesome tooltip example!"></div>
                             </div>
                         </div>
                     </div>

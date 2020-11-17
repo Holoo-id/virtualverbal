@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return view('front.home');
-});
+})->middleware(['verified']);
 
 // Route::post('/login', [AuthController::class, 'authenticate']);
 // Route::get('/logout', [AuthController::class, 'logout']);

@@ -32,7 +32,7 @@
 		<meta name="description" content="Virtual Verbal adalah portal berita Games, Event, dan E-Sport">
 		<meta name="keywords" content="virtual verbal, vv, portal game news">
 
-		<title>Virtual Admin</title>
+		<title>One more step..</title>
 
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 		<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">

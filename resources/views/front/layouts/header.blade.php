@@ -139,10 +139,15 @@
     </figure>
 
     <ul class="mobile-menu">
+    @if (Auth::Guest())
+    <hr>
+    @elseif (!(Auth::user()->hasVerifiedEmail()))
+    <hr>
+    @else
         <li class="mobile-menu-item">
             <p class="mobile-menu-item-link pd-dropdown-handler">
-                <img class="widget-option-img user-avatar micro" src="{{ asset('/frontend/assets/img/users/00.jpg')}}" alt="avatar-01">
-                James_Spiegel
+                <img class="widget-option-img user-avatar micro" src="{{ asset(Auth::user()->image)}}" alt="avatar-01">
+                {{Auth::user()->name}}
             </p>
             <svg class="arrow-icon medium">
                 <use xlink:href="#svg-arrow-medium"></use>
@@ -196,6 +201,7 @@
                 </li>
             </ul>
         </li>
+    @endif
         <li class="mobile-menu-item">
             <a href="#" class="mobile-menu-item-link">Games</a>
         </li>

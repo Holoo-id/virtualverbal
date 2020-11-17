@@ -16,6 +16,7 @@
 		<meta name="twitter:description" content="Responsive Bootstrap 4 Dashboard Template">
 		<meta name="twitter:image" content="http://themepixels.me/azia/img/azia-social.png">
 
+<<<<<<< HEAD:resources/views/front/before-email.blade.php
 		<!-- Facebook -->
 		<meta property="og:url" content="https://www.facebook.com/virtualverbal">
 		<meta property="og:title" content="Virtual Verbal">
@@ -72,3 +73,21 @@
     </body>
 
 </html>
+=======
+                <!-- CROSS ICON -->
+                <svg class="cross-icon small">
+                    <use xlink:href="#svg-cross-small"></use>
+                </svg>
+                <!-- /CROSS ICON -->
+                </div>
+                <!-- /BUTTON ORNAMENT -->
+            </a>
+            <!-- /BUTTON -->
+        </div>
+        <form class="d-inline" method="POST" action="{{ route('verification.send') }}">
+            @csrf
+            <button type="submit"
+                    class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>
+    </layout>
+@endsection
+>>>>>>> 980acfeb93c4d1e2f361119b4dbce417b6453182:resources/views/auth/verify-email.blade.php

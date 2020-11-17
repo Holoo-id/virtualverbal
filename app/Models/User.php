@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Notifications\VerifyEmail;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -46,4 +47,15 @@ class User extends Authenticatable implements MustVerifyEmail
         # code...
         return $this->belongsTo('App\Models\Role', 'role_id');
     }
+    
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @return null
+     */
+    public function sendEmailVerificationNotification()
+    {
+        $this->notify(new VerifyEmail());
+    }
+
 }

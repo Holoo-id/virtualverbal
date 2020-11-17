@@ -1129,7 +1129,7 @@
                                         <h2 class="section-title small">Featured Articles</h2>
                                         <div class="section-title-separator"></div>
                                     </div>
-                                    <div class="post-preview-showcase grid-1col gutter-small">
+                                    <div class="post-preview-showcase grid-1col_1 gutter-small">
                                         <div class="post-preview tiny e-sport">
                                             <a href="esports-post.html">
                                                 <div class="post-preview-img-wrap">

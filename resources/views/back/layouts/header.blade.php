@@ -677,6 +677,12 @@
             </a>
         </li>
         <li>
+            <a href="top-menu-dashboard.html" class="top-menu">
+                <div class="top-menu__icon"> <i data-feather="book-open"></i> </div>
+                <div class="top-menu__title"> Content </div>
+            </a>
+        </li>
+        <!-- <li>
             <a href="javascript:;" class="top-menu">
                 <div class="top-menu__icon"> <i data-feather="box"></i> </div>
                 <div class="top-menu__title"> Menu Layout <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
@@ -1131,7 +1137,7 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> -->
     </ul>
 </nav>
 <!-- END: Top Menu -->

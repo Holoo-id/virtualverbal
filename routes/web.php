@@ -79,6 +79,9 @@ Route::get('/after-registration', function () {
 Route::get('/profil', function () {
     return view('back.profile.profil');
 });
+Route::get('/reset-password', function () {
+    return view('back.profile.reset-password');
+});
 
 //start error layout
 Route::get('/error-404', function () {

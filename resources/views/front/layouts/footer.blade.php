@@ -25,11 +25,11 @@
 
                     <!-- CONTACT INFO PREVIEW EMAIL WRAP -->
                     <div class="contact-info-preview-email-wrap">
-                        <i class="email-icon icon-envelope"></i>
+                        <i class="fas fa-envelope email-icon icon-envelope"></i>
                         <a href="mailto:contact@virtualverbal.com" class="contact-info-preview-email">contact@virtualverbal.com</a>
                     </div>
                     <div class="contact-info-preview-email-wrap">
-                        <i class="email-icon icon-envelope"></i>
+                        <i class="fab fa-whatsapp email-icon icon-envelope"></i>
                         <a href="https://wa.me/6289678419991" class="contact-info-preview-email">+6289678419991</a>
                     </div>
                     <!-- CONTACT INFO PREVIEW EMAIL WRAP -->

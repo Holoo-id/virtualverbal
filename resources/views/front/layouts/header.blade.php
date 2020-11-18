@@ -3,7 +3,7 @@
     <svg class="cross-icon big close-button search-popup-close">
         <use xlink:href="#svg-cross-big"></use>
     </svg>
-    <form method="GET" class="search-popup-form">
+    <form method="GET" class="search-popup-form centered">
         <input type="text" id="search" class="input-line" name="search" placeholder="Mau Cari Apa?">
     </form>
     <p class="search-popup-text">Tulis kata kunci yang kamu mau lalu tekan ENTER untuk memulai pencarian!</p>
@@ -548,7 +548,7 @@
                 <div class="product-preview-img-wrap">
                     <a href="product-page.html">
                         <figure class="product-preview-img liquid">
-                            <img src="img/products/01.jpg" alt="product-01">
+                            <img src="{{ asset('/frontend/assets/img/products/01.jpg')}}" alt="product-01">
                         </figure>
                     </a>
                 </div>
@@ -600,7 +600,7 @@
                 <div class="product-preview-img-wrap">
                     <a href="product-page.html">
                         <figure class="product-preview-img liquid">
-                            <img src="img/products/06.jpg" alt="product-06">
+                            <img src="{{ asset('/frontend/assets/img/products/06.jpg')}}" alt="product-06">
                         </figure>
                     </a>
                 </div>
@@ -652,7 +652,7 @@
                 <div class="product-preview-img-wrap">
                     <a href="product-page.html">
                         <figure class="product-preview-img liquid">
-                            <img src="img/products/05.jpg" alt="product-05">
+                            <img src="{{ asset('/frontend/assets/img/products/05.jpg')}}" alt="product-05">
                         </figure>
                     </a>
                 </div>
@@ -704,7 +704,7 @@
                 <div class="product-preview-img-wrap">
                     <a href="product-page.html">
                         <figure class="product-preview-img liquid">
-                            <img src="img/products/14.jpg" alt="product-14">
+                            <img src="{{ asset('/frontend/assets/img/products/14.jpg')}}" alt="product-14">
                         </figure>
                     </a>
                 </div>

@@ -139,65 +139,65 @@
     </figure>
 
     <ul class="mobile-menu">
-    @if (!(Auth::Guest()))
-        <li class="mobile-menu-item">
-            <p class="mobile-menu-item-link pd-dropdown-handler">
-                <img class="widget-option-img user-avatar micro" src="{{ asset(Auth::user()->image)}}" alt="avatar-01">
-                {{Auth::user()->name}}
-            </p>
-            <svg class="arrow-icon medium">
-                <use xlink:href="#svg-arrow-medium"></use>
-            </svg>
-            <ul class="mobile-dropdown pd-dropdown">
-                <li class="mobile-dropdown-item">
-                    <p class="mobile-dropdown-item-link pd-dropdown-handler">Main Account</p>
-                    <svg class="arrow-icon medium">
-                        <use xlink:href="#svg-arrow-medium"></use>
-                    </svg>
-                    <ul class="mobile-dropdown pd-dropdown">
-                        <li class="mobile-dropdown-item">
-                            <a href="account-settings.html" class="mobile-dropdown-item-link">Account Settings</a>
-                        </li>
-                        <li class="mobile-dropdown-item">
-                            <a href="#" class="mobile-dropdown-item-link">Shipping Details</a>
-                        </li>
-                        <li class="mobile-dropdown-item">
-                            <a href="#" class="mobile-dropdown-item-link">Billing Details</a>
-                        </li>
-                        <li class="mobile-dropdown-item">
-                            <a href="orders-history.html" class="mobile-dropdown-item-link">Orders History</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mobile-dropdown-item">
-                    <p class="mobile-dropdown-item-link pd-dropdown-handler">Pixel Forums</p>
-                    <svg class="arrow-icon medium">
-                        <use xlink:href="#svg-arrow-medium"></use>
-                    </svg>
-                    <ul class="mobile-dropdown pd-dropdown">
-                        <li class="mobile-dropdown-item">
-                            <a href="profile-summary.html" class="mobile-dropdown-item-link">Summary</a>
-                        </li>
-                        <li class="mobile-dropdown-item">
-                            <a href="profile-activity.html" class="mobile-dropdown-item-link">Activity</a>
-                        </li>
-                        <li class="mobile-dropdown-item">
-                            <a href="profile-notifications.html" class="mobile-dropdown-item-link">Notifications</a>
-                        </li>
-                        <li class="mobile-dropdown-item">
-                            <a href="profile-messages.html" class="mobile-dropdown-item-link">Messages</a>
-                        </li>
-                        <li class="mobile-dropdown-item">
-                            <a href="profile-badges.html" class="mobile-dropdown-item-link">Profile Badges</a>
-                        </li>
-                        <li class="mobile-dropdown-item">
-                            <a href="profile-settings.html" class="mobile-dropdown-item-link">Settings</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    @endif
+        @if (!(Auth::Guest()))
+            <li class="mobile-menu-item">
+                <p class="mobile-menu-item-link pd-dropdown-handler">
+                    <img class="widget-option-img user-avatar micro" src="{{ asset(Auth::user()->image)}}" alt="avatar-01">
+                    {{Auth::user()->name}}
+                </p>
+                <svg class="arrow-icon medium">
+                    <use xlink:href="#svg-arrow-medium"></use>
+                </svg>
+                <ul class="mobile-dropdown pd-dropdown">
+                    <li class="mobile-dropdown-item">
+                        <p class="mobile-dropdown-item-link pd-dropdown-handler">Main Account</p>
+                        <svg class="arrow-icon medium">
+                            <use xlink:href="#svg-arrow-medium"></use>
+                        </svg>
+                        <ul class="mobile-dropdown pd-dropdown">
+                            <li class="mobile-dropdown-item">
+                                <a href="account-settings.html" class="mobile-dropdown-item-link">Account Settings</a>
+                            </li>
+                            <li class="mobile-dropdown-item">
+                                <a href="#" class="mobile-dropdown-item-link">Shipping Details</a>
+                            </li>
+                            <li class="mobile-dropdown-item">
+                                <a href="#" class="mobile-dropdown-item-link">Billing Details</a>
+                            </li>
+                            <li class="mobile-dropdown-item">
+                                <a href="orders-history.html" class="mobile-dropdown-item-link">Orders History</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <p class="mobile-dropdown-item-link pd-dropdown-handler">Pixel Forums</p>
+                        <svg class="arrow-icon medium">
+                            <use xlink:href="#svg-arrow-medium"></use>
+                        </svg>
+                        <ul class="mobile-dropdown pd-dropdown">
+                            <li class="mobile-dropdown-item">
+                                <a href="profile-summary.html" class="mobile-dropdown-item-link">Summary</a>
+                            </li>
+                            <li class="mobile-dropdown-item">
+                                <a href="profile-activity.html" class="mobile-dropdown-item-link">Activity</a>
+                            </li>
+                            <li class="mobile-dropdown-item">
+                                <a href="profile-notifications.html" class="mobile-dropdown-item-link">Notifications</a>
+                            </li>
+                            <li class="mobile-dropdown-item">
+                                <a href="profile-messages.html" class="mobile-dropdown-item-link">Messages</a>
+                            </li>
+                            <li class="mobile-dropdown-item">
+                                <a href="profile-badges.html" class="mobile-dropdown-item-link">Profile Badges</a>
+                            </li>
+                            <li class="mobile-dropdown-item">
+                                <a href="profile-settings.html" class="mobile-dropdown-item-link">Settings</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        @endif
         <li class="mobile-menu-item">
             <a href="#" class="mobile-menu-item-link">Games</a>
         </li>

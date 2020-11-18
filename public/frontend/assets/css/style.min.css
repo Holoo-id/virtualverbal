@@ -387,6 +387,8 @@ figure>img {
 }
 
 .mobile-menu-item>.mobile-menu-item-link, .mobile-menu-item2>.mobile-menu-item2-link{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
     font-size: .8125em
 }
 

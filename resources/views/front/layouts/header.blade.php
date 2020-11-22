@@ -521,7 +521,7 @@
             </ul>
         </li>
         <li class="mobile-menu-item2">
-            <a href="#" class="mobile-menu-item2-link">Hubungi Kami</a>
+            <a href="{{ route('about') }}" class="mobile-menu-item2-link">Hubungi Kami</a>
         </li>
         <li class="mobile-menu-item2">
             <a href="#" class="mobile-menu-item2-link">Kebijakan Privasi</a>

@@ -11,10 +11,6 @@ use Illuminate\Http\Request;
 //Controller
 //View
 
-Route::get('/', function () {
-    return view('front.home');
-})->middleware(['verified']);
-
 // Route::post('/login', [AuthController::class, 'authenticate']);
 // Route::get('/logout', [AuthController::class, 'logout']);
 
@@ -53,9 +49,6 @@ Route::get('/shop', function () {
 });
 Route::get('/before-email', function () {
     return view('front.before-email');
-});
-Route::get('/about', function () {
-    return view('front.about');
 });
 
 // start backend layouts
@@ -103,4 +96,15 @@ Route::get('/error-404', function () {
 });
 Route::get('/error-401', function () {
     return view('error.401');
+});
+
+// Mulai Rapih
+Route::get('/', function () {
+    return view('front.home');
+})->middleware(['verified']);
+
+Route::prefix('/front')->group(function () {
+    Route::get('/about', function () {
+        return view('front.about');
+    })->name('about');
 });

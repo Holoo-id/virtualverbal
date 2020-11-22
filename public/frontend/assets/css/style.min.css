@@ -4416,9 +4416,8 @@ a {
 }
 
 .contact-section .contact-section-text {
-    width: 430px;
-    margin: 16px auto 0;
-    text-align: center
+    margin: 20px 50px;
+    text-align: justify
 }
 
 .contact-section .social-links {
@@ -13767,7 +13766,7 @@ visibility: hidden;
 }
 
 .post-preview.picture.short .post-preview-img {
-    height: 125px;
+    height: 112px;
     box-shadow: inset 0px -100px 190px -60px rgba(0, 0, 0, 0.85)
 }
 
@@ -13856,7 +13855,7 @@ visibility: hidden;
 }
 
 .post-preview.picture.big .post-preview-img {
-    height: 625px;
+    height: 560px;
     box-shadow: inset 0px -310px 370px -150px rgba(0, 0, 0, 0.85)
 }
 
@@ -17408,8 +17407,8 @@ visibility: hidden;
 }
 
 .postslide {
-    width: 1140px;
-    height: 625px;
+    width: 1024px;
+    height: 560px;
     overflow: hidden
 }
 
@@ -17421,7 +17420,7 @@ visibility: hidden;
 
 .postslide .news-preview {
     float: left;
-    width: 840px
+    width: 725px
 }
 
 .postslide .news-preview .post-preview {

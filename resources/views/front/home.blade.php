@@ -740,7 +740,7 @@
         <div class="layout-body layout-item centered">
             <!-- LAYOUT ITEM -->
             <div class="subscribe-section-wrap">
-                <div class="subscribe-section grid-limit">
+                <div class="subscribe-section">
 
                     <!-- SUBSCRIBE SECTION INFO -->
                     <div class="subscribe-section-info">

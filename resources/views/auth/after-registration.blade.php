@@ -73,13 +73,14 @@
                             </h2> -->
                             <!-- <div class="intro-x mt-2 text-gray-500 xl:hidden text-center">A few more clicks to sign in to your account. Manage all your e-commerce accounts in one place</div> -->
                             <div class="intro-x mt-8">
-                                <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" action="/file-upload" method="post">
+                                <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" method="POST" enctype="multipart/form-data">
+                                    @csrf
                                     <input type="text" class="intro-x login__input input input--lg border border-gray-300 block" placeholder="Username" name="username" required>
-                                    <input type="file" class="intro-x login__input input input--lg border border-gray-300 block mt-4" placeholder="Your Photo" name="file">
+                                    <input type="file" class="intro-x login__input input input--lg border border-gray-300 block mt-4" placeholder="Your Photo" name="image">
+                                    <div class="intro-x mt-5 xl:mt-8 text-center xl:text-left">
+                                    <button type="submit" class="button button--lg w-full xl:w-32 text-white bg-theme-1 xl:mr-3">Submit</button>
+                                </div>    
                                 </form>
-                            </div>
-                            <div class="intro-x mt-5 xl:mt-8 text-center xl:text-left">
-                                <button class="button button--lg w-full xl:w-32 text-white bg-theme-1 xl:mr-3">Submit</button>
                             </div>
                         </div>
                     </div>

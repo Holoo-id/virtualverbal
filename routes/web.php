@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Frontend\BeritaController;
-use App\Http\Controllers\Backend\AuthController;
+use App\Http\Controllers\Backend\UserController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 
@@ -66,22 +66,7 @@ Route::get('/content-preview', function () {
 });
 
 
-Route::get('/email/verify', function () {
-    return view('auth.verify-email');
-})->middleware(['auth'])->name('verification.notice');
 
-Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
-    $request->fulfill();
-
-    return view('auth.after-registration');
-
-})->middleware(['auth', 'signed'])->name('verification.verify');
-
-Route::post('email/verification-notification', function (Request $request)
-{
-    $request->user()->sendEmailVerificationNotification();
-    return back()->with('status', 'verification-link-sent');
-})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
 Route::get('/profil', function () {
     return view('back.profile.profil');
@@ -106,5 +91,19 @@ Route::get('/', function () {
 Route::prefix('/front')->group(function () {
     Route::get('/about', function () {
         return view('front.about');
-    })->name('about');
+    })->middleware(['verified'])->name('about');
 });
+// Route untuk verifikasi email
+Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware(['auth'])->name('verification.notice');
+Route::post('/email/verification-notification', function (Request $request){
+    $request->user()->sendEmailVerificationNotification();
+    return back()->with('status', 'verification-link-sent');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+    return view('auth.after-registration');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+Route::post('/email/verify/{id}/{hash}', [UserController::class, 'finalizeRegister']);
+// Route untuk verifikasi email

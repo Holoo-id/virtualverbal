@@ -24,22 +24,6 @@ class FormatSeeder extends Seeder
             [
                 'name' => 'Artikel',
                 'created_at' => Carbon::now()
-            ],
-            [
-                'name' => 'E-Sports',
-                'created_at' => Carbon::now()
-            ],
-            [
-                'name' => 'Videos',
-                'created_at' => Carbon::now()
-            ],
-            [
-                'name' => 'Apps',
-                'created_at' => Carbon::now()
-            ],
-            [
-                'name' => 'Database',
-                'created_at' => Carbon::now()
             ]
         ]);
     }

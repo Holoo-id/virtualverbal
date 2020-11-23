@@ -19,7 +19,7 @@ class VerifiedOrNot
     public function handle(Request $request, Closure $next)
     {
         if(Auth::check()){
-            if(Auth::user() instanceof MustVerifyEmail && !(Auth::user()->hasVerifiedEmail())){
+            if(Auth::user()->name == "Anonymous"){
                 return redirect(route('verification.notice'));
             }
         }

@@ -40,11 +40,15 @@
                             <div class="mt-3 dropzone border-gray-200 border-dashed">
                                 <label class="flex flex-col sm:flex-row"> Feature Image </label>
                                 <div class="fallback">
-                                    <input name="image" type="file" />
+                                    <input name="file" type="file" />
                                 </div>
                                 <div class="dz-message" data-dz-message>
                                     <div class="text-lg font-medium">Drop files here or click to upload.</div>
                                 </div>
+                            </div>
+                            <div class="mt-3">
+                                <label class="flex flex-col sm:flex-row"> Image Name <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
+                                <input type="text" name="tittle" class="input w-full border mt-2" placeholder="Image Name" >
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Published <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>

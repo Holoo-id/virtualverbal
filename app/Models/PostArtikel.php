@@ -9,6 +9,6 @@ class PostArtikel extends Model
 {
     protected $table = 'v_content';
     protected $fillable = [
-        'judul','konten','sub_judul','permalink','image_name','category_id','published'
+        'judul','konten','sub_judul','permalink','image_path','image_name','category_id','published'
     ];
 }

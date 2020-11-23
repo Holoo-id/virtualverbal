@@ -28,6 +28,7 @@ class CreateViverbContentTable extends Migration
             $table->integer('igdb_id')->nullable();
             $table->boolean('published')->default(false);
             $table->date('publish_at')->nullable();
+            $table->text('media')->nullable();
         });
     }
 

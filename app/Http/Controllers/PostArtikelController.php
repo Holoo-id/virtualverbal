@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\PostArtikel;
+use Storage;
+use Illuminate\Http\RedirectResponse;
 
 class PostArtikelController extends Controller
 {
@@ -13,19 +15,20 @@ class PostArtikelController extends Controller
     }
     public function tambah(Request $request)
     {
-        $tambah = new PostArtikel;
-        $tambah->judul = $request->judul;
-        $tambah->konten = $request->konten;
-        $tambah->sub_judul = $request->sub_judul;
-        $tambah->permalink = $request->permalink;
 
-        $file = $request->file('image');
-                $fileName = $file->getClientOriginalName();
-                $request->file('image')->move('storage/', $fileName);
-        $tambah->image_name = $fileName;
+        $uploadedFile = $request->file('file');
+        $path = $uploadedFile->store('public/files');
+        $file = PostArtikel::create([
+            'judul' => $request->judul,
+            'konten' => $request->konten,
+            'sub_judul' => $request->sub_judul,
+            'permalink' => $request->permalink,
+            'image_path' => $path,
+            'image_name' => $request->tittle ?? $uploadedFile->getClientOriginalName(),
+            'category_id' => $request->category_id,
+            'published' => $request->published,
+        ]);
 
-        $tambah->category_id = $request->category_id;
-        $tambah->published = $request->published;
-        $tambah->save();
+      
     }
 }

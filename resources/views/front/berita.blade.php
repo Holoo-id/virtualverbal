@@ -131,7 +131,8 @@
                         </div>
                     </div>
     
-                    <div class="post-comment-form-wrap">
+                    <div class="fb-comments" data-href="https://localhost:8000/post/third" data-numposts="3" data-width=""></div>
+                    {{-- <div class="post-comment-form-wrap">
                         <!-- SECTION TITLE WRAP -->
                         <div class="section-title-wrap blue">
                             <h2 class="section-title medium">Write a comment</h2>
@@ -389,7 +390,7 @@
                             <!-- /POST COMMENT ACTIONS -->
                         </div>
                         <!-- /POST COMMENT -->
-                    </div>
+                    </div> --}}
                 </div>
             </div>
 

@@ -75,13 +75,13 @@ Route::get('/reset-password', function () {
     return view('back.profile.reset-password');
 });
 
-//start error layout
-Route::get('/error-404', function () {
-    return view('error.404');
-});
-Route::get('/error-401', function () {
-    return view('error.401');
-});
+// //start error layout
+// Route::get('/error-404', function () {
+//     return view('error.404');
+// });
+// Route::get('/error-401', function () {
+//     return view('error.401');
+// });
 
 // Mulai Rapih
 Route::get('/', function () {

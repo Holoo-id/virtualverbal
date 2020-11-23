@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
                 'created_at' => Carbon::now()
                 ],
                 [
-                'name' => 'Anonymous',
+                'name' => 'A certain User',
                 'email' => 'deletedwriter@viverb.com',
                 'password' => Hash::make(' '),
                 'email_verified_at' => Carbon::now(),

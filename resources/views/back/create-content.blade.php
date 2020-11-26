@@ -18,33 +18,48 @@
                 </div>
                 <div class="p-5" id="basic-datepicker">
                     <div class="preview">
-                        <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" action="/file-upload" method="post" class="validate-form">
-                            <div>
-                                <label class="flex flex-col sm:flex-row"> Permalink <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Tidak untuk dirubah, URL format</span> </label>
-                                <input type="url" name="url" class="input w-full border mt-2 cursor-not-allowed" value="https://google.com/judul-yang-dibuat" disabled>
-                            </div>
+                        <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" action="{{ route('tambahdata')}}" enctype="multipart/form-data" method="post" class="validate-form">
+                            @csrf
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Judul <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
                                 <input type="text" name="judul" class="input w-full border mt-2" placeholder="Judul Kontenmu" required>
                             </div>
                             <div class="mt-3">
-                                <label class="flex flex-col sm:flex-row"> Deskripsi Singkat <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <input type="text" name="subjudul" class="input w-full border mt-2" placeholder="Tentang Kontenmu" required>
+                                <label class="flex flex-col sm:flex-row mb-2"> Konten </label>
+                                 <textarea id="summernote" class="summernote" name="konten"></textarea>
                             </div>
                             <div class="mt-3">
-                                <label class="flex flex-col sm:flex-row"> Format <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <div class="flex flex-col sm:flex-row mt-2">
-                                    <div class="flex items-center text-gray-700 mr-2">
-                                        <input type="radio" class="input border mr-2" id="horizontal-radio-chris-evans" name="horizontal_radio_button" value="horizontal-radio-chris-evans">
-                                        <label class="cursor-pointer select-none" for="horizontal-radio-chris-evans">Artikel</label>
-                                    </div>
-                                    <div class="flex items-center text-gray-700 mr-2">
-                                        <input type="radio" class="input border mr-2" id="horizontal-radio-chris-evans" name="horizontal_radio_button" value="horizontal-radio-chris-evans">
-                                        <label class="cursor-pointer select-none" for="horizontal-radio-chris-evans">Berita</label>
-                                    </div>
+                                <label class="flex flex-col sm:flex-row"> Sub Judul <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
+                                <input type="text" name="sub_judul" class="input w-full border mt-2" placeholder="Tentang Kontenmu" required>
+                            </div>
+                            <div>
+                                <label class="flex flex-col sm:flex-row"> Permalink <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Tidak untuk dirubah, URL format</span> </label>
+                                <input type="url" name="permalink" class="input w-full border mt-2 cursor-not-allowed" value="https://google.com/judul-yang-dibuat">
+                            </div>
+
+                            <div class="mt-3 dropzone border-gray-200 border-dashed">
+                                <label class="flex flex-col sm:flex-row"> Feature Image </label>
+                                <div class="fallback">
+                                    <input name="file" type="file" />
+                                </div>
+                                <div class="dz-message" data-dz-message>
+                                    <div class="text-lg font-medium">Drop files here or click to upload.</div>
                                 </div>
                             </div>
                             <div class="mt-3">
+                                <label class="flex flex-col sm:flex-row"> Image Name <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
+                                <input type="text" name="tittle" class="input w-full border mt-2" placeholder="Image Name" >
+                            </div>
+                            <div class="mt-3">
+                                <label class="flex flex-col sm:flex-row"> Published <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
+                                <input type="text" name="published" class="input w-full border mt-2" placeholder="Published" required>
+                            </div>
+                            <div class="mt-3">
+                                <label class="flex flex-col sm:flex-row"> category <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
+                                <input type="text" name="category_id" class="input w-full border mt-2" placeholder="Published" required>
+                            </div>
+
+                            <!--<div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Topik <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
                                 <div class="mt-2">
                                     <select data-placeholder="Topik kontenmu" class="select2 w-full" multiple>
@@ -65,23 +80,12 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="mt-3 dropzone border-gray-200 border-dashed">
-                                <label class="flex flex-col sm:flex-row"> Feature Image </label>
-                                <div class="fallback">
-                                    <input name="file" type="file" />
-                                </div>
-                                <div class="dz-message" data-dz-message>
-                                    <div class="text-lg font-medium">Drop files here or click to upload.</div>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <label class="flex flex-col sm:flex-row mb-2"> Konten </label>
-                                 <textarea id="summernote" class="summernote" name="editor"></textarea>
-                            </div>
+                            
+                            
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> SEO <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
                                 <input type="text" name="seo" class="input w-full border mt-2" placeholder="SEO" required>
-                            </div>
+                            </div>-->
 
                             <!-- <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Email <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Required, email address format</span> </label>

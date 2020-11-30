@@ -1,7 +1,19 @@
 @extends('front.layouts.base')
 
 @section('content')
-<div id="map-wrap-bg-01" class="map-wrap big" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-err-container"><div class="gm-err-content"><div class="gm-err-icon"><img src="https://maps.gstatic.com/mapfiles/api-3/images/icon_error.png" draggable="false" style="user-select: none;"></div><div class="gm-err-title">Oops! Something went wrong.</div><div class="gm-err-message">This page didn't load Google Maps correctly. See the JavaScript console for technical details.</div></div></div></div></div>
+    <div id="map-wrap-bg-01" class="map-wrap big" style="position: relative; overflow: hidden;">
+        <div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223); background-size: cover; background: url('{{ asset('/frontend/assets/img/posts/37.jpg')}}') no-repeat center fixed;">
+            <div class="gm-err-container">
+                <div class="gm-err-content">
+                    <!-- <div class="gm-err-icon">
+                        <img src="{{ asset('/frontend/assets/img/posts/37.jpg')}}" draggable="false" style="user-select: none; width:100%; position: absolute">
+                    </div> -->
+                    <!-- <div class="gm-err-title">Oops! Something went wrong.</div>
+                    <div class="gm-err-message">This page didn't load Google Maps correctly. See the JavaScript console for technical details.</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="contact-section-wrap">
         <!-- CONTACT SECTION -->
         <div class="contact-section grid-limit">
@@ -22,7 +34,7 @@
                 <!-- CONTACT ITEM -->
                 <div class="contact-item">
                     <!-- CONTACT ITEM ICON -->
-                    <i class="contact-item-icon icon-envelope"></i>
+                    <i class="fas fa-envelope contact-item-icon icon-envelope"></i>
                     <!-- /CONTACT ITEM ICON -->
 
                     <!-- CONTACT ITEM TITLE -->
@@ -30,7 +42,7 @@
                     <!-- /CONTACT ITEM TITLE -->
 
                     <!-- CONTACT ITEM TEXT -->
-                    <a href="mailto:contact@virtualverbal.com" class="contact-item-text">contact@virtualverbal.com</a>
+                    <a href="mailto:contact@virtualverbal.com" class="contact-item-text" style="text-transform:lowercase">contact@virtualverbal.com</a>
                     <!-- /CONTACT ITEM TEXT -->
 
                     <!-- CONTACT ITEM TEXT -->
@@ -42,7 +54,7 @@
                 <!-- CONTACT ITEM -->
                 <div class="contact-item">
                     <!-- CONTACT ITEM ICON -->
-                    <i class="contact-item-icon icon-location-pin"></i>
+                    <i class="fas fa-map-pin contact-item-icon icon-location-pin"></i>
                     <!-- /CONTACT ITEM ICON -->
 
                     <!-- CONTACT ITEM TITLE -->
@@ -55,26 +67,6 @@
 
                     <!-- CONTACT ITEM TEXT -->
                     <p class="contact-item-text">Jawa Barat 40153, IDN</p>
-                    <!-- /CONTACT ITEM TEXT -->
-                </div>
-                <!-- /CONTACT ITEM -->
-
-                <!-- CONTACT ITEM -->
-                <div class="contact-item">
-                    <!-- CONTACT ITEM ICON -->
-                    <i class="contact-item-icon icon-game-controller"></i>
-                    <!-- /CONTACT ITEM ICON -->
-
-                    <!-- CONTACT ITEM TITLE -->
-                    <p class="contact-item-title">Work With Us!</p>
-                    <!-- /CONTACT ITEM TITLE -->
-
-                    <!-- CONTACT ITEM TEXT -->
-                    <a href="mailto:jobs@pixeldiamond.com" class="contact-item-text">jobs@pixeldiamond.com</a>
-                    <!-- /CONTACT ITEM TEXT -->
-
-                    <!-- CONTACT ITEM TEXT -->
-                    <p class="contact-item-text">HHRR - Valery Dex</p>
                     <!-- /CONTACT ITEM TEXT -->
                 </div>
                 <!-- /CONTACT ITEM -->

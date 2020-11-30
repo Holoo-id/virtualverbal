@@ -925,270 +925,125 @@
                             </ul>
                         </div>
                     </div>
+                    
+                    <div class="fb-comments" data-href="https://localhost:8000/post/third" data-numposts="3" data-width=""></div>
     
-                    <!-- POST COMMENT FORM WRAP -->
-                    <div class="post-comment-form-wrap">
-                        <!-- SECTION TITLE WRAP -->
+                    <!-- {{-- <div class="post-comment-form-wrap">
                         <div class="section-title-wrap blue">
                             <h2 class="section-title medium">Write a comment</h2>
                             <div class="section-title-separator"></div>
                         </div>
-                        <!-- /SECTION TITLE WRAP -->
-                    
-                        <!-- POST COMMENT FORM -->
                         <form class="post-comment-form">
-                            <!-- FORM ROW -->
                             <div class="form-row">
-                                <!-- FORM ITEM -->
                                 <div class="form-item half blue">
                                     <label for="pcf_name" class="rl-label">Your Name</label>
                                     <input type="text" id="pcf_name" name="pcf_name" placeholder="Enter your first name here...">
                                 </div>
-                                <!-- /FORM ITEM -->
-                    
-                                <!-- FORM ITEM -->
                                 <div class="form-item half blue">
                                     <label for="pcf_email" class="rl-label">Your Email</label>
                                     <input type="text" id="pcf_email" name="pcf_email" placeholder="Enter your email here...">
                                 </div>
-                                <!-- /FORM ITEM -->
                             </div>
-                            <!-- /FORM ROW -->
-                    
-                            <!-- FORM ROW -->
                             <div class="form-row">
-                                <!-- FORM ITEM -->
                                 <div class="form-item blue">
                                     <label for="pcf_comment" class="rl-label">Your Comment</label>
                                     <textarea name="pcf_comment" id="pcf_comment" class="violet"
                                         placeholder="Write you comment here..."></textarea>
                                 </div>
-                                <!-- /FORM ITEM -->
                             </div>
-                            <!-- /FORM ROW -->
-                    
-                            <!-- SUBMIT BUTTON WRAP -->
                             <div style="text-align:center" class="submit-button-wrap">
-                                <!-- SUBMIT BUTTON -->
                                 <button class="submit-button button blue">
                                     Post your comment
-                                    <!-- BUTTON ORNAMENT -->
                                     <span class="button-ornament">
-                                        <!-- ARROW ICON -->
                                         <svg class="arrow-icon medium">
                                             <use xlink:href="#svg-arrow-medium"></use>
                                         </svg>
-                                        <!-- /ARROW ICON -->
-                    
-                                        <!-- CROSS ICON -->
                                         <svg class="cross-icon small">
                                             <use xlink:href="#svg-cross-small"></use>
                                         </svg>
-                                        <!-- /CROSS ICON -->
                                     </span>
-                                    <!-- /BUTTON ORNAMENT -->
                                 </button>
-                                <!-- /SUBMIT BUTTON -->
                             </div>
-                            <!-- /SUBMIT BUTTON WRAP -->
                         </form>
-                        <!-- /POST COMMENT FORM -->
                     </div>
-                    <!-- /POST COMMENT FORM WRAP -->
-                    <!-- POST COMMENT THREAD -->
                     <div id="op-comments" class="post-comment-thread">
-                        <!-- SECTION TITLE WRAP -->
                         <div class="section-title-wrap blue">
                             <h2 class="section-title medium">Comments (174)</h2>
                             <div class="section-title-separator"></div>
                         </div>
-                        <!-- /SECTION TITLE WRAP -->
-
-                        <!-- POST COMMENT -->
                         <div class="post-comment">
-                            <!-- USER AVATAR -->
                             <figure class="user-avatar medium liquid">
                                 <img src="{{ asset('/frontend/assets/img/users/09.jpg')}}" alt="user-09">
                             </figure>
-                            <!-- /USER AVATAR -->
-
-                            <!-- POST COMMENT USERNAME -->
                             <p class="post-comment-username">Elizabeth Valentine</p>
-                            <!-- /POST COMMENT USERNAME -->
-
-                            <!-- POST COMMENT TIMESTAMP -->
                             <p class="post-comment-timestamp">25 mins ago</p>
-                            <!-- /POST COMMENT TIMESTAMP -->
-
-                            <!-- REPORT BUTTON -->
                             <a href="#" class="report-button">Report</a>
-                            <!-- /REPORT BUTTON -->
-
-                            <!-- POST COMMENT TEXT -->
                             <p class="post-comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            <!-- /POST COMMENT TEXT -->
-
-                            <!-- POST COMMENT ACTIONS -->
                             <div class="post-comment-actions">
-                                <!-- REPLY BUTTON -->
                                 <div class="reply-button bubble-ornament blue">
-                                    <i class="fas fa-reply"></i>
+                                    <i class="fas fa-reply icon-action-undo reply-icon"></i>
                                 </div>
-                                <!-- /REPLY BUTTON -->
-
-                                <!-- LIKE BUTTON -->
                                 <div class="like-button bubble-ornament hoverable cyan">
-                                    <i class="fas fa-thumbs-up"></i>
+                                    <i class="fas fa-thumbs-up icon-like like-icon"></i>
                                 </div>
-                                <!-- /LIKE BUTTON -->
-
-                                <!-- LIKES COUNT -->
                                 <p class="likes-count">12 Thumbs Up</p>
-                            <!-- /LIKES COUNT -->
                             </div>
-                            <!-- /POST COMMENT ACTIONS -->
                         </div>
-                        <!-- /POST COMMENT -->
-
-                        <!-- POST COMMENT -->
                         <div class="post-comment">
-                            <!-- USER AVATAR -->
                             <figure class="user-avatar medium liquid">
                                 <img src="{{ asset('/frontend/assets/img/users/07.jpg')}}" alt="user-07">
                             </figure>
-                            <!-- /USER AVATAR -->
-
-                            <!-- POST COMMENT USERNAME -->
                             <p class="post-comment-username">Thomas Stevens</p>
-                            <!-- /POST COMMENT USERNAME -->
-
-                            <!-- POST COMMENT TIMESTAMP -->
                             <p class="post-comment-timestamp">49 mins ago</p>
-                            <!-- /POST COMMENT TIMESTAMP -->
-
-                            <!-- REPORT BUTTON -->
                             <a href="#" class="report-button">Report</a>
-                            <!-- /REPORT BUTTON -->
-
-                            <!-- POST COMMENT TEXT -->
                             <p class="post-comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            <!-- /POST COMMENT TEXT -->
-
-                            <!-- POST COMMENT ACTIONS -->
                             <div class="post-comment-actions">
-                                <!-- REPLY BUTTON -->
                                 <div class="reply-button bubble-ornament blue">
-                                    <i class="fas fa-reply"></i>
+                                    <i class="fas fa-reply icon-action-undo reply-icon"></i>
                                 </div>
-                                <!-- /REPLY BUTTON -->
-
-                                <!-- LIKE BUTTON -->
                                 <div class="like-button bubble-ornament hoverable cyan">
-                                    <i class="fas fa-thumbs-up"></i>
+                                    <i class="fas fa-thumbs-up icon-like like-icon"></i>
                                 </div>
-                                <!-- /LIKE BUTTON -->
-
-                                <!-- LIKES COUNT -->
                                 <p class="likes-count">36 Thumbs Up</p>
-                                <!-- /LIKES COUNT -->
                             </div>
-                            <!-- /POST COMMENT ACTIONS -->
-
-                            <!-- POST COMMENT -->
                             <div class="post-comment">
-                                <!-- USER AVATAR -->
                                 <figure class="user-avatar medium liquid">
                                     <img src="{{ asset('/frontend/assets/img/users/06.jpg')}}" alt="user-06">
                                 </figure>
-                                <!-- /USER AVATAR -->
-                        
-                                <!-- POST COMMENT USERNAME -->
                                 <p class="post-comment-username">Megan Lebeau</p>
-                                <!-- /POST COMMENT USERNAME -->
-                        
-                                <!-- POST COMMENT TIMESTAMP -->
                                 <p class="post-comment-timestamp">6 mins ago</p>
-                                <!-- /POST COMMENT TIMESTAMP -->
-                        
-                                <!-- REPORT BUTTON -->
                                 <a href="#" class="report-button">Report</a>
-                                <!-- /REPORT BUTTON -->
-                        
-                                <!-- POST COMMENT TEXT -->
                                 <p class="post-comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                <!-- /POST COMMENT TEXT -->
-                        
-                                <!-- POST COMMENT ACTIONS -->
                                 <div class="post-comment-actions">
-                                    <!-- REPLY BUTTON -->
                                     <div class="reply-button bubble-ornament blue">
-                                        <i class="fas fa-reply"></i>
+                                        <i class="fas fa-reply icon-action-undo reply-icon"></i>
                                     </div>
-                                    <!-- /REPLY BUTTON -->
-                            
-                                    <!-- LIKE BUTTON -->
                                     <div class="like-button bubble-ornament hoverable cyan">
-                                        <i class="fas fa-thumbs-up"></i>
+                                        <i class="fas fa-thumbs-up icon-like like-icon"></i>
                                     </div>
-                                    <!-- /LIKE BUTTON -->
-                            
-                                    <!-- LIKES COUNT -->
                                     <p class="likes-count">6 Thumbs Up</p>
-                                    <!-- /LIKES COUNT -->
                                 </div>
-                                <!-- /POST COMMENT ACTIONS -->
                             </div>
-                            <!-- /POST COMMENT -->
                         </div>
-                        <!-- /POST COMMENT -->
-
-                        <!-- POST COMMENT -->
                         <div class="post-comment">
-                            <!-- USER AVATAR -->
                             <figure class="user-avatar medium liquid">
                                 <img src="{{ asset('/frontend/assets/img/users/01.jpg')}}" alt="user-01">
                             </figure>
-                            <!-- /USER AVATAR -->
-
-                            <!-- POST COMMENT USERNAME -->
                             <p class="post-comment-username text-tag staff">Dexter Danvers</p>
-                            <!-- /POST COMMENT USERNAME -->
-
-                            <!-- POST COMMENT TIMESTAMP -->
                             <p class="post-comment-timestamp">2 hours ago</p>
-                            <!-- /POST COMMENT TIMESTAMP -->
-
-                            <!-- REPORT BUTTON -->
                             <a href="#" class="report-button">Report</a>
-                            <!-- /REPORT BUTTON -->
-
-                            <!-- POST COMMENT TEXT -->
                             <p class="post-comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            <!-- /POST COMMENT TEXT -->
-
-                            <!-- POST COMMENT ACTIONS -->
                             <div class="post-comment-actions">
-                                <!-- REPLY BUTTON -->
                                 <div class="reply-button bubble-ornament blue">
-                                    <i class="fas fa-reply"></i>
+                                    <i class="fas fa-reply icon-action-undo reply-icon"></i>
                                 </div>
-                                <!-- /REPLY BUTTON -->
-
-                                <!-- LIKE BUTTON -->
                                 <div class="like-button bubble-ornament hoverable cyan">
-                                    <i class="fas fa-thumbs-up"></i>
+                                    <i class="fas fa-thumbs-up icon-like like-icon"></i>
                                 </div>
-                                <!-- /LIKE BUTTON -->
-
-                                <!-- LIKES COUNT -->
                                 <p class="likes-count">47 Thumbs Up</p>
-                                <!-- /LIKES COUNT -->
                             </div>
-                            <!-- /POST COMMENT ACTIONS -->
                         </div>
-                        <!-- /POST COMMENT -->
-                    </div>
-                    <!-- /POST COMMENT THREAD -->
+                    </div> --}} -->
                 </div>
                 <!-- /POST OPEN CONTENT -->
             </div>

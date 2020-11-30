@@ -92,18 +92,24 @@ Route::prefix('/front')->group(function () {
     Route::get('/about', function () {
         return view('front.about');
     })->middleware(['verified'])->name('about');
+
+    Route::get('/artikel/{slug}', [ContentController::class, 'artikel'])->name('artikel');
 });
+
 // Route untuk verifikasi email
 Route::get('/email/verify', function () {
     return view('auth.verify-email');
 })->middleware(['auth'])->name('verification.notice');
+
 Route::post('/email/verification-notification', function (Request $request){
     $request->user()->sendEmailVerificationNotification();
     return back()->with('status', 'verification-link-sent');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
     return view('auth.after-registration');
 })->middleware(['auth', 'signed'])->name('verification.verify');
+
 Route::post('/email/verify/{id}/{hash}', [UserController::class, 'finalizeRegister']);
 // Route untuk verifikasi email

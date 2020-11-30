@@ -2,33 +2,39 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\PostArtikel;
-use Storage;
+use App\Models\Content;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Storage;
 
-class PostArtikelController extends Controller
+class ContentController extends Controller
 {
+    public function content($id = 340)
+    {
+        $content = Content::where('id', $id)->first();
+        $date = $content->publish_at;
+        $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
+        return view('front.content', compact('content', 'newDate'));
+    }
+
     public function post()
     {
         return view('back.create-content');
     }
+
     public function tambah(Request $request)
     {
-
         $uploadedFile = $request->file('file');
         $path = $uploadedFile->store('public/files');
-        $file = PostArtikel::create([
+        $file = Content::create([
             'judul' => $request->judul,
             'konten' => $request->konten,
             'sub_judul' => $request->sub_judul,
             'permalink' => $request->permalink,
             'image_path' => $path,
-            'image_name' => $request->tittle ?? $uploadedFile->getClientOriginalName(),
+            'image_name' => $request->title ?? $uploadedFile->getClientOriginalName(),
             'category_id' => $request->category_id,
             'published' => $request->published,
         ]);
-
-      
     }
 }

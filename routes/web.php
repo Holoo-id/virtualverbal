@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Frontend\BeritaController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\ContentController;
+use App\Http\Controllers\Frontend\BeritaController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 
@@ -17,9 +18,6 @@ use Illuminate\Http\Request;
 Route::get('/berita', [BeritaController::class, 'Berita']);
 Route::get('/berita/{slug}', [BeritaController::class, 'LinkBerita']);
 
-Route::get('/artikel', function () {
-    return view('front.artikel-game');
-});
 Route::get('/search-result', function () {
     return view('front.search-result');
 });
@@ -75,14 +73,6 @@ Route::get('/reset-password', function () {
     return view('back.profile.reset-password');
 });
 
-// //start error layout
-// Route::get('/error-404', function () {
-//     return view('error.404');
-// });
-// Route::get('/error-401', function () {
-//     return view('error.401');
-// });
-
 // Mulai Rapih
 Route::get('/', function () {
     return view('front.home');
@@ -93,7 +83,7 @@ Route::prefix('/front')->group(function () {
         return view('front.about');
     })->middleware(['verified'])->name('about');
 
-    Route::get('/artikel/{slug}', [ContentController::class, 'artikel'])->name('artikel');
+    Route::get('/content', [ContentController::class, 'content']);
 });
 
 // Route untuk verifikasi email

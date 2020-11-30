@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PostArtikel extends Model
+class Content extends Model
 {
     protected $table = 'v_content';
     protected $fillable = [
-        'judul','konten','sub_judul','permalink','image_path','image_name','category_id','published'
+        'judul','konten','sub_judul','permalink','image_path','image_name','category_id','published', 'publish_at'
     ];
 }

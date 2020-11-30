@@ -183,38 +183,38 @@
             <!-- LAYOUT ITEM -->
             <div class="layout-item">
                 <!-- POST PREVIEW -->
-                <div class="post-preview landscape e-sport">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="esports-post.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/47.jpg')}}" alt="post-45">
-                            </figure>
-                            <!-- POST PREVIEW IMG -->
+                @foreach($contents as $content)
+                    <div class="post-preview landscape e-sport">
+                        <!-- POST PREVIEW IMG WRAP -->
+                        <a href="{{ $content->permalink }}">
+                            <div class="post-preview-img-wrap">
+                                <!-- POST PREVIEW IMG -->
+                                <figure class="post-preview-img liquid">
+                                    <img src="{{ asset('/frontend/assets/img/posts/47.jpg')}}" alt="post-45">
+                                </figure>
+                                <!-- POST PREVIEW IMG -->
+                            </div>
+                        </a>
+                        <!-- /POST PREVIEW IMG WRAP -->
+        
+                        <!-- TAG ORNAMENT -->
+                        <a href="esports-news.html" class="tag-ornament">Esports</a>
+                        <!-- /TAG ORNAMENT -->
+        
+                        <!-- POST PREVIEW TITLE -->
+                        <a href="{{ $content->permalink }}" class="post-preview-title">{{ $content->judul }}</a>
+                        <!-- POST AUTHOR INFO -->
+                        <div class="post-author-info-wrap">
+                            <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
+                                    class="post-author">Dexter</a><span class="separator">|</span>hari, 12 bulan 1234<span
+                                    class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
+                                    Komentar</a></p>
                         </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-    
-                    <!-- TAG ORNAMENT -->
-                    <a href="esports-news.html" class="tag-ornament">Esports</a>
-                    <!-- /TAG ORNAMENT -->
-    
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="esports-post.html" class="post-preview-title">Thomas Howlett joins the Wolves Xenowatch esports
-                        team</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
-                                class="post-author">Dexter</a><span class="separator">|</span>Hari, 15 Desember 2018<span
-                                class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
-                                Komentar</a></p>
+                        <!-- /POST AUTHOR INFO -->
+                        <!-- POST PREVIEW TEXT -->
+                        <p class="post-preview-text">{{ $content->sub_judul }}</p>
                     </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua</p>
-                </div>
+                @endforeach
                 <!-- /POST PREVIEW -->
                 <!-- POST PREVIEW -->
                 <div class="post-preview landscape video e-sport no-hover">

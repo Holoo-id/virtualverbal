@@ -12,9 +12,10 @@ class ContentController extends Controller
     public function all()
     {
         $contents = Content::all();
-        $date = $contents->publish_at;
-        $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
-        return view('front.search-result', compact('contents', 'newDate'));
+        // $date = $contents->publish_at;
+        // $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
+        // return view('front.search-result', compact('contents', 'newDate'));
+        return view('front.search-result', compact('contents'));
     }
 
     public function detail($id = 340)
@@ -23,6 +24,15 @@ class ContentController extends Controller
         $date = $content->publish_at;
         $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
         return view('front.content', compact('content', 'newDate'));
+    }
+
+    public function list()
+    {
+        $contents = Content::all();
+        // $date = $contents->publish_at;
+        // $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
+        // return view('front.search-result', compact('contents', 'newDate'));
+        return view('back.content-list', compact('contents'));
     }
 
     public function post()

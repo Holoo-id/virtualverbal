@@ -9,7 +9,15 @@ use Storage;
 
 class ContentController extends Controller
 {
-    public function content($id = 340)
+    public function all()
+    {
+        $contents = Content::all();
+        $date = $contents->publish_at;
+        $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
+        return view('front.search-result', compact('contents', 'newDate'));
+    }
+
+    public function detail($id = 340)
     {
         $content = Content::where('id', $id)->first();
         $date = $content->publish_at;
@@ -20,6 +28,14 @@ class ContentController extends Controller
     public function post()
     {
         return view('back.create-content');
+    }
+
+    public function preview($id = 340)
+    {
+        $content = Content::where('id', $id)->first();
+        $date = $content->publish_at;
+        $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
+        return view('back.content-preview', compact('content', 'newDate'));
     }
 
     public function tambah(Request $request)

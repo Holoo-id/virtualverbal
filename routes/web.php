@@ -83,7 +83,17 @@ Route::prefix('/front')->group(function () {
         return view('front.about');
     })->middleware(['verified'])->name('about');
 
-    Route::get('/content', [ContentController::class, 'content']);
+    Route::prefix('/content')->group(function () {
+        Route::get('/all', [ContentController::class, 'all']);
+        Route::get('/detail', [ContentController::class, 'detail']);
+    });
+});
+
+Route::prefix('/back')->group(function (){
+    Route::prefix('/content')->group(function () {
+        Route::get('/list', [ContentController::class, 'list']);
+        Route::get('/preview', [ContentController::class, 'preview']);
+    });
 });
 
 // Route untuk verifikasi email

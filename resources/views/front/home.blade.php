@@ -1878,27 +1878,27 @@
         <div class="layout-body layout-item">
             <!-- LAYOUT ITEM -->
             <div class="layout-item">
-                <div class="post-preview landscape gaming-news">
-                    <a href="post-v1.html">
-                        <div class="post-preview-img-wrap">
-                            <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/41.jpg')}}" alt="post-01">
-                            </figure>
+                @foreach($contents as $content)
+                    <div class="post-preview landscape gaming-news">
+                        <a href="post-v1.html">
+                            <div class="post-preview-img-wrap">
+                                <figure class="post-preview-img liquid">
+                                    <img src="{{ asset('/frontend/assets/img/posts/41.jpg')}}" alt="post-01">
+                                </figure>
+                            </div>
+                        </a>
+                        <a href="news-v1.html" class="tag-ornament">Gaming News</a>
+                        <a href="post-v1.html" class="post-preview-title">{{ $content->judul }}</a>
+                        <div class="post-author-info-wrap">
+                            <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
+                                    class="post-author">Dexter</a><span class="separator">|</span>Hari, 15 Desember 2018<span
+                                    class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
+                                    Komentar</a></p>
                         </div>
-                    </a>
-                    <a href="news-v1.html" class="tag-ornament">Gaming News</a>
-                    <a href="post-v1.html" class="post-preview-title">The Clash of Dragons is breaking record sales in
-                        Japan</a>
-                    <div class="post-author-info-wrap">
-                        <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
-                                class="post-author">Dexter</a><span class="separator">|</span>Hari, 15 Desember 2018<span
-                                class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
-                                Komentar</a></p>
+                        <!-- Diambil dari subtitle -->
+                        <p class="post-preview-text">{{ $content->sub_judul }}</p>
                     </div>
-                    <!-- Diambil dari subtitle -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua</p>
-                </div>
+                @endforeach
                 <!-- /POST PREVIEW -->
     
                 <!-- POST PREVIEW -->

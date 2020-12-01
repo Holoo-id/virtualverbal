@@ -5,22 +5,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\Frontend\BeritaController;
+use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 
-//Route
-//Controller
-//View
-
-// Route::post('/login', [AuthController::class, 'authenticate']);
-// Route::get('/logout', [AuthController::class, 'logout']);
-
 Route::get('/berita', [BeritaController::class, 'Berita']);
 Route::get('/berita/{slug}', [BeritaController::class, 'LinkBerita']);
-
-Route::get('/search-result', function () {
-    return view('front.search-result');
-});
 
 Route::get('/esports', function () {
     return view('esports');
@@ -74,9 +64,7 @@ Route::get('/reset-password', function () {
 });
 
 // Mulai Rapih
-Route::get('/', function () {
-    return view('front.home');
-})->middleware(['verified']);
+Route::get('/', [HomeController::class, 'index'])->name('home')->middleware(['verified']);
 
 Route::prefix('/front')->group(function () {
     Route::get('/about', function () {

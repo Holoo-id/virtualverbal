@@ -66,7 +66,7 @@
                     <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('/backend/dist/images/profile-8.jpg') }}">
                 </div>
                 <div class="ml-3 mr-auto">
-                    <a href="" class="font-medium">Leonardo DiCaprio</a> 
+                    <a href="" class="font-medium">{{ $content->writer->name }}</a> 
                     <div class="flex text-gray-600 truncate text-xs mt-1"> <a class="text-theme-1 inline-block truncate" href="">{{ $content->formatContent->name }}</a> <span class="mx-1">•</span> 14 seconds ago </div>
                 </div>
                 <div class="dropdown relative ml-3">

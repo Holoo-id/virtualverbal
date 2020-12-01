@@ -59,7 +59,7 @@
                             </a>
                             <!-- /USER AVATAR -->
                             <p style="display: flex; justify-content: center; align-items: center" class="post-author-info small light">Oleh 
-                                <a href="search-results.html" class="post-author" style="margin-left:2px"> Dexter</a>
+                                <a href="search-results.html" class="post-author" style="margin-left:2px"> {{ $content->writer->name }}</a>
                                 <span class="separator">-</span>{{ $newDate }}
                                 <!-- Senin, 19 Oktober 2020, 14:29 WIB -->
                                 <span class="separator">-</span>

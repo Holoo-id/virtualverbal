@@ -28,7 +28,7 @@
                     <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('/backend/dist/images/profile-3.jpg') }}">
                 </div>
                 <div class="ml-3 mr-auto">
-                    <a href="" class="font-medium">Leonardo DiCaprio</a>, Author 
+                    <a href="" class="font-medium">{{ $content->writer->name }}</a>, Author 
                     <div class="text-gray-600">Senior Frontend Engineer</div>
                 </div>
             </div>

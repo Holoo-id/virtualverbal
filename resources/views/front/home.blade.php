@@ -1891,7 +1891,7 @@
                         <a href="post-v1.html" class="post-preview-title">{{ $content->judul }}</a>
                         <div class="post-author-info-wrap">
                             <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
-                                    class="post-author">Dexter</a><span class="separator">|</span>Hari, 15 Desember 2018<span
+                                    class="post-author">{{ $content->writer->name }}</a><span class="separator">|</span>Hari, 15 Desember 2018<span
                                     class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
                                     Komentar</a></p>
                         </div>

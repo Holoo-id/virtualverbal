@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Content;
 use App\Models\FormatContent;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

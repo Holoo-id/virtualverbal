@@ -206,7 +206,7 @@
                         <!-- POST AUTHOR INFO -->
                         <div class="post-author-info-wrap">
                             <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
-                                    class="post-author">Dexter</a><span class="separator">|</span>hari, 12 bulan 1234<span
+                                    class="post-author">{{ $content->writer->name }}</a><span class="separator">|</span>hari, 12 bulan 1234<span
                                     class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
                                     Komentar</a></p>
                         </div>

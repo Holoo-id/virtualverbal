@@ -15,4 +15,7 @@ class Content extends Model
     public function formatContent(){
     	return $this->belongsTo(FormatContent::class, 'category_id');
     }
+    public function writer(){
+    	return $this->belongsTo(User::class, 'created_by');
+    }
 }

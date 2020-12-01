@@ -67,7 +67,7 @@ Route::prefix('/front')->group(function () {
     })->middleware(['verified'])->name('about');
 
     Route::prefix('/content')->group(function () {
-        Route::get('/all', [ContentController::class, 'all']);
+        Route::get('/all', [ContentController::class, 'all'])->name('all-content');
         Route::get('/detail', [ContentController::class, 'detail']);
     });
 });

@@ -1872,14 +1872,19 @@
         </div>
         <!-- /LAYOUT CONTENT 1 -->
     </div>
-    <!-- LAYOUT CONTENT 1 -->
+    
     <div class="layout-content-1 layout-item-3-1 own-grid grid-limit centered">
-        <!-- LAYOUT BODY -->
         <div class="layout-body layout-item">
-            <!-- LAYOUT ITEM -->
             <div class="layout-item">
                 @foreach($contents as $content)
-                    <div class="post-preview landscape gaming-news">
+                    <div class="post-preview landscape 
+                        @if($content->category_id == 2)
+                            gaming-news
+                        @elseif($content->category_id == 1)
+                            e-sport
+                        @else
+                            ''
+                        @endif ">
                         <a href="post-v1.html">
                             <div class="post-preview-img-wrap">
                                 <figure class="post-preview-img liquid">
@@ -1895,83 +1900,12 @@
                                     class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
                                     Komentar</a></p>
                         </div>
-                        <!-- Diambil dari subtitle -->
                         <p class="post-preview-text">{{ $content->sub_judul }}</p>
                     </div>
                 @endforeach
-                <!-- /POST PREVIEW -->
     
                 <!-- POST PREVIEW -->
-                <div class="post-preview landscape e-sport">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="esports-post.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/42.jpg')}}" alt="post-45">
-                            </figure>
-                            <!-- POST PREVIEW IMG -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-    
-                    <!-- TAG ORNAMENT -->
-                    <a href="esports-news.html" class="tag-ornament">Esports</a>
-                    <!-- /TAG ORNAMENT -->
-    
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="esports-post.html" class="post-preview-title">Thomas Howlett joins the Wolves Xenowatch esports
-                        team</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
-                                class="post-author">Dexter</a><span class="separator">|</span>Hari, 15 Desember 2018<span
-                                class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
-                                Komentar</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua</p>
-                </div>
-                <!-- /POST PREVIEW -->
-    
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape gaming-news">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-v1.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/43.jpg')}}" alt="post-27">
-                            </figure>
-                            <!-- POST PREVIEW IMG -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-    
-                    <!-- TAG ORNAMENT -->
-                    <a href="news-v1.html" class="tag-ornament">Gaming News</a>
-                    <!-- /TAG ORNAMENT -->
-    
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-v1.html" class="post-preview-title">Everything about kawai party 8!</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
-                                class="post-author">Dexter</a><span class="separator">|</span>Hari, 15 Desember 2018<span
-                                class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
-                                Komentar</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua</p>
-                </div>
-                <!-- /POST PREVIEW -->
-    
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape game-review">
+                {{--<div class="post-preview landscape game-review">
                     <!-- POST PREVIEW IMG WRAP -->
                     <a href="post-v2.html">
                         <div class="post-preview-img-wrap">
@@ -2009,43 +1943,6 @@
                     <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt dutor et dolore magna aliqua</p>
                 </div>
-                <!-- /POST PREVIEW -->
-    
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape geeky-news">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-v4.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/45.jpg')}}" alt="post-21">
-                            </figure>
-                            <!-- POST PREVIEW IMG -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-    
-                    <!-- TAG ORNAMENT -->
-                    <a href="news-v4.html" class="tag-ornament">Geeky News</a>
-                    <!-- /TAG ORNAMENT -->
-    
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-v4.html" class="post-preview-title">"Steamboat" anime will have a preview event in May</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
-                                class="post-author">Dexter</a><span class="separator">|</span>Hari, 15 Desember 2018<span
-                                class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
-                                Komentar</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua</p>
-                </div>
-                <!-- /POST PREVIEW -->
-    
-                <!-- POST PREVIEW -->
                 <div class="post-preview landscape movie-news">
                     <!-- POST PREVIEW IMG WRAP -->
                     <a href="post-v3.html">
@@ -2126,34 +2023,24 @@
                     <!-- POST PREVIEW TEXT -->
                     <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt dutor et dolore magna aliqua</p>
-                </div>
-                <!-- /POST PREVIEW -->
+                </div>--}}
             </div>
-            <!-- /LAYOUT ITEM -->
+
+            <!-- BUTTON -->
             <div class="layout-item centered padded load-more-wrap">
-                <!-- BUTTON -->
-                <a href="news-v1.html" class="button big blue">
+                <a href="{{ route('all-content') }}" class="button big blue">
                     Load More
-                    <!-- BUTTON ORNAMENT -->
                     <div class="button-ornament">
-                        <!-- ARROW ICON -->
                         <svg class="arrow-icon medium">
                             <use xlink:href="#svg-arrow-medium"></use>
                         </svg>
-                        <!-- /ARROW ICON -->
-                
-                        <!-- CROSS ICON -->
                         <svg class="cross-icon small">
                             <use xlink:href="#svg-cross-small"></use>
                         </svg>
-                        <!-- /CROSS ICON -->
                     </div>
-                    <!-- /BUTTON ORNAMENT -->
                 </a>
-                <!-- /BUTTON -->
             </div>
         </div>
-        <!-- /LAYOUT BODY -->
         
         @include('front.layouts.sidebar-esports')
     </div>

@@ -1,26 +1,18 @@
 @extends('front.layouts.base')
 
 @section('content')
-    <!-- LAYOUT CONTENT 1 -->
     <div class="layout-content-1 layout-item-3-1 own-grid centered">
-        <!-- LAYOUT BODY -->
         <div class="layout-body layout-item centered">
-            <!-- SECTION TITLE WRAP -->
             <div class="section-title-wrap blue">
                 <h2 class="section-title medium">Search Results</h2>
                 <div class="section-title-separator"></div>
             </div>
-            <!-- /SECTION TITLE WRAP -->
-
-            <!-- FILTER HEADING -->
             <div class="filter-heading">
                 <!-- FILTER HEADING TEXT -->
                 <p class="filter-heading-text"><span class="highlight">12</span> Results found for: "<span class="highlight">Esports
                         Japan game team</span>"</p>
                 <!-- /FILTER HEADING TEXT -->
             </div>
-            <!-- /FILTER HEADING -->
-            <!-- FILTERS ROW -->
             <div class="filters-row">
                 <!-- DROPDOWN SIMPLE WRAP -->
                 <div class="dropdown-simple-wrap">
@@ -178,46 +170,40 @@
                 </div>
                 <!-- /DROPDOWN SIMPLE WRAP -->
             </div>
-            <!-- /FILTERS ROW -->
 
             <!-- LAYOUT ITEM -->
             <div class="layout-item">
                 <!-- POST PREVIEW -->
                 @foreach($contents as $content)
-                    <div class="post-preview landscape e-sport">
-                        <!-- POST PREVIEW IMG WRAP -->
+                    <div class="post-preview landscape 
+                        @if($content->category_id == 2)
+                            gaming-news
+                        @elseif($content->category_id == 1)
+                            e-sport
+                        @else
+                            ''
+                        @endif ">
                         <a href="{{ $content->permalink }}">
                             <div class="post-preview-img-wrap">
-                                <!-- POST PREVIEW IMG -->
                                 <figure class="post-preview-img liquid">
                                     <img src="{{ asset('/frontend/assets/img/posts/47.jpg')}}" alt="post-45">
                                 </figure>
-                                <!-- POST PREVIEW IMG -->
                             </div>
                         </a>
-                        <!-- /POST PREVIEW IMG WRAP -->
-        
-                        <!-- TAG ORNAMENT -->
                         <a href="esports-news.html" class="tag-ornament">{{ $content->formatContent->name }}</a>
-                        <!-- /TAG ORNAMENT -->
-        
-                        <!-- POST PREVIEW TITLE -->
                         <a href="{{ $content->permalink }}" class="post-preview-title">{{ $content->judul }}</a>
-                        <!-- POST AUTHOR INFO -->
                         <div class="post-author-info-wrap">
                             <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
                                     class="post-author">{{ $content->writer->name }}</a><span class="separator">|</span>hari, 12 bulan 1234<span
                                     class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
                                     Komentar</a></p>
                         </div>
-                        <!-- /POST AUTHOR INFO -->
-                        <!-- POST PREVIEW TEXT -->
                         <p class="post-preview-text">{{ $content->sub_judul }}</p>
                     </div>
                 @endforeach
-                <!-- /POST PREVIEW -->
+
                 <!-- POST PREVIEW -->
-                <div class="post-preview landscape video e-sport no-hover">
+                {{--<div class="post-preview landscape video e-sport no-hover">
                     <!-- POST PREVIEW IMG WRAP -->
                     <a href="post-video.html">
                         <div class="post-preview-img-wrap">
@@ -272,112 +258,6 @@
                     <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur bere adipisicing elit, sed do eiusmod tempor...
                     </p>
                 </div>
-                <!-- /POST PREVIEW -->
-
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape esports-news">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-v1.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/49.jpg')}}" alt="post-01">
-                            </figure>
-                            <!-- POST PREVIEW IMG -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-                
-                    <!-- TAG ORNAMENT -->
-                    <a href="news-v1.html" class="tag-ornament">Esports News</a>
-                    <!-- /TAG ORNAMENT -->
-                
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-v1.html" class="post-preview-title">The Clash of Dragons is breaking record sales in
-                        Japan</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <!-- USER AVATAR -->
-                        <a href="search-results.html">
-                            <figure class="user-avatar tiny liquid">
-                                <img src="{{ asset('/frontend/assets/img/users/03.jpg')}}" alt="user-01">
-                            </figure>
-                        </a>
-                        <!-- /USER AVATAR -->
-                        <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Dexter</a><span
-                                class="separator">|</span>December 15th, 2018<span class="separator">|</span><a
-                                href="post-v1.html#op-comments" class="post-comment-count">174
-                                Comments</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod
-                        tempor incididunt dutor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation
-                        loso laboris tempora aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore...</p>
-                </div>
-                <!-- /POST PREVIEW -->
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape video esports-news no-hover">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-video.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/50.jpg')}}" alt="post-31">
-                            </figure>
-                            <!-- /POST PREVIEW IMG -->
-                
-                            <!-- POST PREVIEW OVERLAY -->
-                            <div class="post-preview-overlay">
-                                <!-- PLAY BUTTON -->
-                                <div class="play-button">
-                                    <!-- PLAY BUTTON ICON -->
-                                    <svg class="play-button-icon">
-                                        <use xlink:href="#svg-play"></use>
-                                    </svg>
-                                    <!-- /PLAY BUTTON ICON -->
-                                </div>
-                                <!-- /PLAY BUTTON -->
-                            </div>
-                            <!-- /POST PREVIEW OVERLAY -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-                
-                    <!-- TAG LIST -->
-                    <div class="tag-list">
-                        <a href="browse-videos.html" class="tag-ornament video">Video</a>
-                        <a href="news-v1.html" class="tag-ornament">Esports News</a>
-                    </div>
-                    <!-- /TAG LIST -->
-                
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-video.html" class="post-preview-title">Galaxy Aventure RX peek at the new weapons</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <!-- USER AVATAR -->
-                        <a href="search-results.html">
-                            <figure class="user-avatar tiny liquid">
-                                <img src="{{ asset('/frontend/assets/img/users/04.jpg')}}" alt="user-01">
-                            </figure>
-                        </a>
-                        <!-- /USER AVATAR -->
-                        <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Dexter</a><span
-                                class="separator">|</span>December 15th, 2018<span class="separator">|</span><a
-                                href="post-v1.html#op-comments" class="post-comment-count">174
-                                Comments</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur bere adipisicing elit, sed do eiusmod tempor...
-                    </p>
-                </div>
-                <!-- /POST PREVIEW -->
-
-                <!-- POST PREVIEW -->
                 <div class="post-preview landscape game-review">
                     <!-- POST PREVIEW IMG WRAP -->
                     <a href="post-v2.html">
@@ -416,239 +296,6 @@
                     <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt dutor et dolore magna aliqua</p>
                 </div>
-                <!-- /POST PREVIEW -->
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape video game-review no-hover">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-video.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/02.jpg')}}" alt="post-31">
-                            </figure>
-                            <!-- /POST PREVIEW IMG -->
-                
-                            <!-- POST PREVIEW OVERLAY -->
-                            <div class="post-preview-overlay">
-                                <!-- PLAY BUTTON -->
-                                <div class="play-button">
-                                    <!-- PLAY BUTTON ICON -->
-                                    <svg class="play-button-icon">
-                                        <use xlink:href="#svg-play"></use>
-                                    </svg>
-                                    <!-- /PLAY BUTTON ICON -->
-                                </div>
-                                <!-- /PLAY BUTTON -->
-                            </div>
-                            <!-- /POST PREVIEW OVERLAY -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-                
-                    <!-- TAG LIST -->
-                    <div class="tag-list">
-                        <a href="browse-videos.html" class="tag-ornament video">Video</a>
-                        <a href="news-v1.html" class="tag-ornament">Game Reviews</a>
-                    </div>
-                    <!-- /TAG LIST -->
-                
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-video.html" class="post-preview-title">Galaxy Aventure RX peek at the new weapons</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <!-- USER AVATAR -->
-                        <a href="search-results.html">
-                            <figure class="user-avatar tiny liquid">
-                                <img src="{{ asset('/frontend/assets/img/users/08.jpg')}}" alt="user-01">
-                            </figure>
-                        </a>
-                        <!-- /USER AVATAR -->
-                        <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Dexter</a><span
-                                class="separator">|</span>December 15th, 2018<span class="separator">|</span><a
-                                href="post-v1.html#op-comments" class="post-comment-count">174
-                                Comments</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur bere adipisicing elit, sed do eiusmod tempor...
-                    </p>
-                </div>
-                <!-- /POST PREVIEW -->
-
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape gaming-news">
-                    <a href="post-v1.html">
-                        <div class="post-preview-img-wrap">
-                            <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/03.jpg')}}" alt="post-01">
-                            </figure>
-                        </div>
-                    </a>
-                    <a href="news-v1.html" class="tag-ornament">Gaming News</a>
-                    <a href="post-v1.html" class="post-preview-title">The Clash of Dragons is breaking record sales in
-                        Japan</a>
-                    <div class="post-author-info-wrap">
-                        <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
-                                class="post-author">Dexter</a><span class="separator">|</span>Hari, 15 Desember 2018<span
-                                class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
-                                Komentar</a></p>
-                    </div>
-                    <!-- Diambil dari subtitle -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua</p>
-                </div>
-                <!-- /POST PREVIEW -->
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape video gaming-news no-hover">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-video.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/04.jpg')}}" alt="post-31">
-                            </figure>
-                            <!-- /POST PREVIEW IMG -->
-                
-                            <!-- POST PREVIEW OVERLAY -->
-                            <div class="post-preview-overlay">
-                                <!-- PLAY BUTTON -->
-                                <div class="play-button">
-                                    <!-- PLAY BUTTON ICON -->
-                                    <svg class="play-button-icon">
-                                        <use xlink:href="#svg-play"></use>
-                                    </svg>
-                                    <!-- /PLAY BUTTON ICON -->
-                                </div>
-                                <!-- /PLAY BUTTON -->
-                            </div>
-                            <!-- /POST PREVIEW OVERLAY -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-                
-                    <!-- TAG LIST -->
-                    <div class="tag-list">
-                        <a href="browse-videos.html" class="tag-ornament video">Video</a>
-                        <a href="news-v1.html" class="tag-ornament">Gaming News</a>
-                    </div>
-                    <!-- /TAG LIST -->
-                
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-video.html" class="post-preview-title">Galaxy Aventure RX peek at the new weapons</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <!-- USER AVATAR -->
-                        <a href="search-results.html">
-                            <figure class="user-avatar tiny liquid">
-                                <img src="{{ asset('/frontend/assets/img/users/02.jpg')}}" alt="user-01">
-                            </figure>
-                        </a>
-                        <!-- /USER AVATAR -->
-                        <p class="post-author-info small light">By <a href="search-results.html"
-                                class="post-author">Dexter</a><span class="separator">|</span>December 15th, 2018<span
-                                class="separator">|</span><a href="post-v1.html#op-comments"
-                                class="post-comment-count">174
-                                Comments</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur bere adipisicing elit, sed do eiusmod tempor...
-                    </p>
-                </div>
-                <!-- /POST PREVIEW -->
-
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape geeky-news">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-v4.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/05.jpg')}}" alt="post-21">
-                            </figure>
-                            <!-- POST PREVIEW IMG -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-    
-                    <!-- TAG ORNAMENT -->
-                    <a href="news-v4.html" class="tag-ornament">Geeky News</a>
-                    <!-- /TAG ORNAMENT -->
-    
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-v4.html" class="post-preview-title">"Steamboat" anime will have a preview event in May</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
-                                class="post-author">Dexter</a><span class="separator">|</span>Hari, 15 Desember 2018<span
-                                class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
-                                Komentar</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua</p>
-                </div>
-                <!-- /POST PREVIEW -->
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape video geeky-news no-hover">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-video.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/06.jpg')}}" alt="post-31">
-                            </figure>
-                            <!-- /POST PREVIEW IMG -->
-                
-                            <!-- POST PREVIEW OVERLAY -->
-                            <div class="post-preview-overlay">
-                                <!-- PLAY BUTTON -->
-                                <div class="play-button">
-                                    <!-- PLAY BUTTON ICON -->
-                                    <svg class="play-button-icon">
-                                        <use xlink:href="#svg-play"></use>
-                                    </svg>
-                                    <!-- /PLAY BUTTON ICON -->
-                                </div>
-                                <!-- /PLAY BUTTON -->
-                            </div>
-                            <!-- /POST PREVIEW OVERLAY -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-                
-                    <!-- TAG LIST -->
-                    <div class="tag-list">
-                        <a href="browse-videos.html" class="tag-ornament video">Video</a>
-                        <a href="news-v1.html" class="tag-ornament">Geeky News</a>
-                    </div>
-                    <!-- /TAG LIST -->
-                
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-video.html" class="post-preview-title">Galaxy Aventure RX peek at the new weapons</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <!-- USER AVATAR -->
-                        <a href="search-results.html">
-                            <figure class="user-avatar tiny liquid">
-                                <img src="{{ asset('/frontend/assets/img/users/10.jpg')}}" alt="user-01">
-                            </figure>
-                        </a>
-                        <!-- /USER AVATAR -->
-                        <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Dexter</a><span
-                                class="separator">|</span>December 15th, 2018<span class="separator">|</span><a
-                                href="post-v1.html#op-comments" class="post-comment-count">174
-                                Comments</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur bere adipisicing elit, sed do eiusmod tempor...
-                    </p>
-                </div>
-                <!-- /POST PREVIEW -->
-
-                <!-- POST PREVIEW -->
                 <div class="post-preview landscape movie-news">
                     <!-- POST PREVIEW IMG WRAP -->
                     <a href="post-v3.html">
@@ -729,67 +376,9 @@
                     <!-- POST PREVIEW TEXT -->
                     <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt dutor et dolore magna aliqua</p>
-                </div>
-                <!-- /POST PREVIEW -->
-                <!-- POST PREVIEW -->
-                <div class="post-preview landscape video movie-news no-hover">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-video.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/08.jpg')}}" alt="post-31">
-                            </figure>
-                            <!-- /POST PREVIEW IMG -->
-                
-                            <!-- POST PREVIEW OVERLAY -->
-                            <div class="post-preview-overlay">
-                                <!-- PLAY BUTTON -->
-                                <div class="play-button">
-                                    <!-- PLAY BUTTON ICON -->
-                                    <svg class="play-button-icon">
-                                        <use xlink:href="#svg-play"></use>
-                                    </svg>
-                                    <!-- /PLAY BUTTON ICON -->
-                                </div>
-                                <!-- /PLAY BUTTON -->
-                            </div>
-                            <!-- /POST PREVIEW OVERLAY -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-                
-                    <!-- TAG LIST -->
-                    <div class="tag-list">
-                        <a href="browse-videos.html" class="tag-ornament video">Video</a>
-                        <a href="news-v1.html" class="tag-ornament">Movie News</a>
-                    </div>
-                    <!-- /TAG LIST -->
-                
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-video.html" class="post-preview-title">Galaxy Aventure RX peek at the new weapons</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <!-- USER AVATAR -->
-                        <a href="search-results.html">
-                            <figure class="user-avatar tiny liquid">
-                                <img src="{{ asset('/frontend/assets/img/users/12.jpg')}}" alt="user-01">
-                            </figure>
-                        </a>
-                        <!-- /USER AVATAR -->
-                        <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Dexter</a><span
-                                class="separator">|</span>December 15th, 2018<span class="separator">|</span><a
-                                href="post-v1.html#op-comments" class="post-comment-count">174
-                                Comments</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur bere adipisicing elit, sed do eiusmod tempor...
-                    </p>
-                </div>
+                </div>--}}
                 <!-- /POST PREVIEW -->
             </div>
-            <!-- /LAYOUT ITEM -->
             <div class="layout-item centered padded load-more-wrap">
                 <!-- BUTTON -->
                 <a href="news-v1.html" class="button big blue">
@@ -813,9 +402,7 @@
                 <!-- /BUTTON -->
             </div>
         </div>
-        <!-- /LAYOUT BODY -->
     
         @include('front.layouts.sidebar')
     </div>
-    <!-- /LAYOUT CONTENT 1 -->
 @endsection

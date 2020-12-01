@@ -24,115 +24,62 @@
     
         <!-- LAYOUT BODY -->
         <div class="layout-body layout-item">
-            <!-- POST OPEN -->
-            <div class="post-open gaming-news">
-                <!-- POST OPEN CONTENT -->
+            <div class="post-open 
+                @if($content->category_id == 2)
+                    gaming-news
+                @elseif($content->category_id == 1)
+                    e-sport
+                @else
+                    ''
+                @endif">
                 <div class="post-open-content v5">
-                    <!-- POST OPEN BODY  -->
                     <div class="post-open-body">
-                        <!-- TAG LIST -->
                         <div class="tag-list">
-                            <!-- TAG ORNAMENT -->
                             <a href="news-v4.html" class="tag-ornament">{{ $content->formatContent->name }}</a>
-                            <!-- /TAG ORNAMENT -->
                         </div>
-                        <!-- /TAG LIST -->
-    
-                        <!-- POST OPEN TITLE -->
                         <p class="post-open-title">{{ $content->judul }}</p>
-                        <!-- /POST OPEN TITLE -->
-                
-                        <!-- POST OPEN TEXT -->
                         <p class="post-open-subtitle">{{ $content->sub_judul }}</p>
-                        <div class="section-title-wrap blue">
+                        <div class="section-title-wrap 
+                        @if($content->category_id == 2)
+                            blue
+                        @elseif($content->category_id == 1)
+                            violet
+                        @else
+                            ''
+                        @endif">
                             <div class="section-title-separator"></div>
                         </div>
-                        <!-- /POST OPEN TEXT -->
-
-                        <!-- POST AUTHOR INFO -->
                         <div style="margin-top: 5px;margin-bottom:40px;display: flex; justify-content: center;" class="post-author-info-wrap">
-                            <!-- USER AVATAR -->
                             <a href="search-results.html">
                                 <figure class="user-avatar tiny liquid">
                                     <img src="{{ asset('/frontend/assets/img/users/01.jpg')}}" alt="user-01">
                                 </figure>
                             </a>
-                            <!-- /USER AVATAR -->
                             <p style="display: flex; justify-content: center; align-items: center" class="post-author-info small light">Oleh 
                                 <a href="search-results.html" class="post-author" style="margin-left:2px"> {{ $content->writer->name }}</a>
                                 <span class="separator">-</span>{{ $newDate }}
                                 <!-- Senin, 19 Oktober 2020, 14:29 WIB -->
                                 <span class="separator">-</span>
-                                <!-- BUBBLE ORNAMENT -->
                                 <a href="#" class="bubble-ornament fb">
-                                    <!-- FACEBOOK ICON -->
                                     <svg class="facebook-icon">
                                         <use xlink:href="#svg-facebook"></use>
                                     </svg>
-                                    <!-- /FACEBOOK ICON -->
                                 </a>
-                                <!-- /BUBBLE ORNAMENT -->
-    
-                                <!-- BUBBLE ORNAMENT -->
                                 <a href="#" class="bubble-ornament twt">
-                                    <!-- TWITTER ICON -->
                                     <svg class="twitter-icon">
                                         <use xlink:href="#svg-twitter"></use>
                                     </svg>
-                                    <!-- /TWITTER ICON -->
                                 </a>
-                                <!-- /BUBBLE ORNAMENT -->
-    
-                                <!-- BUBBLE ORNAMENT -->
                                 <a href="#" class="bubble-ornament gplus">
-                                    <!-- GPLUS ICON -->
                                     <svg class="gplus-icon">
                                         <use xlink:href="#svg-gplus"></use>
                                     </svg>
-                                    <!-- /GPLUS ICON -->
                                 </a>
-                                <!-- /BUBBLE ORNAMENT -->
                             </p>
                         </div>
-                        <!-- /POST AUTHOR INFO -->
-                        
-                        <!-- POST OPEN TEXT -->
                         <div class="post-open-text">{{ $content->konten }}</div>
-                        <!-- /POST OPEN TEXT -->
                         
                     </div>
-                    <div class="game-card-wrap grid-limit">
-                        <img class="gambar-gantung" src="{{ asset('/frontend/assets/img/posts/02_tall.jpg')}}" alt="">
-                        <div class="card-profil-game centered">
-                            <div class="section-title-wrap">
-                                <div style="padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.15)" class="section-title medium">Game Database</div>
-                            </div>
-                            <ul class="profil-game-text">
-                                <li class="text-judul">Platform:</li>
-                                <li class="text-isi">asdghjkl</li>
-                                <li class="text-judul">Tanggal Rilis:</li>
-                                <li class="text-isi">12 Bulan 1234 (UK), 12 Bulan 1234 (UK)</li>
-                                <li class="text-judul">Publisher:</li>
-                                <li class="text-isi">Publisher 1</li>
-                                <li class="text-judul">Developer:</li>
-                                <li class="text-isi">Developer</li>
-                                <li class="text-judul">Genre:</li>
-                                <li class="text-isi">Game</li>
-                                <a style="width: 100%; margin-top: 15px;" href="#" class="button disable">Selengkapnya
-                                    <!-- BUTTON ORNAMENT -->
-                                    <div class="button-ornament">
-                                        <!-- ARROW ICON -->
-                                        <svg class="arrow-icon medium">
-                                            <use xlink:href="#svg-arrow-medium"></use>
-                                        </svg>
-                                        <!-- /ARROW ICON -->
-                                    </div>
-                                    <!-- /BUTTON ORNAMENT -->
-                                </a>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /POST OPEN BODY -->
 
                     
                     <div class="fb-comments" data-href="https://localhost:8000/post/third" data-numposts="3" data-width=""></div>

@@ -33,7 +33,7 @@
                         <!-- TAG LIST -->
                         <div class="tag-list">
                             <!-- TAG ORNAMENT -->
-                            <a href="news-v4.html" class="tag-ornament">Geeky News</a>
+                            <a href="news-v4.html" class="tag-ornament">{{ $content->formatContent->name }}</a>
                             <!-- /TAG ORNAMENT -->
                         </div>
                         <!-- /TAG LIST -->

@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\Frontend\BeritaController;
 use App\Http\Controllers\Frontend\HomeController;
+
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 
@@ -45,12 +46,6 @@ Route::get('/dashboard', function () {
 });
 Route::get('/create-content', function () {
     return view('back.create-content');
-});
-Route::get('/content-list', function () {
-    return view('back.content-list');
-});
-Route::get('/content-preview', function () {
-    return view('back.content-preview');
 });
 
 

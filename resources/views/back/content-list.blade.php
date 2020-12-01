@@ -67,7 +67,7 @@
                 </div>
                 <div class="ml-3 mr-auto">
                     <a href="" class="font-medium">Leonardo DiCaprio</a> 
-                    <div class="flex text-gray-600 truncate text-xs mt-1"> <a class="text-theme-1 inline-block truncate" href="">Photography</a> <span class="mx-1">•</span> 14 seconds ago </div>
+                    <div class="flex text-gray-600 truncate text-xs mt-1"> <a class="text-theme-1 inline-block truncate" href="">{{ $content->formatContent->name }}</a> <span class="mx-1">•</span> 14 seconds ago </div>
                 </div>
                 <div class="dropdown relative ml-3">
                     <a href="javascript:;" class="dropdown-toggle w-5 h-5 text-gray-500"> <i data-feather="more-vertical" class="w-4 h-4"></i> </a>

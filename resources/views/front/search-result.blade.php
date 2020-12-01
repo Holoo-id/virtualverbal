@@ -198,7 +198,7 @@
                         <!-- /POST PREVIEW IMG WRAP -->
         
                         <!-- TAG ORNAMENT -->
-                        <a href="esports-news.html" class="tag-ornament">Esports</a>
+                        <a href="esports-news.html" class="tag-ornament">{{ $content->formatContent->name }}</a>
                         <!-- /TAG ORNAMENT -->
         
                         <!-- POST PREVIEW TITLE -->

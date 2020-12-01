@@ -1887,7 +1887,7 @@
                                 </figure>
                             </div>
                         </a>
-                        <a href="news-v1.html" class="tag-ornament">Gaming News</a>
+                        <a href="news-v1.html" class="tag-ornament">{{ $content->formatContent->name }}</a>
                         <a href="post-v1.html" class="post-preview-title">{{ $content->judul }}</a>
                         <div class="post-author-info-wrap">
                             <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"

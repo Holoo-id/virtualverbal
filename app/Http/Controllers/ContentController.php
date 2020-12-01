@@ -11,7 +11,7 @@ class ContentController extends Controller
 {
     public function all()
     {
-        $contents = Content::all();
+        $contents = Content::where('published', '=', 1)->paginate(10);
         // $date = $contents->publish_at;
         // $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
         // return view('front.search-result', compact('contents', 'newDate'));

@@ -12,7 +12,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $contents = Content::all();
+        $contents = Content::where('published', '=', 1)->paginate(6);
         // $date = $contents->publish_at;
         // $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
         // return view('front.search-result', compact('contents', 'newDate'));

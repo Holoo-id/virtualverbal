@@ -381,25 +381,17 @@
             </div>
             <div class="layout-item centered padded load-more-wrap">
                 <!-- BUTTON -->
-                <a href="news-v1.html" class="button big blue">
+                <a href="{{ $contents->links() }}" class="button big blue">
                     Load More
-                    <!-- BUTTON ORNAMENT -->
                     <div class="button-ornament">
-                        <!-- ARROW ICON -->
                         <svg class="arrow-icon medium">
                             <use xlink:href="#svg-arrow-medium"></use>
                         </svg>
-                        <!-- /ARROW ICON -->
-                
-                        <!-- CROSS ICON -->
                         <svg class="cross-icon small">
                             <use xlink:href="#svg-cross-small"></use>
                         </svg>
-                        <!-- /CROSS ICON -->
                     </div>
-                    <!-- /BUTTON ORNAMENT -->
                 </a>
-                <!-- /BUTTON -->
             </div>
         </div>
     

@@ -58,6 +58,7 @@
     <body>
         <div id="fb-root"></div>
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v9.0" nonce="WMSHG28e"></script>
+        
         @include('front.layouts.header')
         @yield('content')
         @include('front.layouts.footer')

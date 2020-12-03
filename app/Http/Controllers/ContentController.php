@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Content;
+use App\Models\FormatContent;
+use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Storage;
@@ -11,11 +13,12 @@ class ContentController extends Controller
 {
     public function all()
     {
+        $authors = User::all();
+        $categories = FormatContent::all();
         $contents = Content::where('published', '=', 1)->paginate(10);
-        // $date = $contents->publish_at;
+        // $date = Content::select('published_at');
         // $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
-        // return view('front.search-result', compact('contents', 'newDate'));
-        return view('front.search-result', compact('contents'));
+        return view('front.search-result', compact('authors', 'categories', 'contents', 'newDate'));
     }
 
     public function detail($id = 340)
@@ -28,11 +31,13 @@ class ContentController extends Controller
 
     public function list()
     {
+        $authors = User::all();
+        $categories = FormatContent::all();
         $contents = Content::all();
         // $date = $contents->publish_at;
         // $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
         // return view('front.search-result', compact('contents', 'newDate'));
-        return view('back.content-list', compact('contents'));
+        return view('back.content-list', compact('authors', 'categories', 'contents'));
     }
 
     public function post()

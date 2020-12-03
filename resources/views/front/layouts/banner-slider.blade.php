@@ -1,6 +1,4 @@
-<!-- BANNER SLIDER -->
 <div id="banner-slider-2" class="banner-slider v2">
-    <!-- SLIDER ITEMS -->
     <div class="slider-items">
         <!-- SLIDER ITEM -->
         <div class="slider-item slider-item-1">
@@ -202,9 +200,6 @@
         </div>
         <!-- /SLIDER ITEM -->
     </div>
-    <!-- /SLIDER ITEMS -->
-
-    <!-- BANNER SLIDER PREVIEW WRAP -->
     <div class="banner-slider-preview-wrap">
         <!-- BANNER SLIDER CONTROLS -->
         <div id="sliderb2-controls" class="banner-slider-controls">
@@ -281,6 +276,4 @@
         </div>
         <!-- /BANNER SLIDER ROSTER -->
     </div>
-    <!-- /BANNER SLIDER PREVIEW WRAP -->
 </div>
-<!-- /BANNER SLIDER -->

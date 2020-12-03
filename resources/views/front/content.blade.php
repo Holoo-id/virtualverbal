@@ -1,24 +1,15 @@
 @extends('front.layouts.base')
 
 @section('content')
-    <!-- LAYOUT ITEM -->
     <div class="layout-item gutter-big">
-        <!-- POST OPEN -->
         <div class="post-open game-review">
-            <!-- POST OPEN IMG WRAP -->
             <div class="post-open-img-wrap">
-                <!-- POST OPEN IMG -->
                 <figure class="post-open-img2 liquid">
                     <img src="{{ asset('/frontend/assets/img/posts/18.jpg')}}" alt="post-12">
                 </figure>
-                <!-- /POST OPEN IMG -->
             </div>
-            <!-- /POST OPEN IMG WRAP -->
         </div>
-        <!-- /POST OPEN -->
     </div>
-    <!-- /LAYOUT ITEM -->
-    <!-- LAYOUT CONTENT 2 -->
     <div class="layout-content-2 layout-item-1-2-1 own-grid centered">
         @include('front.layouts.sidebar-left')
     
@@ -457,5 +448,4 @@
 
         @include('front.layouts.sidebar-right')
     </div>
-    <!-- /LAYOUT CONTENT 2 -->
 @endsection

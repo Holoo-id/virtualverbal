@@ -1,12 +1,9 @@
-<!-- FOOTER TOP WRAP -->
 <div class="footer-top-wrap">
-    <!-- FOOTER TOP -->
     <div class="footer-top">
 
         <!-- LINE SEPARATOR -->
         <div class="line-separator negative"></div>
 
-        <!-- FOOTER TOP WIDGETS -->
         <div class="footer-top-widgets grid-4col centered gutter-big">
 
             <!-- FOOTER TOP WIDGET -->
@@ -81,13 +78,9 @@
             </div>
             <!-- FOOTER TOP WIDGET -->
         </div>
-        <!-- /FOOTER TOP WIDGETS -->
     </div>
-    <!-- /FOOTER TOP -->
+    
     <div class="footer-bottom grid-limit">
         <p class="footer-bottom-text">© Copyright 2020<span class="separator">-</span><span class="brand"><a class="highlighted" href="">virtualverbal.com</a></span>. All Rights Reserved<span class="separator">|</span><span class="brand"><a class="highlighted" href="">virtualverbal.com</a></span> is part of <span class="brand"><a class="highlighted" href="https://holoo.id/">Holoo.id</a></span>.</p>
     </div>
 </div>
-<!-- /FOOTER TOP WRAP -->
-</div>
-<!-- /FOOTER BOTTOM WRAP -->

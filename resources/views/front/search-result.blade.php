@@ -14,91 +14,46 @@
                 <!-- /FILTER HEADING TEXT -->
             </div>
             <div class="filters-row">
-                <!-- DROPDOWN SIMPLE WRAP -->
                 <div class="dropdown-simple-wrap">
-                    <!-- DP CURRENT OPTION -->
                     <div id="filter-01-dropdown-trigger" class="dp-current-option">
-                        <!-- DP CURRENT OPTION VALUE -->
                         <div id="filter-01-dropdown-option-value" class="dp-current-option-value">
                             <p class="dp-option-text">All Categories</p>
                         </div>
-                        <!-- /DP CURRENT OPTION VALUE -->
-            
-                        <!-- ARROW ICON -->
                         <svg class="arrow-icon">
                             <use xlink:href="#svg-arrow"></use>
                         </svg>
-                        <!-- /ARROW ICON -->
                     </div>
-                    <!-- /DP CURRENT OPTION -->
-            
-                    <!-- DP OPTIONS -->
                     <div id="filter-01-dropdown" class="dp-options small">
-                        <!-- DP OPTION -->
                         <div class="dp-option">
                             <p class="dp-option-text">All Categories</p>
                         </div>
-                        <!-- /DP OPTION -->
-            
-                        <!-- DP OPTION -->
-                        <div class="dp-option">
-                            <p class="dp-option-text">News</p>
-                        </div>
-                        <!-- /DP OPTION -->
-            
-                        <!-- DP OPTION -->
-                        <div class="dp-option">
-                            <p class="dp-option-text">Reviews</p>
-                        </div>
-                        <!-- /DP OPTION -->
+                        @foreach($categories as $category)
+                            <div class="dp-option">
+                                <p class="dp-option-text">{{ $category->name }}</p>
+                            </div>
+                        @endforeach
                     </div>
-                    <!-- /DP OPTIONS -->
                 </div>
-                <!-- /DROPDOWN SIMPLE WRAP -->
-            
-                <!-- DROPDOWN SIMPLE WRAP -->
                 <div class="dropdown-simple-wrap">
-                    <!-- DP CURRENT OPTION -->
                     <div id="filter-02-dropdown-trigger" class="dp-current-option">
-                        <!-- DP CURRENT OPTION VALUE -->
                         <div id="filter-02-dropdown-option-value" class="dp-current-option-value">
                             <p class="dp-option-text">All Authors</p>
                         </div>
-                        <!-- /DP CURRENT OPTION VALUE -->
-            
-                        <!-- ARROW ICON -->
                         <svg class="arrow-icon">
                             <use xlink:href="#svg-arrow"></use>
                         </svg>
-                        <!-- /ARROW ICON -->
                     </div>
-                    <!-- /DP CURRENT OPTION -->
-            
-                    <!-- DP OPTIONS -->
                     <div id="filter-02-dropdown" class="dp-options small">
-                        <!-- DP OPTION -->
                         <div class="dp-option">
                             <p class="dp-option-text">All Authors</p>
                         </div>
-                        <!-- /DP OPTION -->
-            
-                        <!-- DP OPTION -->
-                        <div class="dp-option">
-                            <p class="dp-option-text">Vellatrix</p>
-                        </div>
-                        <!-- /DP OPTION -->
-            
-                        <!-- DP OPTION -->
-                        <div class="dp-option">
-                            <p class="dp-option-text">Dexter</p>
-                        </div>
-                        <!-- /DP OPTION -->
+                        @foreach($authors as $author)
+                            <div class="dp-option">
+                                <p class="dp-option-text">{{ $author->name }}</p>
+                            </div>
+                        @endforeach
                     </div>
-                    <!-- /DP OPTIONS -->
                 </div>
-                <!-- /DROPDOWN SIMPLE WRAP -->
-            
-                <!-- DROPDOWN SIMPLE WRAP -->
                 <div class="dropdown-simple-wrap">
                     <!-- DP CURRENT OPTION -->
                     <div id="filter-03-dropdown-trigger" class="dp-current-option">

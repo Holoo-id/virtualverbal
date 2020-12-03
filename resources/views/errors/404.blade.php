@@ -38,36 +38,15 @@
     </head>
 
     <body>
-        <!-- LAYOUT CONTENT FULL -->
         <div class="layout-content-full v3">
-            <!-- ERROR DISPLAY -->
             <div class="error-display grid-limit">
-                <!-- ERROR IMG -->
                 <figure class="error-img liquid">
                     <img src="{{ asset('/frontend/assets/img/other/error-img.png')}}" alt="error-img">
                 </figure>
-                <!-- /ERROR IMG -->
-
-                <!-- ERROR TITLE -->
                 <p class="error-title">Error 404</p>
-                <!-- /ERROR TITLE -->
-
-                <!-- ERROR SUBTITLE -->
                 <p class="error-subtitle">Halaman tidak ditemukan</p>
-                <!-- /ERROR SUBTITLE -->
-
-                <!-- <p class="error-text">
-                    The page you are looking for has been moved or doesn’t exist anymore,
-                     if you like you can return to the previous page,
-                      or go to our main homepage.
-                       If the problem persists,
-                        please send us an email to 
-                        <a class="highlight" href="mailto:info@pixeldiamonds.com">info@pixeldiamonds.com</a>
-                </p> -->
             </div>
-            <!-- /ERROR DISPLAY -->
         </div>
-        <!-- LAYOUT CONTENT FULL -->
 
         <script src="{{ asset('/frontend/assets/js/script.js') }}"></script>
         <script src="{{ asset('/frontend/assets/js/app.bundle.min.js') }}"></script>

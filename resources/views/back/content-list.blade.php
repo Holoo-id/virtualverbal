@@ -18,17 +18,17 @@
                 <div class="sm:mt-2 mr-2">
                     <select class="select2 w-full input" multiple>
                         <option value="" selected disabled hidden>Penulis</option>
-                        <option value="1">Josh</option>
-                        <option value="2">Abraham</option>
-                        <option value="3">James</option>
+                        @foreach($authors as $author)
+                            <option value="{{ $author->id }}">{{ $author->name }}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="sm:mt-2 mr-2">
                     <select data-hide-search="true" class="select2 w-full input">
                         <option value="" selected disabled hidden>Format</option>
-                        <option value="1">Semua</option>
-                        <option value="2">Artikel</option>
-                        <option value="3">Berita</option>
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="sm:mt-2 mr-2">

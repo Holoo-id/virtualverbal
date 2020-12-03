@@ -3992,3 +3992,10 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+  $(".live-news-widget-title-wrap").click(function(){
+    $('#popup-login').click();
+  });
+});
+</script>

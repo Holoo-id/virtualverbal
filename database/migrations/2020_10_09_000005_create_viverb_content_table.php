@@ -27,7 +27,8 @@ class CreateViverbContentTable extends Migration
             $table->foreignId('category_id');
             $table->integer('igdb_id')->nullable();
             $table->boolean('published')->default(false);
-            $table->date('publish_at')->nullable();
+            $table->dateTime('publish_at')->nullable();
+            $table->bigInteger('views')->default(0);
         });
     }
 

@@ -17,7 +17,7 @@ class CreateViverbTopics extends Migration
             $table->id();
             $table->string('name');
             $table->text('url')->nullable();
-            $table->string('color_code')->default('#FFFFFF');
+            $table->string('color_code')->default('transparent');
             $table->timestamps();
         });
     }

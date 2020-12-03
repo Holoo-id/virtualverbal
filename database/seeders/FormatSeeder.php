@@ -24,6 +24,14 @@ class FormatSeeder extends Seeder
             [
                 'name' => 'Artikel',
                 'created_at' => Carbon::now()
+            ],
+            [
+                'name' => 'LiveNews',
+                'created_at' => Carbon::now()
+            ],
+            [
+                'name' => 'Video',
+                'created_at' => Carbon::now()
             ]
         ]);
     }

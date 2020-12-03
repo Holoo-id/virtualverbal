@@ -42,21 +42,13 @@
         </div>
 
         <ul class="custom-tags-wrap">
-            <ul class="custom-tags">
-                <li class="custom-tag">
-                    <a href="">gamegame</a>
-                </li>
-            </ul>
-            <ul class="custom-tags">
-                <li class="custom-tag">
-                    <a href="">gamegame</a>
-                </li>
-            </ul>
-            <ul class="custom-tags">
-                <li class="custom-tag">
-                    <a href="">gamegame</a>
-                </li>
-            </ul>
+           @foreach($content->tags as $tag)
+                <ul class="custom-tags">
+                    <li class="custom-tag">
+                        <a href="{{ $tag->url }}">{{ $tag->name }}</a>
+                    </li>
+                </ul>
+            @endforeach
         </ul>
     </div>
 </div>

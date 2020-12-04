@@ -87,9 +87,6 @@
                     </div>
                     <!-- /DP OPTIONS -->
                 </div>
-                <!-- /DROPDOWN SIMPLE WRAP -->
-            
-                <!-- DROPDOWN SIMPLE WRAP -->
                 <div class="dropdown-simple-wrap">
                     <!-- DP CURRENT OPTION -->
                     <div id="filter-04-dropdown-trigger" class="dp-current-option">
@@ -123,10 +120,7 @@
                     </div>
                     <!-- /DP OPTIONS -->
                 </div>
-                <!-- /DROPDOWN SIMPLE WRAP -->
             </div>
-
-            <!-- LAYOUT ITEM -->
             <div class="layout-item">
                 <!-- POST PREVIEW -->
                 @foreach($contents as $content)

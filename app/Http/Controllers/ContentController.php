@@ -18,7 +18,7 @@ class ContentController extends Controller
         $contents = Content::where('published', '=', 1)->paginate(10);
         // $date = Content::select('published_at');
         // $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
-        return view('front.search-result', compact('authors', 'categories', 'contents', 'newDate'));
+        return view('front.search-result', compact('authors', 'categories', 'contents'));
     }
 
     public function detail($id = 340)

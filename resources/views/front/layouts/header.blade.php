@@ -58,8 +58,9 @@
                     <div class="form-actions full">
                         <button type="submit" class="button blue full">Masuk!</button>
                         <div class="social-buttons">
-                            <a href="#" class="button-social fb">Facebook Login</a>
-                            <a href="#" class="button-social twt">Twitter Login</a>
+                            <div class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
+                            <!-- <a href="#" class="button-social fb fb-login-button" disabled>Facebook Login</a> -->
+                            <a href="#" class="button-social twt" disabled>Twitter Login</a>
                         </div>
                     </div>
                 </form>
@@ -4008,5 +4009,6 @@
         </div>
     </div>
 </div>
+
 <div id="forValidationFail" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); position: fixed; top: 0px; left: 0px; z-index: 100000; opacity: 0; visibility: hidden; transition: opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
 </div>

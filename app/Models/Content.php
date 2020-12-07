@@ -12,11 +12,15 @@ class Content extends Model
     use HasFactory;
     protected $table = 'v_content';
     protected $fillable = [
-        'judul','konten','sub_judul','permalink','image_path','image_name','category_id','published', 'publish_at'
+        'judul','konten','sub_judul','permalink','image_path','image_name','category_id','published', 'publish_at', 'igdb_id'
     ];
 
     public function formatContent(){
     	return $this->belongsTo(FormatContent::class, 'category_id');
+    }
+
+    public function game(){
+    	return $this->belongsTo('MarcReichel\IGDBLaravel\Models\Game', 'igdb_id');
     }
     
     public function tags(){

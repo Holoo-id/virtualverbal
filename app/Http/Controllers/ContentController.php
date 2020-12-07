@@ -7,6 +7,7 @@ use App\Models\FormatContent;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use MarcReichel\IGDBLaravel\Models\Game;
 use Storage;
 
 class ContentController extends Controller
@@ -26,7 +27,9 @@ class ContentController extends Controller
     {
         $content = Content::where('id', $id)->first();
         $date = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
-        return view('front.content', compact('content', 'date'));
+        $games = Game::with(['cover'])->where('id', $content->igdb_id)->get();
+
+        return view('front.content', compact('content', 'date', 'games'));
     }
 
     public function list()

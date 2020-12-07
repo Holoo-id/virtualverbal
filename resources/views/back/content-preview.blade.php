@@ -5,7 +5,7 @@
         <h2 class="intro-y font-medium text-xl sm:text-2xl">
             {{ $content->judul }}
         </h2>
-        <div class="intro-y text-gray-700 mt-3 text-xs sm:text-sm"> {{ $newDate }} <span class="mx-1">•</span> <a class="text-theme-1" href="">{{ $content->formatContent->name }}</a> <span class="mx-1">•</span> 7 Min read </div>
+        <div class="intro-y text-gray-700 mt-3 text-xs sm:text-sm"> {{ $date }} <span class="mx-1">•</span> <a class="text-theme-1" href="">{{ $content->formatContent->name }}</a> <span class="mx-1">•</span> 7 Min read </div>
         <div class="intro-y mt-6">
             <div class="news__preview image-fit">
                 <img alt="Midone Tailwind HTML Admin Template" class="rounded-md" src="{{ asset('/backend/dist/images/preview-11.jpg') }}">

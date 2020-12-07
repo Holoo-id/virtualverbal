@@ -13,9 +13,9 @@ class HomeController extends Controller
     public function index()
     {
         $contents = Content::where('published', '=', 1)->paginate(6);
-        // $date = $contents->publish_at;
-        // $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
-        // return view('front.search-result', compact('contents', 'newDate'));
+        foreach ($contents as $content) {
+            $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
+        }
         return view('front.home', compact('contents'));
     }
 }

@@ -50,7 +50,6 @@ Route::get('/create-content', function () {
 
 
 
-
 Route::get('/profil', function () {
     return view('back.profile.profil');
 });

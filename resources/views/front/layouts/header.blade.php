@@ -1,4 +1,5 @@
 <!-- SEARCH POPUP -->
+
 <div class="search-popup">
     <svg class="cross-icon big close-button search-popup-close">
         <use xlink:href="#svg-cross-big"></use>
@@ -139,10 +140,25 @@
     </figure>
 
     <ul class="mobile-menu">
-        @if (!(Auth::Guest()))
-            <li class="mobile-menu-item">
+        @if ((Auth::Guest()))
+        <li class="mobile-menu-item">
+                <p class="mobile-menu-item-link pd-dropdown-handler">Profile</p>
+                <svg class="arrow-icon medium">
+                    <use xlink:href="#svg-arrow-medium"></use>
+                </svg>
+                <ul class="mobile-dropdown pd-dropdown">
+                    <li class="mobile-dropdown-item">
+                        <a href="#" class="mobile-dropdown-item-link popup-login-trigger">Login</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="#" class="mobile-dropdown-item-link popup-register-trigger">Register</a>
+                    </li> 
+                </ul> 
+        </li>
+        @else
+        <li class="mobile-menu-item">
                 <p class="mobile-menu-item-link pd-dropdown-handler">
-                    <img class="widget-option-img user-avatar micro" src="{{ asset(Auth::user()->image)}}" alt="avatar-01">
+                    <img class="widget-option-img user-avatar micro" src="{{ asset(Auth::user()->image)}}" alt="Avatar for {{Auth::user()->name}}">
                     {{Auth::user()->name}}
                 </p>
                 <svg class="arrow-icon medium">
@@ -196,7 +212,7 @@
                         </ul>
                     </li>
                 </ul>
-            </li>
+        </li>
         @endif
         <li class="mobile-menu-item">
             <a href="#" class="mobile-menu-item-link">Games</a>
@@ -3893,12 +3909,12 @@
         <div class="profil-menu">
             <div class="log-link">
                 <!-- Kalo Belum Login -->
-            @if (Auth::guest())
+                @if (Auth::guest())
                 <div class="belum-login">
                     <a class="popup-login-trigger" href="#">login</a> | <a class="popup-register-trigger" href="#">daftar</a>
                 </div>
             </div>
-            @else
+                @else
                 <div class="sudah-login">
                     <a href="esports-home.html" class="main-menu-item-link">
                         <p>
@@ -3930,7 +3946,7 @@
                 </div>
             </div>
             <div class="gambar">
-                <img class="widget-option-img user-avatar" src="{{ asset(Auth::user()->image)}}" alt="{{Auth::user()->image}}">
+                <img class="widget-option-img user-avatar" src="{{ asset(Auth::user()->image)}}" alt="Avatar for {{Auth::user()->name}}">
             </div>
             @endif
             <!-- INVENTORY BUTTON -->
@@ -3992,10 +4008,5 @@
         </div>
     </div>
 </div>
-<script>
-    $(document).ready(function(){
-  $(".live-news-widget-title-wrap").click(function(){
-    $('#popup-login').click();
-  });
-});
-</script>
+<div id="forValidationFail" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); position: fixed; top: 0px; left: 0px; z-index: 100000; opacity: 0; visibility: hidden; transition: opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
+</div>

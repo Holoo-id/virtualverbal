@@ -66,7 +66,13 @@
         <script src="{{ asset('/frontend/assets/js/script.js') }}"></script>
         <script src="{{ asset('/frontend/assets/js/app.bundle.min.js') }}"></script>
         <script src="{{asset('/frontend/assets/js/jquery-3.5.1.min.js')}}"></script>
-        
+        <script>
+            $(document).ready(function(){
+                $(".logo-img").click(function(){
+                    $('.logo-img').hide();
+                });
+            });
+        </script>
     </body>
 
 </html>

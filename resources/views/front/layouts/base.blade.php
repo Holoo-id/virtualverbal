@@ -57,22 +57,22 @@
 
     <body>
         <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-            appId      : '209835257289966',
-            cookie     : true,
-            xfbml      : true,
-            version    : 'v9.0'
-            });
-            FB.AppEvents.logPageView();   
-        };
-        (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+            window.fbAsyncInit = function() {
+                FB.init({
+                appId      : '209835257289966',
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v9.0'
+                });
+                FB.AppEvents.logPageView();   
+            };
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
         </script>
         <!-- // <div id="fb-root"></div>
          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v9.0" nonce="WMSHG28e"></script> -->
@@ -84,19 +84,25 @@
         <script src="{{ asset('/frontend/assets/js/script.js') }}"></script>
         <script src="{{ asset('/frontend/assets/js/app.bundle.min.js') }}"></script>
         <script src="{{asset('/frontend/assets/js/jquery-3.5.1.min.js')}}"></script>
-        
-        @if ($errors->any())
-            @foreach($errors->all() as $error)
-                <p>{{$error}}</p>
-            @endforeach
-        @endif
 
         <script>
-            $(document).ready(function(){
-                $(".logo-img").click(function(){
-                    $('.logo-img').hide();
-                });
+        $(document).ready(function(){
+            
+            @if ($errors->any())
+                $('#forValidationFail').css('opacity','1');
+                $('#forValidationFail').css('visibility','visible');
+                @foreach($errors->all() as $error)
+                    var error_txt = document.createElement("p"); 
+                    error_txt.innerHTML = "{{ $errors }}";
+                    $('#banner-slider-2').after(error_txt);
+                @endforeach
+            @endif
+            
+            $("#forValidationFail").click(function(){
+                $('#forValidationFail').css('opacity','0');
+                $('#forValidationFail').css('visibility','hidden');
             });
+        });
         </script>
     </body>
 

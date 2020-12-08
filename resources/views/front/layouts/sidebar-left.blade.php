@@ -13,27 +13,27 @@
                         <li class="text-judul">Platform:</li>
                         <li class="text-isi">
                             @foreach($game->platforms as $platform)
-                                {{$platform->name}}
+                                <p>{{$platform->name}}</p>
                             @endforeach
                         </li>
                         <li class="text-judul">Tanggal Rilis:</li>
-                        <li class="text-isi">{{ $game->first_release_date }}</li>
+                        <li class="text-isi">{{ $release_date }}</li>
                         <li class="text-judul">Publisher:</li>
                         <li class="text-isi">
                             @foreach($publishers as $publisher)
-                                {{ $publisher->name }}
+                                <p>{{ $publisher->name }}</p>
                             @endforeach
                         </li>
                         <li class="text-judul">Developer:</li>
                         <li class="text-isi">
                             @foreach($developers as $developer)
-                                {{ $developer->name }}
+                                <p>{{ $developer->name }}</p>
                             @endforeach
                         </li>
                         <li class="text-judul">Genre:</li>
                         <li class="text-isi">
                             @foreach($game->genres as $genre)
-                                {{ $genre->name }}
+                                <p>{{ $genre->name }}</p>
                             @endforeach
                         </li>
                         <!-- <a style="width: 100%; margin-top: 15px;" href="#" class="button disable">Selengkapnya

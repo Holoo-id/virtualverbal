@@ -31,7 +31,10 @@ class ContentController extends Controller
         $developers = Company::whereIn('developed', [$content->igdb_id])->get();
         $games = Game::with(['cover', 'genres', 'platforms'])->where('id', $content->igdb_id)->get();
         $publishers = Company::whereIn('published', [$content->igdb_id])->get();
-        return view('front.content', compact('content', 'date', 'developers', 'games', 'publishers'));
+        foreach ($games as $game) {
+            $release_date = \Carbon\Carbon::parse($game->first_release_date)->format('l, d F Y');
+        }
+        return view('front.content', compact('content', 'date', 'developers', 'games', 'publishers', 'release_date'));
     }
 
     public function list()

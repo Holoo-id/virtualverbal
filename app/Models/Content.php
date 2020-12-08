@@ -18,10 +18,6 @@ class Content extends Model
     public function formatContent(){
     	return $this->belongsTo(FormatContent::class, 'category_id');
     }
-
-    public function game(){
-    	return $this->belongsTo('MarcReichel\IGDBLaravel\Models\Game', 'igdb_id');
-    }
     
     public function tags(){
     	return $this->belongsToMany(Topics::class, 'v_relation_tags_content', 'content_id', 'tag_id');

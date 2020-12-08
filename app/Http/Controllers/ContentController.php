@@ -7,6 +7,7 @@ use App\Models\FormatContent;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use MarcReichel\IGDBLaravel\Models\Company;
 use MarcReichel\IGDBLaravel\Models\Game;
 use Storage;
 
@@ -27,9 +28,10 @@ class ContentController extends Controller
     {
         $content = Content::where('id', $id)->first();
         $date = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
-        $games = Game::with(['cover'])->where('id', $content->igdb_id)->get();
-
-        return view('front.content', compact('content', 'date', 'games'));
+        $developers = Company::whereIn('developed', [$content->igdb_id])->get();
+        $games = Game::with(['cover', 'genres', 'platforms'])->where('id', $content->igdb_id)->get();
+        $publishers = Company::whereIn('published', [$content->igdb_id])->get();
+        return view('front.content', compact('content', 'date', 'developers', 'games', 'publishers'));
     }
 
     public function list()

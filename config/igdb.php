@@ -2,11 +2,6 @@
 
 return [
     /*
-     * This is the API Token you got from https://api.igdb.com
-     */
-    'api_token' => env('IGDB_TOKEN', 'fae55dce240a1e74ea9612e68f3645be'),
-    
-    /*
      * These are the credentials you got from https://dev.twitch.tv/console/apps
      */
     'credentials' => [

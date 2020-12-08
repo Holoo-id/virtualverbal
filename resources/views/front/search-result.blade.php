@@ -8,10 +8,8 @@
                 <div class="section-title-separator"></div>
             </div>
             <div class="filter-heading">
-                <!-- FILTER HEADING TEXT -->
                 <p class="filter-heading-text"><span class="highlight">12</span> Results found for: "<span class="highlight">Esports
                         Japan game team</span>"</p>
-                <!-- /FILTER HEADING TEXT -->
             </div>
             <div class="filters-row">
                 <div class="dropdown-simple-wrap">
@@ -55,70 +53,40 @@
                     </div>
                 </div>
                 <div class="dropdown-simple-wrap">
-                    <!-- DP CURRENT OPTION -->
                     <div id="filter-03-dropdown-trigger" class="dp-current-option">
-                        <!-- DP CURRENT OPTION VALUE -->
                         <div id="filter-03-dropdown-option-value" class="dp-current-option-value">
                             <p class="dp-option-text">Order By Date</p>
                         </div>
-                        <!-- /DP CURRENT OPTION VALUE -->
-            
-                        <!-- ARROW ICON -->
                         <svg class="arrow-icon">
                             <use xlink:href="#svg-arrow"></use>
                         </svg>
-                        <!-- /ARROW ICON -->
                     </div>
-                    <!-- /DP CURRENT OPTION -->
-            
-                    <!-- DP OPTIONS -->
                     <div id="filter-03-dropdown" class="dp-options small">
-                        <!-- DP OPTION -->
                         <div class="dp-option">
                             <p class="dp-option-text">Order By Date</p>
                         </div>
-                        <!-- /DP OPTION -->
-            
-                        <!-- DP OPTION -->
                         <div class="dp-option">
                             <p class="dp-option-text">Order By Popularity</p>
                         </div>
-                        <!-- /DP OPTION -->
                     </div>
-                    <!-- /DP OPTIONS -->
                 </div>
                 <div class="dropdown-simple-wrap">
-                    <!-- DP CURRENT OPTION -->
                     <div id="filter-04-dropdown-trigger" class="dp-current-option">
-                        <!-- DP CURRENT OPTION VALUE -->
                         <div id="filter-04-dropdown-option-value" class="dp-current-option-value">
                             <p class="dp-option-text">Descending</p>
                         </div>
-                        <!-- /DP CURRENT OPTION VALUE -->
-            
-                        <!-- ARROW ICON -->
                         <svg class="arrow-icon">
                             <use xlink:href="#svg-arrow"></use>
                         </svg>
-                        <!-- /ARROW ICON -->
                     </div>
-                    <!-- /DP CURRENT OPTION -->
-            
-                    <!-- DP OPTIONS -->
                     <div id="filter-04-dropdown" class="dp-options small">
-                        <!-- DP OPTION -->
                         <div class="dp-option">
                             <p class="dp-option-text">Descending</p>
                         </div>
-                        <!-- /DP OPTION -->
-            
-                        <!-- DP OPTION -->
                         <div class="dp-option">
                             <p class="dp-option-text">Ascending</p>
                         </div>
-                        <!-- /DP OPTION -->
                     </div>
-                    <!-- /DP OPTIONS -->
                 </div>
             </div>
             <div class="layout-item">
@@ -143,8 +111,8 @@
                         <a href="{{ $content->permalink }}" class="post-preview-title">{{ $content->judul }}</a>
                         <div class="post-author-info-wrap">
                             <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
-                                    class="post-author">{{ $content->writer->name }}</a><span class="separator">|</span>hari, 12 bulan 1234<span
-                                    class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
+                                    class="post-author">{{ $content->writer->name }}</a><span class="separator">|</span>{{ $content->publish_at }}<span
+                                    class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">{{ $content->views }}
                                     Komentar</a></p>
                         </div>
                         <p class="post-preview-text">{{ $content->sub_judul }}</p>

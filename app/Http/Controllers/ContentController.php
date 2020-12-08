@@ -7,6 +7,7 @@ use App\Models\FormatContent;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use MarcReichel\IGDBLaravel\Models\Game;
 use Storage;
 
 class ContentController extends Controller
@@ -14,19 +15,21 @@ class ContentController extends Controller
     public function all()
     {
         $authors = User::all();
-        $categories = FormatContent::all();
+        $categories = FormatContent::where('id', '!=', 3)->get();
         $contents = Content::where('published', '=', 1)->paginate(10);
-        // $date = Content::select('published_at');
-        // $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
+        foreach ($contents as $content) {
+            $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
+        }
         return view('front.search-result', compact('authors', 'categories', 'contents'));
     }
 
-    public function detail($id = 340)
+    public function detail($id = 548)
     {
         $content = Content::where('id', $id)->first();
-        $date = $content->publish_at;
-        $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
-        return view('front.content', compact('content', 'newDate'));
+        $date = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
+        $games = Game::with(['cover'])->where('id', $content->igdb_id)->get();
+
+        return view('front.content', compact('content', 'date', 'games'));
     }
 
     public function list()
@@ -34,9 +37,9 @@ class ContentController extends Controller
         $authors = User::all();
         $categories = FormatContent::all();
         $contents = Content::all();
-        // $date = $contents->publish_at;
-        // $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
-        // return view('front.search-result', compact('contents', 'newDate'));
+        foreach ($contents as $content) {
+            $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
+        }
         return view('back.content-list', compact('authors', 'categories', 'contents'));
     }
 
@@ -48,9 +51,8 @@ class ContentController extends Controller
     public function preview($id = 340)
     {
         $content = Content::where('id', $id)->first();
-        $date = $content->publish_at;
-        $newDate = \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('l, d F Y');
-        return view('back.content-preview', compact('content', 'newDate'));
+        $date = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
+        return view('back.content-preview', compact('content', 'date'));
     }
 
     public function tambah(Request $request)

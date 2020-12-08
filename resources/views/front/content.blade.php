@@ -31,13 +31,13 @@
                         <p class="post-open-title">{{ $content->judul }}</p>
                         <p class="post-open-subtitle">{{ $content->sub_judul }}</p>
                         <div class="section-title-wrap 
-                        @if($content->category_id == 2)
-                            blue
-                        @elseif($content->category_id == 1)
-                            violet
-                        @else
-                            ''
-                        @endif">
+                            @if($content->category_id == 2)
+                                blue
+                            @elseif($content->category_id == 1)
+                                violet
+                            @else
+                                ''
+                            @endif">
                             <div class="section-title-separator"></div>
                         </div>
                         <div style="margin-top: 5px;margin-bottom:40px;display: flex; justify-content: center;" class="post-author-info-wrap">
@@ -48,7 +48,7 @@
                             </a>
                             <p style="display: flex; justify-content: center; align-items: center" class="post-author-info small light">Oleh 
                                 <a href="search-results.html" class="post-author" style="margin-left:2px"> {{ $content->writer->name }}</a>
-                                <span class="separator">-</span>{{ $newDate }}
+                                <span class="separator">-</span>{{ $date }}
                                 <!-- Senin, 19 Oktober 2020, 14:29 WIB -->
                                 <span class="separator">-</span>
                                 <a href="#" class="bubble-ornament fb">
@@ -68,7 +68,9 @@
                                 </a>
                             </p>
                         </div>
-                        <div class="post-open-text">{{ $content->konten }}</div>
+                        <div class="post-open-text">
+                            <?php echo($content->konten) ?>
+                        </div>
                         
                     </div>
 

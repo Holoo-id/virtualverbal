@@ -10879,6 +10879,18 @@ visibility: hidden;
     font-size: 13px;
 }
 
+.widget-sidebar .game-card-wrap .card-profil-game .profil-game-text .text-isi p,
+.post-open .game-card-wrap .card-profil-game .profil-game-text .text-isi p{
+    font-family: 'Rubik', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 27px;
+    display: inline;
+    border-right: 1px solid rgba(255,255,255,0.75);
+    color: #fff;
+    padding-right: 5px;
+}
+
 .widget-sidebar .sidebar-search-form {
     width: 270px;
     position: static

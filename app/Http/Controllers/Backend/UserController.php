@@ -18,7 +18,7 @@ class UserController extends Controller
                 $validated = $request->validate([
                     'image' => 'mimes:jpeg,png|max:1014'
                 ]);
-                $request->image->storeAs('/storage/images/users/', $request->image->getClientOriginalName());
+                $request->image->storeAs('public/storage/images/users/', $request->image->getClientOriginalName());
                 $url = "/storage/images/users/".$request->image->getClientOriginalName();
                 $new_user->image = $url;
                 $new_user->save();

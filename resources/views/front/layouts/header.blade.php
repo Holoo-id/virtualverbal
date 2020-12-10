@@ -28,7 +28,7 @@
                 </div>
                 <form class="form-wrap" method='POST' action="{{ route('login') }}">
                     @csrf
-                    <div class="form-row">
+                    <div id="login-form" class="form-row">
                         <div class="form-item blue">
                             <label for="login_email" class="rl-label">E-Mail:</label>
                             <input type="text" id="login_email" name="email"
@@ -56,11 +56,11 @@
                         <a href="#" class="link-text-form blue">Lupa Password?</a>
                     </div>
                     <div class="form-actions full">
-                        <button type="submit" class="button blue full">Masuk!</button>
+                        <button type="submit" class="button blue full disabled" id="login_btn" disabled="true">Masuk!</button>
                         <div class="social-buttons">
-                            <div class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
+                            <div style="padding-top: 20px; padding-left: 17%" class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="50"></div>
                             <!-- <a href="#" class="button-social fb fb-login-button" disabled>Facebook Login</a> -->
-                            <a href="#" class="button-social twt" disabled>Twitter Login</a>
+                            <button href="#" style="margin-left:25% !important;" class="button disabled" disabled>Twitter Login</button>
                         </div>
                     </div>
                 </form>
@@ -91,29 +91,29 @@
                 </div>
             <form class="form-wrap" method="POST" action="{{ route('register') }}">
                 @csrf
-                    <div class="form-row">
+                    <div id="register-form" class="form-row">
                         <div class="form-item red">
-                            <label for="register_email_04" class="rl-label">E-Mail:</label>
-                            <input type="text" id="register_email_04" name="email"
+                            <label for="register_email" class="rl-label">E-Mail:</label>
+                            <input type="text" id="register_email" name="email"
                                 placeholder="Masukkan E-Mail kamu...">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-item red">
-                            <label for="register_pwd_04" class="rl-label">Password</label>
-                            <input type="password" id="register_pwd_04" name="password"
+                            <label for="register_pwd" class="rl-label">Password</label>
+                            <input type="password" id="register_pwd" name="password"
                                 placeholder="Masukkan Password kamu...">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-item red">
-                            <label for="register_pwd_repeat_04" class="rl-label">Ulangi Password</label>
-                            <input type="password" id="register_pwd_repeat_04" name="password_confirmation"
+                            <label for="register_pwd_repeat" class="rl-label">Ulangi Password</label>
+                            <input type="password" id="register_pwd_repeat" name="password_confirmation"
                                 placeholder="Tulis kembali Password kamu...">
                         </div>
                     </div>
                     <div class="form-actions full">
-                        <button class="button red full">Buat akun!</button>
+                        <button id="register_btn" class="button red full disabled" disabled="true">Buat akun!</button>
                         <p class="form-info-text">Cek E-Mail kamu setelah mendaftar!</p>
                     </div>
                 </form>

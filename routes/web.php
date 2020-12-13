@@ -6,7 +6,7 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\Frontend\BeritaController;
 use App\Http\Controllers\Frontend\HomeController;
-
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 
@@ -48,8 +48,6 @@ Route::get('/create-content', function () {
     return view('back.create-content');
 });
 
-
-
 Route::get('/profil', function () {
     return view('back.profile.profil');
 });
@@ -79,19 +77,24 @@ Route::prefix('/back')->group(function (){
 });
 
 // Route untuk verifikasi email
-Route::get('/email/verify', function () {
-    return view('auth.verify-email');
-})->middleware(['auth'])->name('verification.notice');
+    Route::get('/email/verify', function () {
+        return view('auth.verify-email');
+    })->middleware(['auth'])->name('verification.notice');
 
-Route::post('/email/verification-notification', function (Request $request){
-    $request->user()->sendEmailVerificationNotification();
-    return back()->with('status', 'verification-link-sent');
-})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+    Route::post('/email/verification-notification', function (Request $request){
+        $request->user()->sendEmailVerificationNotification();
+        return back()->with('status', 'verification-link-sent');
+    })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
-Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
-    $request->fulfill();
-    return view('auth.after-registration');
-})->middleware(['auth', 'signed'])->name('verification.verify');
+    Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request, $id) {
+        $request->fulfill();
+        $encrypted_id = Crypt::encryptString($id);
+        return redirect('/email/verify/'.$encrypted_id);
+    })->middleware(['auth', 'signed'])->name('verification.verify');
 
-Route::post('/email/verify/{id}/{hash}', [UserController::class, 'finalizeRegister']);
+    Route::get('/email/verify/{encrypted_id}', function(){
+        return view('auth.after-registration');
+    })->middleware(['auth']);
+
+    Route::post('/email/verify/{encrypted_id}', [UserController::class, 'finalizeRegister']);
 // Route untuk verifikasi email

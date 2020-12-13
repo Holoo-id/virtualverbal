@@ -46,6 +46,25 @@
 
 	</head>
     <body class="login">
+        <style>
+            .button.disabled {
+                color: #8b8b8b;
+                background-color: #363636;
+                pointer-events: none
+            }
+            .button.disabled .arrow-icon {
+                display: none
+            }
+            .button.disabled .cross-icon {
+                display: block
+            }
+            .button.disabled:hover {
+                background-color: #363636
+            }
+            .button.disabled:hover .button-ornament {
+                background-color: #777
+            }
+        </style>
         <div class="content">
             <div class="container sm:px-10">
                 <div class="block xl:grid grid-cols-2 gap-4">
@@ -75,10 +94,10 @@
                             <div class="intro-x mt-8">
                                 <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" method="POST" enctype="multipart/form-data">
                                     @csrf
-                                    <input type="text" class="intro-x login__input input input--lg border border-gray-300 block" placeholder="Username" name="username" required>
-                                    <input type="file" class="intro-x login__input input input--lg border border-gray-300 block mt-4" placeholder="Your Photo" name="image">
+                                    <input type="text" class="intro-x login__input input input--lg border border-gray-300 block" placeholder="Username" name="username" id="register_username" required>
+                                    <input type="file" class="intro-x login__input input input--lg border border-gray-300 block mt-4" placeholder="Your Photo" name="image" id="register_image" accept="image/*">
                                     <div class="intro-x mt-5 xl:mt-8 text-center xl:text-left">
-                                    <button type="submit" class="button button--lg w-full xl:w-32 text-white bg-theme-1 xl:mr-3">Submit</button>
+                                    <button type="submit" class="button button--lg w-full xl:w-32 text-white bg-theme-1 xl:mr-3 disabled" id="register_btn" disabled>Submit</button>
                                 </div>    
                                 </form>
                             </div>
@@ -91,6 +110,25 @@
 
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=['your-google-map-api']&libraries=places"></script>
-		<script src="{{ asset('/backend/dist/js/app.js') }}"></script>
+        <script src="{{ asset('/backend/dist/js/app.js') }}"></script>
+        <script src="{{asset('/frontend/assets/js/jquery-3.5.1.min.js')}}"></script>
+        <script>
+            $(document).ready(function(){ 
+                function validateRegisterButton(){
+                    var buttonRegisDisabled = $('#register_username').val().trim() === '' || $('#register_image').get(0).files.length === 0;
+                    $('#register_btn').prop('disabled', buttonRegisDisabled);
+                    if (buttonRegisDisabled) {
+                        $('#register_btn').addClass('disabled');
+                    }
+                    else{
+                        $('#register_btn').removeClass('disabled');
+                    }
+                }
+                $('#register_username').on('keyup', validateRegisterButton);
+                $('#register_image').on('mouseenter', validateRegisterButton);
+                $('#register_image').on('mouseleave', validateRegisterButton);
+                $('#register_image').on('change', validateRegisterButton);
+            });
+        </script>
 	</body>
 </html>

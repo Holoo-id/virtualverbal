@@ -1168,67 +1168,24 @@
                         <h2 class="section-title medium">Recently Release</h2>
                         <div class="section-title-separator"></div>
                     </div>
-                    
                     <div class="post-preview-showchase grid-1col_1 centered gutter-small">
-                        <div class="post-preview tiny gaming-news">
-                            <a href="esports-post.html">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/20.jpg')}}" alt="post-36">
-                                    </figure>
+                        @foreach($recently_release as $recent)
+                            <div class="post-preview tiny gaming-news">
+                                <a href="esports-post.html">
+                                    <div class="post-preview-img-wrap">
+                                        <figure class="post-preview-img liquid">
+                                            <img src="https://images.igdb.com/igdb/image/upload/t_cover_small/co2jrt.jpg" alt="post-36">
+                                            <img src="https://images.igdb.com/igdb/image/upload/t_cover_small/{{-- $recent->cover->image_id --}}.jpg" alt="post-36">
+                                        </figure>
+                                    </div>
+                                </a>
+                                <a href="esports-post.html" class="post-preview-title">{{ $recent->name }}</a>
+                                <div class="post-author-info-wrap">
+                                    <p class="post-author-info small light">By <a href="search-results.html"
+                                            class="post-author">Dexter</a><span class="separator">|</span>{{ $recent->first_release_date }}</p>
                                 </div>
-                            </a>
-                            <a href="esports-post.html" class="post-preview-title">Gwen Parker is leading her team to the
-                                semifinals</a>
-                            <div class="post-author-info-wrap">
-                                <p class="post-author-info small light">By <a href="search-results.html"
-                                        class="post-author">Dexter</a><span class="separator">|</span>Dec 15th, 2018</p>
                             </div>
-                        </div>
-                        <div class="post-preview tiny gaming-news">
-                            <a href="esports-post.html">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/21.jpg')}}" alt="post-38">
-                                    </figure>
-                                </div>
-                            </a>
-                            <a href="esports-post.html" class="post-preview-title">Pro Soccer 2018 world league kicked off
-                                today!</a>
-                            <div class="post-author-info-wrap">
-                                <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                                        V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                            </div>
-                        </div>
-                        <div class="post-preview tiny gaming-news">
-                            <a href="esports-post.html">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/22.jpg')}}" alt="post-37">
-                                    </figure>
-                                </div>
-                            </a>
-                            <a href="esports-post.html" class="post-preview-title">Last night the wolves beat the rhinos 12-10</a>
-                            <div class="post-author-info-wrap">
-                                <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                                        V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                            </div>
-                        </div>
-                        <div class="post-preview tiny gaming-news">
-                            <a href="esports-post.html">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/23.jpg')}}" alt="post-39">
-                                    </figure>
-                                </div>
-                            </a>
-                            <a href="esports-post.html" class="post-preview-title">We had an interview with the great Emily
-                                Danniels</a>
-                            <div class="post-author-info-wrap">
-                                <p class="post-author-info small light">By <a href="search-results.html"
-                                        class="post-author">Vellatrix</a><span class="separator">|</span>Dec 15th, 2018</p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="post-preview-showcase grid-1col_1 centered gutter-small">
@@ -1238,65 +1195,25 @@
                     </div>
                     
                     <div class="post-preview-showchase grid-1col_1 centered gutter-small">
+                                        {{--dd($coming_soon)--}}
+                        @foreach($coming_soon as $soon)
                         <div class="post-preview tiny e-sport">
                             <a href="esports-post.html">
                                 <div class="post-preview-img-wrap">
                                     <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/24.jpg')}}" alt="post-36">
+                                        <img src="https://images.igdb.com/igdb/image/upload/t_thumb/{{-- $soon->cover->image_id --}}.jpg" alt="post-36">
                                     </figure>
                                 </div>
                             </a>
-                            <a href="esports-post.html" class="post-preview-title">Gwen Parker is leading her team to the
-                                semifinals</a>
+                            <a href="esports-post.html" class="post-preview-title">{{ $soon->name }}</a>
                             <div class="post-author-info-wrap">
                                 <p class="post-author-info small light">By <a href="search-results.html"
-                                        class="post-author">Dexter</a><span class="separator">|</span>Dec 15th, 2018</p>
+                                        class="post-author">Dexter</a><span class="separator">|</span>
+                                        {{--$soon->release_dates->human--}}
+                                </p>
                             </div>
                         </div>
-                        <div class="post-preview tiny e-sport">
-                            <a href="esports-post.html">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/25.jpg')}}" alt="post-38">
-                                    </figure>
-                                </div>
-                            </a>
-                            <a href="esports-post.html" class="post-preview-title">Pro Soccer 2018 world league kicked off
-                                today!</a>
-                            <div class="post-author-info-wrap">
-                                <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                                        V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                            </div>
-                        </div>
-                        <div class="post-preview tiny e-sport">
-                            <a href="esports-post.html">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/26.jpg')}}" alt="post-37">
-                                    </figure>
-                                </div>
-                            </a>
-                            <a href="esports-post.html" class="post-preview-title">Last night the wolves beat the rhinos 12-10</a>
-                            <div class="post-author-info-wrap">
-                                <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                                        V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                            </div>
-                        </div>
-                        <div class="post-preview tiny e-sport">
-                            <a href="esports-post.html">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/27.jpg')}}" alt="post-39">
-                                    </figure>
-                                </div>
-                            </a>
-                            <a href="esports-post.html" class="post-preview-title">We had an interview with the great Emily
-                                Danniels</a>
-                            <div class="post-author-info-wrap">
-                                <p class="post-author-info small light">By <a href="search-results.html"
-                                        class="post-author">Vellatrix</a><span class="separator">|</span>Dec 15th, 2018</p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="post-preview-showcase grid-1col_1 centered gutter-small">
@@ -1306,6 +1223,7 @@
                     </div>
                     
                     <div class="post-preview-showchase grid-1col_1 centered gutter-small">
+                        @foreach($hypes as $hype)
                         <div class="post-preview tiny game-review">
                             <a href="esports-post.html">
                                 <div class="post-preview-img-wrap">
@@ -1314,57 +1232,13 @@
                                     </figure>
                                 </div>
                             </a>
-                            <a href="esports-post.html" class="post-preview-title">Gwen Parker is leading her team to the
-                                semifinals</a>
+                            <a href="esports-post.html" class="post-preview-title">{{ $hype->name }}</a>
                             <div class="post-author-info-wrap">
                                 <p class="post-author-info small light">By <a href="search-results.html"
-                                        class="post-author">Dexter</a><span class="separator">|</span>Dec 15th, 2018</p>
+                                        class="post-author">Dexter</a><span class="separator">|</span>{{ $hype->first_release_date }}</p>
                             </div>
                         </div>
-                        <div class="post-preview tiny game-review">
-                            <a href="esports-post.html">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/29.png')}}" alt="post-38">
-                                    </figure>
-                                </div>
-                            </a>
-                            <a href="esports-post.html" class="post-preview-title">Pro Soccer 2018 world league kicked off
-                                today!</a>
-                            <div class="post-author-info-wrap">
-                                <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                                        V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                            </div>
-                        </div>
-                        <div class="post-preview tiny game-review">
-                            <a href="esports-post.html">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/30.jpg')}}" alt="post-37">
-                                    </figure>
-                                </div>
-                            </a>
-                            <a href="esports-post.html" class="post-preview-title">Last night the wolves beat the rhinos 12-10</a>
-                            <div class="post-author-info-wrap">
-                                <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye
-                                        V.</a><span class="separator">|</span>Dec 15th, 2018</p>
-                            </div>
-                        </div>
-                        <div class="post-preview tiny game-review">
-                            <a href="esports-post.html">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/31.jpg')}}" alt="post-39">
-                                    </figure>
-                                </div>
-                            </a>
-                            <a href="esports-post.html" class="post-preview-title">We had an interview with the great Emily
-                                Danniels</a>
-                            <div class="post-author-info-wrap">
-                                <p class="post-author-info small light">By <a href="search-results.html"
-                                        class="post-author">Vellatrix</a><span class="separator">|</span>Dec 15th, 2018</p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

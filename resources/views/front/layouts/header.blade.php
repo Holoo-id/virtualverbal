@@ -4012,3 +4012,115 @@
 
 <div id="forValidationFail" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); position: fixed; top: 0px; left: 0px; z-index: 100000; opacity: 0; visibility: hidden; transition: opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
 </div>
+<div id="popup-login-fail" class="popup-wrap medium" style="position: absolute; left: 50%; z-index: 100001; opacity: 0; visibility: hidden; transform: translate(0px, 100px); display: block; transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; top: 180px; margin-left: -400px;">
+    <div class="form-box-wrap">
+        <div class="form-box-heading login">
+            <div class="form-box-heading-title-wrap">
+                <p class="form-box-heading-title">Hi!</p>
+                <p class="form-box-heading-subtitle">Kami Senang akhirnya kamu kembali lagi!</p>
+            </div>
+            <p class="form-box-heading-text">Belum punya akun? <a href="#">Daftar Disini!</a> Gabung bersama komunitas kami!</p>
+        </div>
+        <div class="form-box-body">
+            <div class="form-box">
+                <div class="section-title-wrap blue">
+                    <h2 class="section-title medium">Login dulu ke akun kamu</h2>
+                    <div class="section-title-separator"></div>
+                </div>
+                <form class="form-wrap" method='POST' action="{{ route('login') }}">
+                    @csrf
+                    <div id="login-form-fail" class="form-row">
+                        <div class="form-item blue">
+                            <label for="login_email" class="rl-label">E-Mail:</label>
+                            <input type="text" id="login_email" name="email"
+                                placeholder="Masukkan E-Mail kamu...">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-item blue">
+                            <label for="login_pwd" class="rl-label">Password</label>
+                            <input type="password" id="login_pwd" name="password"
+                                placeholder="Masukkan Password kamu...">
+                        </div>
+                    </div>
+                    <div class="form-confirm-row">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="login_remember_ep" name="remember" value="remember"
+                                checked>
+                            <div class="checkbox-box blue">
+                                <svg class="cross-cb-icon small">
+                                    <use xlink:href="#svg-cross-cb-small"></use>
+                                </svg>
+                            </div>
+                            <label for="login_remember_ep" class="rl-label">Simpan E-Mail dan Password</label>
+                        </div>
+                        <a href="#" class="link-text-form blue">Lupa Password?</a>
+                    </div>
+                    <div class="form-actions full">
+                        <button type="submit" class="button blue full disabled" id="login_btn" disabled="true">Masuk!</button>
+                        <div class="social-buttons">
+                            <div style="padding-top: 20px; padding-left: 17%" class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="50"></div>
+                            <!-- <a href="#" class="button-social fb fb-login-button" disabled>Facebook Login</a> -->
+                            <button href="#" style="margin-left:25% !important;" class="button disabled" disabled>Twitter Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-form-buttons">
+                <p class="tab-form-button selected ">Login</p>
+                <p class="tab-form-button">Daftar</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup-register-fail" class="popup-wrap medium" style="position: absolute; left: 50%; z-index: 100001; opacity: 0; visibility: hidden; transform: translate(0px, 100px); display: block; transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; top: 116px; margin-left: -400px;">
+    <div class="form-box-wrap">
+        <div class="form-box-heading register">
+            <div class="form-box-heading-title-wrap">
+                <p class="form-box-heading-title">Hi!</p>
+                <p class="form-box-heading-subtitle">Ayo daftar dan bergabung bersama komunitas kami!</p>
+            </div>
+            <p class="form-box-heading-text">Setelah mendaftar, kamu akan menerima E-Mail konfirmasi yang terdapat link untuk mengaktifkan akun kamu!</p>
+        </div>
+        <div class="form-box-body">
+            <div class="form-box">
+                <div class="section-title-wrap red">
+                    <h2 class="section-title medium">Daftar Sekarang</h2>
+                    <div class="section-title-separator"></div>
+                </div>
+            <form class="form-wrap" method="POST" action="{{ route('register') }}">
+                @csrf
+                    <div id="register-form-fail" class="form-row">
+                        <div class="form-item red">
+                            <label for="register_email" class="rl-label">E-Mail:</label>
+                            <input type="text" id="register_email" name="email"
+                                placeholder="Masukkan E-Mail kamu...">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-item red">
+                            <label for="register_pwd" class="rl-label">Password</label>
+                            <input type="password" id="register_pwd" name="password"
+                                placeholder="Masukkan Password kamu...">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-item red">
+                            <label for="register_pwd_repeat" class="rl-label">Ulangi Password</label>
+                            <input type="password" id="register_pwd_repeat" name="password_confirmation"
+                                placeholder="Tulis kembali Password kamu...">
+                        </div>
+                    </div>
+                    <div class="form-actions full">
+                        <button id="register_btn" class="button red full disabled" disabled="true">Buat akun!</button>
+                        <p class="form-info-text">Cek E-Mail kamu setelah mendaftar!</p>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-form-buttons">
+                <p class="tab-form-button">Login</p>
+                <p class="tab-form-button selected">Daftar</p>
+            </div>
+        </div>
+    </div>
+</div>

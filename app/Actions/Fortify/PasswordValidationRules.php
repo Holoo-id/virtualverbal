@@ -13,6 +13,6 @@ trait PasswordValidationRules
      */
     protected function passwordRules()
     {
-        return ['required', 'string', (new Password)->length(8), (new Password)->requireUppercase(), (new Password)->requireNumeric(), 'confirmed'];
+        return ['required', 'string', (new Password)->length(8), (new Password)->requireNumeric(), 'confirmed'];
     }
 }

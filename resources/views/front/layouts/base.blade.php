@@ -83,7 +83,7 @@
 
         <script src="{{ asset('/frontend/assets/js/script.js') }}"></script>
         <script src="{{ asset('/frontend/assets/js/app.bundle.min.js') }}"></script>
-        <script src="{{asset('/frontend/assets/js/jquery-3.5.1.min.js')}}"></script>
+        <script src="{{ asset('/frontend/assets/js/jquery-3.5.1.min.js')}}"></script>
         <script>
             $(document).ready(function(){ 
              // Auth Error Start
@@ -172,6 +172,35 @@
              // Button Disabled saat input kosong Finish
 
             });
+                //autoload search result
+                function loadMore(page) {
+                    $.ajax({
+                        url: '?page=' + page,
+                        type: 'get',
+                        beforeSend: function() {
+                            $(".load-more-wrap").show();
+                        }
+                    })
+                    .done(function(data) {
+                        if (data.html == " ") {
+                            $(".load-more-wrap").html("No more records found");
+                            return;
+                        }
+                        $(".load-more-wrap").hide();
+                        $("#post-data").append(data.html);
+                    })
+                    .fail(function(jqXHR, ajaxOptions, thrownError) {
+                        alert("Server not responding");
+                    });
+                }
+                var page = 1;
+                $(window).scroll(function() {
+                    if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+                        page++;
+                        loadMore(page);
+                    }
+                });
+
         </script>
     </body>
 

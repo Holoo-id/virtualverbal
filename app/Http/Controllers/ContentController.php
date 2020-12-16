@@ -13,13 +13,17 @@ use Storage;
 
 class ContentController extends Controller
 {
-    public function all()
+    public function all(Request $request)
     {
         $authors = User::all();
         $categories = FormatContent::where('id', '!=', 3)->get();
         $contents = Content::where('published', '=', 1)->paginate(10);
         foreach ($contents as $content) {
             $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
+        }
+        if ($request->ajax()) {
+            $view = view('front.layouts.components.data-search', compact('authors', 'categories', 'contents'))->render();
+            return response()->json(['html' => $view]);
         }
         return view('front.search-result', compact('authors', 'categories', 'contents'));
     }

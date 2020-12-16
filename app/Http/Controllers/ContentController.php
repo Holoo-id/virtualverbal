@@ -60,6 +60,20 @@ class ContentController extends Controller
         return view('back.content-preview', compact('content', 'date'));
     }
 
+    public function search(Request $request)
+    {
+        $authors = User::all();
+        $categories = FormatContent::where('id', '!=', 3)->get();
+        $contents = Content::where('published', '=', 1)
+            ->where('judul', 'like', "%".$request->search."%")
+            ->orWhere('sub_judul', 'like', "%".$request->search."%")
+            ->paginate(10);
+        foreach ($contents as $content) {
+            $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
+        }
+        return view('front.search-result', compact('authors', 'categories', 'contents'));
+    }
+
     public function tambah(Request $request)
     {
         $uploadedFile = $request->file('file');

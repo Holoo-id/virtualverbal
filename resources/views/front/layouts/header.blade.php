@@ -1,15 +1,4 @@
-<!-- SEARCH POPUP -->
-
-<div class="search-popup">
-    <svg class="cross-icon big close-button search-popup-close">
-        <use xlink:href="#svg-cross-big"></use>
-    </svg>
-    <form method="GET" class="search-popup-form centered">
-        <input type="text" id="search" class="input-line" name="search" placeholder="Mau Cari Apa?">
-    </form>
-    <p class="search-popup-text">Tulis kata kunci yang kamu mau lalu tekan ENTER untuk memulai pencarian!</p>
-</div>
-
+@include('front.layouts.components.search-popup')
 <!-- POPUP LOGIN -->
 <div id="popup-login" class="popup-wrap medium">
     <div class="form-box-wrap">

@@ -8,7 +8,7 @@
                 <div class="section-title-separator"></div>
             </div>
             <div class="filter-heading">
-                <p class="filter-heading-text"><span class="highlight">12</span> Results found for: "<span class="highlight">Esports
+                <p class="filter-heading-text"><span class="highlight">{{ $contents->total() }}</span> Results found for: "<span class="highlight">Esports
                         Japan game team</span>"</p>
             </div>
             <div class="filters-row">
@@ -296,6 +296,7 @@
                 </div>--}}
                 <!-- /POST PREVIEW -->
             </div>
+            @if( $contents->total() > 10)
             <div class="layout-item centered padded load-more-wrap">
                 <!-- BUTTON -->
                 <a href="{{ $contents->links() }}" class="button big blue">
@@ -310,6 +311,7 @@
                     </div>
                 </a>
             </div>
+            @endif
         </div>
     
         @include('front.layouts.sidebar')

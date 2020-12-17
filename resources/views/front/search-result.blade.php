@@ -8,8 +8,7 @@
                 <div class="section-title-separator"></div>
             </div>
             <div class="filter-heading">
-                <p class="filter-heading-text"><span class="highlight">{{ $contents->total() }}</span> Results found for: "<span class="highlight">Esports
-                        Japan game team</span>"</p>
+                <p class="filter-heading-text"><span class="highlight">{{ $contents->total() }}</span> Results found for: "<span class="highlight">{{ $keyword }}</span>"</p>
             </div>
             <div class="filters-row">
                 <div class="dropdown-simple-wrap">

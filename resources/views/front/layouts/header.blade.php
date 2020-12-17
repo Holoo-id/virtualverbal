@@ -204,7 +204,7 @@
                 </ul>
         </li>
         @endif
-        <li class="mobile-menu-item">
+        {{--<li class="mobile-menu-item">
             <a href="#" class="mobile-menu-item-link">Games</a>
         </li>
         <li class="mobile-menu-item">
@@ -525,11 +525,11 @@
                     </ul>
                 </li>
             </ul>
-        </li>
+        </li>--}}
         <li class="mobile-menu-item2">
             <a href="{{ route('about') }}" class="mobile-menu-item2-link">Hubungi Kami</a>
         </li>
-        <li class="mobile-menu-item2">
+        {{--<li class="mobile-menu-item2">
             <a href="#" class="mobile-menu-item2-link">Kebijakan Privasi</a>
         </li>
         <li class="mobile-menu-item2">
@@ -537,12 +537,12 @@
         </li>
         <li class="mobile-menu-item2">
             <a href="#" class="mobile-menu-item2-link">Kode Etik Jurnalistik</a>
-        </li>
+        </li>--}}
     </ul>
 </div>
 
 <!-- INVENTORY BAG PREVIEW -->
-<div class="inventory-bag-preview">
+{{--<div class="inventory-bag-preview">
     <svg class="inventory-close-button cross-icon big">
         <use xlink:href="#svg-cross-big"></use>
     </svg>
@@ -806,7 +806,7 @@
         <a href="inventory-bag.html" class="button full blue">Go to the inventory bag</a>
         <a href="checkout.html" class="button full violet">Proceed to checkout</a>
     </div>
-</div>
+</div>--}}
 
 <!-- NAVIGATION WRAP -->
 <nav class="navigation-wrap">
@@ -821,7 +821,7 @@
                 <img src="{{ asset('/frontend/assets/img/brand/logoputihvv.png')}}" alt="Logo">
             </figure>
         </div>
-        <ul class="main-menu">
+        {{--<ul class="main-menu">
             <li class="main-menu-item">
                 <a href="index.html" class="main-menu-item-link">
                     <i class="fas fa-play fa-2x"></i>
@@ -3894,7 +3894,7 @@
                 </ul>
             </li>
             /MAIN MENU ITEM -->
-        </ul>
+        </ul>--}}
         <!-- Profil Menu -->
         <div class="profil-menu">
             <div class="log-link">
@@ -3940,64 +3940,26 @@
             </div>
             @endif
             <!-- INVENTORY BUTTON -->
-            <div class="inventory-button" style="margin-left: 35px;"
-                
+            {{--<div class="inventory-button" style="margin-left: 35px;">
                 <svg class="inventory-icon">
                     <use xlink:href="#svg-inventory"></use>
                 </svg>
-                
-            
-                <!-- INVENTORY ITEM QUANTITY WRAP -->
                 <div class="inventory-item-quantity-wrap">
                     <p class="inventory-item-quantity">2</p>
                 </div>
-                <!-- /INVENTORY ITEM QUANTITY WRAP -->
-            </div>
+            </div>--}}
             <!-- SEARCH BUTTON -->
             <div class="search-button search-popup-open">
-                <!-- SEARCH ICON -->
                 <svg class="search-icon">
                     <use xlink:href="#svg-search"></use>
                 </svg>
-                <!-- /SEARCH ICON -->
             </div>
         </div>
     </div>
     <!-- NAVIGATION -->
 </nav>
 
-<!-- LIVE NEWS WIDGET WRAP -->
-<div class="live-news-widget-wrap">
-    <div class="live-news-widget grid-limit">
-        <div class="live-news-widget-stairs left red">
-            <div class="live-news-widget-stair"></div>
-            <div class="live-news-widget-stair"></div>
-            <div class="live-news-widget-stair"></div>
-            <div class="live-news-widget-stair"></div>
-            <div class="live-news-widget-stair"></div>
-            <div class="live-news-widget-stair"></div>
-            <div class="live-news-widget-stair"></div>
-            <div class="live-news-widget-stair"></div>
-        </div>
-        <div class="live-news-widget-stairs right red">
-            <div class="live-news-widget-stair"></div>
-            <div class="live-news-widget-stair"></div>
-            <div class="live-news-widget-stair"></div>
-            <div class="live-news-widget-stair"></div>
-            <div class="live-news-widget-stair"></div>
-            <div class="live-news-widget-stair"></div>
-            <div class="live-news-widget-stair"></div>
-            <div class="live-news-widget-stair"></div>
-        </div>
-        <div class="live-news-widget-title-wrap">
-            <img class="live-news-widget-icon" src="{{ asset('/frontend/assets/img/icons/live-news-icon.png')}}" alt="live-news-icon">
-            <p class="live-news-widget-title">Live News</p>
-        </div>
-        <div id="lineslide-wrap1" class="live-news-widget-text-wrap">
-            <p class="live-news-widget-text"></p>
-        </div>
-    </div>
-</div>
+@include('front.layouts.components.livenews')
 
 <div id="forValidationFail" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); position: fixed; top: 0px; left: 0px; z-index: 100000; opacity: 0; visibility: hidden; transition: opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
 </div>

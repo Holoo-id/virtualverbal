@@ -1,6 +1,6 @@
 <!-- LAYOUT SIDEBAR -->
 <div class="layout-sidebar layout-item gutter-medium">
-    <!-- WIDGET SIDEBAR -->
+    {{--<!-- WIDGET SIDEBAR -->
     <div class="widget-sidebar">
         <!-- SECTION TITLE WRAP -->
         <div class="section-title-wrap no-space blue">
@@ -493,7 +493,7 @@
         </div>
         <!-- /TABLE -->
     </div>
-    <!-- /WIDGET SIDEBAR -->
+    <!-- /WIDGET SIDEBAR -->--}}
 
     <!-- WIDGET SIDEBAR -->
     <div class="widget-sidebar">

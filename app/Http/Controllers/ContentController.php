@@ -18,6 +18,7 @@ class ContentController extends Controller
         $authors = User::all();
         $categories = FormatContent::where('id', '!=', 3)->get();
         $contents = Content::where('published', '=', 1)->paginate(10);
+        $keyword = '';
         foreach ($contents as $content) {
             $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
         }
@@ -25,7 +26,7 @@ class ContentController extends Controller
             $view = view('front.layouts.components.data-search', compact('authors', 'categories', 'contents'))->render();
             return response()->json(['html' => $view]);
         }
-        return view('front.search-result', compact('authors', 'categories', 'contents'));
+        return view('front.search-result', compact('authors', 'categories', 'contents', 'keyword'));
     }
 
     public function detail($id = 548)
@@ -68,14 +69,18 @@ class ContentController extends Controller
     {
         $authors = User::all();
         $categories = FormatContent::where('id', '!=', 3)->get();
+        $keyword = $request->search;
         $contents = Content::where('published', '=', 1)
-            ->where('judul', 'like', "%".$request->search."%")
-            ->orWhere('sub_judul', 'like', "%".$request->search."%")
+            ->where('judul', 'like', "%".$keyword."%")
+            ->orWhere('sub_judul', 'like', "%".$keyword."%")
             ->paginate(10);
         foreach ($contents as $content) {
             $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
+            if (str_contains($content->judul, $keyword)) {
+                $content->judul = str_replace($keyword, "<b>".$keyword."</b>", $content->judul);
+            }
         }
-        return view('front.search-result', compact('authors', 'categories', 'contents'));
+        return view('front.search-result', compact('authors', 'categories', 'contents', 'keyword'));
     }
 
     public function tambah(Request $request)

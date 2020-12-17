@@ -47,9 +47,9 @@
                     <div class="form-actions full">
                         <button type="submit" class="button blue full disabled" id="login_btn" disabled="true">Masuk!</button>
                         <div class="social-buttons">
-                            <div style="padding-top: 20px; padding-left: 17%" class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="50"></div>
-                            <!-- <a href="#" class="button-social fb fb-login-button" disabled>Facebook Login</a> -->
-                            <button href="#" style="margin-left:25% !important;" class="button disabled" disabled>Twitter Login</button>
+                            {{-- <div style="padding-top: 20px; padding-left: 17%" class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="50"></div> --}}
+                            <a href="#" class="button-social fb fb-login-button disabled" disabled>Facebook Login</a>
+                            <button href="#" class="button-social gplus gplus-login-button disabled" disabled>Google Login</button>
                         </div>
                     </div>
                 </form>
@@ -4048,9 +4048,9 @@
                     <div class="form-actions full">
                         <button type="submit" class="button blue full disabled" id="login_btn" disabled="true">Masuk!</button>
                         <div class="social-buttons">
-                            <div style="padding-top: 20px; padding-left: 17%" class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="50"></div>
-                            <!-- <a href="#" class="button-social fb fb-login-button" disabled>Facebook Login</a> -->
-                            <button href="#" style="margin-left:25% !important;" class="button disabled" disabled>Twitter Login</button>
+                            {{-- <div style="padding-top: 20px; padding-left: 17%" class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="50"></div> --}}
+                            <a href="#" class="button-social fb fb-login-button disabled" disabled>Facebook Login</a>
+                            <button href="#" class="button-social gplus gplus-login-button disabled" disabled>Google Login</button>
                         </div>
                     </div>
                 </form>

@@ -14,9 +14,10 @@
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="Virtual Verbal">
 		<meta name="twitter:description" content="Responsive Bootstrap 4 Dashboard Template">
-		<meta name="twitter:image" content="http://themepixels.me/azia/img/azia-social.png">
+        <meta name="twitter:image" content="http://themepixels.me/azia/img/azia-social.png">
 
-		<!-- Facebook -->
+        <!-- Facebook -->
+        <meta property="fb:app_id" content="{{ env('FACEBOOK_APP_ID') }}" />
 		<meta property="og:url" content="https://www.facebook.com/virtualverbal">
 		<meta property="og:title" content="Virtual Verbal">
 		<meta property="og:description" content="Responsive Bootstrap 4 Dashboard Template">
@@ -59,7 +60,7 @@
         <script>
             window.fbAsyncInit = function() {
                 FB.init({
-                appId      : '209835257289966',
+                appId      : {{ env('FACEBOOK_APP_ID') }},
                 cookie     : true,
                 xfbml      : true,
                 version    : 'v9.0'
@@ -70,7 +71,7 @@
                 var js, fjs = d.getElementsByTagName(s)[0];
                 if (d.getElementById(id)) {return;}
                 js = d.createElement(s); js.id = id;
-                js.src = "https://connect.facebook.net/en_US/sdk.js";
+                js.src = "https://connect.facebook.net/id_ID/sdk.js";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
         </script>

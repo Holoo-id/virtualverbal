@@ -75,7 +75,7 @@
                     </div>
 
                     
-                    <div class="fb-comments" data-href="https://localhost:8000/post/third" data-numposts="3" data-width=""></div>
+                    <div class="fb-comments" data-href="{{ env('APP_URL') }}/contents/third" data-numposts="3" data-order-by="social" data-colorscheme="light" data-width=""></div>
     
                     <!-- {{-- <div class="post-comment-form-wrap">
                         <div class="section-title-wrap blue">

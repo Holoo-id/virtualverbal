@@ -73,6 +73,14 @@ class ContentController extends Controller
         $contents = Content::where('published', '=', 1)
             ->where('judul', 'like', "%".$keyword."%")
             ->orWhere('sub_judul', 'like', "%".$keyword."%")
+            // ->where(function($query) use ($request){
+            //     if (!empty($request->author)) {
+            //         return $query->where('created_by', $request->input('author'));
+            //     }
+            //     if (!empty($request->category)) {
+            //         return $query->where('category_id', $request->input('category'));
+            //     }
+            // })
             ->paginate(10);
         if (!empty($request->author)) {
             $contents = Content::where('published', '=', 1)
@@ -89,6 +97,10 @@ class ContentController extends Controller
             if (str_contains($content->judul, $keyword)) {
                 $content->judul = str_replace($keyword, "<b>".$keyword."/i/m</b>", $content->judul);
             }
+        }
+        if ($request->ajax()) {
+            $view = view('front.layouts.components.data-search', compact('authors', 'categories', 'contents'))->render();
+            return response()->json(['html' => $view]);
         }
         return view('front.search-result', compact('authors', 'categories', 'contents', 'keyword'));
     }

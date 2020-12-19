@@ -77,7 +77,7 @@ class ContentController extends Controller
         foreach ($contents as $content) {
             $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
             if (str_contains($content->judul, $keyword)) {
-                $content->judul = str_replace($keyword, "<b>".$keyword."</b>", $content->judul);
+                $content->judul = str_replace($keyword, "<b>".$keyword."/i/m</b>", $content->judul);
             }
         }
         return view('front.search-result', compact('authors', 'categories', 'contents', 'keyword'));

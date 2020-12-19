@@ -2,7 +2,7 @@
 
 @section('content')
     @include('front.layouts.banner-slider')
-    @include('front.layouts.components.esports-live-score')
+    {{--@include('front.layouts.components.esports-live-score')--}}
     <!-- LAYOUT CONTENT 1 -->
     <div class="layout-content-1 layout-item centered">
         <!-- LAYOUT BODY -->
@@ -1019,33 +1019,7 @@
     <div class="layout-content-1 layout-item-3-1 own-grid grid-limit centered">
         <div class="layout-body layout-item">
             <div class="layout-item">
-                @foreach($contents as $content)
-                    <div class="post-preview landscape 
-                        @if($content->category_id == 2)
-                            gaming-news
-                        @elseif($content->category_id == 1)
-                            e-sport
-                        @else
-                            ''
-                        @endif ">
-                        <a href="post-v1.html">
-                            <div class="post-preview-img-wrap">
-                                <figure class="post-preview-img liquid">
-                                    <img src="{{ asset('/frontend/assets/img/posts/41.jpg')}}" alt="post-01">
-                                </figure>
-                            </div>
-                        </a>
-                        <a href="news-v1.html" class="tag-ornament">{{ $content->formatContent->name }}</a>
-                        <a href="post-v1.html" class="post-preview-title">{{ $content->judul }}</a>
-                        <div class="post-author-info-wrap">
-                            <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
-                                    class="post-author">{{ $content->writer->name }}</a><span class="separator">|</span>{{ $content->publish_at }}<span
-                                    class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">{{ $content->views }}
-                                    Dilihat</a></p>
-                        </div>
-                        <p class="post-preview-text">{{ $content->sub_judul }}</p>
-                    </div>
-                @endforeach
+                @include('front.layouts.components.data-search')
     
                 <!-- POST PREVIEW -->
                 {{--<div class="post-preview landscape game-review">
@@ -1170,7 +1144,7 @@
             </div>
 
             <!-- BUTTON -->
-            <div class="layout-item centered padded load-more-wrap">
+            <div class="layout-item centered padded">
                 <a href="{{ route('all-content') }}" class="button big blue">
                     Load More
                     <div class="button-ornament">

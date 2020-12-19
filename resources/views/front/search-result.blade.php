@@ -10,7 +10,7 @@
             <div class="filter-heading">
                 <p class="filter-heading-text"><span class="highlight">{{ $contents->total() }}</span> Results found for: "<span class="highlight">{{ $keyword }}</span>"</p>
             </div>
-            <div class="filters-row">
+            <form method="GET" action="{{ route('search') }}" ocClick="{{ route('search') }}" class="filters-row">
                 <div class="dropdown-simple-wrap">
                     <div id="filter-01-dropdown-trigger" class="dp-current-option">
                         <div id="filter-01-dropdown-option-value" class="dp-current-option-value">
@@ -22,11 +22,11 @@
                     </div>
                     <div id="filter-01-dropdown" class="dp-options small">
                         <div class="dp-option">
-                            <p class="dp-option-text">All Categories</p>
+                            <button type="submit" name="category" id="category" value="" class="dp-option-text" style="background-color:transparent">All Categories</button>
                         </div>
                         @foreach($categories as $category)
                             <div class="dp-option">
-                                <p class="dp-option-text">{{ $category->name }}</p>
+                                <button type="submit" name="category" id="category" value="{{ $category->id }}" class="dp-option-text" style="background-color:transparent">{{ $category->name }}</button>
                             </div>
                         @endforeach
                     </div>
@@ -42,16 +42,16 @@
                     </div>
                     <div id="filter-02-dropdown" class="dp-options small">
                         <div class="dp-option">
-                            <p class="dp-option-text">All Authors</p>
+                            <button type="submit" name="author" id="author" value="" class="dp-option-text" style="background-color:transparent">All Authors</button>
                         </div>
                         @foreach($authors as $author)
                             <div class="dp-option">
-                                <p class="dp-option-text">{{ $author->name }}</p>
+                                <button type="submit" name="author" id="author" value="{{ $author->id }}" class="dp-option-text" style="background-color:transparent">{{ $author->name }}</button>
                             </div>
                         @endforeach
                     </div>
                 </div>
-                <div class="dropdown-simple-wrap">
+                {{--<div class="dropdown-simple-wrap">
                     <div id="filter-03-dropdown-trigger" class="dp-current-option">
                         <div id="filter-03-dropdown-option-value" class="dp-current-option-value">
                             <p class="dp-option-text">Order By Date</p>
@@ -86,8 +86,8 @@
                             <p class="dp-option-text">Ascending</p>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div>--}}
+            </form>
             <div id="post-data" class="layout-item">
                 <!-- POST PREVIEW -->
                 @include('front.layouts.components.data-search')

@@ -74,6 +74,16 @@ class ContentController extends Controller
             ->where('judul', 'like', "%".$keyword."%")
             ->orWhere('sub_judul', 'like', "%".$keyword."%")
             ->paginate(10);
+        if (!empty($request->author)) {
+            $contents = Content::where('published', '=', 1)
+                ->where('created_by', '=', $request->author)
+                ->paginate(10);
+        }
+        if (!empty($request->category)) {
+            $contents = Content::where('published', '=', 1)
+                ->where('category_id', '=', $request->category)
+                ->paginate(10);
+        }
         foreach ($contents as $content) {
             $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
             if (str_contains($content->judul, $keyword)) {

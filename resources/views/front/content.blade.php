@@ -85,112 +85,32 @@
                 </div>
 
                 <div class="post-preview-showcase grid-2col centered">
-                    <div class="post-preview gaming-news">
-                        <a href="post-v1.html">
-                            <div class="post-preview-img-wrap">
-                                <figure class="post-preview-img liquid">
-                                    <img src="{{ asset('/frontend/assets/img/posts/09.jpg')}}" alt="post-09">
-                                </figure>
-                            </div>
-                        </a>
-                        <a href="news-v1.html" class="tag-ornament">Gaming news</a>
-                        <a href="post-v1.html" class="post-preview-title">New "Rizen" game is gonna be released in summer 2019</a>
-                        <div class="post-author-info-wrap">
-                            <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Vellatrix</a><span class="separator">|</span>December 15th, 2018</p>
-                        </div>
-                    </div>
-                    <div class="post-preview video gaming-news no-hover">
-                        <a href="post-video.html">
-                            <div class="post-preview-img-wrap">
-                                <figure class="post-preview-img2 liquid">
-                                    <img src="{{ asset('/frontend/assets/img/posts/02.jpg')}}" alt="post-31">
-                                </figure>
-                                <div class="post-preview-overlay">
-                                    <div class="play-button">
-                                        <svg class="play-button-icon">
-                                            <use xlink:href="#svg-play"></use>
-                                        </svg>
-                                    </div>
+                    @foreach($relates as $relate)
+                        <div class="post-preview 
+                        @if($relate->category_id == 2)
+                            gaming-news
+                        @elseif($relate->category_id == 1)
+                            e-sport
+                        @else
+                            ''
+                        @endif ">
+                            <a href="{{ route('detail', ['permalink' => $relate->permalink]) }}">
+                                <div class="post-preview-img-wrap">
+                                    <figure class="post-preview-img liquid">
+                                        <img src="{{ asset('/frontend/assets/img/posts/09.jpg')}}" alt="post-09">
+                                    </figure>
                                 </div>
+                            </a>
+                            <a href="{{ url('front/content/search?category='.$relate->category_id) }}" class="tag-ornament">{{ $relate->format }}</a>
+                            <a href="{{ route('detail', ['permalink' => $relate->permalink]) }}" class="post-preview-title">{{ $relate->judul }}</a>
+                            <div class="post-author-info-wrap">
+                                <p class="post-author-info small light">By 
+                                    <a href="{{ url('front/content/search?author='.$relate->created_by) }}" class="post-author">{{ $relate->author }}</a>
+                                    <span class="separator">|</span>{{ $date2 }}
+                                </p>
                             </div>
-                        </a>
-                        <a href="news-v1.html" class="tag-ornament">Gaming news</a>
-                        <a href="post-v1.html" class="post-preview-title">New "Rizen" game is gonna be released in summer 2019</a>
-                        <div class="post-author-info-wrap">
-                            <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Vellatrix</a><span class="separator">|</span>December 15th, 2018</p>
                         </div>
-                    </div>
-                    <div class="post-preview e-sport">
-                        <a href="post-v1.html">
-                            <div class="post-preview-img-wrap">
-                                <figure class="post-preview-img liquid">
-                                    <img src="{{ asset('/frontend/assets/img/posts/09.jpg')}}" alt="post-09">
-                                </figure>
-                            </div>
-                        </a>
-                        <a href="news-v1.html" class="tag-ornament">Gaming news</a>
-                        <a href="post-v1.html" class="post-preview-title">New "Rizen" game is gonna be released in summer 2019</a>
-                        <div class="post-author-info-wrap">
-                            <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Vellatrix</a><span class="separator">|</span>December 15th, 2018</p>
-                        </div>
-                    </div>
-                    <div class="post-preview game-review">
-                        <a href="post-v2.html">
-                            <div class="post-preview-img-wrap">
-                                <figure class="post-preview-img liquid">
-                                    <img src="{{ asset('/frontend/assets/img/posts/08.jpg')}}" alt="post-05">
-                                </figure>
-                                <div class="review-rating">
-                                    <div id="content-news-rate-7" class="arc"></div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="news-v1.html" class="tag-ornament">Gaming news</a>
-                        <a href="post-v1.html" class="post-preview-title">New "Rizen" game is gonna be released in summer 2019</a>
-                        <div class="post-author-info-wrap">
-                            <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Vellatrix</a><span class="separator">|</span>December 15th, 2018</p>
-                        </div>
-                    </div>
-                    <div class="post-preview geeky-news">
-                        <a href="post-v4.html">
-                            <div class="post-preview-img-wrap">
-                                <figure class="post-preview-img liquid">
-                                    <img src="{{ asset('/frontend/assets/img/posts/02.jpg')}}" alt="post-02">
-                                </figure>
-                            </div>
-                        </a>
-                        <a href="news-v4.html" class="tag-ornament">Geeky news</a>
-                        <a href="post-v4.html" class="post-preview-title">Jessica Tam to star in the new "Charlotte" series</a>
-                        <div class="post-author-info-wrap">
-                            <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Vellatrix</a><span class="separator">|</span>December 15th, 2018</p>
-                        </div>
-                    </div>
-                    <div class="post-preview movie-news">
-                        <a href="post-v3.html">
-                            <div class="post-preview-img-wrap">
-                                <figure class="post-preview-img liquid">
-                                    <img src="{{ asset('/frontend/assets/img/posts/12.jpg')}}" alt="post-12">
-                                </figure>
-                                <div class="rating-ornament">
-                                    <div class="rating-ornament-item">
-                                        <svg class="rating-ornament-icon">
-                                            <use xlink:href="#svg-star"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="rating-ornament-item">
-                                        <svg class="rating-ornament-icon empty">
-                                            <use xlink:href="#svg-star"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="news-v3.html" class="tag-ornament">Movie news</a>
-                        <a href="post-v3.html" class="post-preview-title">We reviewed the "Guardians of the Universe" movie</a>
-                        <div class="post-author-info-wrap">
-                            <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Faye V.</a><span class="separator">|</span>December 15th, 2018</p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
 
             </div>

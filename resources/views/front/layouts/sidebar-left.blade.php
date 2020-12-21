@@ -58,7 +58,7 @@
         </div>
 
         <ul class="custom-tags-wrap">
-           @foreach($content->tags as $tag)
+            @foreach($content->tags as $tag)
                 <ul class="custom-tags">
                     <li class="custom-tag">
                         <a href="{{ $tag->url }}">{{ $tag->name }}</a>
@@ -68,4 +68,3 @@
         </ul>
     </div>
 </div>
-<!-- /LAYOUT SIDEBAR 1 -->

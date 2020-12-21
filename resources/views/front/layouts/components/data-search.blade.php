@@ -7,7 +7,7 @@
         @else
             ''
         @endif ">
-        <a href="{{ route('detail', $content->permalink) }}">
+        <a href="{{ route('detail', ['permalink' => $content->permalink]) }}">
             <div class="post-preview-img-wrap">
                 <figure class="post-preview-img liquid">
                     <img src="{{ asset('/frontend/assets/img/posts/41.jpg')}}" alt="post-01">

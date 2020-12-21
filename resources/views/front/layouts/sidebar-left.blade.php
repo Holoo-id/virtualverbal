@@ -1,53 +1,55 @@
 <!-- LAYOUT SIDEBAR 1 -->
 <div class="layout-sidebar1 layout-item">
     <!-- App Articles Only -->
-    <div class="widget-sidebar">
-        <div class="game-card-wrap">
-            @foreach($games as $game)
-                <img class="gambar-gantung" src="https://images.igdb.com/igdb/image/upload/t_cover_big/{{ $game->cover->image_id }}.jpg" alt="">
-                <div class="card-profil-game centered">
-                    <div class="section-title-wrap">
-                        <div style="padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.15)" class="section-title medium">{{ $game->name }}</div>
+    @if(!empty($games))
+        <div class="widget-sidebar">
+            <div class="game-card-wrap">
+                @foreach($games as $game)
+                    <img class="gambar-gantung" src="https://images.igdb.com/igdb/image/upload/t_cover_big/{{ $game->cover->image_id }}.jpg" alt="">
+                    <div class="card-profil-game centered">
+                        <div class="section-title-wrap">
+                            <div style="padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.15)" class="section-title medium">{{ $game->name }}</div>
+                        </div>
+                        <ul class="profil-game-text">
+                            <li class="text-judul">Platform:</li>
+                            <li class="text-isi">
+                                @foreach($game->platforms as $platform)
+                                    <p>{{$platform->name}}</p>
+                                @endforeach
+                            </li>
+                            <li class="text-judul">Tanggal Rilis:</li>
+                            <li class="text-isi">{{ $release_date }}</li>
+                            <li class="text-judul">Publisher:</li>
+                            <li class="text-isi">
+                                @foreach($publishers as $publisher)
+                                    <p>{{ $publisher->name }}</p>
+                                @endforeach
+                            </li>
+                            <li class="text-judul">Developer:</li>
+                            <li class="text-isi">
+                                @foreach($developers as $developer)
+                                    <p>{{ $developer->name }}</p>
+                                @endforeach
+                            </li>
+                            <li class="text-judul">Genre:</li>
+                            <li class="text-isi">
+                                @foreach($game->genres as $genre)
+                                    <p>{{ $genre->name }}</p>
+                                @endforeach
+                            </li>
+                            <!-- <a style="width: 100%; margin-top: 15px;" href="#" class="button disable">Selengkapnya
+                                <div class="button-ornament">
+                                    <svg class="arrow-icon medium">
+                                        <use xlink:href="#svg-arrow-medium"></use>
+                                    </svg>
+                                </div>
+                            </a> -->
+                        </ul>
                     </div>
-                    <ul class="profil-game-text">
-                        <li class="text-judul">Platform:</li>
-                        <li class="text-isi">
-                            @foreach($game->platforms as $platform)
-                                <p>{{$platform->name}}</p>
-                            @endforeach
-                        </li>
-                        <li class="text-judul">Tanggal Rilis:</li>
-                        <li class="text-isi">{{ $release_date }}</li>
-                        <li class="text-judul">Publisher:</li>
-                        <li class="text-isi">
-                            @foreach($publishers as $publisher)
-                                <p>{{ $publisher->name }}</p>
-                            @endforeach
-                        </li>
-                        <li class="text-judul">Developer:</li>
-                        <li class="text-isi">
-                            @foreach($developers as $developer)
-                                <p>{{ $developer->name }}</p>
-                            @endforeach
-                        </li>
-                        <li class="text-judul">Genre:</li>
-                        <li class="text-isi">
-                            @foreach($game->genres as $genre)
-                                <p>{{ $genre->name }}</p>
-                            @endforeach
-                        </li>
-                        <!-- <a style="width: 100%; margin-top: 15px;" href="#" class="button disable">Selengkapnya
-                            <div class="button-ornament">
-                                <svg class="arrow-icon medium">
-                                    <use xlink:href="#svg-arrow-medium"></use>
-                                </svg>
-                            </div>
-                        </a> -->
-                    </ul>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
-    </div>
+    @endif
 
     <div class="widget-sidebar">
         <div class="section-title-wrap blue">

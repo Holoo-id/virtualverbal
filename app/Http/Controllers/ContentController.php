@@ -29,7 +29,7 @@ class ContentController extends Controller
             $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
         }
         foreach ($populars as $popular) {
-            $popular->publish_at = \Carbon\Carbon::parse($popular->publish_at)->format('l, d F Y H:m');
+            $popular->publish_at = \Carbon\Carbon::parse($popular->publish_at)->format('D, d F Y');
         }
         if ($request->ajax()) {
             $view = view('front.layouts.components.data-search', compact('authors', 'categories', 'contents'))->render();
@@ -38,17 +38,21 @@ class ContentController extends Controller
         return view('front.search-result', compact('authors', 'categories', 'contents', 'keyword', 'populars'));
     }
 
-    public function detail($id = 548)
+    public function detail($permalink)
     {
-        $content = Content::where('id', $id)->first();
+        $content = Content::where('permalink', $permalink)->first();
         $date = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
-        $developers = Company::whereIn('developed', [$content->igdb_id])->get();
-        $games = Game::with(['cover', 'genres', 'platforms'])->where('id', $content->igdb_id)->get();
-        $publishers = Company::whereIn('published', [$content->igdb_id])->get();
-        foreach ($games as $game) {
-            $release_date = \Carbon\Carbon::parse($game->first_release_date)->format('l, d F Y');
+        if (!empty($content->igdb_id)) {
+            $games = Game::with(['cover', 'genres', 'platforms'])->where('id', $content->igdb_id)->get();
+            foreach ($games as $game) {
+                $release_date = \Carbon\Carbon::parse($game->first_release_date)->format('l, d F Y');
+            }
+            $developers = Company::whereIn('developed', [$content->igdb_id])->get();
+            $publishers = Company::whereIn('published', [$content->igdb_id])->get();
+            return view('front.content', compact('content', 'date', 'developers', 'games', 'publishers', 'release_date'));
+        }else{
+            return view('front.content', compact('content', 'date'));
         }
-        return view('front.content', compact('content', 'date', 'developers', 'games', 'publishers', 'release_date'));
     }
 
     public function list()
@@ -113,7 +117,7 @@ class ContentController extends Controller
             }
         }
         foreach ($populars as $popular) {
-            $popular->publish_at = \Carbon\Carbon::parse($popular->publish_at)->format('l, d F Y H:m');
+            $popular->publish_at = \Carbon\Carbon::parse($popular->publish_at)->format('D, d F Y');
         }
         if ($request->ajax()) {
             $view = view('front.layouts.components.data-search', compact('authors', 'categories', 'contents'))->render();

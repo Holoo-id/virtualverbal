@@ -65,8 +65,7 @@ Route::prefix('/front')->group(function () {
 
     Route::prefix('/content')->group(function () {
         Route::get('/all', [ContentController::class, 'all'])->name('all-content');
-        Route::get('/detail', [ContentController::class, 'detail'])->name('detail');
-        // Route::get('/detail/{$permalink}', [ContentController::class, 'detail'])->name('detail');
+        Route::get('/detail/{permalink}', [ContentController::class, 'detail'])->name('detail');
         Route::get('/search', [ContentController::class, 'search'])->name('search');
     });
 });

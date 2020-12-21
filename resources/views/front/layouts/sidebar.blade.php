@@ -5,7 +5,7 @@
             <h2 class="section-title medium">Popular Posts</h2>
             <div class="section-title-separator"></div>
         </div>
-        <div class="post-preview-showcase grid-1col gutter-small">
+        <div class="post-preview-showcase grid-1col_1 gutter-small">
             @foreach($populars as $popular)
                 <div class="post-preview tiny padded 
                     @if($popular->category_id == 2)
@@ -14,7 +14,7 @@
                         e-sport
                     @else
                         ''
-                    @endif ">
+                    @endif " style="margin-bottom:5%">
                     <a href="{{ route('detail', $popular->permalink) }}">
                         <div class="post-preview-img-wrap">
                             <figure class="post-preview-img liquid">
@@ -24,7 +24,7 @@
                     </a>
                     <a href="{{ route('detail', $popular->permalink) }}" class="post-preview-title">{{ $popular->judul }}</a>
                     <div class="post-author-info-wrap">
-                        <p class="post-author-info small light">Ditulis oleh 
+                        <p class="post-author-info small light" style="line-height:1em; margin-top:.6875em">Ditulis oleh 
                             <a href="{{ url('front/content/search?author='.$popular->writer->id) }}" class="post-author">{{ $popular->writer->name }}</a>
                             <span class="separator">|</span>{{ $popular->publish_at }}</p>
                     </div>

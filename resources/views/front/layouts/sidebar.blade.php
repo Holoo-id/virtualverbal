@@ -24,7 +24,7 @@
                     </a>
                     <a href="{{ route('detail', $popular->permalink) }}" class="post-preview-title">{{ $popular->judul }}</a>
                     <div class="post-author-info-wrap">
-                        <p class="post-author-info small light" style="line-height:1em; margin-top:.6875em">Ditulis oleh 
+                        <p class="post-author-info small light" style="line-height:1em; margin-top:.6875em">
                             <a href="{{ url('front/content/search?author='.$popular->writer->id) }}" class="post-author">{{ $popular->writer->name }}</a>
                             <span class="separator">|</span>{{ $popular->publish_at }}</p>
                     </div>

@@ -49,7 +49,7 @@
                                 </a>
                                 <p style="display: flex; justify-content: center; align-items: center" class="post-author-info small light">Oleh 
                                     <a href="search-results.html" class="post-author" style="margin-left:2px"> {{ $content->writer->name }}</a>
-                                    <span class="separator">-</span>{{ $date }}
+                                    <span class="separator">-</span>{{ $content->publish_at }}
                                     <span class="separator">-</span>
                                     <a href="#" class="bubble-ornament fb">
                                         <svg class="facebook-icon">
@@ -82,35 +82,36 @@
                         <h2 class="section-title medium">Related News</h2>
                         <div class="section-title-separator"></div>
                     </div>
-                </div>
-
-                <div class="post-preview-showcase grid-2col centered">
-                    @foreach($relates as $relate)
-                        <div class="post-preview 
-                        @if($relate->category_id == 2)
-                            gaming-news
-                        @elseif($relate->category_id == 1)
-                            e-sport
-                        @else
-                            ''
-                        @endif ">
-                            <a href="{{ route('detail', ['permalink' => $relate->permalink]) }}">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/09.jpg')}}" alt="post-09">
-                                    </figure>
+                    @if(!empty($relates))
+                        <div class="post-preview-showcase grid-2col centered">
+                            @foreach($relates as $relate)
+                                <div class="post-preview 
+                                @if($relate->category_id == 2)
+                                    gaming-news
+                                @elseif($relate->category_id == 1)
+                                    e-sport
+                                @else
+                                    ''
+                                @endif ">
+                                    <a href="{{ route('detail', ['permalink' => $relate->permalink]) }}">
+                                        <div class="post-preview-img-wrap">
+                                            <figure class="post-preview-img liquid">
+                                                <img src="{{ asset('/frontend/assets/img/posts/09.jpg')}}" alt="post-09">
+                                            </figure>
+                                        </div>
+                                    </a>
+                                    <a href="{{ url('front/content/search?category='.$relate->category_id) }}" class="tag-ornament">{{ $relate->format }}</a>
+                                    <a href="{{ route('detail', ['permalink' => $relate->permalink]) }}" class="post-preview-title">{{ $relate->judul }}</a>
+                                    <div class="post-author-info-wrap">
+                                        <p class="post-author-info small light">By 
+                                            <a href="{{ url('front/content/search?author='.$relate->created_by) }}" class="post-author">{{ $relate->author }}</a>
+                                            <span class="separator">|</span>{{$relate->publish_at}}
+                                        </p>
+                                    </div>
                                 </div>
-                            </a>
-                            <a href="{{ url('front/content/search?category='.$relate->category_id) }}" class="tag-ornament">{{ $relate->format }}</a>
-                            <a href="{{ route('detail', ['permalink' => $relate->permalink]) }}" class="post-preview-title">{{ $relate->judul }}</a>
-                            <div class="post-author-info-wrap">
-                                <p class="post-author-info small light">By 
-                                    <a href="{{ url('front/content/search?author='.$relate->created_by) }}" class="post-author">{{ $relate->author }}</a>
-                                    <span class="separator">|</span>{{ $date2 }}
-                                </p>
-                            </div>
+                            @endforeach
                         </div>
-                    @endforeach
+                    @endif
                 </div>
 
             </div>

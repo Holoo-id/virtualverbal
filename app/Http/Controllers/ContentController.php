@@ -20,10 +20,13 @@ class ContentController extends Controller
         $categories = FormatContent::where('id', '!=', 3)->get();
         $contents = Content::where('published', '=', 1)
             ->where('category_id', '!=', 3)
+            ->where('publish_at', '!=', '')
+            ->orderBy('publish_at', 'desc')
             ->paginate(10);
         $keyword = '';
-        $populars = Content::where('category_id', '!=', 3)
-            ->where('published', '=', 1)
+        $populars = Content::where('published', '=', 1)
+            ->where('category_id', '!=', 3)
+            ->where('publish_at', '!=', '')
             ->orderBy('views', 'desc')
             ->paginate(10);
         foreach ($contents as $content) {
@@ -42,44 +45,53 @@ class ContentController extends Controller
     public function detail($permalink)
     {
         $content = Content::where('permalink', $permalink)->first();
-        $date = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
+        $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
 
-        foreach ($content->tags as $tag) {
-            $topic = $tag->id;
-        }
-        $relates = DB::table('v_content')
-            ->join('v_relation_tags_content', 'v_content.id', '=', 'v_relation_tags_content.content_id')
-            ->join('v_topics', 'v_relation_tags_content.tag_id', '=', 'v_topics.id')
-            ->join('v_format_content', 'v_content.category_id', '=', 'v_format_content.id')
-            ->join('users', 'v_content.created_by', '=', 'users.id')
-            ->select(
-                'users.name as author',
-                'v_format_content.name as format',
-                'v_content.category_id',
-                'v_content.created_by',
-                'v_content.judul',
-                'v_content.permalink',
-                'v_content.publish_at'
-            )
+        if (!empty($content->tags)) {
+            $relates = Content::whereHas('tags', function ($q) use ($content) {
+                return $q->whereIn('name', $content ->tags->pluck('name')); 
+            })
             ->where('category_id', '!=', 3)
-            ->where('v_content.id', '!=', $content->id)
             ->where('published', '=', 1)
-            ->where('v_relation_tags_content.tag_id', '=', $topic)
+            ->where('id', '!=', $content->id) // So you won't fetch same post
             ->get();
-        foreach ($relates as $relate) {
-            $date2 = \Carbon\Carbon::parse($relate->publish_at)->format('l, d F Y H:m');
+            // foreach ($content->tags as $tag) {
+            //     $topic = $tag->id;
+            // }
+            // $relates = DB::table('v_content')
+            //     ->join('v_relation_tags_content', 'v_content.id', '=', 'v_relation_tags_content.content_id')
+            //     ->join('v_topics', 'v_relation_tags_content.tag_id', '=', 'v_topics.id')
+            //     ->join('v_format_content', 'v_content.category_id', '=', 'v_format_content.id')
+            //     ->join('users', 'v_content.created_by', '=', 'users.id')
+            //     ->select(
+            //         'users.name as author',
+            //         'v_format_content.name as format',
+            //         'v_content.category_id',
+            //         'v_content.created_by',
+            //         'v_content.judul',
+            //         'v_content.permalink',
+            //         'v_content.publish_at'
+            //     )
+            //     ->where('category_id', '!=', 3)
+            //     ->where('v_content.id', '!=', $content->id)
+            //     ->where('published', '=', 1)
+            //     ->where('v_relation_tags_content.tag_id', '=', $topic)
+            //     ->get();
+            foreach ($relates as $relate) {
+                $relate->publish_at = \Carbon\Carbon::parse($relate->publish_at)->format('l, d F Y H:m');
+            }
         }
 
         if (!empty($content->igdb_id)) {
             $games = Game::with(['cover', 'genres', 'platforms'])->where('id', $content->igdb_id)->get();
             foreach ($games as $game) {
-                $release_date = \Carbon\Carbon::parse($game->first_release_date)->format('l, d F Y');
+                $game->first_release_date = \Carbon\Carbon::parse($game->first_release_date)->format('l, d F Y');
             }
             $developers = Company::whereIn('developed', [$content->igdb_id])->get();
             $publishers = Company::whereIn('published', [$content->igdb_id])->get();
-            return view('front.content', compact('content', 'date', 'date2', 'developers', 'games', 'publishers', 'relates', 'release_date'));
+            return view('front.content', compact('content', 'developers', 'games', 'publishers', 'relates'));
         }else{
-            return view('front.content', compact('content', 'date', 'date2', 'relates'));
+            return view('front.content', compact('content', 'relates'));
         }
     }
 
@@ -102,8 +114,8 @@ class ContentController extends Controller
     public function preview($id = 340)
     {
         $content = Content::where('id', $id)->first();
-        $date = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
-        return view('back.content-preview', compact('content', 'date'));
+        $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
+        return view('back.content-preview', compact('content'));
     }
 
     public function search(Request $request)
@@ -112,6 +124,8 @@ class ContentController extends Controller
         $categories = FormatContent::where('id', '!=', 3)->get();
         $keyword = $request->search;
         $contents = Content::where('published', '=', 1)
+            ->where('category_id', '!=', 3)
+            ->where('publish_at', '!=', '')
             ->where('category_id', '!=', 3)
             ->where('judul', 'like', "%".$keyword."%")
             ->orWhere('sub_judul', 'like', "%".$keyword."%")
@@ -126,16 +140,21 @@ class ContentController extends Controller
             ->paginate(10);
         if (!empty($request->author)) {
             $contents = Content::where('published', '=', 1)
+                ->where('category_id', '!=', 3)
+                ->where('publish_at', '!=', '')
                 ->where('created_by', '=', $request->author)
                 ->paginate(10);
         }
         if (!empty($request->category)) {
             $contents = Content::where('published', '=', 1)
+                ->where('category_id', '!=', 3)
+                ->where('publish_at', '!=', '')
                 ->where('category_id', '=', $request->category)
                 ->paginate(10);
         }
-        $populars = Content::where('category_id', '!=', 3)
-            ->where('published', '=', 1)
+        $populars = Content::where('published', '=', 1)
+            ->where('category_id', '!=', 3)
+            ->where('publish_at', '!=', '')
             ->orderBy('views', 'desc')
             ->paginate(10);
         foreach ($contents as $content) {

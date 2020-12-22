@@ -22,7 +22,7 @@
                         e-sport
                     @else
                         ''
-                    @endif " style="margin-bottom:5%">
+                    @endif ">
                     <a href="{{ route('detail', $popular->permalink) }}">
                         <div class="post-preview-img-wrap">
                             <figure class="post-preview-img liquid">
@@ -55,7 +55,7 @@
                         e-sport
                     @else
                         ''
-                    @endif " style="margin-bottom:5%">
+                    @endif ">
                     <a href="{{ route('detail', $late->permalink) }}">
                         <div class="post-preview-img-wrap">
                             <figure class="post-preview-img liquid">

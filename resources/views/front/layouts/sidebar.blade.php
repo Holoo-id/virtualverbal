@@ -2,10 +2,10 @@
 <div class="layout-sidebar layout-item own-grid gutter-medium">
     <div class="widget-sidebar">
         <div class="section-title-wrap violet">
-            <h2 class="section-title medium">Popular Contents</h2>
+            <h2 class="section-title medium">Popular Posts</h2>
             <div class="section-title-separator"></div>
         </div>
-        <div class="post-preview-showcase grid-1col_1 gutter-small">
+        <div class="post-preview-showcase grid-1col gutter-small">
             @foreach($populars as $popular)
                 <div class="post-preview tiny padded 
                     @if($popular->category_id == 2)
@@ -14,7 +14,7 @@
                         e-sport
                     @else
                         ''
-                    @endif " style="margin-bottom:5%">
+                    @endif ">
                     <a href="{{ route('detail', $popular->permalink) }}">
                         <div class="post-preview-img-wrap">
                             <figure class="post-preview-img liquid">

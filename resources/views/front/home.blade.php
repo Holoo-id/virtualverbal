@@ -530,7 +530,7 @@
                             <div class="post-open-media-wrap">
                                 <!-- POST OPEN MEDIA -->
                                 <div class="post-open-media">
-                                    <iframe src="../embed/IoBOFTi-zAk.html"
+                                    <iframe src="https://www.youtube.com/embed/AqgeQMy0NQI"
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen=""></iframe>
                                 </div>

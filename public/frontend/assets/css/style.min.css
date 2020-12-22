@@ -808,7 +808,7 @@ figure>img {
 }
 
 .layout-item-1-2-1 {
-    grid-template-columns: 22.5% 45% 22.5%
+    grid-template-columns: 22% 46% 22%
 }
 
 .layout-item-2-1 {
@@ -1126,7 +1126,7 @@ figure>img {
 }
 
 .grid-1col_1 {
-    grid-template-columns: 270px
+    grid-template-columns: 300px
 }
 
 .grid-4col {
@@ -1154,7 +1154,7 @@ figure>img {
 }
 
 .grid-1col {
-    grid-template-columns: 360px
+    grid-template-columns: 350px
 }
 
 @media screen and (max-width: 1260px) {

@@ -32,7 +32,7 @@ class ContentController extends Controller
             $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
         }
         foreach ($populars as $popular) {
-            $popular->publish_at = \Carbon\Carbon::parse($popular->publish_at)->format('D, d F Y');
+            $popular->publish_at = \Carbon\Carbon::parse($popular->publish_at)->format('D, d M Y');
         }
         if ($request->ajax()) {
             $view = view('front.layouts.components.data-search', compact('authors', 'categories', 'contents'))->render();
@@ -47,11 +47,13 @@ class ContentController extends Controller
         $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
         $latest = Content::where('published', '=', 1)
             ->where('category_id', '!=', 3)
+            ->where('id', '!=', $content->id)
             ->where('publish_at', '!=', '')
             ->orderBy('publish_at', 'desc')
             ->paginate(5);
         $populars = Content::where('published', '=', 1)
             ->where('category_id', '!=', 3)
+            ->where('id', '!=', $content->id)
             ->where('publish_at', '!=', '')
             ->orderBy('views', 'desc')
             ->paginate(5);
@@ -159,7 +161,7 @@ class ContentController extends Controller
             }
         }
         foreach ($populars as $popular) {
-            $popular->publish_at = \Carbon\Carbon::parse($popular->publish_at)->format('D, d F Y');
+            $popular->publish_at = \Carbon\Carbon::parse($popular->publish_at)->format('D, d M Y');
         }
         if ($request->ajax()) {
             $view = view('front.layouts.components.data-search', compact('authors', 'categories', 'contents'))->render();

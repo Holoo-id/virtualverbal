@@ -4,6 +4,8 @@
             gaming-news
         @elseif($content->category_id == 1)
             e-sport
+        @elseif($content->category_id == 4)
+            movie-news
         @else
             ''
         @endif ">

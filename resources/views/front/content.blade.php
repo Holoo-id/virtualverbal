@@ -21,6 +21,8 @@
                         gaming-news
                     @elseif($content->category_id == 1)
                         e-sport
+                    @elseif($content->category_id == 4)
+                        movie-news
                     @else
                         ''
                     @endif" >
@@ -36,6 +38,8 @@
                                     blue
                                 @elseif($content->category_id == 1)
                                     violet
+                                @elseif($content->category_id == 4)
+                                    green
                                 @else
                                     ''
                                 @endif">

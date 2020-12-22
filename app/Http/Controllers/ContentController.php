@@ -7,7 +7,6 @@ use App\Models\FormatContent;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use MarcReichel\IGDBLaravel\Models\Company;
 use MarcReichel\IGDBLaravel\Models\Game;
 use Storage;
@@ -46,6 +45,24 @@ class ContentController extends Controller
     {
         $content = Content::where('permalink', $permalink)->first();
         $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
+        $latest = Content::where('published', '=', 1)
+            ->where('category_id', '!=', 3)
+            ->where('publish_at', '!=', '')
+            ->orderBy('publish_at', 'desc')
+            ->paginate(5);
+        $populars = Content::where('published', '=', 1)
+            ->where('category_id', '!=', 3)
+            ->where('publish_at', '!=', '')
+            ->orderBy('views', 'desc')
+            ->paginate(5);
+            
+        foreach ($latest as $late) {
+            $late->publish_at = \Carbon\Carbon::parse($late->publish_at)->format('D, d F Y');
+        }
+        
+        foreach ($populars as $popular) {
+            $popular->publish_at = \Carbon\Carbon::parse($popular->publish_at)->format('D, d F Y');
+        }
 
         if (!empty($content->tags)) {
             $relates = Content::whereHas('tags', function ($q) use ($content) {
@@ -55,28 +72,6 @@ class ContentController extends Controller
             ->where('published', '=', 1)
             ->where('id', '!=', $content->id) // So you won't fetch same post
             ->get();
-            // foreach ($content->tags as $tag) {
-            //     $topic = $tag->id;
-            // }
-            // $relates = DB::table('v_content')
-            //     ->join('v_relation_tags_content', 'v_content.id', '=', 'v_relation_tags_content.content_id')
-            //     ->join('v_topics', 'v_relation_tags_content.tag_id', '=', 'v_topics.id')
-            //     ->join('v_format_content', 'v_content.category_id', '=', 'v_format_content.id')
-            //     ->join('users', 'v_content.created_by', '=', 'users.id')
-            //     ->select(
-            //         'users.name as author',
-            //         'v_format_content.name as format',
-            //         'v_content.category_id',
-            //         'v_content.created_by',
-            //         'v_content.judul',
-            //         'v_content.permalink',
-            //         'v_content.publish_at'
-            //     )
-            //     ->where('category_id', '!=', 3)
-            //     ->where('v_content.id', '!=', $content->id)
-            //     ->where('published', '=', 1)
-            //     ->where('v_relation_tags_content.tag_id', '=', $topic)
-            //     ->get();
             foreach ($relates as $relate) {
                 $relate->publish_at = \Carbon\Carbon::parse($relate->publish_at)->format('l, d F Y H:m');
             }
@@ -89,9 +84,9 @@ class ContentController extends Controller
             }
             $developers = Company::whereIn('developed', [$content->igdb_id])->get();
             $publishers = Company::whereIn('published', [$content->igdb_id])->get();
-            return view('front.content', compact('content', 'developers', 'games', 'publishers', 'relates'));
+            return view('front.content', compact('content', 'developers', 'games', 'latest', 'publishers', 'populars', 'relates'));
         }else{
-            return view('front.content', compact('content', 'relates'));
+            return view('front.content', compact('content', 'latest', 'populars', 'relates'));
         }
     }
 

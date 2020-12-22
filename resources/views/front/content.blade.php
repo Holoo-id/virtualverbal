@@ -78,8 +78,8 @@
                 </div>
 
                 <div class="widget-news">
-                    <div class="section-title-wrap blue">
-                        <h2 class="section-title medium">Related News</h2>
+                    <div class="section-title-wrap green">
+                        <h2 class="section-title medium">Related Content</h2>
                         <div class="section-title-separator"></div>
                     </div>
                     @if(!empty($relates))

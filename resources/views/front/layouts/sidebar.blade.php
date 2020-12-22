@@ -2,7 +2,7 @@
 <div class="layout-sidebar layout-item own-grid gutter-medium">
     <div class="widget-sidebar">
         <div class="section-title-wrap violet">
-            <h2 class="section-title medium">Popular Posts</h2>
+            <h2 class="section-title medium">Popular Contents</h2>
             <div class="section-title-separator"></div>
         </div>
         <div class="post-preview-showcase grid-1col_1 gutter-small">

@@ -18,7 +18,7 @@
                     <a href="{{ route('detail', $popular->permalink) }}">
                         <div class="post-preview-img-wrap">
                             <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/01.jpg')}}" alt="post-01">
+                                <img src="{{ asset($popular->image_path)}}" alt="{{ $popular->image_name }}">
                             </figure>
                         </div>
                     </a>

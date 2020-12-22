@@ -12,7 +12,7 @@
         <a href="{{ route('detail', ['permalink' => $content->permalink]) }}">
             <div class="post-preview-img-wrap">
                 <figure class="post-preview-img liquid">
-                    <img src="{{ asset('/frontend/assets/img/posts/41.jpg')}}" alt="post-01">
+                    <img src="{{ asset($content->image_path)}}" alt="{{ $content->image_name }}">
                 </figure>
             </div>
         </a>

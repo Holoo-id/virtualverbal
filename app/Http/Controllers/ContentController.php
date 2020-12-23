@@ -96,10 +96,8 @@ class ContentController extends Controller
     {
         $authors = User::all();
         $categories = FormatContent::all();
-        $contents = Content::all();
-        foreach ($contents as $content) {
-            $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
-        }
+        $contents = Content::orderBy('created_at', 'desc')
+            ->paginate(20);
         return view('back.content-list', compact('authors', 'categories', 'contents'));
     }
 
@@ -108,10 +106,10 @@ class ContentController extends Controller
         return view('back.create-content');
     }
 
-    public function preview($id = 340)
+    public function preview($permalink)
     {
-        $content = Content::where('id', $id)->first();
-        $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
+        $content = Content::where('permalink', $permalink)->first();
+        $content->created_at = \Carbon\Carbon::parse($content->created_at)->format('l, d F Y H:m');
         return view('back.content-preview', compact('content'));
     }
 

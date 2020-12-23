@@ -18,7 +18,7 @@
                 </div>
                 <div class="p-5" id="basic-datepicker">
                     <div class="preview">
-                        <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" action="{{ route('tambahdata')}}" enctype="multipart/form-data" method="post" class="validate-form">
+                        <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" action="{{ route('add-content')}}" enctype="multipart/form-data" method="post" class="validate-form">
                             @csrf
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Judul <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>

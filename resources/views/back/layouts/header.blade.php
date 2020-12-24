@@ -473,11 +473,22 @@
         <a href="" class="-intro-x hidden md:flex">
             <img alt="Virtual Verbal Admin" class="w-40" src="{{ asset('/frontend/assets/img/brand/logoputihvv.png')}}">
         </a>
-        <!-- END: Logo -->
+        
         <!-- BEGIN: Breadcrumb -->
-        <div class="-intro-x breadcrumb breadcrumb--light mr-auto"> <a href="" class="">Application</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="" class="breadcrumb--active">Dashboard</a> </div>
-        <!-- END: Breadcrumb -->
-        <!-- BEGIN: Search -->
+        <div class="-intro-x breadcrumb breadcrumb--light mr-auto">
+        <!-- GA BOLEH DIHAPUS -->
+            <!-- {{ $a = request()->segment(count(request()->segments())) }} -->
+            @foreach(Request::segments() as $segment)
+                @if($segment == $a)
+                    <a href="" class="breadcrumb--active capitalize">{{ $segment }}</a>
+                @else
+                    <a href="" class="capitalize">{{ $segment }}</a>
+                    <i data-feather="chevron-right" class="breadcrumb__icon"></i>
+                @endif
+            @endforeach
+        </div>
+        
+        {{--<!-- BEGIN: Search -->
         <div class="intro-x relative mr-3 sm:mr-6">
             <div class="search hidden sm:block">
                 <input type="text" class="search__input input placeholder-theme-13" placeholder="Search...">
@@ -488,10 +499,6 @@
                 <div class="search-result__content">
                     <div class="search-result__content__title">Pages</div>
                     <div class="mb-5">
-                        <a href="" class="flex items-center">
-                            <div class="w-8 h-8 bg-theme-18 text-theme-9 flex items-center justify-center rounded-full"> <i class="w-4 h-4" data-feather="inbox"></i> </div>
-                            <div class="ml-3">Mail Settings</div>
-                        </a>
                         <a href="" class="flex items-center mt-2">
                             <div class="w-8 h-8 bg-theme-17 text-theme-11 flex items-center justify-center rounded-full"> <i class="w-4 h-4" data-feather="users"></i> </div>
                             <div class="ml-3">Users & Permissions</div>
@@ -517,20 +524,6 @@
                             <div class="ml-3">Denzel Washington</div>
                             <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">denzelwashington@left4code.com</div>
                         </a>
-                        <a href="" class="flex items-center mt-2">
-                            <div class="w-8 h-8 image-fit">
-                                <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-15.jpg">
-                            </div>
-                            <div class="ml-3">Angelina Jolie</div>
-                            <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">angelinajolie@left4code.com</div>
-                        </a>
-                        <a href="" class="flex items-center mt-2">
-                            <div class="w-8 h-8 image-fit">
-                                <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-15.jpg">
-                            </div>
-                            <div class="ml-3">Sylvester Stallone</div>
-                            <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">sylvesterstallone@left4code.com</div>
-                        </a>
                     </div>
                     <div class="search-result__content__title">Products</div>
                     <a href="" class="flex items-center mt-2">
@@ -547,24 +540,10 @@
                         <div class="ml-3">Nikon Z6</div>
                         <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Photography</div>
                     </a>
-                    <a href="" class="flex items-center mt-2">
-                        <div class="w-8 h-8 image-fit">
-                            <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="dist/images/preview-11.jpg">
-                        </div>
-                        <div class="ml-3">Sony Master Series A9G</div>
-                        <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Electronic</div>
-                    </a>
-                    <a href="" class="flex items-center mt-2">
-                        <div class="w-8 h-8 image-fit">
-                            <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="dist/images/preview-11.jpg">
-                        </div>
-                        <div class="ml-3">Samsung Q90 QLED TV</div>
-                        <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Electronic</div>
-                    </a>
                 </div>
             </div>
         </div>
-        <!-- END: Search -->
+        
         <!-- BEGIN: Notifications -->
         <div class="intro-x dropdown relative mr-4 sm:mr-6">
             <div class="dropdown-toggle notification notification--light notification--bullet cursor-pointer"> <i data-feather="bell" class="notification__icon"></i> </div>
@@ -638,32 +617,32 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- END: Notifications -->
+        </div>--}}
+        
         <!-- BEGIN: Account Menu -->
         <div class="intro-x dropdown w-8 h-8 relative">
             <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in scale-110">
-                <img alt="Midone Tailwind HTML Admin Template" src="{{ asset('/frontend/assets/img/users/01.jpg')}}">
+                <img alt="Avatar for {{Auth::user()->name}}" src="{{ asset(Auth::user()->image)}}">
             </div>
             <div class="dropdown-box mt-10 absolute w-56 top-0 right-0 z-20">
                 <div class="dropdown-box__content box bg-theme-38 text-white">
                     <div class="p-4 border-b border-theme-40">
-                        <div class="font-medium">Angelina Jolie</div>
-                        <div class="text-xs text-theme-41">DevOps Engineer</div>
+                        <div class="font-medium">{{Auth::user()->name}}</div>
+                        <div class="text-xs text-theme-41">{{Auth::user()->role->name}}</div>
                     </div>
-                    <div class="p-2">
+                    {{--<div class="p-2">
                         <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="user" class="w-4 h-4 mr-2"></i> Profile </a>
                         <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="edit" class="w-4 h-4 mr-2"></i> Add Account </a>
                         <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="lock" class="w-4 h-4 mr-2"></i> Reset Password </a>
                         <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="help-circle" class="w-4 h-4 mr-2"></i> Help </a>
-                    </div>
+                    </div>--}}
                     <div class="p-2 border-t border-theme-40">
-                        <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+                        <a href="{{ route('logout') }}" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- END: Account Menu -->
+        
     </div>
 </div>
 <!-- END: Top Bar -->
@@ -671,13 +650,19 @@
 <nav class="top-nav">
     <ul>
         <li>
-            <a href="{{ route('dashboard') }}" class="top-menu top-menu--active">
+            <a href="{{ route('dashboard') }}" class="top-menu 
+                @if(Route::current() == Request::segments(1))
+                    top-menu--active
+                @endif ">
                 <div class="top-menu__icon"> <i data-feather="home"></i> </div>
                 <div class="top-menu__title"> Dashboard </div>
             </a>
         </li>
         <li>
-            <a href="javascript:;" class="top-menu">
+            <a href="javascript:;" class="top-menu
+                @if(Route::current() == Request::segments(1))
+                    top-menu--active
+                @endif ">
                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
                 <div class="top-menu__title"> Content <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
             </a>

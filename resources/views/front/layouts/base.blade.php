@@ -17,7 +17,7 @@
         <meta name="twitter:image" content="http://themepixels.me/azia/img/azia-social.png">
 
         <!-- Facebook -->
-        <meta property="fb:app_id" content="{{ env('FACEBOOK_APP_ID') }}" />
+        <meta property="fb:app_id" content="{{ config('services.facebook.client_id') }}" />
 		<meta property="og:url" content="https://www.facebook.com/virtualverbal">
 		<meta property="og:title" content="Virtual Verbal">
 		<meta property="og:description" content="Responsive Bootstrap 4 Dashboard Template">
@@ -60,7 +60,7 @@
         <script>
             window.fbAsyncInit = function() {
                 FB.init({
-                appId      : {{ env('FACEBOOK_APP_ID') }},
+                appId      : {{ config('services.facebook.client_id') }},
                 cookie     : true,
                 xfbml      : true,
                 version    : 'v9.0'

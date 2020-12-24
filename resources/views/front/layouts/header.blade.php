@@ -48,8 +48,8 @@
                         <button type="submit" class="button blue full disabled" id="login_btn" disabled="true">Masuk!</button>
                         <div class="social-buttons">
                             {{-- <div style="padding-top: 20px; padding-left: 17%" class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="50"></div> --}}
-                            <a href="#" class="button-social fb fb-login-button disabled" disabled>Facebook Login</a>
-                            <button href="#" class="button-social gplus gplus-login-button disabled" disabled>Google Login</button>
+                            <a href="/login-by/facebook" class="button-social fb">Facebook Login</a>
+                            <a href="/login-by/google" class="button-social gplus">Google Login</a>
                         </div>
                     </div>
                 </form>
@@ -4011,8 +4011,8 @@
                         <button type="submit" class="button blue full disabled" id="login_btn" disabled="true">Masuk!</button>
                         <div class="social-buttons">
                             {{-- <div style="padding-top: 20px; padding-left: 17%" class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="50"></div> --}}
-                            <a href="#" class="button-social fb fb-login-button disabled" disabled>Facebook Login</a>
-                            <button href="#" class="button-social gplus gplus-login-button disabled" disabled>Google Login</button>
+                            <a href="/login-by/facebook" class="button-social fb fb-login-button">Facebook Login</a>
+                            <a href="/login-by/google" class="button-social gplus gplus-login-button">Google Login</a>
                         </div>
                     </div>
                 </form>

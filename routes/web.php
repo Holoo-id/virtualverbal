@@ -97,3 +97,6 @@ Route::prefix('/back')->group(function (){
 
     Route::post('/email/verify/{encrypted_id}', [UserController::class, 'finalizeRegister']);
 // Route untuk verifikasi email
+
+Route::get('/login-by/google', [UserController::class, 'redirectToProvider']);
+Route::get('/login-by/google/callback', [UserController::class, 'handleProviderCallback']);

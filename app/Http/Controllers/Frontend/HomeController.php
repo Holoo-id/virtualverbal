@@ -44,8 +44,12 @@ class HomeController extends Controller
             ->get()
             ->sortByDesc('first_release_date');
 
-        $lives = Content::where('category_id', 3)->get();
+        $video_contents = Content::where('published', '=', 1)
+            ->where('category_id', 4)
+            ->where('publish_at', '!=', '')
+            ->orderBy('views', 'desc')
+            ->paginate(9);
 
-        return view('front.home', compact('coming_soon', 'contents', 'hypes', 'lives', 'recently_release'));
+        return view('front.home', compact('coming_soon', 'contents', 'hypes', 'recently_release', 'video_contents'));
     }
 }

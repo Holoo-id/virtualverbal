@@ -62,5 +62,6 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \App\Http\Middleware\VerifiedOrNot::class,
+        'get.live_news' => \App\Http\Middleware\Livenews::class,
     ];
 }

@@ -130,7 +130,6 @@ class ContentController extends Controller
         $contents = Content::where('published', '=', 1)
             ->where('category_id', '!=', 3)
             ->where('publish_at', '!=', '')
-            ->where('category_id', '!=', 3)
             ->where('judul', 'like', "%".$keyword."%")
             ->orWhere('sub_judul', 'like', "%".$keyword."%")
             // ->where(function($query) use ($request){

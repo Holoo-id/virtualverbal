@@ -492,6 +492,7 @@
                     </div>
                     
                     <div class="post-preview-showchase grid-1col_1 centered gutter-small">
+                    {{-- dd($hypes) --}}
                         @foreach($hypes as $hype)
                         <div class="post-preview tiny game-review">
                             <a href="esports-post.html">
@@ -503,8 +504,12 @@
                             </a>
                             <a href="esports-post.html" class="post-preview-title">{{ $hype->name }}</a>
                             <div class="post-author-info-wrap">
-                                <p class="post-author-info small light">By <a href="search-results.html"
-                                        class="post-author">Dexter</a><span class="separator">|</span>{{ $hype->first_release_date }}</p>
+                                <p class="post-author-info small light">
+                                {{--dd($hype->release_dates)--}}
+                                    @foreach($hype->release_dates as $release_date)
+                                        {{ $release_date->human }}
+                                    @endforeach
+                                </p>
                             </div>
                         </div>
                         @endforeach

@@ -25,10 +25,13 @@ class HomeController extends Controller
         $coming_soon = Game::with(['cover', 'release_dates'])
             ->where('status', 4)
             ->get()->sortByDesc('first_release_date');
-        $hypes = Game::with(['cover'])
-            ->where('status', 4)
+
+        $hypes = Game::with(['cover', 'release_dates'])
+            ->where('first_release_date', '>', now())
+            ->where('hypes', '>', 34)
             ->get()
             ->sortByDesc('hypes');
+
         $recently_release = Game::with(['cover'])
             ->get()
             ->sortByDesc('first_release_date');

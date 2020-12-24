@@ -81,7 +81,21 @@
         @include('front.layouts.header')
         @yield('content')
         @include('front.layouts.footer')
-
+        <script>
+            function getDataSlide(){
+                let data = [];
+                @foreach($live_news as $live_data)
+                    data.push(
+                        {
+                            title:'{{ $live_data->judul }}',
+                            content:'{{ $live_data->sub_judul }}',
+                            separator:'<span class="separator"><span class="separator-bar">/</span><span class="separator-bar">/</span></span>'
+                        },
+                    );          
+                @endforeach
+                return data
+            }
+        </script>
         <script src="{{ asset('/frontend/assets/js/app.bundle.min.js') }}"></script>
         <script src="{{ asset('/frontend/assets/js/jquery-3.5.1.min.js')}}"></script>
         
@@ -202,16 +216,6 @@
                 }
             });
 
-            function getDataSlide(){
-                var data = [
-                    {
-                        title:'',
-                        content:'The new game from the world famous "Eternity Studios" is back with a new adventure game with a lot of classic and puzzle elements',
-                        separator:'<span class="separator"><span class="separator-bar">/</span><span class="separator-bar">/</span></span>'
-                    },
-                ];
-                return data
-            }
         </script>
     </body>
 

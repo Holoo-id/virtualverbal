@@ -443,15 +443,20 @@
                                 <a href="esports-post.html">
                                     <div class="post-preview-img-wrap">
                                         <figure class="post-preview-img liquid">
-                                            <img src="https://images.igdb.com/igdb/image/upload/t_cover_small/co2jrt.jpg" alt="post-36">
-                                            <img src="https://images.igdb.com/igdb/image/upload/t_cover_small/{{-- $recent->cover->image_id --}}.jpg" alt="post-36">
+                                            <!-- <img src="https://images.igdb.com/igdb/image/upload/t_cover_small/co2jrt.jpg" alt="{{ $recent->hypes }}"> -->
+                                            <img src="https://images.igdb.com/igdb/image/upload/t_cover_small/{{ $recent->cover->image_id }}.jpg" alt="post-36">
                                         </figure>
                                     </div>
                                 </a>
                                 <a href="esports-post.html" class="post-preview-title">{{ $recent->name }}</a>
                                 <div class="post-author-info-wrap">
-                                    <p class="post-author-info small light">By <a href="search-results.html"
-                                            class="post-author">Dexter</a><span class="separator">|</span>{{ $recent->first_release_date }}</p>
+                                    <p class="post-author-info small light">
+                                        {{-- dd($recently_release) --}}
+                                        @foreach($recent->release_dates as $release_date)
+                                            {{ $recent->follows }}
+                                            {{ $release_date->human }}
+                                        @endforeach
+                                    </p>
                                 </div>
                             </div>
                         @endforeach
@@ -464,21 +469,22 @@
                     </div>
                     
                     <div class="post-preview-showchase grid-1col_1 centered gutter-small">
-                                        {{--dd($coming_soon)--}}
                         @foreach($coming_soon as $soon)
                         <div class="post-preview tiny e-sport">
                             <a href="esports-post.html">
                                 <div class="post-preview-img-wrap">
                                     <figure class="post-preview-img liquid">
-                                        <img src="https://images.igdb.com/igdb/image/upload/t_thumb/{{-- $soon->cover->image_id --}}.jpg" alt="post-36">
+                                        <img src="https://images.igdb.com/igdb/image/upload/t_thumb/{{ $soon->cover->image_id }}.jpg" alt="{{ $soon->hypes }}">
                                     </figure>
                                 </div>
                             </a>
                             <a href="esports-post.html" class="post-preview-title">{{ $soon->name }}</a>
                             <div class="post-author-info-wrap">
-                                <p class="post-author-info small light">By <a href="search-results.html"
-                                        class="post-author">Dexter</a><span class="separator">|</span>
-                                        {{--$soon->release_dates->human--}}
+                                <p class="post-author-info small light">
+                                    @foreach($soon->release_dates as $release_date)
+                                        {{ $release_date->human }}
+                                    @endforeach
+                                </p>
                                 </p>
                             </div>
                         </div>
@@ -492,19 +498,24 @@
                     </div>
                     
                     <div class="post-preview-showchase grid-1col_1 centered gutter-small">
+                    {{-- dd($hypes) --}}
                         @foreach($hypes as $hype)
                         <div class="post-preview tiny game-review">
                             <a href="esports-post.html">
                                 <div class="post-preview-img-wrap">
                                     <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/28.jpg')}}" alt="post-36">
+                                        <img src="https://images.igdb.com/igdb/image/upload/t_cover_small/{{ $hype->cover->image_id }}.jpg" alt="post-36">
                                     </figure>
                                 </div>
                             </a>
                             <a href="esports-post.html" class="post-preview-title">{{ $hype->name }}</a>
                             <div class="post-author-info-wrap">
-                                <p class="post-author-info small light">By <a href="search-results.html"
-                                        class="post-author">Dexter</a><span class="separator">|</span>{{ $hype->first_release_date }}</p>
+                                <p class="post-author-info small light">
+                                {{--dd($hype->release_dates)--}}
+                                    @foreach($hype->release_dates as $release_date)
+                                        {{ $release_date->human }}
+                                    @endforeach
+                                </p>
                             </div>
                         </div>
                         @endforeach

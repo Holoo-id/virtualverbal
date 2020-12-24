@@ -3019,6 +3019,9 @@ a {
     content: 'Moderator';
     background-color: #7442ce
 }
+.text-tag.important:after {
+    content: 'Important!'
+}
 
 .review-block {
     display: flex;

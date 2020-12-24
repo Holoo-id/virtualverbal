@@ -44,7 +44,14 @@ class ContentController extends Controller
     public function detail($permalink)
     {
         $content = Content::where('permalink', $permalink)->first();
+        //count views
+        $count = $content->increment('views');
+        $content->update([
+            'views' => $count
+        ]);
         $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
+
+        // sidebar
         $latest = Content::where('published', '=', 1)
             ->where('category_id', '!=', 3)
             ->where('id', '!=', $content->id)
@@ -66,6 +73,7 @@ class ContentController extends Controller
             $popular->publish_at = \Carbon\Carbon::parse($popular->publish_at)->format('D, d F Y');
         }
 
+        // topipcs
         if (!empty($content->tags)) {
             $relates = Content::whereHas('tags', function ($q) use ($content) {
                 return $q->whereIn('name', $content ->tags->pluck('name')); 
@@ -78,7 +86,8 @@ class ContentController extends Controller
                 $relate->publish_at = \Carbon\Carbon::parse($relate->publish_at)->format('l, d F Y H:m');
             }
         }
-
+        
+        // igdb
         if (!empty($content->igdb_id)) {
             $games = Game::with(['cover', 'genres', 'platforms'])->where('id', $content->igdb_id)->get();
             foreach ($games as $game) {
@@ -121,7 +130,6 @@ class ContentController extends Controller
         $contents = Content::where('published', '=', 1)
             ->where('category_id', '!=', 3)
             ->where('publish_at', '!=', '')
-            ->where('category_id', '!=', 3)
             ->where('judul', 'like', "%".$keyword."%")
             ->orWhere('sub_judul', 'like', "%".$keyword."%")
             // ->where(function($query) use ($request){

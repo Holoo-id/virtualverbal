@@ -42,6 +42,8 @@
 		<link href="{{ asset('/backend/lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
 		<link href="{{ asset('/backend/lib/typicons.font/typicons.css')}}" rel="stylesheet">
 
+        <link rel="stylesheet" href="{{ asset('/frontend/assets/css/style.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('/frontend/assets/font-awesome/css/all.css')}}">
 		<link rel="stylesheet" href="{{ asset('/backend/dist/css/app.css') }}" />
 
 	</head>
@@ -92,12 +94,26 @@
                             </h2> -->
                             <!-- <div class="intro-x mt-2 text-gray-500 xl:hidden text-center">A few more clicks to sign in to your account. Manage all your e-commerce accounts in one place</div> -->
                             <div class="intro-x mt-8">
+                                    @if ($errors->any())
+                                        <p class="text-tag important red">    
+                                        @foreach ($errors->all() as $error)
+                                            @if ($error == "The username has already been taken.")
+                                                Username sudah terpakai!
+                                            @elseif($error == "The image must be a file of type: image\/jpeg, image\/png.")
+                                                Mohon gunakan file image dengan format jpeg atau png saja! 
+                                            @else
+                                                {{$error}}
+                                            @endif
+                                        @endforeach
+                                        </p>
+                                        <br>
+                                    @endif
                                 <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <input type="text" class="intro-x login__input input input--lg border border-gray-300 block" placeholder="Username" name="username" id="register_username" required>
                                     <input type="file" class="intro-x login__input input input--lg border border-gray-300 block mt-4" placeholder="Your Photo" name="image" id="register_image" accept="image/*">
                                     <div class="intro-x mt-5 xl:mt-8 text-center xl:text-left">
-                                    <button type="submit" class="button button--lg w-full xl:w-32 text-white bg-theme-1 xl:mr-3 disabled" id="register_btn" disabled>Submit</button>
+                                    <button type="submit" class="button fb full disabled" id="register_btn" disabled>Submit</button>
                                 </div>    
                                 </form>
                             </div>
@@ -109,7 +125,6 @@
         </div>
 
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=['your-google-map-api']&libraries=places"></script>
         <script src="{{ asset('/backend/dist/js/app.js') }}"></script>
         <script src="{{asset('/frontend/assets/js/jquery-3.5.1.min.js')}}"></script>
         <script>

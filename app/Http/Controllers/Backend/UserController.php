@@ -6,6 +6,8 @@ use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
+use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -24,5 +26,14 @@ class UserController extends Controller
         $new_user->image = 'storage/images/users/'.$img_name;
         $new_user->save();
         return redirect('/');
+    }
+
+    public function redirectToProvider(){
+        return Socialite::driver('google')->redirect();
+    }
+
+    public function handleProviderCallback(){
+        $user = Socialite::driver('google')->user();
+        dd($user);
     }
 }

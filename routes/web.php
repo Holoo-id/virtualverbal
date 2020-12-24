@@ -48,14 +48,14 @@ Route::get('/reset-password', function () {
 });
 
 // Mulai Rapih
-Route::get('/', [HomeController::class, 'index'])->name('home')->middleware(['verified']);
+Route::get('/', [HomeController::class, 'index'])->name('home')->middleware(['verified','get.live_news']);
 
 Route::prefix('/front')->group(function () {
     Route::get('/about', function () {
         return view('front.about');
-    })->middleware(['verified'])->name('about');
+    })->middleware(['verified','get.live_news'])->name('about');
 
-    Route::prefix('/content')->group(function () {
+    Route::middleware(['verified','get.live_news'])->prefix('/content')->group(function () {
         Route::get('/all', [ContentController::class, 'all'])->name('all-content');
         Route::get('/detail/{permalink}', [ContentController::class, 'detail'])->name('detail');
         Route::get('/search', [ContentController::class, 'search'])->name('search');

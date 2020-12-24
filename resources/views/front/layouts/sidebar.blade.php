@@ -5,7 +5,7 @@
             <h2 class="section-title medium">Popular Posts</h2>
             <div class="section-title-separator"></div>
         </div>
-        <div class="post-preview-showcase grid-1col_1 gutter-small">
+        <div class="post-preview-showcase grid-1col gutter-small">
             @foreach($populars as $popular)
                 <div class="post-preview tiny padded 
                     @if($popular->category_id == 2)
@@ -14,11 +14,11 @@
                         e-sport
                     @else
                         ''
-                    @endif " style="margin-bottom:5%">
+                    @endif ">
                     <a href="{{ route('detail', $popular->permalink) }}">
                         <div class="post-preview-img-wrap">
                             <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/01.jpg')}}" alt="post-01">
+                                <img src="{{ asset($popular->image_path)}}" alt="{{ $popular->image_name }}">
                             </figure>
                         </div>
                     </a>

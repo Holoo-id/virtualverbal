@@ -5,10 +5,10 @@
         <h2 class="intro-y font-medium text-xl sm:text-2xl">
             {{ $content->judul }}
         </h2>
-        <div class="intro-y text-gray-700 mt-3 text-xs sm:text-sm"> {{ $date }} <span class="mx-1">•</span> <a class="text-theme-1" href="">{{ $content->formatContent->name }}</a> <span class="mx-1">•</span> 7 Min read </div>
+        <div class="intro-y text-gray-700 mt-3 text-xs sm:text-sm"> {{ $content->created_at }} <span class="mx-1">•</span> <a class="text-theme-1" href="">{{ $content->formatContent->name }}</a> <span class="mx-1">•</span> 7 Min read </div>
         <div class="intro-y mt-6">
             <div class="news__preview image-fit">
-                <img alt="Midone Tailwind HTML Admin Template" class="rounded-md" src="{{ asset('/backend/dist/images/preview-11.jpg') }}">
+                <img alt="{{ $content->image_name }}" class="rounded-md" src="{{ asset($content->image_path) }}">
             </div>
         </div>
         <div class="intro-y flex relative pt-16 sm:pt-6 items-center pb-6">

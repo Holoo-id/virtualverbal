@@ -5,7 +5,7 @@
         <div class="post-open game-review">
             <div class="post-open-img-wrap">
                 <figure class="post-open-img2 liquid">
-                    <img src="{{ asset('/frontend/assets/img/posts/01.jpg')}}" alt="post-01">
+                    <img src="{{ asset($content->image_path)}}" alt="{{ $content->image_name }}">
                 </figure>
             </div>
         </div>
@@ -21,6 +21,8 @@
                         gaming-news
                     @elseif($content->category_id == 1)
                         e-sport
+                    @elseif($content->category_id == 4)
+                        movie-news
                     @else
                         ''
                     @endif" >
@@ -36,6 +38,8 @@
                                     blue
                                 @elseif($content->category_id == 1)
                                     violet
+                                @elseif($content->category_id == 4)
+                                    green
                                 @else
                                     ''
                                 @endif">
@@ -44,7 +48,7 @@
                             <div style="margin-top: 5px;margin-bottom:40px;display: flex; justify-content: center;" class="post-author-info-wrap">
                                 <a href="{{ url('front/content/search?author='.$content->writer->id) }}">
                                     <figure class="user-avatar tiny liquid">
-                                        <img src="{{ asset('/frontend/assets/img/users/01.jpg')}}" alt="user-01">
+                                        <img src="{{ asset($content->writer->image)}}" alt="{{ $content->writer->name }}">
                                     </figure>
                                 </a>
                                 <p style="display: flex; justify-content: center; align-items: center" class="post-author-info small light">Oleh 
@@ -78,8 +82,8 @@
                 </div>
 
                 <div class="widget-news">
-                    <div class="section-title-wrap blue">
-                        <h2 class="section-title medium">Related News</h2>
+                    <div class="section-title-wrap green">
+                        <h2 class="section-title medium">Related Content</h2>
                         <div class="section-title-separator"></div>
                     </div>
                     @if(!empty($relates))
@@ -96,7 +100,7 @@
                                     <a href="{{ route('detail', ['permalink' => $relate->permalink]) }}">
                                         <div class="post-preview-img-wrap">
                                             <figure class="post-preview-img liquid">
-                                                <img src="{{ asset('/frontend/assets/img/posts/09.jpg')}}" alt="post-09">
+                                                <img src="{{ asset($relate->image_path)}}" alt="{{ $relate->image_name }}">
                                             </figure>
                                         </div>
                                     </a>

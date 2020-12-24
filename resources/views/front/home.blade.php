@@ -530,7 +530,7 @@
                             <div class="post-open-media-wrap">
                                 <!-- POST OPEN MEDIA -->
                                 <div class="post-open-media">
-                                    <iframe src="../embed/IoBOFTi-zAk.html"
+                                    <iframe src="https://www.youtube.com/embed/AqgeQMy0NQI"
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen=""></iframe>
                                 </div>
@@ -1020,127 +1020,6 @@
         <div class="layout-body layout-item">
             <div class="layout-item">
                 @include('front.layouts.components.data-search')
-    
-                <!-- POST PREVIEW -->
-                {{--<div class="post-preview landscape game-review">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-v2.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/44.jpg')}}" alt="post-05">
-                            </figure>
-                            <!-- POST PREVIEW IMG -->
-    
-                            <!-- REVIEW RATING -->
-                            <div class="review-rating">
-                                <div id="content-news-rate-7" class="arc"></div>
-                            </div>
-                            <!-- /REVIEW RATING -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-    
-                    <!-- TAG ORNAMENT -->
-                    <a href="news-v2.html" class="tag-ornament">Game Reviews</a>
-                    <!-- /TAG ORNAMENT -->
-    
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-v2.html" class="post-preview-title">We reviewed the new and exciting fantasy game
-                        "Olympus"</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
-                                class="post-author">Dexter</a><span class="separator">|</span>Hari, 15 Desember 2018<span
-                                class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
-                                Komentar</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua</p>
-                </div>
-                <div class="post-preview landscape movie-news">
-                    <!-- POST PREVIEW IMG WRAP -->
-                    <a href="post-v3.html">
-                        <div class="post-preview-img-wrap">
-                            <!-- POST PREVIEW IMG -->
-                            <figure class="post-preview-img liquid">
-                                <img src="{{ asset('/frontend/assets/img/posts/46.jpg')}}" alt="post-03">
-                            </figure>
-                            <!-- /POST PREVIEW IMG -->
-    
-                            <!-- RATING ORNAMENT -->
-                            <div class="rating-ornament">
-                                <!-- RATING ORNAMENT ITEM -->
-                                <div class="rating-ornament-item">
-                                    <!-- RATING ORNAMENT ICON -->
-                                    <svg class="rating-ornament-icon">
-                                        <use xlink:href="#svg-star"></use>
-                                    </svg>
-                                </div>
-                                <!-- /RATING ORNAMENT ITEM -->
-    
-                                <!-- RATING ORNAMENT ITEM -->
-                                <div class="rating-ornament-item">
-                                    <!-- RATING ORNAMENT ICON -->
-                                    <svg class="rating-ornament-icon">
-                                        <use xlink:href="#svg-star"></use>
-                                    </svg>
-                                </div>
-                                <!-- /RATING ORNAMENT ITEM -->
-    
-                                <!-- RATING ORNAMENT ITEM -->
-                                <div class="rating-ornament-item">
-                                    <!-- RATING ORNAMENT ICON -->
-                                    <svg class="rating-ornament-icon">
-                                        <use xlink:href="#svg-star"></use>
-                                    </svg>
-                                </div>
-                                <!-- /RATING ORNAMENT ITEM -->
-    
-                                <!-- RATING ORNAMENT ITEM -->
-                                <div class="rating-ornament-item">
-                                    <!-- RATING ORNAMENT ICON -->
-                                    <svg class="rating-ornament-icon">
-                                        <use xlink:href="#svg-star"></use>
-                                    </svg>
-                                </div>
-                                <!-- /RATING ORNAMENT ITEM -->
-    
-                                <!-- RATING ORNAMENT ITEM -->
-                                <div class="rating-ornament-item">
-                                    <!-- RATING ORNAMENT ICON -->
-                                    <svg class="rating-ornament-icon">
-                                        <use xlink:href="#svg-star"></use>
-                                    </svg>
-                                </div>
-                                <!-- /RATING ORNAMENT ITEM -->
-                            </div>
-                            <!-- /RATING ORNAMENT -->
-                        </div>
-                    </a>
-                    <!-- /POST PREVIEW IMG WRAP -->
-    
-                    <!-- TAG ORNAMENT -->
-                    <a href="news-v3.html" class="tag-ornament">Movie News</a>
-                    <!-- /TAG ORNAMENT -->
-    
-                    <!-- POST PREVIEW TITLE -->
-                    <a href="post-v3.html" class="post-preview-title">"The Sandbender II" break the bad sequel spell with a
-                        great movie</a>
-                    <!-- POST AUTHOR INFO -->
-                    <div class="post-author-info-wrap">
-                        <p class="post-author-info small light">Ditulis oleh <a href="search-results.html"
-                                class="post-author">Dexter</a><span class="separator">|</span>Hari, 15 Desember 2018<span
-                                class="separator">|</span><a href="post-v1.html#op-comments" class="post-comment-count">174
-                                Komentar</a></p>
-                    </div>
-                    <!-- /POST AUTHOR INFO -->
-                    <!-- POST PREVIEW TEXT -->
-                    <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt dutor et dolore magna aliqua</p>
-                </div>--}}
             </div>
 
             <!-- BUTTON -->

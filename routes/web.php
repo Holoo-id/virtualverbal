@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\Frontend\BeritaController;
@@ -9,9 +10,6 @@ use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
-
-Route::get('/berita', [BeritaController::class, 'Berita']);
-Route::get('/berita/{slug}', [BeritaController::class, 'LinkBerita']);
 
 Route::get('/esports', function () {
     return view('esports');
@@ -41,12 +39,6 @@ Route::get('/before-email', function () {
 });
 
 // start backend layouts
-Route::get('/dashboard', function () {
-    return view('back.dashboard');
-});
-Route::get('/create-content', function () {
-    return view('back.create-content');
-});
 
 Route::get('/profil', function () {
     return view('back.profile.profil');
@@ -71,9 +63,15 @@ Route::prefix('/front')->group(function () {
 });
 
 Route::prefix('/back')->group(function (){
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::prefix('/content')->group(function () {
-        Route::get('/list', [ContentController::class, 'list']);
-        Route::get('/preview', [ContentController::class, 'preview']);
+        Route::get('/create', [ContentController::class, 'post'])->name('create-content');
+        Route::get('/delete/{permalink}', [ContentController::class, 'delete'])->name('delete-content');
+        Route::get('/edit/{permalink}', [ContentController::class, 'edit'])->name('edit-content');
+        Route::get('/list', [ContentController::class, 'list'])->name('content-list');
+        Route::get('/preview/{permalink}', [ContentController::class, 'preview'])->name('preview');
+        Route::post('/add', [ContentController::class, 'tambah'])->name('add-content');
+        Route::post('/update/{permalink}', [ContentController::class, 'update'])->name('update-content');
     });
 });
 

@@ -63,32 +63,32 @@
         <div class="intro-y col-span-12 md:col-span-6 xl:col-span-3 box">
             <div class="flex items-center border-b border-gray-200 px-5 py-4">
                 <div class="w-10 h-10 flex-none image-fit">
-                    <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('/backend/dist/images/profile-8.jpg') }}">
+                    <img alt="{{-- $content->writer->name --}}" class="rounded-full" src="{{-- asset($content->writer->image) --}}">
                 </div>
                 <div class="ml-3 mr-auto">
-                    <a href="" class="font-medium">{{ $content->writer->name }}</a> 
+                    <a href="" class="font-medium">{{-- $content->writer->name --}}</a> 
                     <div class="flex text-gray-600 truncate text-xs mt-1"> <a class="text-theme-1 inline-block truncate" href="">{{ $content->formatContent->name }}</a> <span class="mx-1">•</span> 14 seconds ago </div>
                 </div>
                 <div class="dropdown relative ml-3">
                     <a href="javascript:;" class="dropdown-toggle w-5 h-5 text-gray-500"> <i data-feather="more-vertical" class="w-4 h-4"></i> </a>
                     <div class="dropdown-box mt-6 absolute w-40 top-0 right-0 z-20">
                         <div class="dropdown-box__content box p-2">
-                            <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white hover:bg-gray-200 rounded-md"> <i data-feather="edit-2" class="w-4 h-4 mr-2"></i> Edit Post </a>
-                            <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white hover:bg-gray-200 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete Post </a>
+                            <a href="{{ route('edit-content', ['permalink' => $content->permalink]) }}" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white hover:bg-gray-200 rounded-md"> <i data-feather="edit-2" class="w-4 h-4 mr-2"></i> Edit Post </a>
+                            <a href="{{ route('delete-content', ['permalink' => $content->permalink]) }}" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white hover:bg-gray-200 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete Post </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="p-5">
                 <div class="h-40 xxl:h-56 image-fit">
-                    <img alt="Midone Tailwind HTML Admin Template" class="rounded-md" src="{{ asset('/backend/dist/images/preview-9.jpg') }}">
+                    <img alt="{{ $content->image_name }}" class="rounded-md" src="{{ asset($content->image_path) }}">
                 </div>
-                <a href="" class="block font-medium text-base mt-5">{{ $content->judul }}</a> 
+                <a href="{{ route('preview', ['permalink' => $content->permalink]) }}" class="block font-medium text-base mt-5">{{ $content->judul }}</a> 
                 <div class="text-gray-700 mt-2">{{ $content->sub_judul }}</div>
             </div>
             <div class="flex items-center px-5 py-3 border-t border-gray-200">
                 <a href="" class="intro-x w-8 h-8 flex items-center justify-center rounded-full border border-gray-500 text-gray-600 mr-2 tooltip" title="Published"> <i data-feather="send" class="w-3 h-3"></i> </a>
-                <a href="" class="intro-x w-8 h-8 flex items-center justify-center rounded-full bg-theme-14 text-theme-10 ml-auto tooltip" title="Preview"> <i data-feather="eye" class="w-3 h-3"></i> </a>
+                <a href="{{ route('preview', ['permalink' => $content->permalink]) }}" class="intro-x w-8 h-8 flex items-center justify-center rounded-full bg-theme-14 text-theme-10 ml-auto tooltip" title="Preview"> <i data-feather="eye" class="w-3 h-3"></i> </a>
                 <a href="" class="intro-x w-8 h-8 flex items-center justify-center rounded-full bg-theme-1 text-white ml-2 tooltip" title="Publish"> <i data-feather="share" class="w-3 h-3"></i> </a>
             </div>
         </div>
@@ -97,7 +97,8 @@
         <!-- BEGIN: Pagination -->
         <div class="intro-y col-span-12 flex flex-wrap sm:flex-row sm:flex-no-wrap items-center">
             <ul class="pagination">
-                <li>
+                {{ $contents->links() }}
+                <!-- <li>
                     <a class="pagination__link" href=""> <i class="w-4 h-4" data-feather="chevrons-left"></i> </a>
                 </li>
                 <li>
@@ -113,7 +114,7 @@
                 </li>
                 <li>
                     <a class="pagination__link" href=""> <i class="w-4 h-4" data-feather="chevrons-right"></i> </a>
-                </li>
+                </li> -->
             </ul>
             <select class="w-20 input box mt-3 sm:mt-0">
                 <option>10</option>

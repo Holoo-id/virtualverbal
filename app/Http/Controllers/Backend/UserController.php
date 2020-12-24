@@ -13,8 +13,8 @@ class UserController extends Controller
         $id = Crypt::decryptString($encrypted_id);
         $new_user = User::findOrFail($id);
         $validated = $request->validate([
-            'username' => 'required|unique:App\Models\User|max:255',
-            'image' => 'required|mimetypes:image/jpeg,image/png|dimensions:ratio=1',
+            'username' => 'required|unique:App\Models\User,name|max:255',
+            'image' => 'required|mimetypes:image/jpeg,image/png',
         ]);
         $new_user->name = $request->input('username');
         $img_name = $new_user->name.".".$request->file('image')->extension();

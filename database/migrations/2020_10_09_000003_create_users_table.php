@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name')->default('Anonymous');
             $table->string('email')->unique();
             $table->string('provider_id')->nullable();
+            $table->foreignId('detail_id')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken()->nullable();
@@ -29,6 +30,11 @@ class CreateUsersTable extends Migration
             $table->foreign('role_id')
                 ->references('id')
                 ->on('v_role')
+                ->onDelete('set null');
+
+            $table->foreign('detail_id')
+                ->references('id')
+                ->on('v_user_details')
                 ->onDelete('set null');
         });
     }

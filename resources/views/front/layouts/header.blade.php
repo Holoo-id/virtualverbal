@@ -3980,23 +3980,23 @@
                 </div>
                 <form class="form-wrap" method='POST' action="{{ route('login') }}">
                     @csrf
-                    <div id="login-form-fail" class="form-row">
+                    <div id="login-form" class="form-row">
                         <div class="form-item blue">
                             <label for="login_email" class="rl-label">E-Mail:</label>
-                            <input type="text" id="login_email" name="email"
+                            <input type="text" id="login_email_fail" name="email"
                                 placeholder="Masukkan E-Mail kamu...">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-item blue">
                             <label for="login_pwd" class="rl-label">Password</label>
-                            <input type="password" id="login_pwd" name="password"
+                            <input type="password" id="login_pwd_fail" name="password"
                                 placeholder="Masukkan Password kamu...">
                         </div>
                     </div>
                     <div class="form-confirm-row">
                         <div class="checkbox-item">
-                            <input type="checkbox" id="login_remember_ep" name="remember" value="remember"
+                            <input type="checkbox" id="login_remember_ep_fail" name="remember" value="remember"
                                 checked>
                             <div class="checkbox-box blue">
                                 <svg class="cross-cb-icon small">
@@ -4008,11 +4008,11 @@
                         <a href="#" class="link-text-form blue">Lupa Password?</a>
                     </div>
                     <div class="form-actions full">
-                        <button type="submit" class="button blue full disabled" id="login_btn" disabled="true">Masuk!</button>
+                        <button type="submit" class="button blue full disabled" id="login_btn_fail" disabled="true">Masuk!</button>
                         <div class="social-buttons">
                             {{-- <div style="padding-top: 20px; padding-left: 17%" class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="50"></div> --}}
-                            <a href="/login-by/facebook" class="button-social fb fb-login-button">Facebook Login</a>
-                            <a href="/login-by/google" class="button-social gplus gplus-login-button">Google Login</a>
+                            <a href="/login-by/facebook" class="button-social fb">Facebook Login</a>
+                            <a href="/login-by/google" class="button-social gplus">Google Login</a>
                         </div>
                     </div>
                 </form>
@@ -4044,26 +4044,26 @@
                     <div id="register-form-fail" class="form-row">
                         <div class="form-item red">
                             <label for="register_email" class="rl-label">E-Mail:</label>
-                            <input type="text" id="register_email" name="email"
+                            <input type="text" id="register_email_fail" name="email"
                                 placeholder="Masukkan E-Mail kamu...">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-item red">
                             <label for="register_pwd" class="rl-label">Password</label>
-                            <input type="password" id="register_pwd" name="password"
+                            <input type="password" id="register_pwd_fail" name="password"
                                 placeholder="Masukkan Password kamu...">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-item red">
                             <label for="register_pwd_repeat" class="rl-label">Ulangi Password</label>
-                            <input type="password" id="register_pwd_repeat" name="password_confirmation"
+                            <input type="password" id="register_pwd_repeat_fail" name="password_confirmation"
                                 placeholder="Tulis kembali Password kamu...">
                         </div>
                     </div>
                     <div class="form-actions full">
-                        <button id="register_btn" class="button red full disabled" disabled="true">Buat akun!</button>
+                        <button id="register_btn_fail" class="button red full disabled" disabled="true">Buat akun!</button>
                         <p class="form-info-text">Cek E-Mail kamu setelah mendaftar!</p>
                     </div>
                 </form>

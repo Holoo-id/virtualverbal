@@ -24,6 +24,7 @@ class UserController extends Controller
             'public/images/users/', $img_name
         );
         $new_user->image = 'storage/images/users/'.$img_name;
+        $new_user->role_id = 3;
         $new_user->save();
         return redirect('/');
     }

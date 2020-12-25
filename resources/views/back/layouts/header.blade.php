@@ -476,7 +476,7 @@
         
         <!-- BEGIN: Breadcrumb -->
         <div class="-intro-x breadcrumb breadcrumb--light mr-auto">
-        <!-- GA BOLEH DIHAPUS -->
+            <!-- GA BOLEH DIHAPUS -->
             <!-- {{ $a = request()->segment(count(request()->segments())) }} -->
             @foreach(Request::segments() as $segment)
                 @if($segment == $a)
@@ -645,24 +645,18 @@
         
     </div>
 </div>
-<!-- END: Top Bar -->
+
 <!-- BEGIN: Top Menu -->
 <nav class="top-nav">
     <ul>
         <li>
-            <a href="{{ route('dashboard') }}" class="top-menu 
-                @if(Route::current() == Request::segments(1))
-                    top-menu--active
-                @endif ">
+            <a href="{{ route('dashboard') }}" class="top-menu {{ Route::currentRouteName() == 'dashboard' ? 'top-menu--active' : '' }} ">
                 <div class="top-menu__icon"> <i data-feather="home"></i> </div>
                 <div class="top-menu__title"> Dashboard </div>
             </a>
         </li>
         <li>
-            <a href="javascript:;" class="top-menu
-                @if(Route::current() == Request::segments(1))
-                    top-menu--active
-                @endif ">
+            <a href="javascript:;" class="top-menu {{ Route::current()->getPrefix() == 'back/content' ? 'top-menu--active' : '' }} ">
                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
                 <div class="top-menu__title"> Content <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
             </a>
@@ -800,4 +794,3 @@
         </li>--}}
     </ul>
 </nav>
-<!-- END: Top Menu -->

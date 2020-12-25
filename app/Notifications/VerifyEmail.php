@@ -54,9 +54,9 @@ class VerifyEmail extends Notification
 
         return (new MailMessage)
             ->subject(Lang::get('Verify Email Add Me'))
-            ->line(Lang::get('Please click the button below to verify my email address.'))
-            ->action(Lang::get('Verify Email Address'), $verificationUrl)
-            ->line(Lang::get('If you did not create an account, no further action is required.'));
+            ->line(Lang::get('Silakan klik tombol di bawah untuk memverifikasi alamat email.'))
+            ->action(Lang::get('Verify'), $verificationUrl)
+            ->line(Lang::get('Jika tidak membuat akun, tidak diperlukan tindakan lebih lanjut.'));
     }
 
     /**

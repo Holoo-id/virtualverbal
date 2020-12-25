@@ -23,16 +23,16 @@ class HomeController extends Controller
         }
 
         $coming_soon = Game::with(['cover', 'release_dates'])
-            ->where('first_release_date', '>', now())
+            ->where('first_release_date', '>', today())
             ->where('status', 4)
-            ->get()
-            ->sortBy('first_release_date');
+            ->orderBy('first_release_date', 'desc')
+            ->paginate(5);
 
         $hypes = Game::with(['cover', 'release_dates'])
-            ->where('first_release_date', '>', now())
+            ->where('first_release_date', '>', today())
             ->where('hypes', '>', 34)
-            ->get()
-            ->sortByDesc('hypes');
+            ->orderBy('hypes', 'desc')
+            ->paginate(5);
 
         // $today = now()->format('Y-m-d');
         // $last5days = now()->subDays(5)->format('Y-m-d');
@@ -41,8 +41,8 @@ class HomeController extends Controller
             // ->whereBetween('first_release_date.date', $today, $last5days)
             ->where('status', 0)
             // ->where('follows', '>', 1)
-            ->get()
-            ->sortByDesc('first_release_date');
+            ->orderBy('first_release_date', 'desc')
+            ->paginate(5);
 
         $video_contents = Content::where('published', '=', 1)
             ->where('category_id', 4)

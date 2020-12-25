@@ -4,17 +4,17 @@
         <div class="flex flex-col lg:flex-row border-b border-gray-200 pb-5 -mx-5">
             <div class="flex flex-1 px-5 items-center justify-center lg:justify-start">
                 <div class="w-20 h-20 sm:w-24 sm:h-24 flex-none lg:w-32 lg:h-32 image-fit relative">
-                    <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('/backend/dist/images/profile-14.jpg') }}">
+                    <img alt="Avatar for {{ Auth::user()->name }}" class="rounded-full" src="{{ asset(Auth::user()->image) }}">
                 </div>
                 <div class="ml-5">
-                    <div class="w-24 sm:w-40 truncate sm:whitespace-normal font-medium text-lg">Robert De Niro</div>
-                    <div class="text-gray-600">Software Engineer</div>
+                    <div class="w-24 sm:w-40 truncate sm:whitespace-normal font-medium text-lg">{{ Auth::user()->name }}</div>
+                    <div class="text-gray-600">{{ Auth::user()->role->name }}</div>
                 </div>
             </div>
             <div class="flex mt-6 lg:mt-0 items-center lg:items-start flex-1 flex-col justify-center text-gray-600 px-5 border-l border-r border-gray-200 border-t lg:border-t-0 pt-5 lg:pt-0">
-                <div class="truncate sm:whitespace-normal flex items-center"> <i data-feather="mail" class="w-4 h-4 mr-2"></i> robertdeniro@left4code.com </div>
-                <div class="truncate sm:whitespace-normal flex items-center mt-3"> <i data-feather="instagram" class="w-4 h-4 mr-2"></i> Instagram Robert De Niro </div>
-                <div class="truncate sm:whitespace-normal flex items-center mt-3"> <i data-feather="twitter" class="w-4 h-4 mr-2"></i> Twitter Robert De Niro </div>
+                <div class="truncate sm:whitespace-normal flex items-center"> <i data-feather="mail" class="w-4 h-4 mr-2"></i> {{ Auth::user()->email }} </div>
+                {{--<div class="truncate sm:whitespace-normal flex items-center mt-3"> <i data-feather="instagram" class="w-4 h-4 mr-2"></i> Instagram Robert De Niro </div>
+                <div class="truncate sm:whitespace-normal flex items-center mt-3"> <i data-feather="twitter" class="w-4 h-4 mr-2"></i> Twitter Robert De Niro </div>--}}
             </div>
             <div class="mt-6 lg:mt-0 flex-1 flex items-center justify-center px-5 border-t lg:border-0 border-gray-200 pt-5 lg:pt-0">
                 <div class="text-center rounded-md w-full py-3">
@@ -25,7 +25,7 @@
     </div>
 
     <div class="grid grid-cols-12 gap-6">
-        <div class="col-span-12 xxl:col-span-9 grid grid-cols-12 gap-6">
+        <div class="col-span-12 grid grid-cols-12 gap-6">
             <!-- BEGIN: General Report -->
             <div class="col-span-12 mt-8">
                 <div class="intro-y flex items-center h-10">
@@ -44,8 +44,8 @@
                                         <div class="report-box__indicator bg-theme-9 tooltip cursor-pointer" title="33% Higher than last month"> 33% <i data-feather="chevron-up" class="w-4 h-4"></i> </div>
                                     </div>
                                 </div>
-                                <div class="text-3xl font-bold leading-8 mt-6">4.510</div>
-                                <div class="text-base text-gray-600 mt-1">Post</div>
+                                <div class="text-3xl font-bold leading-8 mt-6">{{ $creates->count() }}</div>
+                                <div class="text-base text-gray-600 mt-1">Content</div>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                                         <div class="report-box__indicator bg-theme-6 tooltip cursor-pointer" title="2% Lower than last month"> 2% <i data-feather="chevron-down" class="w-4 h-4"></i> </div>
                                     </div>
                                 </div>
-                                <div class="text-3xl font-bold leading-8 mt-6">3.521</div>
+                                <div class="text-3xl font-bold leading-8 mt-6">{{ $publishes->count() }}</div>
                                 <div class="text-base text-gray-600 mt-1">Di-publish</div>
                             </div>
                         </div>
@@ -132,59 +132,25 @@
             <div class="col-span-12 xl:col-span-4 mt-6">
                 <div class="intro-y flex items-center h-10">
                     <h2 class="text-lg font-medium truncate mr-5">
-                        Weekly Best Sellers
+                        Content Terbanyak Dilihat
                     </h2>
                 </div>
                 <div class="mt-5">
-                    <div class="intro-y">
-                        <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
-                            <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                <img alt="Midone Tailwind HTML Admin Template" src="{{ asset('/backend/dist/images/profile-6.jpg') }}">
+                    @foreach($top_views as $top)
+                        <div class="intro-y">
+                            <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
+                                <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
+                                    <img alt="{{ $top->image_name }}" src="{{ asset($top->image_path) }}">
+                                </div>
+                                <div class="ml-4 mr-auto">
+                                    <div class="font-medium">{{ $top->judul }}</div>
+                                    <div class="text-gray-600 text-xs">{{ $top->publish_at }}</div>
+                                </div>
+                                <div class="py-1 px-2 rounded-full text-xs bg-theme-9 text-white cursor-pointer font-medium">{{ $top->views }} Dibaca</div>
                             </div>
-                            <div class="ml-4 mr-auto">
-                                <div class="font-medium">Arnold Schwarzenegger</div>
-                                <div class="text-gray-600 text-xs">12 March 2022</div>
-                            </div>
-                            <div class="py-1 px-2 rounded-full text-xs bg-theme-9 text-white cursor-pointer font-medium">137 Sales</div>
                         </div>
-                    </div>
-                    <div class="intro-y">
-                        <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
-                            <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                <img alt="Midone Tailwind HTML Admin Template" src="{{ asset('/backend/dist/images/profile-4.jpg') }}">
-                            </div>
-                            <div class="ml-4 mr-auto">
-                                <div class="font-medium">Arnold Schwarzenegger</div>
-                                <div class="text-gray-600 text-xs">25 August 2022</div>
-                            </div>
-                            <div class="py-1 px-2 rounded-full text-xs bg-theme-9 text-white cursor-pointer font-medium">137 Sales</div>
-                        </div>
-                    </div>
-                    <div class="intro-y">
-                        <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
-                            <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                <img alt="Midone Tailwind HTML Admin Template" src="{{ asset('/backend/dist/images/profile-13.jpg') }}">
-                            </div>
-                            <div class="ml-4 mr-auto">
-                                <div class="font-medium">Nicolas Cage</div>
-                                <div class="text-gray-600 text-xs">12 January 2022</div>
-                            </div>
-                            <div class="py-1 px-2 rounded-full text-xs bg-theme-9 text-white cursor-pointer font-medium">137 Sales</div>
-                        </div>
-                    </div>
-                    <div class="intro-y">
-                        <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
-                            <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                <img alt="Midone Tailwind HTML Admin Template" src="{{ asset('/backend/dist/images/profile-4.jpg') }}">
-                            </div>
-                            <div class="ml-4 mr-auto">
-                                <div class="font-medium">Angelina Jolie</div>
-                                <div class="text-gray-600 text-xs">21 September 2022</div>
-                            </div>
-                            <div class="py-1 px-2 rounded-full text-xs bg-theme-9 text-white cursor-pointer font-medium">137 Sales</div>
-                        </div>
-                    </div>
-                    <a href="" class="intro-y w-full block text-center rounded-md py-4 border border-dotted border-theme-15 text-theme-16">View More</a> 
+                    @endforeach
+                    <a href="{{ route('content-list') }}" class="intro-y w-full block text-center rounded-md py-4 border border-dotted border-theme-15 text-theme-16">View More</a> 
                 </div>
             </div>
             <!-- END: Weekly Best Sellers -->

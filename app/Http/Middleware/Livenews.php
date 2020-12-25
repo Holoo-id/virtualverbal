@@ -17,7 +17,7 @@ class Livenews
      */
     public function handle(Request $request, Closure $next)
     {
-        $live_news = Content::select('judul','sub_judul')->get();
+        $live_news = Content::where('category_id','3')->get();
         view()->share('live_news', $live_news);
         return $next($request);
     }

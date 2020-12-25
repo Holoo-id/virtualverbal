@@ -108,7 +108,7 @@
                     $('#forValidationFail').css('visibility','visible');
                     @foreach($errors->all() as $error)
                         error_txt = document.createElement("p");
-                        error_txt.className += "text-tag red";
+                        error_txt.className += "text-tag important red";
                         @if ($error == "These credentials do not match our records.")
                             $('#popup-login-fail').css('opacity','1');
                             $('#popup-login-fail').css('visibility','visible');
@@ -159,7 +159,7 @@
 
              // Button Disabled saat input kosong Start 
                 function validateLoginButton() {
-                var buttonLoginDisabled = $('#login_email').val().trim() === '' || $('#login_pwd').val().trim() === '';
+                    var buttonLoginDisabled = $('#login_email').val().trim() === '' || $('#login_pwd').val().trim() === '';
                     $('#login_btn').prop('disabled', buttonLoginDisabled);
                     if (buttonLoginDisabled) {
                         $('#login_btn').addClass('disabled');
@@ -171,8 +171,21 @@
                 $('#login_email').on('keyup', validateLoginButton);
                 $('#login_pwd').on('keyup', validateLoginButton);
 
+                function validateLoginButtonFail() {
+                    var buttonLoginDisabled = $('#login_email_fail').val().trim() === '' || $('#login_pwd_fail').val().trim() === '';
+                    $('#login_btn_fail').prop('disabled', buttonLoginDisabled);
+                    if (buttonLoginDisabled) {
+                        $('#login_btn_fail').addClass('disabled');
+                    }
+                    else{
+                        $('#login_btn_fail').removeClass('disabled');
+                    }
+                }
+                $('#login_email_fail').on('keyup', validateLoginButtonFail);
+                $('#login_pwd_fail').on('keyup', validateLoginButtonFail);
+
                 function validateRegisterButton() {
-                var buttonRegisterDisabled = $('#register_email').val().trim() === '' || $('#register_pwd').val().trim() === '' || $('#register_pwd_repeat').val().trim() === '';
+                    var buttonRegisterDisabled = $('#register_email').val().trim() === '' || $('#register_pwd').val().trim() === '' || $('#register_pwd_repeat').val().trim() === '';
                     $('#register_btn').prop('disabled', buttonRegisterDisabled);
                     if (buttonRegisterDisabled) {
                         $('#register_btn').addClass('disabled');
@@ -184,6 +197,20 @@
                 $('#register_email').on('keyup', validateRegisterButton);
                 $('#register_pwd').on('keyup', validateRegisterButton);
                 $('#register_pwd_repeat').on('keyup', validateRegisterButton);
+
+                function validateRegisterButtonFail() {
+                    var buttonRegisterDisabled = $('#register_email_fail').val().trim() === '' || $('#register_pwd_fail').val().trim() === '' || $('#register_pwd_repeat_fail').val().trim() === '';
+                    $('#register_btn_fail').prop('disabled', buttonRegisterDisabled);
+                    if (buttonRegisterDisabled) {
+                        $('#register_btn_fail').addClass('disabled');
+                    }
+                    else{
+                        $('#register_btn_fail').removeClass('disabled');
+                    }
+                }
+                $('#register_email_fail').on('keyup', validateRegisterButtonFail);
+                $('#register_pwd_fail').on('keyup', validateRegisterButtonFail);
+                $('#register_pwd_repeat_fail').on('keyup', validateRegisterButtonFail);
              // Button Disabled saat input kosong Finish
 
             });

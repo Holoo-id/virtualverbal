@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Content;
 use App\Models\FormatContent;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use MarcReichel\IGDBLaravel\Models\Company;
@@ -112,7 +113,8 @@ class ContentController extends Controller
 
     public function post()
     {
-        return view('back.create-content');
+        $category = DB::table('v_format_content')->get();
+        return view('back.create-content',['category'=>$category]);
     }
 
     public function preview($permalink)
@@ -189,7 +191,6 @@ class ContentController extends Controller
             'image_path' => $path,
             'image_name' => $request->title ?? $uploadedFile->getClientOriginalName(),
             'category_id' => $request->category_id,
-            'published' => $request->published,
         ]);
     }
 }

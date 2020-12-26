@@ -34,7 +34,8 @@
                             </div>
                             <div>
                                 <label class="flex flex-col sm:flex-row"> Permalink <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Tidak untuk dirubah, URL format</span> </label>
-                                <input type="url" name="permalink" class="input w-full border mt-2 cursor-not-allowed" value="https://google.com/judul-yang-dibuat">
+                                <input type="url" name="" class="input border mt-2 cursor-not-allowed" value="virtualverbal.com">
+                                <input type="url" name="permalink" class="input border col-md-5" value="Permalink">
                             </div>
 
                             <div class="mt-3 dropzone border-gray-200 border-dashed">
@@ -51,12 +52,15 @@
                                 <input type="text" name="tittle" class="input w-full border mt-2" placeholder="Image Name" >
                             </div>
                             <div class="mt-3">
-                                <label class="flex flex-col sm:flex-row"> Published <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <input type="text" name="published" class="input w-full border mt-2" placeholder="Published" required>
-                            </div>
-                            <div class="mt-3">
-                                <label class="flex flex-col sm:flex-row"> category <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <input type="text" name="category_id" class="input w-full border mt-2" placeholder="Published" required>
+                                <label class="flex flex-col sm:flex-row"> Category <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
+                                
+                                <select class="input w-full border mt-2" name="category_id">
+                                <option>Category</option>
+                                @foreach($category as $ct)
+                                        <option value=" {{ $ct->id }}" >{{ $ct->name }}</option>
+                                        @endforeach
+                                    </select>
+                                  
                             </div>
 
                             <!--<div class="mt-3">

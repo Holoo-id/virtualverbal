@@ -193,4 +193,25 @@ class ContentController extends Controller
             'category_id' => $request->category_id,
         ]);
     }
+    public function edit($id)
+    {
+        $category = DB::table('v_format_content')->get();
+
+        $data = Content::find($id);
+        return view('back.edit-content',['category'=>$category,'data'=>$data]);
+    }
+    public function update(Request $request)
+    {
+        $uploadedFile = $request->file('file');
+        $path = $uploadedFile->store('public/files');
+        $file = Content::where('id',$request->id)->update([
+            'judul' => $request->judul,
+            'konten' => $request->konten,
+            'sub_judul' => $request->sub_judul,
+            'permalink' => $request->permalink,
+            'image_path' => $path,
+            'image_name' => $request->title ?? $uploadedFile->getClientOriginalName(),
+            'category_id' => $request->category_id,
+        ]);
+    }
 }

@@ -43,7 +43,7 @@
                     <input type="text" class="input w-full border" placeholder="Seacrh">
                 </div>
             </div>
-            <button class="button text-white bg-theme-1 shadow-md mr-2">Add New Post</button>
+            <a class="button text-white bg-theme-1 shadow-md mr-2" href="">Add New Post</a>
             <div class="dropdown relative ml-auto sm:ml-0">
                 <button class="dropdown-toggle button px-2 box text-gray-700">
                     <span class="w-5 h-5 flex items-center justify-center"> <i class="w-4 h-4" data-feather="plus"></i> </span>

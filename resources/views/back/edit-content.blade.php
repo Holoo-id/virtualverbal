@@ -18,24 +18,25 @@
                 </div>
                 <div class="p-5" id="basic-datepicker">
                     <div class="preview">
-                        <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" action="{{ route('add-content')}}" enctype="multipart/form-data" method="post" class="validate-form">
+                        <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" action="{{ route('update-content')}}" enctype="multipart/form-data" method="post" class="validate-form">
                             @csrf
+                            <input type="hidden" name="id"  value="{{ $data->id }}">
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Judul <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <input type="text" name="judul" class="input w-full border mt-2" placeholder="Judul Kontenmu" required>
+                                <input type="text" name="judul" class="input w-full border mt-2" placeholder="Judul Kontenmu" value="{{ $data->judul }}" required>
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row mb-2"> Konten </label>
-                                 <textarea id="summernote" class="summernote" name="konten"></textarea>
+                                 <textarea id="summernote" class="summernote" name="konten">{{ $data->konten }}</textarea>
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Sub Judul <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <input type="text" name="sub_judul" class="input w-full border mt-2" placeholder="Tentang Kontenmu" required>
+                                <input type="text" name="sub_judul" class="input w-full border mt-2" placeholder="Tentang Kontenmu" value="{{ $data->sub_judul }}" required>
                             </div>
                             <div>
                                 <label class="flex flex-col sm:flex-row"> Permalink <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Tidak untuk dirubah, URL format</span> </label>
-                                
-                                <input type="url" name="permalink" class="input border col-md-5" value="Permalink">
+                                <input name="" class="input border mt-2 cursor-not-allowed" value="virtualverbal.com">
+                                <input type="url" name="permalink" class="input border col-md-5" value="{{ $data->permalink }}">
                             </div>
 
                             <div class="mt-3 dropzone border-gray-200 border-dashed">
@@ -55,7 +56,7 @@
                                 <label class="flex flex-col sm:flex-row"> Category <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
                                 
                                 <select class="input w-full border mt-2" name="category_id">
-                                <option>Category</option>
+                                <option >Category</option>
                                 @foreach($category as $ct)
                                         <option value=" {{ $ct->id }}" >{{ $ct->name }}</option>
                                         @endforeach

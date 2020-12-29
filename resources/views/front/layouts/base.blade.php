@@ -109,6 +109,7 @@
                     @foreach($errors->all() as $error)
                         error_txt = document.createElement("p");
                         error_txt.className += "text-tag important red";
+                        // error_txt.className += "information-box-message";
                         @if ($error == "These credentials do not match our records.")
                             $('#popup-login-fail').css('opacity','1');
                             $('#popup-login-fail').css('visibility','visible');
@@ -144,6 +145,7 @@
                             $('.live-news-widget-wrap').before(error_txt);
                         @endif
                     @endforeach
+                    // document.getElementById("error-log").appendChild(error_txt);
                 @endif
                 $("#forValidationFail").click(function(){
                     $('#forValidationFail').css('opacity','0');

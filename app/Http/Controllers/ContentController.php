@@ -106,7 +106,8 @@ class ContentController extends Controller
     {
         $authors = User::all();
         $categories = FormatContent::all();
-        $contents = Content::orderBy('created_at', 'desc')
+        $contents = Content::with(['writer'])
+            ->orderBy('created_at', 'desc')
             ->paginate(20);
         return view('back.content-list', compact('authors', 'categories', 'contents'));
     }
@@ -134,14 +135,6 @@ class ContentController extends Controller
             ->where('publish_at', '!=', '')
             ->where('judul', 'like', "%".$keyword."%")
             ->orWhere('sub_judul', 'like', "%".$keyword."%")
-            // ->where(function($query) use ($request){
-            //     if (!empty($request->author)) {
-            //         return $query->where('created_by', $request->input('author'));
-            //     }
-            //     if (!empty($request->category)) {
-            //         return $query->where('category_id', $request->input('category'));
-            //     }
-            // })
             ->paginate(10);
         if (!empty($request->author)) {
             $contents = Content::where('published', '=', 1)
@@ -193,12 +186,13 @@ class ContentController extends Controller
             'category_id' => $request->category_id,
         ]);
     }
-    public function edit($id)
+    public function edit($permalink)
     {
-        $category = DB::table('v_format_content')->get();
-
-        $data = Content::find($id);
-        return view('back.edit-content',['category'=>$category,'data'=>$data]);
+        // $data = Content::find($id);
+        $content = Content::where('permalink', $permalink)->first();
+        $categories = FormatContent::all();
+        // $category = DB::table('v_format_content')->get();
+        return view('back.edit-content', compact('content', 'categories'));
     }
     public function update(Request $request)
     {

@@ -1114,7 +1114,7 @@ figure>img {
 }
 
 .grid-4col_1 {
-    grid-template-columns: repeat(4, 252px)
+    grid-template-columns: repeat(4, 20%)
 }
 
 .grid-3col_1 {
@@ -21487,7 +21487,7 @@ visibility: hidden;
 
 .information-box {
     width: 100%;
-    height: 60px;
+    min-height: 60px;
     padding: 0 26px 0 70px;
     border: 1px solid #dbdbdb;
     border-radius: 200px;
@@ -21555,7 +21555,7 @@ visibility: hidden;
 
 .information-box .information-box-message,
 .information-box .information-box-action {
-    line-height: 60px
+    margin: auto 0;
 }
 
 .information-box .information-box-message {

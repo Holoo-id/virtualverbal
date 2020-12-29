@@ -10,84 +10,132 @@
             <div class="filter-heading">
                 <p class="filter-heading-text"><span class="highlight">{{ $contents->total() }}</span> Results found for: "<span class="highlight">{{ $keyword }}</span>"</p>
             </div>
-            <form method="GET" action="{{ route('search') }}" ocClick="{{ route('search') }}" class="filters-row">
-                <div class="dropdown-simple-wrap">
-                    <div id="filter-01-dropdown-trigger" class="dp-current-option">
-                        <div id="filter-01-dropdown-option-value" class="dp-current-option-value">
-                            <p class="dp-option-text">All Categories</p>
-                        </div>
-                        <svg class="arrow-icon">
-                            <use xlink:href="#svg-arrow"></use>
+                <form method="GET" action="{{ route('search') }}" ocClick="{{ route('search') }}" class="grid-4col_1" style="max-width:85%">
+                    <div class="select-block">
+                        <select id="sc_select_dropdown" name="sc_select_dropdown">
+                            <option value="" hidden="">All Authors</option>
+                            @foreach($authors as $author)
+                                <option value="{{ $author->id }}">{{ $author->name }}</option>
+                            @endforeach
+                        </select>
+                        <svg class="arrow-icon medium">
+                            <use xlink:href="#svg-arrow-medium"></use>
                         </svg>
                     </div>
-                    <div id="filter-01-dropdown" class="dp-options small">
-                        <div class="dp-option">
-                            <button type="submit" name="category" id="category" value="" class="dp-option-text" style="background-color:transparent">All Categories</button>
+                    <div class="select-block">
+                        <select id="sc_select_dropdown" name="sc_select_dropdown">
+                            <option value="" hidden="">All Categories</option>
+                            @foreach($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>
+                        <svg class="arrow-icon medium">
+                            <use xlink:href="#svg-arrow-medium"></use>
+                        </svg>
+                    </div>
+                    <div class="select-block">
+                        <select id="sc_select_dropdown" name="sc_select_dropdown">
+                            <option value="" hidden="">Sort</option>
+                            <option value="0">Alpabethical (ASC)</option>
+                            <option value="0">Alpabethical (DESC)</option>
+                            <option value="0">Latest</option>
+                            <option value="0">Most Views</option>
+                            <option value="0">Oldest</option>
+                        </select>
+                        <svg class="arrow-icon medium">
+                            <use xlink:href="#svg-arrow-medium"></use>
+                        </svg>
+                    </div>
+                    <button type="submit" class="button blue">
+                        Filter
+                        <div class="button-ornament">
+                            <svg class="arrow-icon medium">
+                                <use xlink:href="#svg-arrow-medium"></use>
+                            </svg>
+                            <svg class="cross-icon small">
+                                <use xlink:href="#svg-cross-small"></use>
+                            </svg>
                         </div>
-                        @foreach($categories as $category)
-                            <div class="dp-option">
-                                <button type="submit" name="category" id="category" value="{{ $category->id }}" class="dp-option-text" style="background-color:transparent">{{ $category->name }}</button>
+                    </button>
+                    {{--<div class="dropdown-simple-wrap">
+                        <div id="filter-01-dropdown-trigger" class="dp-current-option">
+                            <div id="filter-01-dropdown-option-value" class="dp-current-option-value">
+                                <p class="dp-option-text">All Categories</p>
                             </div>
-                        @endforeach
-                    </div>
-                </div>
-                <div class="dropdown-simple-wrap">
-                    <div id="filter-02-dropdown-trigger" class="dp-current-option">
-                        <div id="filter-02-dropdown-option-value" class="dp-current-option-value">
-                            <p class="dp-option-text">All Authors</p>
+                            <svg class="arrow-icon">
+                                <use xlink:href="#svg-arrow"></use>
+                            </svg>
                         </div>
-                        <svg class="arrow-icon">
-                            <use xlink:href="#svg-arrow"></use>
-                        </svg>
-                    </div>
-                    <div id="filter-02-dropdown" class="dp-options small">
-                        <div class="dp-option">
-                            <button type="submit" name="author" id="author" value="" class="dp-option-text" style="background-color:transparent">All Authors</button>
-                        </div>
-                        @foreach($authors as $author)
+                        <div id="filter-01-dropdown" class="dp-options small">
                             <div class="dp-option">
-                                <button type="submit" name="author" id="author" value="{{ $author->id }}" class="dp-option-text" style="background-color:transparent">{{ $author->name }}</button>
+                                <button type="submit" name="category" id="category" value="" class="dp-option-text" style="background-color:transparent">All Categories</button>
                             </div>
-                        @endforeach
-                    </div>
-                </div>
-                {{--<div class="dropdown-simple-wrap">
-                    <div id="filter-03-dropdown-trigger" class="dp-current-option">
-                        <div id="filter-03-dropdown-option-value" class="dp-current-option-value">
-                            <p class="dp-option-text">Order By Date</p>
-                        </div>
-                        <svg class="arrow-icon">
-                            <use xlink:href="#svg-arrow"></use>
-                        </svg>
-                    </div>
-                    <div id="filter-03-dropdown" class="dp-options small">
-                        <div class="dp-option">
-                            <p class="dp-option-text">Order By Date</p>
-                        </div>
-                        <div class="dp-option">
-                            <p class="dp-option-text">Order By Popularity</p>
+                            @foreach($categories as $category)
+                                <div class="dp-option">
+                                    <button type="submit" name="category" id="category" value="{{ $category->id }}" class="dp-option-text" style="background-color:transparent">{{ $category->name }}</button>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
-                </div>
-                <div class="dropdown-simple-wrap">
-                    <div id="filter-04-dropdown-trigger" class="dp-current-option">
-                        <div id="filter-04-dropdown-option-value" class="dp-current-option-value">
-                            <p class="dp-option-text">Descending</p>
+                    <div class="dropdown-simple-wrap">
+                        <div id="filter-02-dropdown-trigger" class="dp-current-option">
+                            <div id="filter-02-dropdown-option-value" class="dp-current-option-value">
+                                <p class="dp-option-text">All Authors</p>
+                            </div>
+                            <svg class="arrow-icon">
+                                <use xlink:href="#svg-arrow"></use>
+                            </svg>
                         </div>
-                        <svg class="arrow-icon">
-                            <use xlink:href="#svg-arrow"></use>
-                        </svg>
+                        <div id="filter-02-dropdown" class="dp-options small">
+                            <div class="dp-option">
+                                <button type="submit" name="author" id="author" value="" class="dp-option-text" style="background-color:transparent">All Authors</button>
+                            </div>
+                            @foreach($authors as $author)
+                                <div class="dp-option">
+                                    <button type="submit" name="author" id="author" value="{{ $author->id }}" class="dp-option-text" style="background-color:transparent">{{ $author->name }}</button>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
-                    <div id="filter-04-dropdown" class="dp-options small">
-                        <div class="dp-option">
-                            <p class="dp-option-text">Descending</p>
+                    <div class="dropdown-simple-wrap">
+                        <div id="filter-03-dropdown-trigger" class="dp-current-option">
+                            <div id="filter-03-dropdown-option-value" class="dp-current-option-value">
+                                <p class="dp-option-text">Order By Date</p>
+                            </div>
+                            <svg class="arrow-icon">
+                                <use xlink:href="#svg-arrow"></use>
+                            </svg>
                         </div>
-                        <div class="dp-option">
-                            <p class="dp-option-text">Ascending</p>
+                        <div id="filter-03-dropdown" class="dp-options small">
+                            <div class="dp-option">
+                                <p class="dp-option-text">Order By Date</p>
+                            </div>
+                            <div class="dp-option">
+                                <p class="dp-option-text">Order By Popularity</p>
+                            </div>
                         </div>
                     </div>
-                </div>--}}
-            </form>
+                    <div class="dropdown-simple-wrap">
+                        <div id="filter-04-dropdown-trigger" class="dp-current-option">
+                            <div id="filter-04-dropdown-option-value" class="dp-current-option-value">
+                                <p class="dp-option-text">Descending</p>
+                            </div>
+                            <svg class="arrow-icon">
+                                <use xlink:href="#svg-arrow"></use>
+                            </svg>
+                        </div>
+                        <div id="filter-04-dropdown" class="dp-options small">
+                            <div class="dp-option">
+                                <p class="dp-option-text">Descending</p>
+                            </div>
+                            <div class="dp-option">
+                                <p class="dp-option-text">Ascending</p>
+                            </div>
+                        </div>
+                    </div>--}}
+                </form>
+            <div class="layout-item centered">
+            </div>
             <div id="post-data" class="layout-item">
                 <!-- POST PREVIEW -->
                 @include('front.layouts.components.data-search')

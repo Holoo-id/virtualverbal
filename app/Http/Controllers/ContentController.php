@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Content;
 use App\Models\FormatContent;
+use App\Models\Topics;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\RedirectResponse;
@@ -114,8 +115,11 @@ class ContentController extends Controller
 
     public function post()
     {
-        $category = DB::table('v_format_content')->get();
-        return view('back.create-content',['category'=>$category]);
+        $categories = FormatContent::all();
+        $tags = Topics::all();
+        $games = Game::all();
+        // $games = Game::where('name', 'like', 'a%')->get();
+        return view('back.create-content', compact('categories', 'games', 'tags'));
     }
 
     public function preview($permalink)
@@ -158,8 +162,8 @@ class ContentController extends Controller
         foreach ($contents as $content) {
             $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
             if (str_contains($content->judul, $keyword)) {
-                $content->judul = str_replace($keyword, $keyword, $content->judul);
-                $content->sub_judul = str_replace($keyword, $keyword, $content->sub_judul);
+                $content->judul = str_replace($keyword, "<p style=\"background-color: #1c95f3\">".$keyword."</p>", $content->judul);
+                $content->sub_judul = str_replace($keyword, "<p style=\"background-color: #1c95f3\">".$keyword."</p>", $content->sub_judul);
             }
         }
         foreach ($populars as $popular) {

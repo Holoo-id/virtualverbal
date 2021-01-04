@@ -10,7 +10,7 @@
             <div class="filter-heading">
                 <p class="filter-heading-text"><span class="highlight">{{ $contents->total() }}</span> Results found for: "<span class="highlight">{{ $keyword }}</span>"</p>
             </div>
-            <form method="GET" action="{{ route('search') }}" ocClick="{{ route('search') }}" class="filters-row">
+            <form method="GET" action="{{ route('search') }}" class="filters-row">
                 <div class="dropdown-simple-wrap">
                     <div id="filter-01-dropdown-trigger" class="dp-current-option">
                         <div id="filter-01-dropdown-option-value" class="dp-current-option-value">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Content;
 use App\Models\FormatContent;
+use App\Models\Topics;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\RedirectResponse;
@@ -106,15 +107,19 @@ class ContentController extends Controller
     {
         $authors = User::all();
         $categories = FormatContent::all();
-        $contents = Content::orderBy('created_at', 'desc')
+        $contents = Content::with(['writer'])
+            ->orderBy('created_at', 'desc')
             ->paginate(20);
         return view('back.content-list', compact('authors', 'categories', 'contents'));
     }
 
     public function post()
     {
-        $category = DB::table('v_format_content')->get();
-        return view('back.create-content',['category'=>$category]);
+        $categories = FormatContent::all();
+        $tags = Topics::all();
+        $games = Game::all();
+        // $games = Game::where('name', 'like', 'a%')->get();
+        return view('back.create-content', compact('categories', 'games', 'tags'));
     }
 
     public function preview($permalink)
@@ -134,14 +139,6 @@ class ContentController extends Controller
             ->where('publish_at', '!=', '')
             ->where('judul', 'like', "%".$keyword."%")
             ->orWhere('sub_judul', 'like', "%".$keyword."%")
-            // ->where(function($query) use ($request){
-            //     if (!empty($request->author)) {
-            //         return $query->where('created_by', $request->input('author'));
-            //     }
-            //     if (!empty($request->category)) {
-            //         return $query->where('category_id', $request->input('category'));
-            //     }
-            // })
             ->paginate(10);
         if (!empty($request->author)) {
             $contents = Content::where('published', '=', 1)
@@ -165,8 +162,8 @@ class ContentController extends Controller
         foreach ($contents as $content) {
             $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
             if (str_contains($content->judul, $keyword)) {
-                $content->judul = str_replace($keyword, $keyword, $content->judul);
-                $content->sub_judul = str_replace($keyword, $keyword, $content->sub_judul);
+                $content->judul = str_replace($keyword, "<p style=\"background-color: #1c95f3\">".$keyword."</p>", $content->judul);
+                $content->sub_judul = str_replace($keyword, "<p style=\"background-color: #1c95f3\">".$keyword."</p>", $content->sub_judul);
             }
         }
         foreach ($populars as $popular) {
@@ -193,12 +190,13 @@ class ContentController extends Controller
             'category_id' => $request->category_id,
         ]);
     }
-    public function edit($id)
+    public function edit($permalink)
     {
-        $category = DB::table('v_format_content')->get();
-
-        $data = Content::find($id);
-        return view('back.edit-content',['category'=>$category,'data'=>$data]);
+        // $data = Content::find($id);
+        $content = Content::where('permalink', $permalink)->first();
+        $categories = FormatContent::all();
+        // $category = DB::table('v_format_content')->get();
+        return view('back.edit-content', compact('content', 'categories'));
     }
     public function update(Request $request)
     {

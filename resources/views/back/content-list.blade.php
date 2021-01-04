@@ -2,10 +2,10 @@
 @section('content')
     <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
         <h2 class="text-lg font-medium mr-auto">
-            Blog Layout
+            All Content
         </h2>
         <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-            <div class="flex flex-col sm:flex-row items-center">
+            <form class="flex flex-col sm:flex-row items-center">
                 <div class="sm:mt-2 mr-2">
                     <select data-hide-search="true" class="select2 w-full input">
                         <option value="" selected disabled hidden>Sort</option>
@@ -42,9 +42,11 @@
                 <div class="sm:mt-2 mr-2">
                     <input type="text" class="input w-full border" placeholder="Seacrh">
                 </div>
-            </div>
-            <a class="button text-white bg-theme-1 shadow-md mr-2" href="">Add New Post</a>
-            <div class="dropdown relative ml-auto sm:ml-0">
+                <div class="sm:mt-2 mr-2">
+                    <button type="submit" class="button text-white bg-theme-1 shadow-md mr-2">Filter</a>
+                </div>
+            </form>
+            <!-- <div class="dropdown relative ml-auto sm:ml-0">
                 <button class="dropdown-toggle button px-2 box text-gray-700">
                     <span class="w-5 h-5 flex items-center justify-center"> <i class="w-4 h-4" data-feather="plus"></i> </span>
                 </button>
@@ -54,7 +56,7 @@
                         <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white hover:bg-gray-200 rounded-md"> <i data-feather="download" class="w-4 h-4 mr-2"></i> Download Post </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="intro-y grid grid-cols-12 gap-6 mt-5">
@@ -66,7 +68,7 @@
                     <img alt="{{-- $content->writer->name --}}" class="rounded-full" src="{{-- asset($content->writer->image) --}}">
                 </div>
                 <div class="ml-3 mr-auto">
-                    <a href="" class="font-medium">{{-- $content->writer->name --}}</a> 
+                    <a href="" class="font-medium">{{--$content->writer->name--}}</a> 
                     <div class="flex text-gray-600 truncate text-xs mt-1"> <a class="text-theme-1 inline-block truncate" href="">{{ $content->formatContent->name }}</a> <span class="mx-1">•</span> 14 seconds ago </div>
                 </div>
                 <div class="dropdown relative ml-3">
@@ -87,9 +89,13 @@
                 <div class="text-gray-700 mt-2">{{ $content->sub_judul }}</div>
             </div>
             <div class="flex items-center px-5 py-3 border-t border-gray-200">
-                <a href="" class="intro-x w-8 h-8 flex items-center justify-center rounded-full border border-gray-500 text-gray-600 mr-2 tooltip" title="Published"> <i data-feather="send" class="w-3 h-3"></i> </a>
+                <!-- <a href="" class="intro-x w-8 h-8 flex items-center justify-center rounded-full border border-gray-500 text-gray-600 mr-2 tooltip" title="Published"> <i data-feather="send" class="w-3 h-3"></i> </a> -->
                 <a href="{{ route('preview', ['permalink' => $content->permalink]) }}" class="intro-x w-8 h-8 flex items-center justify-center rounded-full bg-theme-14 text-theme-10 ml-auto tooltip" title="Preview"> <i data-feather="eye" class="w-3 h-3"></i> </a>
-                <a href="" class="intro-x w-8 h-8 flex items-center justify-center rounded-full bg-theme-1 text-white ml-2 tooltip" title="Publish"> <i data-feather="share" class="w-3 h-3"></i> </a>
+                @if(Auth::user()->role_id == 7)
+                    <a href="" class="intro-x w-8 h-8 flex items-center justify-center rounded-full bg-theme-1 text-white ml-2 tooltip" title="Publish">
+                        <i data-feather="share" class="w-3 h-3"></i>
+                    </a>
+                @endif
             </div>
         </div>
         @endforeach

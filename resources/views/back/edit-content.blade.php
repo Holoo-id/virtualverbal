@@ -20,23 +20,23 @@
                     <div class="preview">
                         <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" action="{{ route('update-content')}}" enctype="multipart/form-data" method="post" class="validate-form">
                             @csrf
-                            <input type="hidden" name="id"  value="{{ $data->id }}">
+                            <input type="hidden" name="id"  value="{{ $content->id }}">
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Judul <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <input type="text" name="judul" class="input w-full border mt-2" placeholder="Judul Kontenmu" value="{{ $data->judul }}" required>
+                                <input type="text" name="judul" class="input w-full border mt-2" placeholder="Judul Kontenmu" value="{{ $content->judul }}" required>
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row mb-2"> Konten </label>
-                                 <textarea id="summernote" class="summernote" name="konten">{{ $data->konten }}</textarea>
+                                 <textarea id="summernote" class="summernote" name="konten">{{ $content->konten }}</textarea>
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Sub Judul <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <input type="text" name="sub_judul" class="input w-full border mt-2" placeholder="Tentang Kontenmu" value="{{ $data->sub_judul }}" required>
+                                <input type="text" name="sub_judul" class="input w-full border mt-2" placeholder="Tentang Kontenmu" value="{{ $content->sub_judul }}" required>
                             </div>
                             <div>
                                 <label class="flex flex-col sm:flex-row"> Permalink <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Tidak untuk dirubah, URL format</span> </label>
                                 <input name="" class="input border mt-2 cursor-not-allowed" value="virtualverbal.com">
-                                <input type="url" name="permalink" class="input border col-md-5" value="{{ $data->permalink }}">
+                                <input type="url" name="permalink" class="input border col-md-5" value="{{ $content->permalink }}">
                             </div>
 
                             <div class="mt-3 dropzone border-gray-200 border-dashed">
@@ -57,7 +57,7 @@
                                 
                                 <select class="input w-full border mt-2" name="category_id">
                                 <option >Category</option>
-                                @foreach($category as $ct)
+                                @foreach($categories as $ct)
                                         <option value=" {{ $ct->id }}" >{{ $ct->name }}</option>
                                         @endforeach
                                     </select>

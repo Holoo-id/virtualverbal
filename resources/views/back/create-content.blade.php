@@ -30,7 +30,7 @@
                                 <input type="text" name="sub_judul" class="input w-full border mt-2" placeholder="Tentang Kontenmu" required>
                             </div>
                             <div class="mt-3">
-                                <label class="flex flex-col sm:flex-row mb-2"> Permalink <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Tidak untuk dirubah, URL format</span> </label>
+                                <label class="flex flex-col sm:flex-row mb-2"> Permalink <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
                                 <div class="grid grid-cols-12 gap-2">
                                     <input type="url" name="permalink" class="input border col-md-5 col-span-3 cursor-not-allowed" placeholder="virtualverbal.com/" disabled>
                                     <input type="url" name="permalink" class="input border col-md-5 col-span-9" value="link-yang-anda-masukan">
@@ -56,19 +56,31 @@
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Image Name <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <input type="text" name="tittle" class="input w-full border mt-2" placeholder="Image Name" >
+                                <input type="text" name="title" class="input w-full border mt-2" placeholder="Image Name" >
                             </div>
                             <div class="mt-3">
-                                <label class="flex flex-col sm:flex-row"> Topik <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <div class="mt-2">
-                                    <select data-placeholder="Topik kontenmu" class="select2 w-full" data-search="true" multiple>
-                                        @foreach($tags as $tag)
-                                            <option value="{{ $tag->id }}">{{ $tag->name }}</option>
-                                        @endforeach
-                                    </select>
+                                <div class="grid grid-cols-12 gap-6">
+                                    <div class="col-span-8">
+                                        <label class="flex flex-col sm:flex-row"> Topik <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
+                                        <div class="mt-2">
+                                            <select data-placeholder="Topik kontenmu" class="select2 w-full" data-search="true" multiple>
+                                                @foreach($tags as $tag)
+                                                    <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-4">
+                                        <label class="flex flex-col sm:flex-row"><span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Topik yang dicari tidak ada? Tambahkan di sini</span> </label>
+                                        <div class="mt-3">
+                                            <form action="" class="grid grid-cols-4">
+                                                <input type="text" name="" id="" class="col-span-10 input w-5/6 border col-md-5" placeholder="Topik Baru">
+                                                <button type="submit" class="button bg-theme-1 text-white col-span-2">Tambah</button>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Game Database </label>
                                 <div class="mt-2">
@@ -80,8 +92,7 @@
                                     </select>
                                 </div>
                             </div>
-                            
-                            
+
                             <!--<div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> SEO <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
                                 <input type="text" name="seo" class="input w-full border mt-2" placeholder="SEO" required>

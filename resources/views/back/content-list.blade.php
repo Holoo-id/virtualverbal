@@ -4,6 +4,7 @@
         <h2 class="text-lg font-medium mr-auto">
             All Content
         </h2>
+
         <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
             <form class="flex flex-col sm:flex-row items-center">
                 <div class="sm:mt-2 mr-2">

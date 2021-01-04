@@ -123,14 +123,8 @@
                         error_div.id = "error-log";
                         error_div.innerHTML = "<div class='information-box-icon'><svg class='cross-cb-icon'><use xlink:href='#svg-cross-cb-small'></use></svg></div>";
                         error_txt = document.createElement("p");
-<<<<<<< HEAD
                         error_txt.className += "information-box-message";
                         @if ($error == "Email atau Password anda salah!")
-=======
-                        error_txt.className += "text-tag important red";
-                        // error_txt.className += "information-box-message";
-                        @if ($error == "These credentials do not match our records.")
->>>>>>> 13891a2a538726f9450241a5a452607cc8261a1e
                             $('#popup-login-fail').css('opacity','1');
                             $('#popup-login-fail').css('visibility','visible');
                             $('#popup-login-fail').css('translate','(0px, 0px)');

@@ -10,16 +10,6 @@
             <div class="filter-heading">
                 <p class="filter-heading-text"><span class="highlight">{{ $contents->total() }}</span> Results found for: "<span class="highlight">{{ $keyword }}</span>"</p>
             </div>
-<<<<<<< HEAD
-            <form method="GET" action="{{ route('search') }}" class="filters-row">
-                <div class="dropdown-simple-wrap">
-                    <div id="filter-01-dropdown-trigger" class="dp-current-option">
-                        <div id="filter-01-dropdown-option-value" class="dp-current-option-value">
-                            <p class="dp-option-text">All Categories</p>
-                        </div>
-                        <svg class="arrow-icon">
-                            <use xlink:href="#svg-arrow"></use>
-=======
                 <form method="GET" action="{{ route('search') }}" ocClick="{{ route('search') }}" class="grid-4col_1" style="max-width:85%">
                     <div class="select-block">
                         <select id="sc_select_dropdown" name="sc_select_dropdown">
@@ -30,7 +20,6 @@
                         </select>
                         <svg class="arrow-icon medium">
                             <use xlink:href="#svg-arrow-medium"></use>
->>>>>>> 13891a2a538726f9450241a5a452607cc8261a1e
                         </svg>
                     </div>
                     <div class="select-block">

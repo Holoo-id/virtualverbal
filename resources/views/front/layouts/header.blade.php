@@ -4057,7 +4057,6 @@
                     <h2 class="section-title medium">Daftar Sekarang</h2>
                     <div class="section-title-separator"></div>
                 </div>
-<<<<<<< HEAD
             <form class="form-wrap" method="POST" action="{{ route('register') }}">
                 <div class="information-box error" id="error-log-01" style="display: none;"> 
                     <div class='information-box-icon'><svg class='cross-cb-icon'><use xlink:href='#svg-cross-cb-small'></use></svg></div>
@@ -4080,17 +4079,6 @@
                     <p class="information-box-message" id="error-info-fail-register">Password tidak sama!</p>
                 </div>
                 @csrf
-=======
-                <form class="form-wrap" method="POST" action="{{ route('register') }}">
-                    @csrf
-                    <!-- <div class="information-box error" id="error-log"> 
-                        <div class="information-box-icon">
-                            <svg class="cross-cb-icon">
-                                <use xlink:href="#svg-cross-cb-small"></use>
-                            </svg>
-                        </div>
-                    </div> -->
->>>>>>> 13891a2a538726f9450241a5a452607cc8261a1e
                     <div id="register-form-fail" class="form-row">
                         <div class="form-item red">
                             <label for="register_email" class="rl-label">E-Mail:</label>

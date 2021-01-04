@@ -81,72 +81,29 @@
         @include('front.layouts.header')
         @yield('content')
         @include('front.layouts.footer')
-        <script>
-            function getDataSlide(){
-                let data = [];
-                @foreach($live_news as $live_data)
-                    data.push(
-                        {
-                            title:'{{ $live_data->judul }}',
-                            content:'{{ $live_data->sub_judul }}',
-                            separator:'<span class="separator"><span class="separator-bar">/</span><span class="separator-bar">/</span></span>'
-                        },
-                    );          
-                @endforeach
-                return data
-            }
-        </script>
+        {{-- Script untuk live news marquee Start--}}
+            <script>
+                function getDataSlide(){
+                    let data = [];
+                    @foreach($live_news as $live_data)
+                        data.push(
+                            {
+                                title:'{{ $live_data->judul }}',
+                                content:'{{ $live_data->sub_judul }}',
+                                separator:'<span class="separator"><span class="separator-bar">/</span><span class="separator-bar">/</span></span>'
+                            },
+                        );          
+                    @endforeach
+                    return data
+                }
+            </script>
+        {{-- Script untuk live news marquee Finish--}}
         <script src="{{ asset('/frontend/assets/js/app.bundle.min.js') }}"></script>
         <script src="{{ asset('/frontend/assets/js/jquery-3.5.1.min.js')}}"></script>
-        
         <script>
             $(document).ready(function(){ 
              // Auth Error Start
                 var error_txt;
-                @if ($errors->any())
-                    $('#forValidationFail').css('opacity','1');
-                    $('#forValidationFail').css('visibility','visible');
-                    @foreach($errors->all() as $error)
-                        error_txt = document.createElement("p");
-                        error_txt.className += "text-tag important red";
-                        // error_txt.className += "information-box-message";
-                        @if ($error == "These credentials do not match our records.")
-                            $('#popup-login-fail').css('opacity','1');
-                            $('#popup-login-fail').css('visibility','visible');
-                            $('#popup-login-fail').css('translate','(0px, 0px)');                                  
-                            error_txt.innerHTML = "Email atau Password anda salah!";
-                            $('#login-form, #login-form-fail').before(error_txt);
-                        @elseif($error == "The email must be a valid email address.")
-                            $('#popup-register-fail').css('opacity','1');
-                            $('#popup-register-fail').css('visibility','visible');
-                            $('#popup-register-fail').css('translate','(0px, 0px)');                                  
-                            error_txt.innerHTML = "Email yang anda masukkan tidak valid.";
-                            $('#register-form, #register-form-fail').before(error_txt);
-                        @elseif($error == "The email has already been taken.")
-                            $('#popup-register-fail').css('opacity','1');
-                            $('#popup-register-fail').css('visibility','visible');
-                            $('#popup-register-fail').css('translate','(0px, 0px)');                                  
-                            error_txt.innerHTML = "Email telah terpakai!";
-                            $('#register-form, #register-form-fail').before(error_txt);
-                        @elseif($error == "The password confirmation does not match.")
-                            $('#popup-register-fail').css('opacity','1');
-                            $('#popup-register-fail').css('visibility','visible');
-                            $('#popup-register-fail').css('translate','(0px, 0px)');                                  
-                            error_txt.innerHTML = "Password yang anda masukkan tidak cocok.";
-                            $('#register-form, #register-form-fail').before(error_txt);
-                        @elseif($error == "The password must be at least 8 characters and contain at least one number." || $error == "The password must be at least 8 characters.")
-                            $('#popup-register-fail').css('opacity','1');
-                            $('#popup-register-fail').css('visibility','visible');
-                            $('#popup-register-fail').css('translate','(0px, 0px)');                                  
-                            error_txt.innerHTML = "Password minimal delapan karakter dan harus menggunakan minimal satu angka";
-                            $('#register-form, #register-form-fail').before(error_txt);
-                        @else
-                            error_txt.innerHTML = "{{$errors}}";
-                            $('.live-news-widget-wrap').before(error_txt);
-                        @endif
-                    @endforeach
-                    // document.getElementById("error-log").appendChild(error_txt);
-                @endif
                 $("#forValidationFail").click(function(){
                     $('#forValidationFail').css('opacity','0');
                     $('#forValidationFail').css('visibility','hidden');
@@ -157,9 +114,62 @@
                     $('#popup-register-fail').css('opacity','0');
                     $('#popup-register-fail').css('visibility','hidden');
                 });
+                @if ($errors->any())
+                    $('#forValidationFail').css('opacity','1');
+                    $('#forValidationFail').css('visibility','visible');
+                    @foreach($errors->all() as $error)
+                        error_div = document.createElement("div");
+                        error_div.className += "information-box error";
+                        error_div.id = "error-log";
+                        error_div.innerHTML = "<div class='information-box-icon'><svg class='cross-cb-icon'><use xlink:href='#svg-cross-cb-small'></use></svg></div>";
+                        error_txt = document.createElement("p");
+                        error_txt.className += "information-box-message";
+                        @if ($error == "Email atau Password anda salah!")
+                            $('#popup-login-fail').css('opacity','1');
+                            $('#popup-login-fail').css('visibility','visible');
+                            $('#popup-login-fail').css('translate','(0px, 0px)');
+                            error_txt.innerHTML = "{{$error}}";
+                            $('#login-form').before(error_div);
+                            $('#error-log').append(error_txt);
+                            @break
+                        @elseif($error == "The password must be at least 8 characters and contain at least one number.")
+                            $('#popup-register-fail').css('opacity','1');
+                            $('#popup-register-fail').css('visibility','visible');
+                            $('#popup-register-fail').css('translate','(0px, 0px)');                                  
+                            error_txt.innerHTML = "Password minimal memiliki satu angka";
+                            $('#register-form').before(error_div);
+                            $('#error-log').append(error_txt);
+                            $('#error-log-03').show();
+                            @break
+                        @elseif($error == "The password must be at least 8 characters.")
+                            $('#popup-register-fail').css('opacity','1');
+                            $('#popup-register-fail').css('visibility','visible');
+                            $('#popup-register-fail').css('translate','(0px, 0px)');                                  
+                            error_txt.innerHTML = "Password minimal delapan karakter";
+                            $('#register-form').before(error_div);
+                            $('#error-log').append(error_txt);
+                            $('#error-log-04').show();
+                            @break
+                        @else
+                            $('#popup-register-fail').css('opacity','1');
+                            $('#popup-register-fail').css('visibility','visible');
+                            $('#popup-register-fail').css('translate','(0px, 0px)');
+                            error_txt.innerHTML = "{{$error}}";
+                            $('#register-form').before(error_div);
+                            $('#error-log').append(error_txt);
+                                @if($error == "password yang anda masukkan tidak sama.")
+                                $('#error-log-05').show();
+                                @else
+                                $('#error-log-02').show();
+                                @endif
+                            @break
+                        @endif
+                    @endforeach
+                    // document.getElementById("error-log").appendChild(error_txt);
+                @endif
              // Auth Error Finish
 
-             // Button Disabled saat input kosong Start 
+             // Button Disabled Start 
                 function validateLoginButton() {
                     var buttonLoginDisabled = $('#login_email').val().trim() === '' || $('#login_pwd').val().trim() === '';
                     $('#login_btn').prop('disabled', buttonLoginDisabled);
@@ -187,7 +197,9 @@
                 $('#login_pwd_fail').on('keyup', validateLoginButtonFail);
 
                 function validateRegisterButton() {
-                    var buttonRegisterDisabled = $('#register_email').val().trim() === '' || $('#register_pwd').val().trim() === '' || $('#register_pwd_repeat').val().trim() === '';
+                    var buttonRegisterDisabled = $('#register_email').val().trim() === '' || 
+                                                 $('#register_pwd').val().length < 8 || 
+                                                 $('#register_pwd_repeat').val().length < 8;
                     $('#register_btn').prop('disabled', buttonRegisterDisabled);
                     if (buttonRegisterDisabled) {
                         $('#register_btn').addClass('disabled');
@@ -201,7 +213,9 @@
                 $('#register_pwd_repeat').on('keyup', validateRegisterButton);
 
                 function validateRegisterButtonFail() {
-                    var buttonRegisterDisabled = $('#register_email_fail').val().trim() === '' || $('#register_pwd_fail').val().trim() === '' || $('#register_pwd_repeat_fail').val().trim() === '';
+                    var buttonRegisterDisabled = $('#register_email_fail').val().trim() === '' || 
+                                                 $('#register_pwd_fail').val().length < 8 || 
+                                                 $('#register_pwd_repeat_fail').val().length < 8;
                     $('#register_btn_fail').prop('disabled', buttonRegisterDisabled);
                     if (buttonRegisterDisabled) {
                         $('#register_btn_fail').addClass('disabled');
@@ -213,7 +227,7 @@
                 $('#register_email_fail').on('keyup', validateRegisterButtonFail);
                 $('#register_pwd_fail').on('keyup', validateRegisterButtonFail);
                 $('#register_pwd_repeat_fail').on('keyup', validateRegisterButtonFail);
-             // Button Disabled saat input kosong Finish
+             // Button Disabled Finish
 
             });
             //autoload search result

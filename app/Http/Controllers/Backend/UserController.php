@@ -30,11 +30,11 @@ class UserController extends Controller
     }
 
     public function redirectToProvider(){
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver('facebook')->redirect();
     }
 
     public function handleProviderCallback(){
-        $user = Socialite::driver('google')->user();
+        $user = Socialite::driver('facebook')->user();
         dd($user);
     }
 }

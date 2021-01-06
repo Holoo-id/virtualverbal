@@ -29,12 +29,12 @@ class UserController extends Controller
         return redirect('/');
     }
 
-    public function redirectToProvider(){
-        return Socialite::driver('facebook')->redirect();
+    public function redirectToProvider($driver){
+        return Socialite::driver($driver)->redirect();
     }
 
-    public function handleProviderCallback(){
-        $user = Socialite::driver('facebook')->user();
+    public function handleProviderCallback($driver){
+        $user = Socialite::driver($driver)->user();
         dd($user);
     }
 }

@@ -98,5 +98,5 @@ Route::prefix('/back')->group(function (){
     Route::post('/email/verify/{encrypted_id}', [UserController::class, 'finalizeRegister']);
 // Route untuk verifikasi email
 
-Route::get('/login-by/facebook', [UserController::class, 'redirectToProvider']);
-Route::get('/login-by/facebook/callback', [UserController::class, 'handleProviderCallback']);
+Route::get('/login-by/{driver}', [UserController::class, 'redirectToProvider']);
+Route::get('/login-by/{driver}/callback', [UserController::class, 'handleProviderCallback']);

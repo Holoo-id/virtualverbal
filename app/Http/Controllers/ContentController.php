@@ -193,10 +193,13 @@ class ContentController extends Controller
     public function edit($permalink)
     {
         // $data = Content::find($id);
-        $content = Content::where('permalink', $permalink)->first();
+        $content = Content::where('permalink', $permalink)
+            ->first();
         $categories = FormatContent::all();
+        $tags = Topics::all();
+        $games = Game::all();
         // $category = DB::table('v_format_content')->get();
-        return view('back.edit-content', compact('content', 'categories'));
+        return view('back.edit-content', compact('content', 'categories', 'games', 'tags'));
     }
     public function update(Request $request)
     {

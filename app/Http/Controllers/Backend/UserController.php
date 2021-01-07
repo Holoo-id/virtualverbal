@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
@@ -33,8 +34,23 @@ class UserController extends Controller
         return Socialite::driver($driver)->redirect();
     }
 
-    public function handleProviderCallback($driver){
-        $user = Socialite::driver($driver)->user();
-        dd($user);
+    public function handleProviderCallback($driver, Request $request){
+        $request_user = Socialite::driver($driver)->user();
+        $checkuser = User::where('provider_id', $request_user->id)->first();
+
+        if($checkuser){
+            Auth::loginUsingId($checkuser->id, false);
+        }
+        else{
+            $new_user = new User;
+            $new_user->provider_id = $request_user->id;
+            $new_user->name = $request_user->name;
+            $new_user->email = $request_user->email;
+            $new_user->password = encrypt(Str::random(16));
+            $new_user->save();
+            Auth::login($new_user, false);
+        }
+        $request->session()->regenerate();
+        return redirect('/');
     }
 }

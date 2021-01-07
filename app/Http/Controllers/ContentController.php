@@ -65,6 +65,7 @@ class ContentController extends Controller
 
         $this->seo()->opengraph()->addProperty('type', 'articles');
 
+        $this->seo()->twitter()->setImage(asset($content->image_path));
         $this->seo()->twitter()->setType('summary_large_image');
         
         $this->seo()->jsonLdMulti()->addImage(asset($content->image_path));

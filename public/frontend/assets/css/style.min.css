@@ -13428,7 +13428,7 @@ visibility: hidden;
 .post-author-info-wrap:after {
     content: '';
     display: table;
-    clear: both
+    clear: both;
 }
 
 .post-author-info-wrap .user-avatar {

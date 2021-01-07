@@ -43,7 +43,7 @@ return [
             'type'        => 'website', // website || article || blog
             'site_name'   => 'Virtual Verbal',
             'images'      => ['https://scontent.fcgk6-1.fna.fbcdn.net/v/t1.0-9/80222316_2821866754572734_7581848670333566976_n.jpg'],
-            // 'fb:app_id'   => {{ config('services.facebook.client_id') }},
+            // 'fb:app_id'   => config('services.facebook.client_id'),
             // 'locale'      => '',
             // 'audio'      => '',
             // 'video'      => '',

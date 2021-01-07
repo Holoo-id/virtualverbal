@@ -64,6 +64,7 @@
         @include('front.layouts.header')
         @yield('content')
         @include('front.layouts.footer')
+        
         {{-- Script untuk live news marquee Start--}}
             <script>
                 function getDataSlide(){
@@ -81,6 +82,8 @@
                 }
             </script>
         {{-- Script untuk live news marquee Finish--}}
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
         <script src="{{ asset('/frontend/assets/js/app.bundle.min.js') }}"></script>
         <script src="{{ asset('/frontend/assets/js/jquery-3.5.1.min.js')}}"></script>
         <script>

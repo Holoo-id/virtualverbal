@@ -45,31 +45,29 @@
                                 @endif">
                                 <div class="section-title-separator"></div>
                             </div>
-                            <div style="margin-top: 5px;margin-bottom:40px;display: flex; justify-content: center;" class="post-author-info-wrap">
+                            <div style="margin-top: 5px;margin-bottom:40px;display: flex; justify-content: center; align-items: center;" class="post-author-info-wrap">
                                 <a href="{{ url('front/content/search?author='.$content->writer->id) }}">
                                     <figure class="user-avatar tiny liquid">
                                         <img src="{{ asset($content->writer->image)}}" alt="{{ $content->writer->name }}">
                                     </figure>
                                 </a>
-                                <p style="display: flex; justify-content: center; align-items: center" class="post-author-info small light">Oleh 
+                                <p style="display: flex; justify-content: center; align-items: center;" class="post-author-info small light">Oleh 
                                     <a href="search-results.html" class="post-author" style="margin-left:2px"> {{ $content->writer->name }}</a>
                                     <span class="separator">-</span>{{ $content->publish_at }}
                                     <span class="separator">-</span>
-                                    <a href="#" class="bubble-ornament fb">
-                                        <svg class="facebook-icon">
-                                            <use xlink:href="#svg-facebook"></use>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="bubble-ornament twt">
-                                        <svg class="twitter-icon">
-                                            <use xlink:href="#svg-twitter"></use>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="bubble-ornament gplus">
-                                        <svg class="gplus-icon">
-                                            <use xlink:href="#svg-gplus"></use>
-                                        </svg>
-                                    </a>
+
+                                    <div style="display: flex; justify-content: space-around; width: 215px">
+                                        <!-- Facebook -->
+                                        <div class="fb-share-button" data-href="{{ url()->full() }}" data-layout="button" data-size="small">
+                                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ url()->full() }}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"></a>
+                                        </div>
+
+                                        <!-- Twitter -->
+                                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-lang="id" data-show-count="false">kmbng</a>
+
+                                        <!-- Line -->
+                                        <div class="line-it-button" data-lang="id" data-type="share-a" data-ver="3" data-url="{{ url()->full() }}" data-color="default" data-size="small" data-count="false" style="display: none;"></div>
+                                    </div>
                                 </p>
                             </div>
                             <div class="post-open-text">

@@ -6,6 +6,8 @@ use App\Models\Content;
 use App\Models\FormatContent;
 use App\Models\Topics;
 use App\Models\User;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -15,6 +17,8 @@ use Storage;
 
 class ContentController extends Controller
 {
+    use SEOToolsTrait;
+
     public function all(Request $request)
     {
         $authors = User::all();
@@ -53,6 +57,19 @@ class ContentController extends Controller
         ]);
         $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
 
+        $this->seo()->setTitle($content->judul);
+        $this->seo()->setDescription($content->sub_judul);
+        // SEOMeta::addMeta('article:published_time', $content->publish_at, 'property');
+        // SEOMeta::addMeta('article:section', $content->formatContent->name, 'property');
+        // $this->seo()->addKeyword(['key1', 'key2', 'key3']);
+
+        $this->seo()->opengraph()->addProperty('type', 'articles');
+
+        $this->seo()->twitter()->setType('summary_large_image');
+        
+        $this->seo()->jsonLdMulti()->addImage(asset($content->image_path));
+        $this->seo()->jsonLdMulti()->setType('Article');
+
         // sidebar
         $latest = Content::where('published', '=', 1)
             ->where('category_id', '!=', 3)
@@ -75,7 +92,7 @@ class ContentController extends Controller
             $popular->publish_at = \Carbon\Carbon::parse($popular->publish_at)->format('D, d F Y');
         }
 
-        // topipcs
+        // topics
         if (!empty($content->tags)) {
             $relates = Content::whereHas('tags', function ($q) use ($content) {
                 return $q->whereIn('name', $content ->tags->pluck('name')); 

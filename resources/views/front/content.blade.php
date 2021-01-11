@@ -63,7 +63,7 @@
                                         </div>
 
                                         <!-- Twitter -->
-                                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-lang="id" data-show-count="false">kmbng</a>
+                                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-lang="id" data-show-count="false"></a>
 
                                         <!-- Line -->
                                         <div class="line-it-button" data-lang="id" data-type="share-a" data-ver="3" data-url="{{ url()->full() }}" data-color="default" data-size="small" data-count="false" style="display: none;"></div>

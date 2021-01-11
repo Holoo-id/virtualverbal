@@ -1,7 +1,7 @@
 @extends('front.layouts.base')
 
 @section('content')
-    @include('front.layouts.banner-slider')
+    @include('front.layouts.components.banner-slider')
     {{--@include('front.layouts.components.esports-live-score')--}}
     <div class="layout-content-1 layout-item centered">
         <div class="layout-body layout-item centered">
@@ -28,148 +28,40 @@
                 <div class="postslide-wrap">
                     <div id="postslide-1" class="postslide">
                         <div class="news-preview slider-items">
-                            <div class="post-preview picture big gaming-news">
-                                <a href="post-v1.html">
-                                    <div class="post-preview-img-wrap">
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/10.jpg')}}" alt="post-07">
-                                        </figure>
-                                        <div class="post-preview-overlay">
-                                            <span class="tag-ornament">Gaming News</span>
-                                            <p class="post-preview-title">New expansion pack coming to "Rise of Depredators"</p>
-                                            <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                            @foreach($highlight_news as $highlight)
+                                <div class="post-preview picture big e-sport">
+                                    <a href="post-v1.html">
+                                        <div class="post-preview-img-wrap">
+                                            <figure class="post-preview-img liquid">
+                                                <img src="{{ asset($highlight->image_path)}}" alt="{{ $highlight->image_name }}">
+                                            </figure>
+                                            <div class="post-preview-overlay">
+                                                <span class="tag-ornament">{{ $highlight->FormatContent->name }}</span>
+                                                <p class="post-preview-title">{{ $highlight->judul }}</p>
+                                                <p class="post-preview-text">{{ $highlight->sub_judul }}</p>
+                                            </div>
+                                            <div class="loading-line"></div>
                                         </div>
-                                        <div class="loading-line"></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="post-preview picture big game-reviews">
-                                <a href="post-v1.html">
-                                    <div class="post-preview-img-wrap">
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/10.jpg')}}" alt="post-07">
-                                        </figure>
-                                        <div class="post-preview-overlay">
-                                            <span class="tag-ornament">Gaming News</span>
-                                            <p class="post-preview-title">New expansion pack coming to "Rise of Depredators"</p>
-                                            <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                                        </div>
-                                        <div class="loading-line"></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="post-preview picture big geeky-news">
-                                <a href="post-v1.html">
-                                    <div class="post-preview-img-wrap">
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/10.jpg')}}" alt="post-07">
-                                        </figure>
-                                        <div class="post-preview-overlay">
-                                            <span class="tag-ornament">Gaming News</span>
-                                            <p class="post-preview-title">New expansion pack coming to "Rise of Depredators"</p>
-                                            <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                                        </div>
-                                        <div class="loading-line"></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="post-preview picture big movie-news">
-                                <a href="post-v1.html">
-                                    <div class="post-preview-img-wrap">
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/10.jpg')}}" alt="post-07">
-                                        </figure>
-                                        <div class="post-preview-overlay">
-                                            <span class="tag-ornament">Gaming News</span>
-                                            <p class="post-preview-title">New expansion pack coming to "Rise of Depredators"</p>
-                                            <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                                        </div>
-                                        <div class="loading-line"></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="post-preview picture big game-reviews">
-                                <a href="post-v1.html">
-                                    <div class="post-preview-img-wrap">
-                                        <figure class="post-preview-img liquid">
-                                            <img src="{{ asset('/frontend/assets/img/posts/10.jpg')}}" alt="post-07">
-                                        </figure>
-                                        <div class="post-preview-overlay">
-                                            <span class="tag-ornament">Gaming News</span>
-                                            <p class="post-preview-title">New expansion pack coming to "Rise of Depredators"</p>
-                                            <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                                        </div>
-                                        <div class="loading-line"></div>
-                                    </div>
-                                </a>
-                            </div>
+                                    </a>
+                                </div>
+                            @endforeach
                         </div>
                         <div class="news-roster slider-roster">
-                            <div class="post-preview picture short gaming-news">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/15.jpg')}}" alt="post-07">
-                                    </figure>
-                                    <div class="post-preview-overlay">
-                                        <p class="post-preview-title">New expansion pack coming to "Rise of Depredators"</p>
+                            @foreach($highlight_news as $highlight)
+                                <div class="post-preview picture short e-sport">
+                                    <div class="post-preview-img-wrap">
+                                        <figure class="post-preview-img liquid">
+                                            <img src="{{ asset($highlight->image_path)}}" alt="{{ $highlight->image_name }}">
+                                        </figure>
+                                        <div class="post-preview-overlay">
+                                            <p class="post-preview-title">{{ $highlight->judul }}</p>
+                                        </div>
+                                        <span class="tag-ornament">{{ $highlight->FormatContent->name }}</span>
                                     </div>
-                                    <span class="tag-ornament">Gaming news</span>
+                                    <div class="loading-line"></div>
+                                    <div class="overlay"></div>
                                 </div>
-                                <div class="loading-line"></div>
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="post-preview picture short game-review">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/15.jpg')}}" alt="post-07">
-                                    </figure>
-                                    <div class="post-preview-overlay">
-                                        <p class="post-preview-title">New expansion pack coming to "Rise of Depredators"</p>
-                                    </div>
-                                    <span class="tag-ornament">Gaming news</span>
-                                </div>
-                                <div class="loading-line"></div>
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="post-preview picture short geeky-news">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/15.jpg')}}" alt="post-07">
-                                    </figure>
-                                    <div class="post-preview-overlay">
-                                        <p class="post-preview-title">New expansion pack coming to "Rise of Depredators"</p>
-                                    </div>
-                                    <span class="tag-ornament">Gaming news</span>
-                                </div>
-                                <div class="loading-line"></div>
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="post-preview picture short movie-news">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/15.jpg')}}" alt="post-07">
-                                    </figure>
-                                    <div class="post-preview-overlay">
-                                        <p class="post-preview-title">New expansion pack coming to "Rise of Depredators"</p>
-                                    </div>
-                                    <span class="tag-ornament">Gaming news</span>
-                                </div>
-                                <div class="loading-line"></div>
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="post-preview picture short gaming-news">
-                                <div class="post-preview-img-wrap">
-                                    <figure class="post-preview-img liquid">
-                                        <img src="{{ asset('/frontend/assets/img/posts/15.jpg')}}" alt="post-07">
-                                    </figure>
-                                    <div class="post-preview-overlay">
-                                        <p class="post-preview-title">New expansion pack coming to "Rise of Depredators"</p>
-                                    </div>
-                                    <span class="tag-ornament">Gaming news</span>
-                                </div>
-                                <div class="loading-line"></div>
-                                <div class="overlay"></div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                     <div id="postslide-1-controls" class="slider-controls blue">

@@ -13,19 +13,35 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $contents = Content::where('published', '=', 1)
-            ->where('category_id', '!=', 3)
-            ->where('publish_at', '!=', '')
-            ->orderBy('views', 'desc')
-            ->paginate(6);
-        foreach ($contents as $content) {
-            $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
-        }
-
         $coming_soon = Game::with(['cover', 'release_dates'])
             ->where('first_release_date', '>', today())
             ->where('status', 4)
             ->orderBy('first_release_date', 'desc')
+            ->paginate(5);
+
+        $contents = Content::where('published', '=', 1)
+            ->where('category_id', 1)
+            ->orWhere('category_id', 2)
+            ->orWhere('category_id', 4)
+            ->where('publish_at', '!=', '')
+            ->orderBy('views', 'desc')
+            ->paginate(6);
+            foreach ($contents as $content) {
+                $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
+            }
+
+        $feature_contents = Content::where('published', '=', 1)
+            ->where('category_id', 5)
+            ->orderBy('publish_at', 'desc')
+            ->paginate(3);
+            foreach ($feature_contents as $feature) {
+                $feature->publish_at = \Carbon\Carbon::parse($feature->publish_at)->format('l, d F Y');
+            }
+
+        $highlight_news = Content::where('published', '=', 1)
+            ->where('category_id', 1)
+            ->where('highlight', 1)
+            ->orderBy('publish_at', 'desc')
             ->paginate(5);
 
         $hypes = Game::with(['cover', 'release_dates'])
@@ -50,6 +66,6 @@ class HomeController extends Controller
             ->orderBy('views', 'desc')
             ->paginate(9);
 
-        return view('front.home', compact('coming_soon', 'contents', 'hypes', 'recently_release', 'video_contents'));
+        return view('front.home', compact('coming_soon', 'contents', 'feature_contents', 'highlight_news', 'hypes', 'recently_release', 'video_contents'));
     }
 }

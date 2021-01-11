@@ -132,9 +132,11 @@
       <use xlink:href="#svg-search"></use>
     </svg>
 
-    <figure class="logo-img">
-        <img src="{{ asset('/frontend/assets/img/brand/logovv.png')}}" alt="Logo">
-    </figure>
+    <a href="{{ route('home') }}">
+        <figure class="logo-img">
+            <img src="{{ asset('/frontend/assets/img/brand/logovv.png')}}" alt="Logo">
+        </figure>
+    </a>
 
     <ul class="mobile-menu">
         @if ((Auth::Guest()))
@@ -824,9 +826,11 @@
                     <use xlink:href="#svg-menu-pull"></use>
                 </svg>
             </div>
-            <figure class="logo-img">
-                <img src="{{ asset('/frontend/assets/img/brand/logoputihvv.png')}}" alt="Logo">
-            </figure>
+            <a href="{{ route('home') }}">
+                <figure class="logo-img">
+                    <img src="{{ asset('/frontend/assets/img/brand/logoputihvv.png')}}" alt="Logo">
+                </figure>
+            </a>
         </div>
         {{--<ul class="main-menu">
             <li class="main-menu-item">

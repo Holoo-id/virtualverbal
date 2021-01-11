@@ -20,24 +20,6 @@
         <link rel="stylesheet" href="{{ asset('/frontend/assets/css/style.min.css')}}">
         <link rel="stylesheet" href="{{ asset('/frontend/assets/font-awesome/css/all.css')}}">
     </head>
-    <style>
-        .banner-slider .slider-item-1 {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("{{ asset('/frontend/assets/img/posts/01.jpg')}}") no-repeat center;
-            background-size: cover
-        }
-        .banner-slider .slider-item-2 {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("{{ asset('/frontend/assets/img/posts/02.jpg')}}") no-repeat center;
-            background-size: cover
-        }
-        .banner-slider .slider-item-3 {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("{{ asset('/frontend/assets/img/posts/03.jpg')}}") no-repeat center;
-            background-size: cover
-        }
-        .banner-slider .slider-item-4 {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("{{ asset('/frontend/assets/img/posts/04.jpg')}}") no-repeat center;
-            background-size: cover
-        }
-    </style>
 
     <body>
         <script>
@@ -72,7 +54,7 @@
                     @foreach($live_news as $live_data)
                         data.push(
                             {
-                                title:'{{ $live_data->judul }}',
+                                title:'<a class="link">{{ $live_data->judul }} : </a>',
                                 content:'{{ $live_data->sub_judul }}',
                                 separator:'<span class="separator"><span class="separator-bar">/</span><span class="separator-bar">/</span></span>'
                             },
@@ -82,6 +64,7 @@
                 }
             </script>
         {{-- Script untuk live news marquee Finish--}}
+        
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
         <script src="{{ asset('/frontend/assets/js/app.bundle.min.js') }}"></script>

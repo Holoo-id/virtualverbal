@@ -12,7 +12,3 @@ Untuk mengatasi berbagai macam error dan juga keamanan serta keringangan file pr
 #### Others
   1. Untuk memudahkan pengaturan penyimpanan file serta pemanggilannya, cek dalam folder **public/** apakah ada folder **storage/** . Bila ada hapus terlebih dahulu.
   2. Setelah memastikan tidak ada folder **public/storage/** , run command ` php artisan storage:link ` sehingga semua file dalam folder **storage/** bisa dipanggil menggunakan  code  ` asset(...) ` dalam laravel
-  3. Dalam penggunaan Eloquent setiap model diberi nama sesuai dengan nama table dalam database serta sudah terhubung dengan table yang diperlukan, berdasasrkan yang sudah digunakan berikut daftar dan penggunaannya:
-    - `Content::` = v_content
-    - `FormatContent::` = v_format_content
-    - `Topics::` = v_topics

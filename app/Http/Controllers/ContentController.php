@@ -22,10 +22,15 @@ class ContentController extends Controller
     public function all(Request $request)
     {
         $authors = User::all();
-        $categories = FormatContent::where('id', '!=', 3)->get();
+        $categories = FormatContent::where('id', 1)
+            ->orWhere('id', 2)
+            ->orWhere('id', 4)
+            ->get();
         $contents = Content::where('published', '=', 1)
-            ->where('category_id', '!=', 3)
             ->where('publish_at', '!=', '')
+            ->where('category_id', 1)
+            ->orWhere('category_id', 2)
+            ->orWhere('category_id', 4)
             ->orderBy('publish_at', 'desc')
             ->paginate(10);
         $keyword = '';
@@ -73,15 +78,19 @@ class ContentController extends Controller
 
         // sidebar
         $latest = Content::where('published', '=', 1)
-            ->where('category_id', '!=', 3)
-            ->where('id', '!=', $content->id)
             ->where('publish_at', '!=', '')
+            ->where('id', '!=', $content->id)
+            ->where('category_id', 1)
+            ->orWhere('category_id', 2)
+            ->orWhere('category_id', 4)
             ->orderBy('publish_at', 'desc')
             ->paginate(5);
         $populars = Content::where('published', '=', 1)
-            ->where('category_id', '!=', 3)
-            ->where('id', '!=', $content->id)
             ->where('publish_at', '!=', '')
+            ->where('id', '!=', $content->id)
+            ->where('category_id', 1)
+            ->orWhere('category_id', 2)
+            ->orWhere('category_id', 4)
             ->orderBy('views', 'desc')
             ->paginate(5);
             
@@ -96,12 +105,14 @@ class ContentController extends Controller
         // topics
         if (!empty($content->tags)) {
             $relates = Content::whereHas('tags', function ($q) use ($content) {
-                return $q->whereIn('name', $content ->tags->pluck('name')); 
-            })
-            ->where('category_id', '!=', 3)
-            ->where('published', '=', 1)
-            ->where('id', '!=', $content->id) // So you won't fetch same post
-            ->get();
+                    return $q->whereIn('name', $content ->tags->pluck('name')); 
+                })
+                ->where('publish_at', '!=', '')
+                ->where('id', '!=', $content->id)
+                ->where('category_id', 1)
+                ->orWhere('category_id', 2)
+                ->orWhere('category_id', 4)
+                ->get();
             foreach ($relates as $relate) {
                 $relate->publish_at = \Carbon\Carbon::parse($relate->publish_at)->format('l, d F Y H:m');
             }
@@ -119,6 +130,16 @@ class ContentController extends Controller
         }else{
             return view('front.content', compact('content', 'latest', 'populars', 'relates'));
         }
+    }
+
+    public function edit($permalink)
+    {
+        $content = Content::where('permalink', $permalink)
+            ->first();
+        $categories = FormatContent::all();
+        $tags = Topics::all();
+        $games = Game::all();
+        return view('back.edit-content', compact('content', 'categories', 'games', 'tags'));
     }
 
     public function list()
@@ -150,47 +171,63 @@ class ContentController extends Controller
     public function search(Request $request)
     {
         $authors = User::all();
-        $categories = FormatContent::where('id', '!=', 3)->get();
+        $categories = FormatContent::where('category_id', 1)
+            ->orWhere('category_id', 2)
+            ->orWhere('category_id', 4)
+            ->get();
         $keyword = $request->search;
+
         $contents = Content::where('published', '=', 1)
-            ->where('category_id', '!=', 3)
             ->where('publish_at', '!=', '')
+            ->where('category_id', 1)
+            ->orWhere('category_id', 2)
+            ->orWhere('category_id', 4)
             ->where('judul', 'like', "%".$keyword."%")
             ->orWhere('sub_judul', 'like', "%".$keyword."%")
             ->paginate(10);
+            foreach ($contents as $content) {
+                $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
+                if (str_contains($content->judul, $keyword)) {
+                    $content->judul = str_replace($keyword, "<p style=\"background-color: #1c95f3\">".$keyword."</p>", $content->judul);
+                    $content->sub_judul = str_replace($keyword, "<p style=\"background-color: #1c95f3\">".$keyword."</p>", $content->sub_judul);
+                }
+            }
+
         if (!empty($request->author)) {
             $contents = Content::where('published', '=', 1)
-                ->where('category_id', '!=', 3)
                 ->where('publish_at', '!=', '')
+                ->where('category_id', 1)
+                ->orWhere('category_id', 2)
+                ->orWhere('category_id', 4)
                 ->where('created_by', '=', $request->author)
                 ->paginate(10);
         }
         if (!empty($request->category)) {
             $contents = Content::where('published', '=', 1)
-                ->where('category_id', '!=', 3)
                 ->where('publish_at', '!=', '')
+                ->where('category_id', 1)
+                ->orWhere('category_id', 2)
+                ->orWhere('category_id', 4)
                 ->where('category_id', '=', $request->category)
                 ->paginate(10);
         }
+
         $populars = Content::where('published', '=', 1)
-            ->where('category_id', '!=', 3)
             ->where('publish_at', '!=', '')
+            ->where('category_id', 1)
+            ->orWhere('category_id', 2)
+            ->orWhere('category_id', 4)
             ->orderBy('views', 'desc')
             ->paginate(10);
-        foreach ($contents as $content) {
-            $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
-            if (str_contains($content->judul, $keyword)) {
-                $content->judul = str_replace($keyword, "<p style=\"background-color: #1c95f3\">".$keyword."</p>", $content->judul);
-                $content->sub_judul = str_replace($keyword, "<p style=\"background-color: #1c95f3\">".$keyword."</p>", $content->sub_judul);
+            foreach ($populars as $popular) {
+                $popular->publish_at = \Carbon\Carbon::parse($popular->publish_at)->format('D, d M Y');
             }
-        }
-        foreach ($populars as $popular) {
-            $popular->publish_at = \Carbon\Carbon::parse($popular->publish_at)->format('D, d M Y');
-        }
+
         if ($request->ajax()) {
             $view = view('front.layouts.components.data-search', compact('authors', 'categories', 'contents'))->render();
             return response()->json(['html' => $view]);
         }
+
         return view('front.search-result', compact('authors', 'categories', 'contents', 'keyword', 'populars'));
     }
 
@@ -208,17 +245,7 @@ class ContentController extends Controller
             'category_id' => $request->category_id,
         ]);
     }
-    public function edit($permalink)
-    {
-        // $data = Content::find($id);
-        $content = Content::where('permalink', $permalink)
-            ->first();
-        $categories = FormatContent::all();
-        $tags = Topics::all();
-        $games = Game::all();
-        // $category = DB::table('v_format_content')->get();
-        return view('back.edit-content', compact('content', 'categories', 'games', 'tags'));
-    }
+
     public function update(Request $request)
     {
         $uploadedFile = $request->file('file');

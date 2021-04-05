@@ -51,20 +51,22 @@
         </div>
     @endif
 
-    <div class="widget-sidebar">
-        <div class="section-title-wrap blue">
-            <h2 class="section-title medium">topik</h2>
-            <div class="section-title-separator"></div>
-        </div>
+    @if($content->tags->count() > 0)
+        <div class="widget-sidebar">
+            <div class="section-title-wrap blue">
+                <h2 class="section-title medium">topik</h2>
+                <div class="section-title-separator"></div>
+            </div>
 
-        <ul class="custom-tags-wrap">
-            @foreach($content->tags as $tag)
-                <ul class="custom-tags">
-                    <li class="custom-tag">
-                        <a href="{{ $tag->url }}">{{ $tag->name }}</a>
-                    </li>
-                </ul>
-            @endforeach
-        </ul>
-    </div>
+            <ul class="custom-tags-wrap">
+                @foreach($content->tags as $tag)
+                    <ul class="custom-tags">
+                        <li class="custom-tag">
+                            <a href="{{ $tag->url }}">{{ $tag->name }}</a>
+                        </li>
+                    </ul>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 </div>

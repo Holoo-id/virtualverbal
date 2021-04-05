@@ -30,10 +30,10 @@
                         <div class="news-preview slider-items">
                             @foreach($highlight_news as $highlight)
                                 <div class="post-preview picture big e-sport">
-                                    <a href="post-v1.html">
+                                    <a href="{{ route('detail', ['permalink' => $highlight->permalink]) }}">
                                         <div class="post-preview-img-wrap">
                                             <figure class="post-preview-img liquid">
-                                                <img src="{{ asset($highlight->image_path)}}" alt="{{ $highlight->image_name }}">
+                                                <img src="{{ !empty($highlight->image_path) ? asset($highlight->image_path) : asset('/frontend/assets/img/brand/virtual_banner.jpg')}}" alt="{{ $highlight->image_name }}">
                                             </figure>
                                             <div class="post-preview-overlay">
                                                 <span class="tag-ornament">{{ $highlight->FormatContent->name }}</span>
@@ -51,7 +51,7 @@
                                 <div class="post-preview picture short e-sport">
                                     <div class="post-preview-img-wrap">
                                         <figure class="post-preview-img liquid">
-                                            <img src="{{ asset($highlight->image_path)}}" alt="{{ $highlight->image_name }}">
+                                            <img src="{{ !empty($highlight->image_path) ? asset($highlight->image_path) : asset('/frontend/assets/img/brand/virtual_banner.jpg')}}" alt="{{ $highlight->image_name }}">
                                         </figure>
                                         <div class="post-preview-overlay">
                                             <p class="post-preview-title">{{ $highlight->judul }}</p>

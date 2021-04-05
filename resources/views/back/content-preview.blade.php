@@ -8,7 +8,7 @@
         <div class="intro-y text-gray-700 mt-3 text-xs sm:text-sm"> {{ $content->created_at }} <span class="mx-1">•</span> <a class="text-theme-1" href="">{{ $content->formatContent->name }}</a> <span class="mx-1">•</span> 7 Min read </div>
         <div class="intro-y mt-6">
             <div class="news__preview image-fit">
-                <img alt="{{ $content->image_name }}" class="rounded-md" src="{{ asset($content->image_path) }}">
+                <img alt="{{ $content->image_name }}" class="rounded-md" src="{{ !empty($content->image_path) ? asset($content->image_path) : asset('/frontend/assets/img/brand/virtual_banner.jpg') }}">
             </div>
         </div>
         <div class="intro-y flex relative pt-16 sm:pt-6 items-center pb-6">

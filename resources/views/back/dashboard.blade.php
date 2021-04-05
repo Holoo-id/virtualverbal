@@ -140,7 +140,7 @@
                         <div class="intro-y">
                             <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
                                 <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                    <img alt="{{ $top->image_name }}" src="{{ asset($top->image_path) }}">
+                                    <img alt="{{ $top->image_name }}" src="{{ !empty($top->image_path) ? asset($top->image_path) : asset('/frontend/assets/img/brand/virtual_banner.jpg') }}">
                                 </div>
                                 <div class="ml-4 mr-auto">
                                     <div class="font-medium">{{ $top->judul }}</div>

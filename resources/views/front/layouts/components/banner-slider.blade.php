@@ -3,7 +3,10 @@
         @foreach($feature_contents as $feature)
             <div class="slider-item slider-item-1" 
                 style="
-                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url({{ asset($feature->image_path)}}) no-repeat center;
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url( {{ 
+                            !empty($feature->image_path) ? asset($feature->image_path) : asset('/frontend/assets/img/brand/virtual_banner.jpg')
+                        }} ) no-repeat center;
                     background-size: cover;
                 ">
                 <div class="slider-item-wrap">

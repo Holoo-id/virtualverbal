@@ -5,7 +5,7 @@
         <div class="post-open game-review">
             <div class="post-open-img-wrap">
                 <figure class="post-open-img2 liquid">
-                    <img src="{{ asset($content->image_path)}}" alt="{{ $content->image_name }}">
+                    <img src="{{ !empty($content->image_path) ? asset($content->image_path) : asset('/frontend/assets/img/brand/virtual_banner.jpg')}}" alt="{{ $content->image_name }}">
                 </figure>
             </div>
         </div>
@@ -23,9 +23,9 @@
                         e-sport
                     @elseif($content->category_id == 4)
                         movie-news
-                    @else
-                        ''
-                    @endif" >
+                    @elseif($content->category_id == 5)
+                        game-review
+                    @endif">
                     <div class="post-open-content v5">
                         <div class="post-open-body">
                             <div class="tag-list">
@@ -40,8 +40,8 @@
                                     violet
                                 @elseif($content->category_id == 4)
                                     green
-                                @else
-                                    ''
+                                @elseif($content->category_id == 5)
+                                    red
                                 @endif">
                                 <div class="section-title-separator"></div>
                             </div>
@@ -75,13 +75,13 @@
                             </div>
                         </div>
                         
-                        <div class="fb-comments" data-href="{{ env('APP_URL') }}/contents/third" data-numposts="3" data-order-by="social" data-colorscheme="light" data-width=""></div>
+                        <div class="fb-comments" data-href="{{ env('APP_URL') }}/content/detail/{{ $content->permalink }}" data-numposts="3" data-order-by="social" data-colorscheme="light" data-width=""></div>
                     </div>
                 </div>
 
                 <div class="widget-news">
                     <div class="section-title-wrap green">
-                        <h2 class="section-title medium">Related Content</h2>
+                        <h2 class="section-title medium">Konten Terkait</h2>
                         <div class="section-title-separator"></div>
                     </div>
                     @if(!empty($relates))
@@ -92,13 +92,11 @@
                                     gaming-news
                                 @elseif($relate->category_id == 1)
                                     e-sport
-                                @else
-                                    ''
                                 @endif ">
                                     <a href="{{ route('detail', ['permalink' => $relate->permalink]) }}">
                                         <div class="post-preview-img-wrap">
                                             <figure class="post-preview-img liquid">
-                                                <img src="{{ asset($relate->image_path)}}" alt="{{ $relate->image_name }}">
+                                                <img src="{{ !empty($relate->image_path) ? asset($relate->image_path) : asset('/frontend/assets/img/brand/virtual_banner.jpg')}}" alt="{{ $relate->image_name }}">
                                             </figure>
                                         </div>
                                     </a>

@@ -10,10 +10,10 @@
             <div class="filter-heading">
                 <p class="filter-heading-text"><span class="highlight">{{ $contents->total() }}</span> Hasil ditemukan untuk: "<span class="highlight">{{ $keyword }}</span>"</p>
             </div>
-            <form method="GET" action="{{ route('search') }}" ocClick="{{ route('search') }}" class="grid-4col_1" style="max-width:85%">
+            <form method="GET" action="{{ route('search') }}" class="grid-4col_1" style="max-width:85%">
                 <div class="select-block">
                     <select id="sc_select_dropdown" name="penulis">
-                        <option value="" hidden="">Semua Penulis</option>
+                        <option value="">Semua Penulis</option>
                         @foreach($authors as $author)
                             <option value="{{ $author->id }}">{{ $author->name }}</option>
                         @endforeach
@@ -24,7 +24,7 @@
                 </div>
                 <div class="select-block">
                     <select id="sc_select_dropdown" name="kategori">
-                        <option value="" hidden="">Semua Kategori</option>
+                        <option value="">Semua Kategori</option>
                         @foreach($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                         @endforeach

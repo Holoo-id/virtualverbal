@@ -84,7 +84,7 @@
             </div>
             <div class="p-5">
                 <div class="h-40 xxl:h-56 image-fit">
-                    <img alt="{{ $content->image_name }}" class="rounded-md" src="{{ asset($content->image_path) }}">
+                    <img alt="{{ $content->image_name }}" class="rounded-md" src="{{ !empty($content->image_path) ? asset($content->image_path) : asset('/frontend/assets/img/brand/virtual_banner.jpg') }}">
                 </div>
                 <a href="{{ route('preview', ['permalink' => $content->permalink]) }}" class="block font-medium text-base mt-5">{{ $content->judul }}</a> 
                 <div class="text-gray-700 mt-2">{{ $content->sub_judul }}</div>

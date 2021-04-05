@@ -10,7 +10,7 @@
 
     <div class="widget-sidebar">
         <div class="section-title-wrap violet">
-            <h2 class="section-title medium">Popular Contents</h2>
+            <h2 class="section-title medium">Konten Terpopuler</h2>
             <div class="section-title-separator"></div>
         </div>
         <div class="post-preview-showcase grid-1col_1 gutter-medium">
@@ -20,13 +20,13 @@
                         gaming-news
                     @elseif($popular->category_id == 1)
                         e-sport
-                    @else
-                        ''
+                    @elseif($popular->category_id == 4)
+                        movie-news
                     @endif ">
                     <a href="{{ route('detail', $popular->permalink) }}">
                         <div class="post-preview-img-wrap">
                             <figure class="post-preview-img liquid">
-                                <img src="{{ asset($popular->image_path)}}" alt="{{ $popular->image_name }}">
+                                <img src="{{ !empty($popular->image_path) ? asset($popular->image_path) : asset('/frontend/assets/img/brand/virtual_banner.jpg')}}" alt="{{ $popular->image_name }}">
                             </figure>
                         </div>
                     </a>
@@ -43,7 +43,7 @@
     
     <div class="widget-sidebar">
         <div class="section-title-wrap red">
-            <h2 class="section-title medium">Latest Content</h2>
+            <h2 class="section-title medium">Konten Terbaru</h2>
             <div class="section-title-separator"></div>
         </div>
         <div class="post-preview-showcase grid-1col_1 gutter-medium">
@@ -53,13 +53,13 @@
                         gaming-news
                     @elseif($late->category_id == 1)
                         e-sport
-                    @else
-                        ''
-                    @endif ">
+                    @elseif($late->category_id == 4)
+                        movie-news
+                    @endif">
                     <a href="{{ route('detail', $late->permalink) }}">
                         <div class="post-preview-img-wrap">
                             <figure class="post-preview-img liquid">
-                                <img src="{{ asset($late->image_path)}}" alt="{{ $late->image_name }}">
+                                <img src="{{ !empty($late->image_path) ? asset($late->image_path) : asset('/frontend/assets/img/brand/virtual_banner.jpg')}}" alt="{{ $late->image_name }}">
                             </figure>
                         </div>
                     </a>

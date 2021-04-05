@@ -1,6 +1,6 @@
 @extends('back.layouts.base')
 @section('content')
-{{--dd($content)--}}
+{{dd($content)}}
     <div class="grid grid-cols-12 gap-6 mt-5">
         <!-- <div class="intro-y box col-span-12 lg:col-span-4 p-10">
             <div class="intro-y text-justify leading-relaxed">
@@ -32,7 +32,7 @@
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row mb-2"> Permalink <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
                                 <div class="grid grid-cols-12 gap-2">
-                                    <input type="url" name="permalink" class="input border col-md-5 col-span-3 cursor-not-allowed" placeholder="virtualverbal.com/" disabled>
+                                    <input type="url" name="permalink" class="input border col-md-5 col-span-3 cursor-not-allowed" placeholder="virtualverbal.com/content/" disabled>
                                     <input type="url" name="permalink" class="input border col-md-5 col-span-9" value="{{ $content->permalink }}">
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Image Name <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <input type="text" name="title" class="input w-full border mt-2" placeholder="Image Name" >
+                                <input type="text" name="title" class="input w-full border mt-2" value="{{ $content->image_name }}" >
                             </div>
                             <div class="mt-3">
                                 <div class="grid grid-cols-12 gap-6">
@@ -68,13 +68,13 @@
                                         <label class="flex flex-col sm:flex-row"> Topik <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
                                         <div class="mt-2">
                                             <select data-placeholder="Topik kontenmu" class="select2 w-full" data-search="true" multiple>
-                                                {{--@foreach($tags as $tag)
-                                                    @if($content->tags->tag_id == $tag->id)
+                                                @foreach($tags as $tag)
+                                                    @if($content->tags == $tag)
                                                         <option value="{{ $tag->id }}" selected>{{ $tag->name }}</option>
                                                     @else
                                                         <option value="{{ $tag->id }}">{{ $tag->name }}</option>
                                                     @endif
-                                                @endforeach--}}
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>

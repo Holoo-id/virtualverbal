@@ -32,7 +32,7 @@
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row mb-2"> Permalink <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
                                 <div class="grid grid-cols-12 gap-2">
-                                    <input type="url" name="permalink" class="input border col-md-5 col-span-3 cursor-not-allowed" placeholder="virtualverbal.com/" disabled>
+                                    <input type="url" name="permalink" class="input border col-md-5 col-span-3 cursor-not-allowed" placeholder="virtualverbal.com/content/" disabled>
                                     <input type="url" name="permalink" class="input border col-md-5 col-span-9" value="link-yang-anda-masukan">
                                 </div>
                             </div>

@@ -163,7 +163,7 @@ class ContentController extends Controller
 
     public function preview($permalink)
     {
-        $content = Content::where('permalink', $permalink)->first();
+        $content = Content::where('permalink', $permalink)->with('tags')->first();
         $content->created_at = \Carbon\Carbon::parse($content->created_at)->format('l, d F Y H:m');
         return view('back.content-preview', compact('content'));
     }
@@ -171,20 +171,48 @@ class ContentController extends Controller
     public function search(Request $request)
     {
         $authors = User::all();
-        $categories = FormatContent::where('category_id', 1)
-            ->orWhere('category_id', 2)
-            ->orWhere('category_id', 4)
+        $categories = FormatContent::where('id', 1)
+            ->orWhere('id', 2)
+            ->orWhere('id', 4)
             ->get();
         $keyword = $request->search;
-
-        $contents = Content::where('published', '=', 1)
-            ->where('publish_at', '!=', '')
-            ->where('category_id', 1)
-            ->orWhere('category_id', 2)
-            ->orWhere('category_id', 4)
-            ->where('judul', 'like', "%".$keyword."%")
-            ->orWhere('sub_judul', 'like', "%".$keyword."%")
-            ->paginate(10);
+        
+        $content = Content::where('published', 1)
+            ->where('publish_at', '!=', '');
+            if ($request->filled('penulis')) {
+                $content->with(['writer' => function($query) use ($request){
+                    $query->where('name', $request->penulis);
+                }]);
+            }
+            if ($request->filled('kategori')) {
+                $content->where('category_id', $request->kategori);
+            }
+            if ($request->filled('search')) {
+                $content->where('judul', 'like', "%".$request->search."%")
+                    ->orWhere('sub_judul', 'like', "%".$request->search."%");
+            }
+            if ($request->filled('sort')) {
+                if ($request->sort == 1) {
+                    $content->orderBy('judul', 'asc');
+                }
+                if ($request->sort == 2) {
+                    $content->orderBy('judul', 'desc');
+                }
+                if ($request->sort == 3) {
+                    $content->orderBy('publish_at', 'desc');
+                }
+                if ($request->sort == 4) {
+                    $content->orderBy('views', 'desc');
+                }
+                if ($request->sort == 4) {
+                    $content->orderBy('publish_at', 'asc');
+                }
+            }
+            $contents = $content
+                ->where('category_id', '!=', 3)
+                ->where('category_id', '!=', 5)
+                ->paginate(10);
+                
             foreach ($contents as $content) {
                 $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
                 if (str_contains($content->judul, $keyword)) {
@@ -193,23 +221,9 @@ class ContentController extends Controller
                 }
             }
 
-        if (!empty($request->author)) {
-            $contents = Content::where('published', '=', 1)
-                ->where('publish_at', '!=', '')
-                ->where('category_id', 1)
-                ->orWhere('category_id', 2)
-                ->orWhere('category_id', 4)
-                ->where('created_by', '=', $request->author)
-                ->paginate(10);
-        }
-        if (!empty($request->category)) {
-            $contents = Content::where('published', '=', 1)
-                ->where('publish_at', '!=', '')
-                ->where('category_id', 1)
-                ->orWhere('category_id', 2)
-                ->orWhere('category_id', 4)
-                ->where('category_id', '=', $request->category)
-                ->paginate(10);
+        if ($request->ajax()) {
+            $view = view('front.layouts.components.data-search', compact('authors', 'categories', 'contents'))->render();
+            return response()->json(['html' => $view]);
         }
 
         $populars = Content::where('published', '=', 1)
@@ -222,11 +236,6 @@ class ContentController extends Controller
             foreach ($populars as $popular) {
                 $popular->publish_at = \Carbon\Carbon::parse($popular->publish_at)->format('D, d M Y');
             }
-
-        if ($request->ajax()) {
-            $view = view('front.layouts.components.data-search', compact('authors', 'categories', 'contents'))->render();
-            return response()->json(['html' => $view]);
-        }
 
         return view('front.search-result', compact('authors', 'categories', 'contents', 'keyword', 'populars'));
     }

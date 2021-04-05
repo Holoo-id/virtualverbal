@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             UserDetailsSeeder::class,
             UserSeeder::class,
             FormatSeeder::class,
+            vContentSeeder::class
         ]);
     }
 }

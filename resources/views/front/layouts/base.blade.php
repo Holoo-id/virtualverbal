@@ -47,7 +47,7 @@
         @yield('content')
         @include('front.layouts.footer')
         
-        {{-- Script untuk live news marquee Start--}}
+        {{-- Script untuk live news marquee Start --}}
             <script>
                 function getDataSlide(){
                     let data = [];
@@ -63,7 +63,7 @@
                     return data
                 }
             </script>
-        {{-- Script untuk live news marquee Finish--}}
+        {{-- Script untuk live news marquee Finish --}}
         
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>

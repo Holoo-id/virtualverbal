@@ -66,10 +66,10 @@
         <div class="intro-y col-span-12 md:col-span-6 xl:col-span-3 box">
             <div class="flex items-center border-b border-gray-200 px-5 py-4">
                 <div class="w-10 h-10 flex-none image-fit">
-                    <img alt="{{-- $content->writer->name --}}" class="rounded-full" src="{{-- asset($content->writer->image) --}}">
+                    <img alt="{{ $content->writer->name }}" class="rounded-full" src="{{ asset($content->writer->image) }}">
                 </div>
                 <div class="ml-3 mr-auto">
-                    <a href="" class="font-medium">{{--$content->writer->name--}}</a> 
+                    <a href="" class="font-medium">{{ $content->writer->name }}</a> 
                     <div class="flex text-gray-600 truncate text-xs mt-1"> <a class="text-theme-1 inline-block truncate" href="">{{ $content->formatContent->name }}</a> <span class="mx-1">•</span> 14 seconds ago </div>
                 </div>
                 <div class="dropdown relative ml-3">

@@ -19,8 +19,8 @@
                                     <img src="{{ asset($feature->writer->image)}}" alt="{{ $feature->writer->name }}">
                                 </figure>
                             </a>
-                            <p class="post-author-info small light">Oleh 
-                                <a href="{{ url('front/content/search?author='.$feature->writer->id) }}" class="post-author">{{ $feature->writer->name }}</a>
+                            <p class="post-author-info small light">Oleh
+                                <a href="{{ url('front/content/search?author='.$feature->writer->id) }}" class="post-author"> {{ $feature->writer->name }}</a>
                                 <span class="separator">|</span>{{ $feature->publish_at }}
                                 <span class="separator">|</span>
                                 <a class="post-comment-count">{{ $feature->views }} Dilihat</a>

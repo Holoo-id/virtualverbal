@@ -14,7 +14,7 @@ class Content extends Model
     use HasFactory;
     protected $table = 'v_content';
     protected $fillable = [
-        'judul','konten','sub_judul','permalink','image_path','image_name','category_id','published', 'publish_at', 'igdb_id'
+        'judul','konten','sub_judul','permalink','image_path','image_name','category_id','published', 'publish_at', 'igdb_id', 'created_by'
     ];
 
     public function formatContent(){

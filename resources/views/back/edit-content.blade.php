@@ -1,6 +1,6 @@
 @extends('back.layouts.base')
 @section('content')
-{{dd($content)}}
+{{--dd($content)--}}
     <div class="grid grid-cols-12 gap-6 mt-5">
         <!-- <div class="intro-y box col-span-12 lg:col-span-4 p-10">
             <div class="intro-y text-justify leading-relaxed">

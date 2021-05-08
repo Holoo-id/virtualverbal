@@ -17,6 +17,10 @@ class DashboardController extends Controller
             ->where('published', 1)
             ->get();
 
+        $unpublishes = Content::where('created_by', Auth::id())
+            ->where('published', 0)
+            ->get();
+
         $top_views = Content::where('created_by', Auth::id())
             ->where('published', 1)
             ->orderBy('views', 'desc')
@@ -25,6 +29,6 @@ class DashboardController extends Controller
             $top_view->publish_at = \Carbon\Carbon::parse($top_view->publish_at)->format('l, d F Y H:m');
         }
 
-        return view('back.dashboard', compact('creates', 'publishes', 'top_views'));
+        return view('back.dashboard', compact('creates', 'publishes', 'top_views', 'unpublishes'));
     }
 }

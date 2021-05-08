@@ -6,42 +6,46 @@
         </h2>
 
         <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-            <form class="flex flex-col sm:flex-row items-center">
+            <form method="get" action="{{ route('content-list') }}" class="flex flex-col sm:flex-row items-center">
                 <div class="sm:mt-2 mr-2">
-                    <select data-hide-search="true" class="select2 w-full input">
+                    <select data-hide-search="true" class="select2 w-full input" name="sort">
                         <option value="" selected disabled hidden>Sort</option>
-                        <option value="1">Alphabet (ASC)</option>
-                        <option value="2">Alphabet (DESC)</option>
-                        <option value="3">Time (ASC)</option>
-                        <option value="4">Time (DESC)</option>
+                        <option value="1">Alpabethical (ASC)</option>
+                        <option value="2">Alpabethical (DESC)</option>
+                        <option value="3">Terbaru</option>
+                        <option value="4">Terbanyak Dilihat</option>
+                        <option value="5">Terlama</option>
                     </select>
                 </div>
+                @if(Auth::user()->role_id == 7)
+                    <div class="sm:mt-2 mr-2">
+                        <!-- <select class="select2 w-full input" name="penulis[]" multiple> -->
+                        <select class="select2 w-full input" name="penulis">
+                            <option value="" selected disabled hidden>Penulis</option>
+                            @foreach($authors as $author)
+                                <option value="{{ $author->id }}">{{ $author->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                @endif
                 <div class="sm:mt-2 mr-2">
-                    <select class="select2 w-full input" multiple>
-                        <option value="" selected disabled hidden>Penulis</option>
-                        @foreach($authors as $author)
-                            <option value="{{ $author->id }}">{{ $author->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="sm:mt-2 mr-2">
-                    <select data-hide-search="true" class="select2 w-full input">
+                    <select data-hide-search="true" class="select2 w-full input" name="kategori">
                         <option value="" selected disabled hidden>Format</option>
                         @foreach($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                         @endforeach
                     </select>
                 </div>
-                <div class="sm:mt-2 mr-2">
+                <!-- <div class="sm:mt-2 mr-2">
                     <select data-hide-search="true" class="select2 w-full input">
                         <option value="" selected disabled hidden>Status</option>
                         <option value="1">Belum Publish</option>
                         <option value="2">Diedit</option>
                         <option value="3">Belum Edit</option>
                     </select>
-                </div>
+                </div> -->
                 <div class="sm:mt-2 mr-2">
-                    <input type="text" class="input w-full border" placeholder="Seacrh">
+                    <input type="text" class="input w-full border" placeholder="Seacrh" name="search">
                 </div>
                 <div class="sm:mt-2 mr-2">
                     <button type="submit" class="button text-white bg-theme-1 shadow-md mr-2">Filter</a>
@@ -92,7 +96,7 @@
             <div class="flex items-center px-5 py-3 border-t border-gray-200">
                 <!-- <a href="" class="intro-x w-8 h-8 flex items-center justify-center rounded-full border border-gray-500 text-gray-600 mr-2 tooltip" title="Published"> <i data-feather="send" class="w-3 h-3"></i> </a> -->
                 <a href="{{ route('preview', ['permalink' => $content->permalink]) }}" class="intro-x w-8 h-8 flex items-center justify-center rounded-full bg-theme-14 text-theme-10 ml-auto tooltip" title="Preview"> <i data-feather="eye" class="w-3 h-3"></i> </a>
-                @if(Auth::user()->role_id == 7)
+                @if(Auth::user()->role_id == 7 && $content->published != 1)
                     <a href="" class="intro-x w-8 h-8 flex items-center justify-center rounded-full bg-theme-1 text-white ml-2 tooltip" title="Publish">
                         <i data-feather="share" class="w-3 h-3"></i>
                     </a>
@@ -105,30 +109,13 @@
         <div class="intro-y col-span-12 flex flex-wrap sm:flex-row sm:flex-no-wrap items-center">
             <ul class="pagination">
                 {{ $contents->links() }}
-                <!-- <li>
-                    <a class="pagination__link" href=""> <i class="w-4 h-4" data-feather="chevrons-left"></i> </a>
-                </li>
-                <li>
-                    <a class="pagination__link" href=""> <i class="w-4 h-4" data-feather="chevron-left"></i> </a>
-                </li>
-                <li> <a class="pagination__link" href="">...</a> </li>
-                <li> <a class="pagination__link" href="">1</a> </li>
-                <li> <a class="pagination__link pagination__link--active" href="">2</a> </li>
-                <li> <a class="pagination__link" href="">3</a> </li>
-                <li> <a class="pagination__link" href="">...</a> </li>
-                <li>
-                    <a class="pagination__link" href=""> <i class="w-4 h-4" data-feather="chevron-right"></i> </a>
-                </li>
-                <li>
-                    <a class="pagination__link" href=""> <i class="w-4 h-4" data-feather="chevrons-right"></i> </a>
-                </li> -->
             </ul>
-            <select class="w-20 input box mt-3 sm:mt-0">
+            <!-- <select class="w-20 input box mt-3 sm:mt-0">
                 <option>10</option>
                 <option>25</option>
                 <option>35</option>
                 <option>50</option>
-            </select>
+            </select> -->
         </div>
         <!-- END: Pagination -->
     </div>

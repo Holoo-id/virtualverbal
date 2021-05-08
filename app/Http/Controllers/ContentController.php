@@ -8,9 +8,10 @@ use App\Models\Topics;
 use App\Models\User;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use MarcReichel\IGDBLaravel\Models\Company;
 use MarcReichel\IGDBLaravel\Models\Game;
 use Storage;
@@ -142,19 +143,60 @@ class ContentController extends Controller
         return view('back.edit-content', compact('content', 'categories', 'games', 'tags'));
     }
 
-    public function list()
+    public function list(Request $request)
     {
         $authors = User::all();
-        $categories = FormatContent::all();
-        $contents = Content::with(['writer'])
-            ->orderBy('created_at', 'desc')
-            ->paginate(20);
+        $content = Content::with(['writer'])
+            ->where('publish_at', '!=', '');
+            if ($request->filled('kategori')) {
+                $content->where('category_id', $request->kategori);
+            }
+            if ($request->filled('search')) {
+                $content->where('judul', 'like', "%".$request->search."%")
+                    ->orWhere('sub_judul', 'like', "%".$request->search."%");
+            }
+            if ($request->filled('sort')) {
+                if ($request->sort == 1) {
+                    $content->orderBy('judul', 'asc');
+                }
+                if ($request->sort == 2) {
+                    $content->orderBy('judul', 'desc');
+                }
+                if ($request->sort == 3) {
+                    $content->orderBy('publish_at', 'desc');
+                }
+                if ($request->sort == 4) {
+                    $content->orderBy('views', 'desc');
+                }
+                if ($request->sort == 4) {
+                    $content->orderBy('publish_at', 'asc');
+                }
+            }
+            if ($request->filled('penulis')) {
+                $content->where('created_by', $request->penulis);
+            }
+        // $content = Content::with(['writer'])->orderBy('created_at', 'desc');
+        if (Auth::user()->role_id == 7) {
+            $categories = FormatContent::all();
+            $contents = $content->paginate(20);
+        } else {
+            $categories = FormatContent::where('id', '!=', 5)->get();
+            $contents = $content->where('created_by', Auth::id())->paginate(20);
+        }
+                    
+        foreach ($contents as $content) {
+            $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m'); 
+        }
         return view('back.content-list', compact('authors', 'categories', 'contents'));
     }
 
     public function post()
     {
-        $categories = FormatContent::all();
+        if (Auth::user()->role_id == 7) {
+            $categories = FormatContent::all();
+        } else {
+            $categories = FormatContent::where('id', '!=', 5)->get();
+        }
         $tags = Topics::all();
         $games = Game::all();
         // $games = Game::where('name', 'like', 'a%')->get();
@@ -180,9 +222,7 @@ class ContentController extends Controller
         $content = Content::where('published', 1)
             ->where('publish_at', '!=', '');
             if ($request->filled('penulis')) {
-                $content->with(['writer' => function($query) use ($request){
-                    $query->where('name', $request->penulis);
-                }]);
+                $content->where('created_by', $request->penulis);
             }
             if ($request->filled('kategori')) {
                 $content->where('category_id', $request->kategori);
@@ -212,13 +252,9 @@ class ContentController extends Controller
                 ->where('category_id', '!=', 3)
                 ->where('category_id', '!=', 5)
                 ->paginate(10);
-                
+                    
             foreach ($contents as $content) {
                 $content->publish_at = \Carbon\Carbon::parse($content->publish_at)->format('l, d F Y H:m');
-                if (str_contains($content->judul, $keyword)) {
-                    $content->judul = str_replace($keyword, "<p style=\"background-color: #1c95f3\">".$keyword."</p>", $content->judul);
-                    $content->sub_judul = str_replace($keyword, "<p style=\"background-color: #1c95f3\">".$keyword."</p>", $content->sub_judul);
-                }
             }
 
         if ($request->ajax()) {

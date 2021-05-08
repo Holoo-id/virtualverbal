@@ -15,7 +15,7 @@
                     <select id="sc_select_dropdown" name="penulis">
                         <option value="">Semua Penulis</option>
                         @foreach($authors as $author)
-                            <option value="{{ $author->name }}" {{ $author->id == old('penulis') ? 'selecteed' : '' }}>{{ $author->name }}</option>
+                            <option value="{{ $author->id }}" {{ $author->id == old('penulis') ? 'selecteed' : '' }}>{{ $author->name }}</option>
                         @endforeach
                     </select>
                     <svg class="arrow-icon medium">

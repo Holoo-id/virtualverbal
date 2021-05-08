@@ -67,6 +67,7 @@ Route::prefix('/back')->group(function (){
     Route::prefix('/content')->group(function () {
         Route::get('/create', [ContentController::class, 'post'])->name('create-content');
         Route::get('/delete/{permalink}', [ContentController::class, 'delete'])->name('delete-content');
+        // Route::get('/find', [ContentController::class, 'post'])->name('create-content');
         Route::get('/edit/{permalink}', [ContentController::class, 'edit'])->name('edit-content');
         Route::get('/list', [ContentController::class, 'list'])->name('content-list');
         Route::get('/preview/{permalink}', [ContentController::class, 'preview'])->name('preview');

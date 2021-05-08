@@ -28,12 +28,12 @@ class vContentSeeder extends Seeder
             'permalink' => 'https://google.com/judul-yang-dibuat',
             'image_path' => 'public/files/P8J7hs8DRH6r8jIq3a4msXwssFigmSKbR4kADuWY.png',
             'image_name' => 'Capture.PNG',
-            'category_id' => 1,
+            'category_id' => 5,
             'igdb_id' => NULL,
-            'published' => 0,
-            'publish_at' => NULL,
+            'published' => 1,
+            'publish_at' => Carbon::now(),
             'views' => 0,
-            'highlight'=> 0
+            'highlight'=> 1
         ],[
             'id'=>2,
             'created_by'=>NULL,

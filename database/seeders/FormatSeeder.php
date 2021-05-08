@@ -32,6 +32,10 @@ class FormatSeeder extends Seeder
             [
                 'name' => 'Video',
                 'created_at' => Carbon::now()
+            ],
+            [
+                'name' => 'AppFeature',
+                'created_at' => Carbon::now()
             ]
         ]);
     }

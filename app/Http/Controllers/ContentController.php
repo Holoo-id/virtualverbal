@@ -199,7 +199,6 @@ class ContentController extends Controller
         }
         $tags = Topics::all();
         $games = Game::all();
-        // $games = Game::where('name', 'like', 'a%')->get();
         return view('back.create-content', compact('categories', 'games', 'tags'));
     }
 

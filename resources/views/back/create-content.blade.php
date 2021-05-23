@@ -19,26 +19,26 @@
                 </div>
                 <div class="p-10" id="basic-datepicker">
                     <div class="preview">
-                        <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" action="{{ route('add-content')}}" enctype="multipart/form-data" method="post" class="validate-form">
+                        <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" action="{{ route('add-content')}}" enctype="multipart/form-data" method="get" class="validate-form">
                             @csrf
                             <div>
                                 <label class="flex flex-col sm:flex-row"> Judul <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <input type="text" name="judul" class="input w-full border mt-2" placeholder="Judul Kontenmu" required>
+                                <input type="text" name="in_judul" class="input w-full border mt-2" placeholder="Judul Kontenmu" required>
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Sub Judul <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <input type="text" name="sub_judul" class="input w-full border mt-2" placeholder="Tentang Kontenmu" required>
+                                <input type="text" name="in_sub_judul" class="input w-full border mt-2" placeholder="Tentang Kontenmu" required>
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row mb-2"> Permalink <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
                                 <div class="grid grid-cols-12 gap-2">
-                                    <input type="url" name="permalink" class="input border col-md-5 col-span-3 cursor-not-allowed" placeholder="virtualverbal.com/content/" disabled>
-                                    <input type="url" name="permalink" class="input border col-md-5 col-span-9" value="link-yang-anda-masukan">
+                                    <input type="url" name="permalink" class="input border col-md-5 col-span-3 cursor-not-allowed" placeholder="virtualverbal.com/content/detail/" disabled>
+                                    <input name="in_permalink" class="input border col-md-5 col-span-9" placeholder="link-yang-anda-masukan">
                                 </div>
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Format Konten <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <select class="input w-full border mt-2" name="category_id">
+                                <select class="input w-full border mt-2" name="in_category_id" id="in_category_id">
                                     <option>Category</option>
                                     @foreach($categories as $ct)
                                         <option value=" {{ $ct->id }}" >{{ $ct->name }}</option>
@@ -48,29 +48,29 @@
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row mb-2"> Konten </label>
-                                <textarea id="editor" class="editor" name="konten"></textarea>
+                                <textarea id="editor" class="editor" name="in_konten"></textarea>
                             </div>
                             <div class="mt-3">
                                 <label class="mb-2 flex flex-col sm:flex-row"> Feature Image </label>
-                                <input class="dropzone border-gray-200 border-dashed dz-clickable" style="width: 100%" name="file" type="file" />
+                                <input class="dropzone border-gray-200 border-dashed dz-clickable" style="width: 100%" name="in_file" type="file" />
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Image Name <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <input type="text" name="title" class="input w-full border mt-2" placeholder="Image Name" >
+                                <input type="text" name="in_title" class="input w-full border mt-2" placeholder="Image Name" >
                             </div>
                             <div class="mt-3">
                                 <div class="grid grid-cols-12 gap-6">
                                     <div class="col-span-8">
                                         <label class="flex flex-col sm:flex-row"> Topik <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
                                         <div class="mt-2">
-                                            <select data-placeholder="Topik kontenmu" class="select2 w-full" data-search="true" multiple>
+                                            <select data-placeholder="Topik kontenmu" class="select2 w-full" data-search="true" name="in_tags" multiple >
                                                 @foreach($tags as $tag)
                                                     <option value="{{ $tag->id }}">{{ $tag->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-span-4">
+                                    {{-- <div class="col-span-4">
                                         <label class="flex flex-col sm:flex-row"><span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Topik yang dicari tidak ada? Tambahkan di sini</span> </label>
                                         <div class="mt-3">
                                             <form action="" class="grid grid-cols-4">
@@ -78,13 +78,13 @@
                                                 <button type="submit" class="button bg-theme-1 text-white col-span-2">Tambah</button>
                                             </form>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                             <div class="mt-3">
-                                <label class="flex flex-col sm:flex-row"> Game Database </label>
+                                <label class="flex flex-col sm:flex-row"> Game Database <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Hanya jika anda memilih kategori game</span> </label>
                                 <div class="mt-2">
-                                    <select data-placeholder="Pilih Game dari IGDB" class="select2 w-full">
+                                    <select data-placeholder="Pilih Game dari IGDB" class="select2 w-full" name="in_igdb_id" id="in_igdb_id">
                                         <option value="0">None</option>
                                         @foreach($games as $game)
                                             <option value="{{ $game->id }}">{{ $game->name }}</option>

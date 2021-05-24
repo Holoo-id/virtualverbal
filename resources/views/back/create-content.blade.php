@@ -121,23 +121,25 @@
             <!-- END: Form Validation -->
         </div>
     </div>
-    <div class="modal" id="basic-modal-preview" role="dialog" style="padding-left: 0px; margin-top: 0px; margin-left: 0px; z-index: 53;">
+    <div class="modal show" id="basic-modal-preview" role="dialog" style="padding-left: 0px; margin-top: 0px; margin-left: 0px; z-index: 53;">
         <div class="modal__content">
             <div class="flex items-center px-5 py-5 sm:py-3 border-b border-gray-200 dark:border-dark-5">
                 <h2 class="font-medium text-base mr-auto">
                     Tambahkan Topik Baru
                 </h2>
             </div>
-            <div class="p-5 grid grid-cols-12 gap-4 row-gap-3">
-                <div class="col-span-12 sm:col-span">
-                    <label>Topik Baru</label>
-                    <input type="text" class="input w-full border mt-2 flex-1" placeholder="Topik konten baru">
+            <form action="" method="post">
+                <div class="p-5 grid grid-cols-12 gap-4 row-gap-3">
+                    <div class="col-span-12 sm:col-span">
+                        <label>Topik Baru</label>
+                        <input type="text" class="input w-full border mt-2 flex-1" placeholder="Topik konten baru">
+                    </div>
                 </div>
-            </div>
-            <div class="px-5 py-3 text-right border-t border-gray-200 dark:border-dark-5">
-                <button type="button" data-dismiss="modal" class="button w-20 border text-gray-700 dark:border-dark-5 dark:text-gray-300 mr-1">Batal</button>
-                <button type="button" class="button w-20 bg-theme-1 text-white">Kirim</button>
-            </div>
+                <div class="px-5 py-3 text-right border-t border-gray-200 dark:border-dark-5">
+                    <button type="button" data-dismiss="modal" class="button w-20 border text-gray-700 dark:border-dark-5 dark:text-gray-300 mr-1">Batal</button>
+                    <input type="submit" class="button w-20 bg-theme-1 text-white" value="Submit">
+                </div>
+            </form>
         </div>
     </div>
 @endsection

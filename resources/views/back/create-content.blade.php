@@ -63,28 +63,27 @@
                                     <div class="col-span-8">
                                         <label class="flex flex-col sm:flex-row"> Topik <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
                                         <div class="mt-2">
-                                            <select data-placeholder="Topik kontenmu" class="select2 w-full" data-search="true" name="in_tags[]" multiple >
+                                            <select data-placeholder="Topik kontenmu" class="tail-select w-full" data-search="true" name="in_tags[]" multiple >
                                                 @foreach($tags as $tag)
                                                     <option value="{{ $tag->id }}">{{ $tag->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                     </div>
-                                    {{-- <div class="col-span-4">
+                                    <div class="col-span-4">
                                         <label class="flex flex-col sm:flex-row"><span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Topik yang dicari tidak ada? Tambahkan di sini</span> </label>
-                                        <div class="mt-3">
-                                            <form action="" class="grid grid-cols-4">
-                                                <input type="text" name="" id="" class="col-span-10 input w-5/6 border col-md-5" placeholder="Topik Baru">
-                                                <button type="submit" class="button bg-theme-1 text-white col-span-2">Tambah</button>
-                                            </form>
+                                        <div class="mt-4">
+                                            <!-- <button type="button" data-toggle="modal" data-target="#basic-modal-preview" class="button bg-theme-1 text-white col-span-2">Tambah</button> -->
+                                            <a href="javascript:;" data-toggle="modal" data-target="#basic-modal-preview" class="button bg-theme-1 text-white col-span-2">Tambah</a>
+                                            <!-- <button type="button" data-bs-toggle="modal" data-bs-target="#basic-modal-preview" class="button bg-theme-1 text-white col-span-2">Tambah</button> -->
                                         </div>
-                                    </div> --}}
+                                    </div>
                                 </div>
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Game Database <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Hanya jika anda memilih kategori game</span> </label>
                                 <div class="mt-2">
-                                    <select data-placeholder="Pilih Game dari IGDB" class="select2 w-full" name="in_igdb_id" id="in_igdb_id">
+                                    <select data-placeholder="Pilih Game dari IGDB" class="tail-select w-full" name="in_igdb_id" id="in_igdb_id" data-search="true">
                                         <option value="0">None</option>
                                         @foreach($games as $game)
                                             <option value="{{ $game->id }}">{{ $game->name }}</option>
@@ -120,6 +119,27 @@
                 </div>
             </div>
             <!-- END: Form Validation -->
+        </div>
+    </div>
+    <div class="modal show" id="basic-modal-preview" role="dialog" style="padding-left: 0px; margin-top: 0px; margin-left: 0px; z-index: 53;">
+        <div class="modal__content">
+            <div class="flex items-center px-5 py-5 sm:py-3 border-b border-gray-200 dark:border-dark-5">
+                <h2 class="font-medium text-base mr-auto">
+                    Tambahkan Topik Baru
+                </h2>
+            </div>
+            <form action="" method="post">
+                <div class="p-5 grid grid-cols-12 gap-4 row-gap-3">
+                    <div class="col-span-12 sm:col-span">
+                        <label>Topik Baru</label>
+                        <input type="text" class="input w-full border mt-2 flex-1" placeholder="Topik konten baru">
+                    </div>
+                </div>
+                <div class="px-5 py-3 text-right border-t border-gray-200 dark:border-dark-5">
+                    <button type="button" data-dismiss="modal" class="button w-20 border text-gray-700 dark:border-dark-5 dark:text-gray-300 mr-1">Batal</button>
+                    <input type="submit" class="button w-20 bg-theme-1 text-white" value="Submit">
+                </div>
+            </form>
         </div>
     </div>
 @endsection

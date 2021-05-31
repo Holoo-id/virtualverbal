@@ -16,20 +16,20 @@ class CreateViverbContentTable extends Migration
         Schema::create('v_content', function (Blueprint $table) {
             $table->id();
             $table->foreignId('created_by')->nullable();
-            $table->foreignId('updated_by')->nullable();
+            $table->foreignId('updated_by')->nullable()->default(null);
             $table->timestamps();
             $table->string('judul');
             $table->longtext('konten');
             $table->text('sub_judul');
             $table->string('permalink');
-            $table->text('image_path')->nullable();
-            $table->string('image_name')->nullable();
+            $table->text('image_path')->nullable()->default(null);
+            $table->string('image_name')->nullable()->default(null);
             $table->foreignId('category_id');
-            $table->integer('igdb_id')->nullable();
+            $table->integer('igdb_id')->nullable()->default(null);
             $table->boolean('published')->default(false);
-            $table->dateTime('publish_at')->nullable();
+            $table->dateTime('publish_at')->nullable()->default(null);
             $table->bigInteger('views')->default(0);
-            $table->boolean('highlight');
+            $table->boolean('highlight')->default(false);
         });
     }
 

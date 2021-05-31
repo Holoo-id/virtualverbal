@@ -8,6 +8,7 @@ use App\Models\Topics;
 use App\Models\User;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
+use Carbon\Carbon;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -146,8 +147,7 @@ class ContentController extends Controller
     public function list(Request $request)
     {
         $authors = User::all();
-        $content = Content::with(['writer'])
-            ->where('publish_at', '!=', '');
+        $content = Content::with(['writer']);
             if ($request->filled('kategori')) {
                 $content->where('category_id', $request->kategori);
             }
@@ -277,19 +277,32 @@ class ContentController extends Controller
         return view('front.search-result', compact('authors', 'categories', 'contents', 'keyword', 'populars'));
     }
 
-    public function tambah(Request $request)
+    public function create(Request $request)
     {
-        $uploadedFile = $request->file('file');
-        $path = $uploadedFile->store('public/files');
-        $file = Content::create([
-            'judul' => $request->judul,
-            'konten' => $request->konten,
-            'sub_judul' => $request->sub_judul,
-            'permalink' => $request->permalink,
-            'image_path' => $path,
-            'image_name' => $request->title ?? $uploadedFile->getClientOriginalName(),
-            'category_id' => $request->category_id,
+        $uploadedFile = $request->file('in_file');
+        $uploadedFile->storePubliclyAs('public/images/contents/', $request->in_img_title.".".$uploadedFile->extension());
+        $image_path = "storage/images/contents/".$request->in_img_title;
+
+        $createdContent = Content::create([
+            'judul' => $request->in_judul,
+            'konten' => htmlspecialchars($request->in_konten),
+            'sub_judul' => $request->in_sub_judul,
+            'permalink' => $request->in_permalink,
+            'image_path' => $image_path,
+            'image_name' => $request->in_img_title ?? $uploadedFile->getClientOriginalName(),
+            'category_id' => $request->in_category_id,
+            'igdb_id' => ($request->in_igdb_id==0)?null:$request->in_igdb_id,
+            'created_at' => Carbon::now(),
+            'created_by' => Auth::user()->id,
         ]);
+
+        $tags = $request->in_tags;
+        foreach($tags as $tag){
+            DB::table('v_relation_tags_content')->insert([
+                ['content_id' => $createdContent->id, 'tag_id' => $tag],
+            ]);
+        }
+        return redirect()->route("content-list");
     }
 
     public function update(Request $request)

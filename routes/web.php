@@ -71,7 +71,7 @@ Route::prefix('/back')->group(function (){
         Route::get('/edit/{permalink}', [ContentController::class, 'edit'])->name('edit-content');
         Route::get('/list', [ContentController::class, 'list'])->name('content-list');
         Route::get('/preview/{permalink}', [ContentController::class, 'preview'])->name('preview');
-        Route::post('/add', [ContentController::class, 'tambah'])->name('add-content');
+        Route::post('/add', [ContentController::class, 'create'])->name('add-content');
         Route::post('/update', [ContentController::class, 'update'])->name('update-content');
     });
 });

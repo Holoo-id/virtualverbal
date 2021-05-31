@@ -29,7 +29,7 @@ class CreateViverbContentTable extends Migration
             $table->boolean('published')->default(false);
             $table->dateTime('publish_at')->nullable();
             $table->bigInteger('views')->default(0);
-            $table->boolean('highlight');
+            $table->boolean('highlight')->default(false);
         });
     }
 

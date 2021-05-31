@@ -19,7 +19,7 @@
                 </div>
                 <div class="p-10" id="basic-datepicker">
                     <div class="preview">
-                        <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" action="{{ route('add-content')}}" enctype="multipart/form-data" method="get" class="validate-form">
+                        <form data-single="true" data-file-types="image/jpeg|image/png|image/jpg" action="{{ route('add-content')}}" enctype="multipart/form-data" method="post" class="validate-form">
                             @csrf
                             <div>
                                 <label class="flex flex-col sm:flex-row"> Judul <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
@@ -56,14 +56,14 @@
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Image Name <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <input type="text" name="in_title" class="input w-full border mt-2" placeholder="Image Name" >
+                                <input type="text" name="in_img_title" class="input w-full border mt-2" placeholder="Image Name" >
                             </div>
                             <div class="mt-3">
                                 <div class="grid grid-cols-12 gap-6">
                                     <div class="col-span-8">
                                         <label class="flex flex-col sm:flex-row"> Topik <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
                                         <div class="mt-2">
-                                            <select data-placeholder="Topik kontenmu" class="select2 w-full" data-search="true" name="in_tags" multiple >
+                                            <select data-placeholder="Topik kontenmu" class="select2 w-full" data-search="true" name="in_tags[]" multiple >
                                                 @foreach($tags as $tag)
                                                     <option value="{{ $tag->id }}">{{ $tag->name }}</option>
                                                 @endforeach

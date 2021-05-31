@@ -8,6 +8,7 @@ use App\Models\Topics;
 use App\Models\User;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
+use Carbon\Carbon;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -275,19 +276,29 @@ class ContentController extends Controller
         return view('front.search-result', compact('authors', 'categories', 'contents', 'keyword', 'populars'));
     }
 
-    public function tambah(Request $request)
+    public function create(Request $request)
     {
-        $uploadedFile = $request->file('file');
-        $path = $uploadedFile->store('public/files');
-        $file = Content::create([
-            'judul' => $request->judul,
-            'konten' => $request->konten,
-            'sub_judul' => $request->sub_judul,
-            'permalink' => $request->permalink,
-            'image_path' => $path,
-            'image_name' => $request->title ?? $uploadedFile->getClientOriginalName(),
-            'category_id' => $request->category_id,
-        ]);
+        $tags = $request->in_tags;
+        foreach($tags as $tag){
+            return $tag;
+        }
+        
+        // $uploadedFile = $request->file('in_file');
+        // $uploadedFile->storePubliclyAs('public/images/contents/', $request->in_img_title.".".$uploadedFile->extension());
+        // return "success";
+        // $file = Content::create([
+        //     'judul' => $request->in_judul,
+        //     'konten' => htmlspecialchars($request->konten),
+        //     'sub_judul' => $request->in_sub_judul,
+        //     'permalink' => $request->in_permalink,
+        //     'image_name' => $request->in_img_title ?? $uploadedFile->getClientOriginalName(),
+        //     'category_id' => $request->in_category_id,
+        //     'igdb_id' => $request->in_igdb_id,
+        //     'created_at' => Carbon::now(),
+        //     'created_by' => Auth::user()->id,
+        //     // 'image_path' => $path,
+            
+        // ]);
     }
 
     public function update(Request $request)

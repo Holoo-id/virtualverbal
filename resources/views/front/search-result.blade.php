@@ -1,7 +1,7 @@
 @extends('front.layouts.base')
 
 @section('content')
-    <div class="layout-content-1 layout-item-3-1 own-grid centered">
+    <div class="layout-content-1 layout-item-3-1 own-grid2 centered">
         <div class="layout-body layout-item centered">
             <div class="section-title-wrap blue">
                 <h2 class="section-title medium">Hasil Pencarian</h2>

@@ -1,7 +1,7 @@
 @extends('front.layouts.base')
 
 @section('content')
-    <div class="layout-item gutter-big">
+    <div class="layout-item gutter-big" style="margin-bottom: -10em">
         <div class="post-open game-review">
             <div class="post-open-img-wrap">
                 <figure class="post-open-img2 liquid">
@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <div class="layout-content-2 layout-item-1-2-1 own-grid centered">
+    <div class="layout-content-2 layout-item-1-2-1 own-grid2 centered">
         @include('front.layouts.sidebar-left')
 
         <div class="layout-body layout-item">

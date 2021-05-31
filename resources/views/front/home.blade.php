@@ -3,9 +3,9 @@
 @section('content')
     @include('front.layouts.components.banner-slider')
     {{--@include('front.layouts.components.esports-live-score')--}}
-    <div class="layout-content-1 layout-item centered">
+    {{--<div class="layout-content-1 layout-item own-grid2 grid-limit centered">
         <div class="layout-body layout-item centered">
-            <div class="subscribe-section-wrap">
+            <!-- <div class="subscribe-section-wrap">
                 <div class="subscribe-section">
                     <div class="subscribe-section-info">
                         <p class="subscribe-section-title">Langganan Artikel!</p>
@@ -22,7 +22,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="layout-item centered">
                 <div class="postslide-wrap">
@@ -249,9 +249,9 @@
                 <a href="browse-videos.html" class="button small full cyan">Browse more videos...</a>
             </div>
         </div>
-    </div>
+    </div>--}}
     
-    <div class="layout-content-1 layout-item-3-1 own-grid grid-limit centered">
+    <div class="layout-content-1 layout-item-3-1 own-grid2 grid-limit centered">
         <div class="layout-body layout-item">
             <div class="layout-item">
                 @include('front.layouts.components.data-search')

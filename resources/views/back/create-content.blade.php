@@ -43,20 +43,7 @@
                                     @foreach($categories as $ct)
                                         <option value=" {{ $ct->id }}" >{{ $ct->name }}</option>
                                     @endforeach
-                                </select>
-                                  
-                            </div>
-                            <div class="mt-3">
-                                <label class="flex flex-col sm:flex-row mb-2"> Konten </label>
-                                <textarea id="editor" class="editor" name="in_konten"></textarea>
-                            </div>
-                            <div class="mt-3">
-                                <label class="mb-2 flex flex-col sm:flex-row"> Feature Image </label>
-                                <input class="dropzone border-gray-200 border-dashed dz-clickable" style="width: 100%" name="in_file" type="file" />
-                            </div>
-                            <div class="mt-3">
-                                <label class="flex flex-col sm:flex-row"> Image Name <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
-                                <input type="text" name="in_img_title" class="input w-full border mt-2" placeholder="Image Name" >
+                                </select>     
                             </div>
                             <div class="mt-3">
                                 <div class="grid grid-cols-12 gap-6">
@@ -79,6 +66,18 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="mt-3">
+                                <label class="flex flex-col sm:flex-row mb-2"> Konten </label>
+                                <textarea id="editor" class="editor" name="in_konten"></textarea>
+                            </div>
+                            <div class="mt-3">
+                                <label class="mb-2 flex flex-col sm:flex-row"> Feature Image </label>
+                                <input class="dropzone border-gray-200 border-dashed dz-clickable" style="width: 100%" name="in_file" type="file" />
+                            </div>
+                            <div class="mt-3">
+                                <label class="flex flex-col sm:flex-row"> Image Name <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Harus diisi</span> </label>
+                                <input type="text" name="in_img_title" class="input w-full border mt-2" placeholder="Image Name" >
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Game Database <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Hanya jika anda memilih kategori game</span> </label>
@@ -128,12 +127,12 @@
                     Tambahkan Topik Baru
                 </h2>
             </div>
-            <form action="" method="post">
+            <form action="{{route('add-tag')}}" method="POST">
                 @csrf
                 <div class="p-5 grid grid-cols-12 gap-4 row-gap-3">
                     <div class="col-span-12 sm:col-span">
                         <label>Topik Baru</label>
-                        <input type="text" class="input w-full border mt-2 flex-1" placeholder="Topik konten baru">
+                        <input type="text" class="input w-full border mt-2 flex-1" placeholder="Topik konten baru" id="in_tag_name" name="in_tag_name">
                     </div>
                 </div>
                 <div class="px-5 py-3 text-right border-t border-gray-200 dark:border-dark-5">
@@ -152,6 +151,7 @@
                 $("#form-tambah-tag").removeClass("show");
             });
         });
+        
     </script>
 @endsection
 

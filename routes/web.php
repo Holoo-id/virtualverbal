@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\Frontend\BeritaController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
@@ -72,6 +73,7 @@ Route::prefix('/back')->group(function (){
         Route::get('/list', [ContentController::class, 'list'])->name('content-list');
         Route::get('/preview/{permalink}', [ContentController::class, 'preview'])->name('preview');
         Route::post('/add', [ContentController::class, 'create'])->name('add-content');
+        Route::post('/add-tag', [TagController::class, 'addNew'])->name('add-tag');
         Route::post('/update', [ContentController::class, 'update'])->name('update-content');
     });
 });

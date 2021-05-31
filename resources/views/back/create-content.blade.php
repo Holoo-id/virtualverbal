@@ -74,7 +74,7 @@
                                         <label class="flex flex-col sm:flex-row"><span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Topik yang dicari tidak ada? Tambahkan di sini</span> </label>
                                         <div class="mt-4">
                                             <!-- <button type="button" data-toggle="modal" data-target="#basic-modal-preview" class="button bg-theme-1 text-white col-span-2">Tambah</button> -->
-                                            <a href="javascript:;" data-toggle="modal" data-target="#basic-modal-preview" class="button bg-theme-1 text-white col-span-2">Tambah</a>
+                                            <a href="javascript:;" data-toggle="modal" data-target="#form-tambah-tag" class="button bg-theme-1 text-white col-span-2" id="tambah-tag">Tambah</a>
                                             <!-- <button type="button" data-bs-toggle="modal" data-bs-target="#basic-modal-preview" class="button bg-theme-1 text-white col-span-2">Tambah</button> -->
                                         </div>
                                     </div>
@@ -121,7 +121,7 @@
             <!-- END: Form Validation -->
         </div>
     </div>
-    <div class="modal show" id="basic-modal-preview" role="dialog" style="padding-left: 0px; margin-top: 0px; margin-left: 0px; z-index: 53;">
+    <div class="modal" id="form-tambah-tag" role="dialog" style="padding-left: 0px; margin-top: 0px; margin-left: 0px; z-index: 53;">
         <div class="modal__content">
             <div class="flex items-center px-5 py-5 sm:py-3 border-b border-gray-200 dark:border-dark-5">
                 <h2 class="font-medium text-base mr-auto">
@@ -129,6 +129,7 @@
                 </h2>
             </div>
             <form action="" method="post">
+                @csrf
                 <div class="p-5 grid grid-cols-12 gap-4 row-gap-3">
                     <div class="col-span-12 sm:col-span">
                         <label>Topik Baru</label>
@@ -136,11 +137,21 @@
                     </div>
                 </div>
                 <div class="px-5 py-3 text-right border-t border-gray-200 dark:border-dark-5">
-                    <button type="button" data-dismiss="modal" class="button w-20 border text-gray-700 dark:border-dark-5 dark:text-gray-300 mr-1">Batal</button>
+                    <button type="button" data-dismiss="modal" class="button w-20 border text-gray-700 dark:border-dark-5 dark:text-gray-300 mr-1" id="batal-tambah-tag">Batal</button>
                     <input type="submit" class="button w-20 bg-theme-1 text-white" value="Submit">
                 </div>
             </form>
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
+            $("#tambah-tag").click(function(){
+                $("#form-tambah-tag").addClass("show");
+            });
+            $("#batal-tambah-tag").click(function(){
+                $("#form-tambah-tag").removeClass("show");
+            });
+        });
+    </script>
 @endsection
 

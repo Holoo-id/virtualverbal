@@ -144,6 +144,27 @@ class ContentController extends Controller
         return view('back.edit-content', compact('content', 'categories', 'games', 'tags'));
     }
 
+    public function findIgdbGame($name)
+    {
+        $data = Game::where('name', 'ilike', "%".$name."%")->get();
+        // if ($request->ajax()) {
+        //     if ($request->get('query') == '') {
+        //         $data = Game::all();
+        //     } else {
+                // $data = Game::where('name', 'ilike', "%".$name."%")->get();
+        //     }
+        //     if ($data->count() > 0) {
+        //         foreach ($data as $game) {
+        //             $output = "
+        //                 <option value='".$game->id."'>".$game->name."</option>
+        //             ";
+        //         }
+        //     }
+        //     $data = ['option' => $output];
+        // }
+        echo json_encode($data);
+    }
+
     public function list(Request $request)
     {
         $authors = User::all();
@@ -198,9 +219,11 @@ class ContentController extends Controller
             $categories = FormatContent::where('id', '!=', 5)->get();
         }
         $tags = Topics::all();
-        $games = Game::all();
-        // $games = Game::where('name', 'like', "%a%")
-        //     ->get();
+        // $games = Game::all();
+        $games = Game::
+            where('name', 'ilike', "%war%")
+            // where('slug', 'like', "%football%")
+            ->get();
         return view('back.create-content', compact('categories', 'games', 'tags'));
     }
 

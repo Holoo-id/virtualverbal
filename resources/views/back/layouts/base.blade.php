@@ -39,7 +39,8 @@
 		
 		
 		<script src="https://cdn.ckeditor.com/ckeditor5/24.0.0/classic/ckeditor.js"></script>
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 		
 		<title>Virtual Admin</title>
 	</head>
@@ -57,6 +58,26 @@
 				.catch( error => {
 					console.error( error );
 				} );
+
+            // search start
+            // $('#in_igdb_id').select2(
+            //     placeholder: 'Pilih Game dari IGDB',
+			// 	ajax: {
+			// 		url: {{-- route('find-igdb') --}},
+			// 		dataType: 'json',
+			// 		processResults: function (games) {
+			// 			return {
+			// 				results:  $.map(games, function (game) {
+			// 					return {
+			// 						id: game.id
+			// 						name: game.name,
+			// 					}
+			// 				})
+			// 			};
+			// 		},
+			// 		cache: true
+			// 	}
+            // );
 		</script>
 
 		<!-- BEGIN: JS Assets-->

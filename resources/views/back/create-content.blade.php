@@ -1,6 +1,5 @@
 @extends('back.layouts.base')
 @section('content')
-
     <div class="grid grid-cols-12 gap-6 mt-5">
         <!-- <div class="intro-y box col-span-12 lg:col-span-4 p-10">
             <div class="intro-y text-justify leading-relaxed">
@@ -81,12 +80,12 @@
                             </div>
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Game Database <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Hanya jika anda memilih kategori game</span> </label>
-                                <div class="mt-2">
+                                <div class="mt-2" id="findIgdb">
                                     <select data-placeholder="Pilih Game dari IGDB" class="tail-select w-full" name="in_igdb_id" id="in_igdb_id" data-search="true">
-                                        <option value="0">None</option>
-                                        @foreach($games as $game)
+                                        <!-- <option value="0">None</option> -->
+                                        {{--@foreach($games as $game)
                                             <option value="{{ $game->id }}">{{ $game->name }}</option>
-                                        @endforeach
+                                        @endforeach--}}
                                     </select>
                                 </div>
                             </div>
@@ -150,8 +149,21 @@
             $("#batal-tambah-tag").click(function(){
                 $("#form-tambah-tag").removeClass("show");
             });
+
+
+            $('#findIgdb > .tail-select > .select-dropdown > .dropdown-search > .search-input').on('keyup', function(){
+                var query = $(this).val();
+                console.log(query);
+                getGameData(query);
+            });
+            function getGameData(query = '') {
+                $.ajax({
+                    url: "/back/content/create/"+gameName,
+                    type: 'get',
+                    dataType: 'json',
+                });
+            }
         });
-        
     </script>
 @endsection
 

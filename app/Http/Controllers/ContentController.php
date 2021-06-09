@@ -144,9 +144,9 @@ class ContentController extends Controller
         return view('back.edit-content', compact('content', 'categories', 'games', 'tags'));
     }
 
-    public function findIgdbGame($name)
+    public function findIgdbGame(Request $request)
     {
-        $data = Game::where('name', 'ilike', "%".$name."%")->get();
+        $original_data = Game::where('name', 'ilike', "%".$request->search."%")->get();
         // if ($request->ajax()) {
         //     if ($request->get('query') == '') {
         //         $data = Game::all();
@@ -162,7 +162,11 @@ class ContentController extends Controller
         //     }
         //     $data = ['option' => $output];
         // }
-        echo json_encode($data);
+        $minimized_data = array();
+        foreach ($original_data as $data) {
+            array_push($minimized_data, array("id" => $data["id"], "name" => $data["name"]));
+        }
+        return json_encode($minimized_data);
     }
 
     public function list(Request $request)

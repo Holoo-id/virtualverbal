@@ -81,8 +81,8 @@
                             <div class="mt-3">
                                 <label class="flex flex-col sm:flex-row"> Game Database <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Hanya jika anda memilih kategori game</span> </label>
                                 <div class="mt-2" id="findIgdb">
-                                    <select data-placeholder="Pilih Game dari IGDB" class="tail-select w-full" name="in_igdb_id" id="in_igdb_id" data-search="true">
-                                        <!-- <option value="0">None</option> -->
+                                    <select data-placeholder="Pilih Game dari IGDB" class="w-full" name="in_igdb_id" id="in_igdb_id" data-search="true">
+                                        <option value="0" selected>None</option>
                                         {{--@foreach($games as $game)
                                             <option value="{{ $game->id }}">{{ $game->name }}</option>
                                         @endforeach--}}
@@ -143,6 +143,34 @@
     </div>
     <script>
         $(document).ready(function(){
+            $("#in_igdb_id").select2({
+                ajax:{
+                    url: "/back/content/create/search_igdb",
+                    type: 'get',
+                    dataType: 'json',
+                    data: function (params) {
+                        var query = {
+                            search: params.term,
+                            type: 'public'
+                        }
+                        return query;
+                    },
+                    processResults: function (data) {
+                        var select2format_data = {
+                            "results": [
+                                {}
+                            ],
+                            "pagination": {
+                                "more": true
+                            }
+                        };
+                        data.forEach(element => {
+                            select2format_data.results.push({"id":element['id'],"text":element['name']});
+                        });
+                        return select2format_data;
+                    }
+                }
+            });
             $("#tambah-tag").click(function(){
                 $("#form-tambah-tag").addClass("show");
             });
@@ -151,19 +179,24 @@
             });
 
 
-            $('#findIgdb > .tail-select > .select-dropdown > .dropdown-search > .search-input').on('keyup', function(){
+            $('#in_igdb_id').on('keyup', function(){
                 var query = $(this).val();
-                console.log(query);
                 getGameData(query);
             });
-            function getGameData(query = '') {
-                $.ajax({
-                    url: "/back/content/create/"+gameName,
-                    type: 'get',
-                    dataType: 'json',
-                });
-            }
         });
+        // function getGameData(gameName) {
+        //         alert(gameName);   
+        //         $.ajax({
+        //             url: "/back/content/create/"+gameName,
+        //             type: 'get',
+        //             dataType: 'json',
+        //             success: function (data) {
+        //                 data.forEach(element => {
+        //                     $("#findIgdb > .tail-select > .select-dropdown > .dropdown-inner > .dropdown-optgroup").append("<li class='dropdown-option' data-key="+element['id']+" data-group='#'>"+element['name']+"</li>");
+        //                 });
+        //             }
+        //         });
+        // }
     </script>
 @endsection
 

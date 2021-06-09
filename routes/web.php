@@ -69,7 +69,7 @@ Route::prefix('/back')->group(function (){
         Route::get('/create', [ContentController::class, 'post'])->name('create-content');
         Route::get('/delete/{permalink}', [ContentController::class, 'delete'])->name('delete-content');
         Route::get('/edit/{permalink}', [ContentController::class, 'edit'])->name('edit-content');
-        Route::get('/create/{name}', [ContentController::class, 'findIgdbGame'])->name('find-igdb');
+        Route::get('/create/search_igdb', [ContentController::class, 'findIgdbGame'])->name('find-igdb');
         Route::get('/list', [ContentController::class, 'list'])->name('content-list');
         Route::get('/preview/{permalink}', [ContentController::class, 'preview'])->name('preview');
         Route::post('/add', [ContentController::class, 'create'])->name('add-content');

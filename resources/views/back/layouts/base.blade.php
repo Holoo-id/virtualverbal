@@ -36,6 +36,7 @@
 		<link href="{{ asset('/backend/lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
 		<link href="{{ asset('/backend/lib/typicons.font/typicons.css')}}" rel="stylesheet">
 		<link rel="stylesheet" href="{{ asset('/backend/dist/css/app.css') }}" />
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 		
 		
 		<script src="https://cdn.ckeditor.com/ckeditor5/24.0.0/classic/ckeditor.js"></script>
